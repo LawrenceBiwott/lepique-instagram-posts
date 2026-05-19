@@ -10,7 +10,6 @@ Setup: See SETUP_GUIDE.md for credentials and configuration instructions.
 import os
 import json
 import time
-import glob
 import requests
 from datetime import datetime
 from pathlib import Path
@@ -18,19 +17,15 @@ from pathlib import Path
 # ─────────────────────────────────────────────
 # CONFIGURATION — reads from env vars (set as GitHub Secrets)
 # ─────────────────────────────────────────────
-ACCESS_TOKEN = os.environ.get(
-    "INSTAGRAM_ACCESS_TOKEN",
-    "IGAAVmftqcjnpBZAGJ1dTJnYWpSNkJmZADk3ZAEFjeUdYb1BNTUJNRGRUbS1wZAWZAmNXh4Y0d6dV90RGVFeDJtaGZA3Rl90UEQxUEhGTGhSQzlxOHE2cU9mRmFHQWc3NUswa2xyYkdiU2ZAiY3hiamFEMWszemx1WFE0d0NjcDRLOEJBVQZDZD"
-)
+ACCESS_TOKEN = os.environ.get("INSTAGRAM_ACCESS_TOKEN", "").strip()
+IG_USER_ID = os.environ.get("INSTAGRAM_USER_ID", "17841402201496454").strip()
 
-IG_USER_ID = os.environ.get("INSTAGRAM_USER_ID", "17841402201496454")
-
-# Base URL for media hosted on GitHub raw content
-# Media files in the media/ folder will be served from here
+# Base URL for media hosted on GitHub raw content.
+# Media files in the media/ folder will be served from here.
 GITHUB_RAW_BASE = os.environ.get(
     "MEDIA_BASE_URL",
     "https://raw.githubusercontent.com/LawrenceBiwott/lepique-instagram-posts/main/media"
-)
+).rstrip("/")
 
 # Paths (relative to this script)
 BASE_DIR       = Path(__file__).parent
@@ -42,6 +37,7 @@ STATE_FILE     = BASE_DIR / "state.json"
 # Supported file types
 IMAGE_EXTS     = {".jpg", ".jpeg", ".png"}
 VIDEO_EXTS     = {".mp4", ".mov"}
+
 
 # ─────────────────────────────────────────────
 # HELPERS
@@ -78,6 +74,7 @@ def get_next_caption(state: dict) -> dict:
     captions = load_captions()
     if not captions:
         raise ValueError("No captions found in captions.json!")
+
     idx = state["caption_index"] % len(captions)
     caption = captions[idx]
     state["caption_index"] = (idx + 1) % len(captions)
@@ -87,12 +84,15 @@ def get_next_caption(state: dict) -> dict:
 def get_next_media(state: dict) -> Path | None:
     """Get the next media file from the media folder (rotates through all files)."""
     MEDIA_FOLDER.mkdir(exist_ok=True)
+
     all_files = sorted([
         p for p in MEDIA_FOLDER.iterdir()
-        if p.suffix.lower() in IMAGE_EXTS | VIDEO_EXTS
+        if p.suffix.lower() in (IMAGE_EXTS | VIDEO_EXTS)
     ])
+
     if not all_files:
         return None
+
     idx = state["media_index"] % len(all_files)
     media = all_files[idx]
     state["media_index"] = (idx + 1) % len(all_files)
@@ -101,6 +101,18 @@ def get_next_media(state: dict) -> Path | None:
 
 def is_video(path: Path) -> bool:
     return path.suffix.lower() in VIDEO_EXTS
+
+
+def ensure_config():
+    if not ACCESS_TOKEN:
+        raise ValueError(
+            "INSTAGRAM_ACCESS_TOKEN is missing. Add it as a GitHub Secret or environment variable."
+        )
+
+    if not IG_USER_ID:
+        raise ValueError(
+            "INSTAGRAM_USER_ID is missing. Add it as a GitHub Secret or environment variable."
+        )
 
 
 # ─────────────────────────────────────────────
@@ -121,13 +133,16 @@ def create_image_container(image_url: str, caption: str) -> str:
         },
         timeout=30,
     )
+
     if not resp.ok:
         print(resp.text)
 
     resp.raise_for_status()
     return resp.json()["id"]
+
+
 def create_video_container(video_url: str, caption: str) -> str:
-    """Step 1 for videos: create a media container."""
+    """Step 1 for videos/Reels: create a media container."""
     resp = requests.post(
         f"{BASE_URL}/{IG_USER_ID}/media",
         params={
@@ -138,29 +153,45 @@ def create_video_container(video_url: str, caption: str) -> str:
         },
         timeout=30,
     )
+
+    if not resp.ok:
+        print(resp.text)
+
     resp.raise_for_status()
     return resp.json()["id"]
 
 
-def wait_for_container(container_id: str, max_wait: int = 120):
-    """Poll until the media container is ready (videos take time to process)."""
+def wait_for_container(container_id: str, max_wait: int = 300):
+    """Poll until the media container is ready. Videos can take longer to process."""
     for _ in range(max_wait // 5):
         resp = requests.get(
             f"{BASE_URL}/{container_id}",
-            params={"fields": "status_code", "access_token": ACCESS_TOKEN},
+            params={
+                "fields": "status_code",
+                "access_token": ACCESS_TOKEN,
+            },
             timeout=15,
         )
+
+        if not resp.ok:
+            print(resp.text)
+
+        resp.raise_for_status()
         status = resp.json().get("status_code", "")
+
         if status == "FINISHED":
             return True
+
         if status == "ERROR":
             raise RuntimeError(f"Container processing failed: {resp.json()}")
+
         time.sleep(5)
+
     raise TimeoutError("Media container did not finish processing in time.")
 
 
 def publish_container(container_id: str) -> str:
-    """Step 2: publish the container to the feed."""
+    """Step 2: publish the container to Instagram."""
     resp = requests.post(
         f"{BASE_URL}/{IG_USER_ID}/media_publish",
         params={
@@ -169,6 +200,10 @@ def publish_container(container_id: str) -> str:
         },
         timeout=30,
     )
+
+    if not resp.ok:
+        print(resp.text)
+
     resp.raise_for_status()
     return resp.json()["id"]
 
@@ -178,6 +213,7 @@ def publish_container(container_id: str) -> str:
 # ─────────────────────────────────────────────
 
 def post_to_instagram():
+    ensure_config()
     log("─── Starting Instagram post ───")
 
     state = load_state()
@@ -185,20 +221,23 @@ def post_to_instagram():
     # Get caption
     caption_obj = get_next_caption(state)
     full_caption = caption_obj["text"]
+
     if caption_obj.get("hashtags"):
         full_caption += "\n\n" + caption_obj["hashtags"]
+
     log(f"Caption: {full_caption[:80]}...")
 
     # Get media
     media_path = get_next_media(state)
+
     if not media_path:
-        log("⚠️  No media files found in the 'media/' folder. Add photos/videos and retry.")
+        log("⚠️ No media files found in the 'media/' folder. Add photos/videos and retry.")
         save_state(state)
         return
 
     log(f"Media: {media_path.name}")
 
-    # Build the public URL from the media filename.
+    # Build public URL from the media filename.
     # Files in the media/ folder are served via GitHub raw content.
     media_url = f"{GITHUB_RAW_BASE}/{media_path.name}"
     log(f"Media URL: {media_url}")
@@ -206,10 +245,11 @@ def post_to_instagram():
     # Create container
     if is_video(media_path):
         container_id = create_video_container(media_url, full_caption)
-        log(f"Video container created: {container_id}. Waiting for processing...")
+        log(f"Video/Reel container created: {container_id}. Waiting for processing...")
         wait_for_container(container_id)
     else:
         container_id = create_image_container(media_url, full_caption)
+        log(f"Image container created: {container_id}")
 
     # Publish
     post_id = publish_container(container_id)
@@ -220,10 +260,12 @@ def post_to_instagram():
 
 # ─────────────────────────────────────────────
 # ENTRY POINT
-# ───────────────────────────────────────────
+# ─────────────────────────────────────────────
+
 if __name__ == "__main__":
     try:
         post_to_instagram()
     except Exception as e:
-        log(f"Error: {e}")
+        log(f"❌ Error: {e}")
         raise
+
