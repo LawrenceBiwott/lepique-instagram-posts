@@ -1,0 +1,39 @@
+{
+  "captions": [
+    {
+      "id": 1,
+      "text": "📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi\n📞 0 7 2 1 • 6 7 2 • 9 0 0\n\n👖 LEPIQUE FASHIONS 💙\n\nYour perfect jeans fit is waiting ✨\n\nFrom high-waist, mom jeans, skinny, flare, straight-leg, cargo, boyfriend, bootcut & wide-leg styles — we've got premium denim made to flatter every body type 😍\n\n🔥 New arrivals dropping regularly\n💎 Premium Quality\n💃 Confidence in Every Fit\n\nVisit us today & upgrade your wardrobe with styles made for Nairobi queens 👑",
+      "hashtags": "#LepiqueFashions #NairobiFashion #LadiesJeans #DenimStyle #FashionKenya #MomJeans #WideLegJeans #CargoJeans #WomenFashion #NairobiStyle #KenyanFashion #OOTD #FashionReels #StreetStyle #PlusSizeFashion #JeansFashion #StyleInspo #FashionDaily #viral #fypシ❤️💞❤️",
+      "used": false
+    },
+    {
+      "id": 2,
+      "text": "📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi\n📞 0 7 2 1 • 6 7 2 • 9 0 0\n\n✨ LOOK GOOD. FEEL CONFIDENT. 💙\n\nStep into premium denim that hugs in all the right places 👖🔥\n\nShop:\n✔ High-Waist Jeans\n✔ Straight Fit\n✔ Slim Fit\n✔ Flare & Bootcut\n✔ Boyfriend & Cargo Jeans\n✔ Bodysuits, Vests & Crop Tops\n\nWhether you love casual, classy, or streetwear vibes — Lepique Fashions has your fit ✨\n\n💎 Quality You Can Feel\n💃 Fashion That Fits Beautifully",
+      "hashtags": "#LepiqueFashions #JeansCollection #DenimLover #NairobiFashion #KenyaFashion #HighWaistJeans #CargoStyle #StreetwearFashion #WomenStyle #LadiesFashion #FashionNairobi #DenimWear #OOTDInspo #Fashionista #JeansStyle #NairobiShopping #StyleGoals #FashionGram #viral #kenyantiktok🇰🇪",
+      "used": false
+    },
+    {
+      "id": 3,
+      "text": "📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi\n📞 0 7 2 1 • 6 7 2 • 9 0 0\n\n💙 Nairobi ladies, your dream jeans are here 👖✨\n\nAt Lepique Fashions, we focus on ONE thing — giving you the perfect fit 🔥\n\nFind your favorite:\n✨ High-Waist\n✨ Low-Waist\n✨ Skinny\n✨ Wide-Leg\n✨ Mom Jeans\n✨ Cargo & Hipster Styles\n\nPlus stylish tops, bodysuits, jackets & everyday fashion essentials 💃\n\n💎 Premium Quality\n🔥 Trendy Fits\n😍 Comfortable & Flattering",
+      "hashtags": "#LepiqueFashions #NairobiLadies #JeansStore #DenimFashion #KenyaStyle #FashionStore #LadiesWear #DenimOutfit #FashionDaily #AfricanFashion #StyleInspo #WomenClothing #NairobiKenya #CasualStyle #TrendyFashion #FashionInspo #OOTD #viralreels #foryoupage💙 #fyp",
+      "used": false
+    },
+    {
+      "id": 4,
+      "text": "📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi\n📞 0 7 2 1 • 6 7 2 • 9 0 0\n\n👖 Premium jeans for every shape & every vibe 💙\n\nLooking for quality ladies' jeans in Nairobi?\nLepique Fashions has the styles you'll actually love wearing ✨\n\n🔥 Mom Jeans\n🔥 Wide-Leg\n🔥 Straight Fit\n🔥 Skinny & Slim Fit\n🔥 Bootcut & Flare\n🔥 Cargo & Three-Quarter Jeans\n\nComplete your look with trendy crop tops, bodysuits, denim jackets & more 💃\n\n💎 Great Fit • Quality Fabric • Stylish Finish",
+      "hashtags": "#LepiqueFashions #JeansNairobi #LadiesJeans #FashionKenya #NairobiFashion #DenimLooks #KenyanFashion #WomenFashion #CasualStyle #TrendyFashion #OOTDInspo #FashionReels #DenimStyle #StreetFashion #StyleKenya #FashionStore #JeansStyle #viralvideo #fypシ #NairobiShopping",
+      "used": false
+    },
+    {
+      "id": 5,
+      "text": "📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi\n📞 0 7 2 1 • 6 7 2 • 9 0 0\n\n✨ Denim that makes you stand out 💙\n\nAt Lepique Fashions, we bring you flattering fits, premium quality & trendy styles designed for confident women 👖🔥\n\nShop the latest:\n💃 High-Waist Jeans\n💃 Boyfriend & Cargo Jeans\n💃 Flare & Straight-Leg Styles\n💃 Bodysuits, Vests & Sweatpants\n💃 Denim & Leather Jackets\n\n🔥 New stock available\n📍 Visit our Nairobi store today\n\nYour perfect fit starts here ✨",
+      "hashtags": "#LepiqueFashions #DenimStyle #NairobiFashion #KenyaFashion #LadiesWear #JeansStyle #StreetFashion #FashionStore #WomenClothing #NairobiShopping #DenimLovers #FashionInspo #StyleKenya #OOTD #FashionDaily #JeansCollection #WomenStyle #viral #foryoupage #kenyantiktok",
+      "used": false
+    }
+  ],
+  "_instructions": {
+    "how_to_add": "Add new caption objects to the 'captions' array above. Each caption needs: id (unique number), text (your caption), hashtags (optional), used (always set to false for new ones).",
+    "rotation": "Captions are used in order (1, 2, 3...) and cycle back to the start when all have been used. Set 'used' back to false to reuse a caption.",
+    "media_folder": "Place your photos/videos in the 'media/' folder next to this file. They will be posted in alphabetical order."
+  }
+}
