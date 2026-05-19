@@ -1,6 +1,7 @@
 """
 Instagram Auto-Poster
 Posts photos/videos/Reels automatically to Instagram Feed + Stories.
+Posts newest media first.
 """
 
 import os
@@ -49,6 +50,7 @@ BASE_URL = "https://graph.instagram.com/v19.0"
 def log(message):
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     line = f"[{timestamp}] {message}"
+
     print(line)
 
     with open(LOG_FILE, "a", encoding="utf-8") as f:
@@ -93,7 +95,9 @@ def get_next_caption(state):
         raise ValueError("No captions found in captions.json.")
 
     idx = state.get("caption_index", 0) % len(captions)
+
     caption = captions[idx]
+
     state["caption_index"] = (idx + 1) % len(captions)
 
     return caption
@@ -104,10 +108,6 @@ def get_next_caption(state):
 # ─────────────────────────────────────────────
 
 def get_next_media(state):
-    """
-    Get next media file from the media folder.
-    Includes detailed logs so GitHub Actions shows exactly what it can see.
-    """
 
     log(f"Current working directory: {Path.cwd()}")
     log(f"Script base directory: {BASE_DIR}")
@@ -115,17 +115,22 @@ def get_next_media(state):
 
     if not MEDIA_FOLDER.exists():
         log("⚠️ media folder does not exist.")
-        log("Repository files visible to GitHub Actions:")
 
         for item in sorted(BASE_DIR.iterdir()):
             log(f"Root item: {item.name}")
 
         return None
 
-    all_files = sorted([
-        p for p in MEDIA_FOLDER.iterdir()
-        if p.is_file() and p.suffix.lower() in (IMAGE_EXTS | VIDEO_EXTS)
-    ])
+    # NEWEST → OLDEST
+    all_files = sorted(
+        [
+            p for p in MEDIA_FOLDER.iterdir()
+            if p.is_file()
+            and p.suffix.lower() in (IMAGE_EXTS | VIDEO_EXTS)
+        ],
+        key=lambda p: p.stat().st_mtime,
+        reverse=True
+    )
 
     log(f"Found {len(all_files)} media files in media/")
 
@@ -133,15 +138,12 @@ def get_next_media(state):
         log(f"Detected media file: {f.name}")
 
     if not all_files:
-        log("Files currently inside media/:")
-
-        for item in sorted(MEDIA_FOLDER.iterdir()):
-            log(f"media item: {item.name}")
-
         return None
 
     idx = state.get("media_index", 0) % len(all_files)
+
     media = all_files[idx]
+
     state["media_index"] = (idx + 1) % len(all_files)
 
     return media
@@ -152,11 +154,16 @@ def is_video(path):
 
 
 def build_media_url(media_path):
-    """
-    Build a public GitHub raw URL.
-    quote() handles spaces and special characters in video/photo filenames.
-    """
+
     safe_filename = quote(media_path.name)
+
+    return f"{GITHUB_RAW_BASE}/{safe_filename}"
+
+
+def get_story_media_url(media_path):
+
+    safe_filename = quote(media_path.name)
+
     return f"{GITHUB_RAW_BASE}/{safe_filename}"
 
 
@@ -165,6 +172,7 @@ def build_media_url(media_path):
 # ─────────────────────────────────────────────
 
 def ensure_config():
+
     if not ACCESS_TOKEN:
         raise ValueError("INSTAGRAM_ACCESS_TOKEN missing.")
 
@@ -177,6 +185,7 @@ def ensure_config():
 # ─────────────────────────────────────────────
 
 def create_image_container(image_url, caption):
+
     response = requests.post(
         f"{BASE_URL}/{IG_USER_ID}/media",
         params={
@@ -188,12 +197,14 @@ def create_image_container(image_url, caption):
     )
 
     print(response.text)
+
     response.raise_for_status()
 
     return response.json()["id"]
 
 
 def create_video_container(video_url, caption):
+
     response = requests.post(
         f"{BASE_URL}/{IG_USER_ID}/media",
         params={
@@ -206,24 +217,24 @@ def create_video_container(video_url, caption):
     )
 
     print(response.text)
+
     response.raise_for_status()
 
     return response.json()["id"]
 
 
 def create_story_container(media_url, media_path):
-    """
-    Create an Instagram Story container.
-    Stories do not need captions.
-    """
 
     if is_video(media_path):
+
         params = {
             "media_type": "STORIES",
             "video_url": media_url,
             "access_token": ACCESS_TOKEN
         }
+
     else:
+
         params = {
             "media_type": "STORIES",
             "image_url": media_url,
@@ -237,15 +248,18 @@ def create_story_container(media_url, media_path):
     )
 
     print(response.text)
+
     response.raise_for_status()
 
     return response.json()["id"]
 
 
 def wait_for_container(container_id):
+
     log("Waiting for Instagram processing...")
 
     for _ in range(60):
+
         response = requests.get(
             f"{BASE_URL}/{container_id}",
             params={
@@ -256,9 +270,11 @@ def wait_for_container(container_id):
         )
 
         print(response.text)
+
         response.raise_for_status()
 
         data = response.json()
+
         status = data.get("status_code")
 
         log(f"Container status: {status}")
@@ -275,6 +291,7 @@ def wait_for_container(container_id):
 
 
 def publish_container(container_id):
+
     response = requests.post(
         f"{BASE_URL}/{IG_USER_ID}/media_publish",
         params={
@@ -285,6 +302,7 @@ def publish_container(container_id):
     )
 
     print(response.text)
+
     response.raise_for_status()
 
     return response.json()["id"]
@@ -295,6 +313,7 @@ def publish_container(container_id):
 # ─────────────────────────────────────────────
 
 def post_to_instagram():
+
     ensure_config()
 
     log("─── Starting Instagram post ───")
@@ -303,6 +322,7 @@ def post_to_instagram():
 
     # Caption
     caption_obj = get_next_caption(state)
+
     full_caption = caption_obj["text"]
 
     if caption_obj.get("hashtags"):
@@ -324,11 +344,9 @@ def post_to_instagram():
 
     log(f"Media URL: {media_url}")
 
-    # ─────────────────────────────────────
-    # FEED / REEL POST
-    # ─────────────────────────────────────
-
+    # FEED / REELS
     if is_video(media_path):
+
         log("Uploading video/reel to feed...")
 
         container_id = create_video_container(
@@ -339,6 +357,7 @@ def post_to_instagram():
         wait_for_container(container_id)
 
     else:
+
         log("Uploading image to feed...")
 
         container_id = create_image_container(
@@ -346,7 +365,6 @@ def post_to_instagram():
             full_caption
         )
 
-        # Wait for image processing before publishing
         wait_for_container(container_id)
 
     log(f"Feed Container ID: {container_id}")
@@ -356,15 +374,15 @@ def post_to_instagram():
     log("✅ Successfully posted to Instagram Feed")
     log(f"Instagram Feed Post ID: {post_id}")
 
-    # ─────────────────────────────────────
-    # STORY POST
-    # ─────────────────────────────────────
-
+    # STORIES
     try:
+
         log("Uploading Story...")
 
+        story_media_url = get_story_media_url(media_path)
+
         story_container_id = create_story_container(
-            media_url,
+            story_media_url,
             media_path
         )
 
@@ -378,8 +396,10 @@ def post_to_instagram():
         log(f"Instagram Story Post ID: {story_post_id}")
 
     except Exception as story_error:
-        # Feed post has already succeeded, so do not fail the whole run if Story fails.
-        log(f"⚠️ Story upload failed, but feed post succeeded: {story_error}")
+
+        log(
+            f"⚠️ Story upload failed, but feed post succeeded: {story_error}"
+        )
 
     save_state(state)
 
@@ -389,9 +409,12 @@ def post_to_instagram():
 # ─────────────────────────────────────────────
 
 if __name__ == "__main__":
+
     try:
         post_to_instagram()
 
     except Exception as e:
+
         log(f"❌ Error: {e}")
+
         raise
