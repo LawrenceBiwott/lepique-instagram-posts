@@ -1,6 +1,6 @@
 """
 Instagram Auto-Poster
-Posts photos/videos/Reels automatically to Instagram.
+Posts photos/videos/Reels automatically to Instagram Feed + Stories.
 """
 
 import os
@@ -211,6 +211,37 @@ def create_video_container(video_url, caption):
     return response.json()["id"]
 
 
+def create_story_container(media_url, media_path):
+    """
+    Create an Instagram Story container.
+    Stories do not need captions.
+    """
+
+    if is_video(media_path):
+        params = {
+            "media_type": "STORIES",
+            "video_url": media_url,
+            "access_token": ACCESS_TOKEN
+        }
+    else:
+        params = {
+            "media_type": "STORIES",
+            "image_url": media_url,
+            "access_token": ACCESS_TOKEN
+        }
+
+    response = requests.post(
+        f"{BASE_URL}/{IG_USER_ID}/media",
+        params=params,
+        timeout=30
+    )
+
+    print(response.text)
+    response.raise_for_status()
+
+    return response.json()["id"]
+
+
 def wait_for_container(container_id):
     log("Waiting for Instagram processing...")
 
@@ -293,9 +324,12 @@ def post_to_instagram():
 
     log(f"Media URL: {media_url}")
 
-    # Create container
+    # ─────────────────────────────────────
+    # FEED / REEL POST
+    # ─────────────────────────────────────
+
     if is_video(media_path):
-        log("Uploading video/reel...")
+        log("Uploading video/reel to feed...")
 
         container_id = create_video_container(
             media_url,
@@ -305,7 +339,7 @@ def post_to_instagram():
         wait_for_container(container_id)
 
     else:
-        log("Uploading image...")
+        log("Uploading image to feed...")
 
         container_id = create_image_container(
             media_url,
@@ -315,13 +349,37 @@ def post_to_instagram():
         # Wait for image processing before publishing
         wait_for_container(container_id)
 
-    log(f"Container ID: {container_id}")
+    log(f"Feed Container ID: {container_id}")
 
-    # Publish
     post_id = publish_container(container_id)
 
-    log("✅ Successfully posted to Instagram")
-    log(f"Instagram Post ID: {post_id}")
+    log("✅ Successfully posted to Instagram Feed")
+    log(f"Instagram Feed Post ID: {post_id}")
+
+    # ─────────────────────────────────────
+    # STORY POST
+    # ─────────────────────────────────────
+
+    try:
+        log("Uploading Story...")
+
+        story_container_id = create_story_container(
+            media_url,
+            media_path
+        )
+
+        log(f"Story Container ID: {story_container_id}")
+
+        wait_for_container(story_container_id)
+
+        story_post_id = publish_container(story_container_id)
+
+        log("✅ Successfully posted Instagram Story")
+        log(f"Instagram Story Post ID: {story_post_id}")
+
+    except Exception as story_error:
+        # Feed post has already succeeded, so do not fail the whole run if Story fails.
+        log(f"⚠️ Story upload failed, but feed post succeeded: {story_error}")
 
     save_state(state)
 
