@@ -39,7 +39,7 @@ IMAGE_EXTS = {".jpg", ".jpeg", ".png"}
 VIDEO_EXTS = {".mp4", ".mov"}
 
 # Instagram API
-BASE_URL = "https://graph.facebook.com/v19.0"
+BASE_URL = "https://graph.instagram.com/v19.0"
 
 
 # ─────────────────────────────────────────────
