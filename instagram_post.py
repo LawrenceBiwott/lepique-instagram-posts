@@ -312,6 +312,9 @@ def post_to_instagram():
             full_caption
         )
 
+        # Wait for image processing before publishing
+        wait_for_container(container_id)
+
     log(f"Container ID: {container_id}")
 
     # Publish
