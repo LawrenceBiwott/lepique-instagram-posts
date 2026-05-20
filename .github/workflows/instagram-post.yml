@@ -24,7 +24,7 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install requests
+        run: pip install requests Pillow
 
       - name: Run Instagram poster
         env:
@@ -43,6 +43,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
+          git rm -f media/story_temp.jpg 2>/dev/null || true
           git add state.json post_log.txt
 
           git diff --cached --quiet || git commit -m "chore: update post state [skip ci]"
