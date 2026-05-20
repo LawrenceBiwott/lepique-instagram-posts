@@ -2,17 +2,17 @@ name: Instagram Auto-Poster
 
 on:
   schedule:
-    # Runs every hour at :00
+    # Runs every hour at minute 0
     - cron: "0 * * * *"
+
   workflow_dispatch:
-    # Allows you to trigger a post manually from the GitHub Actions tab
 
 jobs:
   post:
     runs-on: ubuntu-latest
 
     permissions:
-      contents: write  # needed to commit state.json back to the repo
+      contents: write
 
     steps:
       - name: Checkout repository
@@ -30,15 +30,21 @@ jobs:
         env:
           INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
           INSTAGRAM_USER_ID: ${{ secrets.INSTAGRAM_USER_ID }}
+
           FB_PAGE_ACCESS_TOKEN: ${{ secrets.FB_PAGE_ACCESS_TOKEN }}
           FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+
           MEDIA_BASE_URL: "https://raw.githubusercontent.com/${{ github.repository }}/main/media"
-        run: python instagram_post.py
+
+        run: python instagram_poster.py
 
       - name: Save updated state back to repo
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+
           git add state.json post_log.txt
+
           git diff --cached --quiet || git commit -m "chore: update post state [skip ci]"
+
           git push
