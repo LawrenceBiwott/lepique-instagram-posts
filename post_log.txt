@@ -1,0 +1,30 @@
+[2026-05-20 08:47:17] --- Starting Instagram + Facebook post ---
+[2026-05-20 08:47:17] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-05-20 08:47:17] Current working directory: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts
+[2026-05-20 08:47:17] Script base directory: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts
+[2026-05-20 08:47:17] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-05-20 08:47:17] Found 41 media files in media/
+[2026-05-20 08:47:17]   Detected: e7fb1722-e47a-403b-9c74-94cc92e711d0.jpeg
+[2026-05-20 08:47:17]   Detected: e02ed965-eeb6-457d-8647-de7dfe893bc5.jpeg
+[2026-05-20 08:47:17]   Detected: e00da383-6a69-4703-ab44-0faebb0d2f36.jpeg
+[2026-05-20 08:47:17]   Detected: d2a11aed-5781-40a6-a008-1b1800069e16.jpeg
+[2026-05-20 08:47:17]   Detected: d61799f0-a259-4daf-b31c-78387c0b9de3.jpg
+[2026-05-20 08:47:17] Selected media: e02ed965-eeb6-457d-8647-de7dfe893bc5.jpeg
+[2026-05-20 08:47:17] Media URL: https://raw.githubusercontent.com/LawrenceBiwott/lepique-instagram-posts/main/media/e02ed965-eeb6-457d-8647-de7dfe893bc5.jpeg
+[2026-05-20 08:47:17] Uploading image to Instagram...
+[2026-05-20 08:47:19] Waiting for Instagram processing...
+[2026-05-20 08:47:19] Container status: IN_PROGRESS
+[2026-05-20 08:47:25] Container status: FINISHED
+[2026-05-20 08:47:25] Container ID: 18530839129073384
+[2026-05-20 08:47:27] ✅ Instagram feed post successful! ID: 17898649728450051
+[2026-05-20 08:47:27] Posting to Instagram Stories...
+[2026-05-20 08:47:29] Waiting for Instagram processing...
+[2026-05-20 08:47:29] Container status: IN_PROGRESS
+[2026-05-20 08:47:35] Container status: FINISHED
+[2026-05-20 08:47:36] ✅ Instagram Story posted! ID: 18107725817483594
+[2026-05-20 08:47:36] --- Posting to Facebook ---
+[2026-05-20 08:47:36] Uploading photo to Facebook feed...
+[2026-05-20 08:47:38] ⚠️ Facebook feed post failed: 403 Client Error: Forbidden for url: https://graph.facebook.com/v21.0/1889041611321657/photos?url=https%3A%2F%2Fraw.githubusercontent.com%2FLawrenceBiwott%2Flepique-instagram-posts%2Fmain%2Fmedia%2Fe02ed965-eeb6-457d-8647-de7dfe893bc5.jpeg&caption=%F0%9F%93%8D+Platinum+Plaza%2C+Ground+Floor%2C+Shop+G16+%E2%80%93+Tom+Mboya+Street%2C+Nairobi%0A%F0%9F%93%9E+0+7+2+1+%E2%80%A2+6+7+2+%E2%80%A2+9+0+0%0A%0A%F0%9F%91%96+Premium+jeans+for+every+shape+%26+every+vibe+%F0%9F%92%99%0A%0ALooking+for+quality+ladies%27+jeans+in+Nairobi%3F%0ALepique+Fashions+has+the+styles+you%27ll+actually+love+wearing+%E2%9C%A8%0A%0A%F0%9F%94%A5+Mom+Jeans%0A%F0%9F%94%A5+Wide-Leg%0A%F0%9F%94%A5+Straight+Fit%0A%F0%9F%94%A5+Skinny+%26+Slim+Fit%0A%F0%9F%94%A5+Bootcut+%26+Flare%0A%F0%9F%94%A5+Cargo+%26+Three-Quarter+Jeans%0A%0AComplete+your+look+with+trendy+crop+tops%2C+bodysuits%2C+denim+jackets+%26+more+%F0%9F%92%83%0A%0A%F0%9F%92%8E+Great+Fit+%E2%80%A2+Quality+Fabric+%E2%80%A2+Stylish+Finish%0A%0A%23LepiqueFashions+%23JeansNairobi+%23LadiesJeans+%23FashionKenya+%23NairobiFashion+%23DenimLooks+%23KenyanFashion+%23WomenFashion+%23CasualStyle+%23TrendyFashion+%23OOTDInspo+%23FashionReels+%23DenimStyle+%23StreetFashion+%23StyleKenya+%23FashionStore+%23JeansStyle+%23viralvideo+%23fyp%E3%82%B7+%23NairobiShopping&access_token=EAAoPvY2rIhYBRsFJL61kXp2EghUAl4eZCVuu7ZAMOFkMmBlTfxbt4Sa56B5YxQYu5bmySTeeffZCRyiXmCIYZAg0hXbI9UJrpzDxGxZBaKeEKbapdOgZBHJQDNKL8gXnzaRd7xUv6e2Kq8gKLGq3837nHZA8kEHODnZAL4JKqpu1zJUrftJVqT2PuYBWK7ggXC1U4cO5mDcHC7VUZB2DpaYgTTVzbKzvnGKpLvO8evf6N4wgQWoR31UYVxrbUL9TZC6OUZBWQFJa8iuggrlXHU5j2TCwehxbaMycIWjX7EpzQZDZD
+[2026-05-20 08:47:38] Posting photo to Facebook Stories...
+[2026-05-20 08:47:38] ⚠️ Facebook Story post failed: 403 Client Error: Forbidden for url: https://graph.facebook.com/v21.0/1889041611321657/photos?url=https%3A%2F%2Fraw.githubusercontent.com%2FLawrenceBiwott%2Flepique-instagram-posts%2Fmain%2Fmedia%2Fe02ed965-eeb6-457d-8647-de7dfe893bc5.jpeg&published=false&temporary=true&access_token=EAAoPvY2rIhYBRsFJL61kXp2EghUAl4eZCVuu7ZAMOFkMmBlTfxbt4Sa56B5YxQYu5bmySTeeffZCRyiXmCIYZAg0hXbI9UJrpzDxGxZBaKeEKbapdOgZBHJQDNKL8gXnzaRd7xUv6e2Kq8gKLGq3837nHZA8kEHODnZAL4JKqpu1zJUrftJVqT2PuYBWK7ggXC1U4cO5mDcHC7VUZB2DpaYgTTVzbKzvnGKpLvO8evf6N4wgQWoR31UYVxrbUL9TZC6OUZBWQFJa8iuggrlXHU5j2TCwehxbaMycIWjX7EpzQZDZD
