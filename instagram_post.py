@@ -96,11 +96,33 @@ def get_next_media(state):
             log(f"  Root item: {item.name}")
         return None
 
-    all_files = sorted([
-        p for p in MEDIA_FOLDER.iterdir()
-        if p.is_file() and p.suffix.lower() in (IMAGE_EXTS | VIDEO_EXTS)
-    ], key=lambda p: p.stat().st_mtime, reverse=True)  # newest first
-    log(f"Found {len(all_files)} media files in media/")
+    # Order by git commit history — newest file added to repo posts first
+    import subprocess
+    all_files = []
+    try:
+        result = subprocess.run(
+            ["git", "log", "--diff-filter=A", "--name-only", "--format=", "--", "media/"],
+            capture_output=True, text=True, cwd=BASE_DIR
+        )
+        for line in result.stdout.strip().split("\n"):
+            line = line.strip()
+            if line:
+                fname = Path(line).name
+                fpath = MEDIA_FOLDER / fname
+                if fpath.exists() and fpath.suffix.lower() in (IMAGE_EXTS | VIDEO_EXTS):
+                    if fpath not in all_files:
+                        all_files.append(fpath)
+        if all_files:
+            log(f"Found {len(all_files)} media files (newest-first by git history)")
+        else:
+            raise Exception("Git log returned no results")
+    except Exception as e:
+        log(f"Git ordering unavailable ({e}), falling back to mtime sort")
+        all_files = sorted([
+            p for p in MEDIA_FOLDER.iterdir()
+            if p.is_file() and p.suffix.lower() in (IMAGE_EXTS | VIDEO_EXTS)
+        ], key=lambda p: p.stat().st_mtime, reverse=True)
+        log(f"Found {len(all_files)} media files in media/")
     for f in all_files[:5]:
         log(f"  Detected: {f.name}")
 
