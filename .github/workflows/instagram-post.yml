@@ -36,7 +36,7 @@ jobs:
 
           MEDIA_BASE_URL: "https://raw.githubusercontent.com/${{ github.repository }}/main/media"
 
-        run: python instagram_poster.py
+        run: python instagram_post.py
 
       - name: Save updated state back to repo
         run: |
