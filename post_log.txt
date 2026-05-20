@@ -146,3 +146,33 @@
 [2026-05-20 18:20:14] ⚠️ Facebook feed post failed: 403 Client Error: Forbidden for url: https://graph.facebook.com/v21.0/1889041611321657/photos?url=https%3A%2F%2Fraw.githubusercontent.com%2FLawrenceBiwott%2Flepique-instagram-posts%2Fmain%2Fmedia%2Fd06b06f9-6a8f-48d9-bf60-757f670a5480.jpeg&caption=%F0%9F%93%8D+Platinum+Plaza%2C+Ground+Floor%2C+Shop+G16+%E2%80%93+Tom+Mboya+Street%2C+Nairobi%0A%F0%9F%93%9E+0+7+2+1+%E2%80%A2+6+7+2+%E2%80%A2+9+0+0%0A%0A%F0%9F%92%99+Nairobi+ladies%2C+your+dream+jeans+are+here+%F0%9F%91%96%E2%9C%A8%0A%0AAt+Lepique+Fashions%2C+we+focus+on+ONE+thing+%E2%80%94+giving+you+the+perfect+fit+%F0%9F%94%A5%0A%0AFind+your+favorite%3A%0A%E2%9C%A8+High-Waist%0A%E2%9C%A8+Low-Waist%0A%E2%9C%A8+Skinny%0A%E2%9C%A8+Wide-Leg%0A%E2%9C%A8+Mom+Jeans%0A%E2%9C%A8+Cargo+%26+Hipster+Styles%0A%0APlus+stylish+tops%2C+bodysuits%2C+jackets+%26+everyday+fashion+essentials+%F0%9F%92%83%0A%0A%F0%9F%92%8E+Premium+Quality%0A%F0%9F%94%A5+Trendy+Fits%0A%F0%9F%98%8D+Comfortable+%26+Flattering%0A%0A%23LepiqueFashions+%23NairobiLadies+%23JeansStore+%23DenimFashion+%23KenyaStyle+%23FashionStore+%23LadiesWear+%23DenimOutfit+%23FashionDaily+%23AfricanFashion+%23StyleInspo+%23WomenClothing+%23NairobiKenya+%23CasualStyle+%23TrendyFashion+%23FashionInspo+%23OOTD+%23viralreels+%23foryoupage%F0%9F%92%99+%23fyp&access_token=EAAoPvY2rIhYBRmIIiUpk3tRmOoZAItjRZCQZBy6vb4JxhdDBjwVS9RxyhpmMXW5ZBUZAQrqQpgKnWANYeiyqaIYRkSkbBu9uZATaoePNzQxJiTctcBCcNqt3gvvFxwNZA0DTRxK4gh7wT6E7Fu9ofsrfUF5ft1QJHzL9ePYIIiZBFBOx08jOz5IBG1JFtIHYxAZAFvgP6PQN7itkNhkHJLVpgZCo4SIGGx0ZAaZADaLonSFc0426gTueOUeOEqggFy4tGsC0wKjpqlJWK1GocIquWKWcXw8pfTD2mgZDZD
 [2026-05-20 18:20:14] Posting photo to Facebook Stories...
 [2026-05-20 18:20:15] ⚠️ Facebook Story post failed: 403 Client Error: Forbidden for url: https://graph.facebook.com/v21.0/1889041611321657/photos?url=https%3A%2F%2Fraw.githubusercontent.com%2FLawrenceBiwott%2Flepique-instagram-posts%2Fmain%2Fmedia%2Fd06b06f9-6a8f-48d9-bf60-757f670a5480.jpeg&published=false&temporary=true&access_token=EAAoPvY2rIhYBRmIIiUpk3tRmOoZAItjRZCQZBy6vb4JxhdDBjwVS9RxyhpmMXW5ZBUZAQrqQpgKnWANYeiyqaIYRkSkbBu9uZATaoePNzQxJiTctcBCcNqt3gvvFxwNZA0DTRxK4gh7wT6E7Fu9ofsrfUF5ft1QJHzL9ePYIIiZBFBOx08jOz5IBG1JFtIHYxAZAFvgP6PQN7itkNhkHJLVpgZCo4SIGGx0ZAaZADaLonSFc0426gTueOUeOEqggFy4tGsC0wKjpqlJWK1GocIquWKWcXw8pfTD2mgZDZD
+[2026-05-20 18:29:20] --- Starting Instagram + Facebook post ---
+[2026-05-20 18:29:20] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-05-20 18:29:20] Current working directory: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts
+[2026-05-20 18:29:20] Script base directory: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts
+[2026-05-20 18:29:20] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-05-20 18:29:20] Found 41 media files in media/
+[2026-05-20 18:29:20]   Detected: e02ed965-eeb6-457d-8647-de7dfe893bc5.jpeg
+[2026-05-20 18:29:20]   Detected: e7fb1722-e47a-403b-9c74-94cc92e711d0.jpeg
+[2026-05-20 18:29:20]   Detected: e00da383-6a69-4703-ab44-0faebb0d2f36.jpeg
+[2026-05-20 18:29:20]   Detected: d61799f0-a259-4daf-b31c-78387c0b9de3.jpg
+[2026-05-20 18:29:20]   Detected: d2a11aed-5781-40a6-a008-1b1800069e16.jpeg
+[2026-05-20 18:29:20] Selected media: ccf1507d-83de-4e1c-9557-2292d8e49bc2.jpeg
+[2026-05-20 18:29:20] Media URL: https://raw.githubusercontent.com/LawrenceBiwott/lepique-instagram-posts/main/media/ccf1507d-83de-4e1c-9557-2292d8e49bc2.jpeg
+[2026-05-20 18:29:20] Uploading image to Instagram...
+[2026-05-20 18:29:23] Waiting for Instagram processing...
+[2026-05-20 18:29:23] Container status: IN_PROGRESS
+[2026-05-20 18:29:28] Container status: FINISHED
+[2026-05-20 18:29:28] Container ID: 18530949235073384
+[2026-05-20 18:29:30] ✅ Instagram feed post successful! ID: 18088296161347342
+[2026-05-20 18:29:30] Posting to Instagram Stories...
+[2026-05-20 18:29:31] Waiting for Instagram processing...
+[2026-05-20 18:29:32] Container status: IN_PROGRESS
+[2026-05-20 18:29:37] Container status: FINISHED
+[2026-05-20 18:29:38] ✅ Instagram Story posted! ID: 17945092257015882
+[2026-05-20 18:29:38] --- Posting to Facebook ---
+[2026-05-20 18:29:38] Uploading photo to Facebook feed...
+[2026-05-20 18:29:45] ✅ Facebook feed post successful! ID: 1889041611321657_1401856405310738
+[2026-05-20 18:29:45] Posting photo to Facebook Stories...
+[2026-05-20 18:29:54] ✅ Facebook Story posted! ID: 881846021596353
