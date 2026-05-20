@@ -6,6 +6,7 @@ and to Facebook Page feed & Stories.
 import os
 import json
 import time
+import subprocess
 import requests
 from datetime import datetime
 from pathlib import Path
@@ -97,7 +98,6 @@ def get_next_media(state):
         return None
 
     # Order by git commit history — newest file added to repo posts first
-    import subprocess
     all_files = []
     try:
         result = subprocess.run(
@@ -220,6 +220,72 @@ def publish_container(container_id):
     print(response.text)
     response.raise_for_status()
     return response.json()["id"]
+
+def prepare_story_image(media_path):
+    """
+    Resize an image to 9:16 (1080x1920) with a blurred background fill,
+    commit it to GitHub as media/story_temp.jpg, wait for CDN, and return
+    its public raw URL.  Falls back to the original feed URL on any error.
+    """
+    original_url = build_media_url(media_path)
+    try:
+        from PIL import Image, ImageFilter
+        import io
+
+        STORY_W, STORY_H = 1080, 1920
+
+        img = Image.open(media_path).convert("RGB")
+        orig_w, orig_h = img.size
+
+        # Already 9:16 — nothing to do
+        if orig_w == STORY_W and orig_h == STORY_H:
+            log("Story image already 9:16 — skipping resize.")
+            return original_url
+
+        # Scale the image to fit inside 1080×1920
+        scale = min(STORY_W / orig_w, STORY_H / orig_h)
+        fg_w = int(orig_w * scale)
+        fg_h = int(orig_h * scale)
+        foreground = img.resize((fg_w, fg_h), Image.LANCZOS)
+
+        # Build blurred background: scale to fill, then blur
+        bg_scale = max(STORY_W / orig_w, STORY_H / orig_h)
+        bg_w = int(orig_w * bg_scale)
+        bg_h = int(orig_h * bg_scale)
+        background = img.resize((bg_w, bg_h), Image.LANCZOS)
+        background = background.filter(ImageFilter.GaussianBlur(radius=30))
+
+        # Crop background to exact canvas size
+        left = (bg_w - STORY_W) // 2
+        top  = (bg_h - STORY_H) // 2
+        background = background.crop((left, top, left + STORY_W, top + STORY_H))
+
+        # Paste foreground centred on background
+        paste_x = (STORY_W - fg_w) // 2
+        paste_y = (STORY_H - fg_h) // 2
+        background.paste(foreground, (paste_x, paste_y))
+
+        story_path = MEDIA_FOLDER / "story_temp.jpg"
+        background.save(story_path, "JPEG", quality=92)
+        log(f"Story image resized to {STORY_W}×{STORY_H} → {story_path.name}")
+
+        # Commit the temp file to GitHub so it's publicly accessible
+        subprocess.run(["git", "config", "user.name", "github-actions[bot]"], cwd=BASE_DIR, check=True)
+        subprocess.run(["git", "config", "user.email", "github-actions[bot]@users.noreply.github.com"], cwd=BASE_DIR, check=True)
+        subprocess.run(["git", "add", str(story_path)], cwd=BASE_DIR, check=True)
+        subprocess.run(["git", "commit", "-m", "chore: add story temp image [skip ci]"], cwd=BASE_DIR, check=True)
+        subprocess.run(["git", "push"], cwd=BASE_DIR, check=True)
+        log("story_temp.jpg pushed to GitHub. Waiting 15 s for CDN…")
+        time.sleep(15)
+
+        story_url = f"{GITHUB_RAW_BASE}/story_temp.jpg"
+        log(f"Story URL: {story_url}")
+        return story_url
+
+    except Exception as e:
+        log(f"⚠️ Story image resize failed ({e}) — using original feed image for Story.")
+        return original_url
+
 
 def create_ig_story_container(media_url, is_video_file):
     """Create an Instagram Stories container."""
@@ -417,7 +483,8 @@ def post_to_instagram():
     log(f"✅ Instagram feed post successful! ID: {post_id}")
 
     # ── Instagram Stories ──
-    post_ig_story(media_url, video_file)
+    story_url = prepare_story_image(media_path) if not video_file else media_url
+    post_ig_story(story_url, video_file)
 
     # ── Facebook feed + Stories ──
     post_to_facebook(media_url, full_caption, video_file)
