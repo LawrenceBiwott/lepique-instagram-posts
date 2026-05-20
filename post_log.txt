@@ -58,3 +58,32 @@
 [2026-05-20 13:27:37] ✅ Facebook feed post successful! ID: 1889041611321657_1401644558665256
 [2026-05-20 13:27:37] Posting photo to Facebook Stories...
 [2026-05-20 13:27:43] ✅ Facebook Story posted! ID: 1587337859625077
+[2026-05-20 18:03:46] --- Starting Instagram + Facebook post ---
+[2026-05-20 18:03:46] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-05-20 18:03:46] Current working directory: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts
+[2026-05-20 18:03:46] Script base directory: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts
+[2026-05-20 18:03:46] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-05-20 18:03:46] Found 41 media files in media/
+[2026-05-20 18:03:46]   Detected: e02ed965-eeb6-457d-8647-de7dfe893bc5.jpeg
+[2026-05-20 18:03:46]   Detected: e7fb1722-e47a-403b-9c74-94cc92e711d0.jpeg
+[2026-05-20 18:03:46]   Detected: e00da383-6a69-4703-ab44-0faebb0d2f36.jpeg
+[2026-05-20 18:03:46]   Detected: d61799f0-a259-4daf-b31c-78387c0b9de3.jpg
+[2026-05-20 18:03:46]   Detected: d2a11aed-5781-40a6-a008-1b1800069e16.jpeg
+[2026-05-20 18:03:46] Selected media: d61799f0-a259-4daf-b31c-78387c0b9de3.jpg
+[2026-05-20 18:03:46] Media URL: https://raw.githubusercontent.com/LawrenceBiwott/lepique-instagram-posts/main/media/d61799f0-a259-4daf-b31c-78387c0b9de3.jpg
+[2026-05-20 18:03:46] Uploading image to Instagram...
+[2026-05-20 18:03:50] Waiting for Instagram processing...
+[2026-05-20 18:03:50] Container status: FINISHED
+[2026-05-20 18:03:50] Container ID: 18530945476073384
+[2026-05-20 18:03:53] ✅ Instagram feed post successful! ID: 18093381464593843
+[2026-05-20 18:03:53] Posting to Instagram Stories...
+[2026-05-20 18:03:55] Waiting for Instagram processing...
+[2026-05-20 18:03:56] Container status: IN_PROGRESS
+[2026-05-20 18:04:01] Container status: FINISHED
+[2026-05-20 18:04:03] ✅ Instagram Story posted! ID: 18081092444322221
+[2026-05-20 18:04:03] --- Posting to Facebook ---
+[2026-05-20 18:04:03] Uploading photo to Facebook feed...
+[2026-05-20 18:04:04] ⚠️ Facebook feed post failed: 403 Client Error: Forbidden for url: https://graph.facebook.com/v21.0/1889041611321657/photos?url=https%3A%2F%2Fraw.githubusercontent.com%2FLawrenceBiwott%2Flepique-instagram-posts%2Fmain%2Fmedia%2Fd61799f0-a259-4daf-b31c-78387c0b9de3.jpg&caption=%F0%9F%93%8D+Platinum+Plaza%2C+Ground+Floor%2C+Shop+G16+%E2%80%93+Tom+Mboya+Street%2C+Nairobi%0A%F0%9F%93%9E+0+7+2+1+%E2%80%A2+6+7+2+%E2%80%A2+9+0+0%0A%0A%F0%9F%91%96+LEPIQUE+FASHIONS+%F0%9F%92%99%0A%0AYour+perfect+jeans+fit+is+waiting+%E2%9C%A8%0A%0AFrom+high-waist%2C+mom+jeans%2C+skinny%2C+flare%2C+straight-leg%2C+cargo%2C+boyfriend%2C+bootcut+%26+wide-leg+styles+%E2%80%94+we%27ve+got+premium+denim+made+to+flatter+every+body+type+%F0%9F%98%8D%0A%0A%F0%9F%94%A5+New+arrivals+dropping+regularly%0A%F0%9F%92%8E+Premium+Quality%0A%F0%9F%92%83+Confidence+in+Every+Fit%0A%0AVisit+us+today+%26+upgrade+your+wardrobe+with+styles+made+for+Nairobi+queens+%F0%9F%91%91%0A%0A%23LepiqueFashions+%23NairobiFashion+%23LadiesJeans+%23DenimStyle+%23FashionKenya+%23MomJeans+%23WideLegJeans+%23CargoJeans+%23WomenFashion+%23NairobiStyle+%23KenyanFashion+%23OOTD+%23FashionReels+%23StreetStyle+%23PlusSizeFashion+%23JeansFashion+%23StyleInspo+%23FashionDaily+%23viral+%23fyp%E3%82%B7%E2%9D%A4%EF%B8%8F%F0%9F%92%9E%E2%9D%A4%EF%B8%8F&access_token=EAAoPvY2rIhYBRpb9Bxs8ULUHUJSmjr79euNGAZBCdm9rKSCWG7JHT2TOqZC2kPjtcaV8thvdK7qdTuyZCeXLjZBrFPh89hyLaygcBRlnvD8UfUPiawxR7kVmZBZAsg2ZB474kuOrsPDh0d9Tq6Bdow7ZBxPfSqSbEVxwyluIDFEZAjNCbfJ4kWZBAb1lyLBwYgYw1IZALv4jfrXjdOdzv8t8Btth3E1Br7ZB9fUuT6towIJXkLjTtcm5jno9YIxTxGP75tG9ZA4rs9HRZA7BVhFJvsbnug3xueCmf5V0PN50epbgZDZD
+[2026-05-20 18:04:04] Posting photo to Facebook Stories...
+[2026-05-20 18:04:04] ⚠️ Facebook Story post failed: 403 Client Error: Forbidden for url: https://graph.facebook.com/v21.0/1889041611321657/photos?url=https%3A%2F%2Fraw.githubusercontent.com%2FLawrenceBiwott%2Flepique-instagram-posts%2Fmain%2Fmedia%2Fd61799f0-a259-4daf-b31c-78387c0b9de3.jpg&published=false&temporary=true&access_token=EAAoPvY2rIhYBRpb9Bxs8ULUHUJSmjr79euNGAZBCdm9rKSCWG7JHT2TOqZC2kPjtcaV8thvdK7qdTuyZCeXLjZBrFPh89hyLaygcBRlnvD8UfUPiawxR7kVmZBZAsg2ZB474kuOrsPDh0d9Tq6Bdow7ZBxPfSqSbEVxwyluIDFEZAjNCbfJ4kWZBAb1lyLBwYgYw1IZALv4jfrXjdOdzv8t8Btth3E1Br7ZB9fUuT6towIJXkLjTtcm5jno9YIxTxGP75tG9ZA4rs9HRZA7BVhFJvsbnug3xueCmf5V0PN50epbgZDZD
