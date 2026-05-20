@@ -43,6 +43,9 @@ VIDEO_EXTS = {".mp4", ".mov"}
 IG_BASE_URL = "https://graph.instagram.com/v21.0"
 FB_BASE_URL = "https://graph.facebook.com/v21.0"
 
+# Minimum minutes between posts (prevents double-posting when cron runs every 10 min)
+MIN_POST_INTERVAL_MINUTES = 55
+
 # ─────────────────────────────────────────────
 # LOGGING
 # ─────────────────────────────────────────────
@@ -447,9 +450,18 @@ def post_to_facebook(media_url, caption, is_video_file):
 # ─────────────────────────────────────────────
 def post_to_instagram():
     ensure_config()
-    log("--- Starting Instagram + Facebook post ---")
 
     state = load_state()
+
+    # ── Interval guard: skip if posted too recently ──
+    last_post_time = state.get("last_post_time")
+    if last_post_time:
+        elapsed = (datetime.utcnow() - datetime.fromisoformat(last_post_time)).total_seconds() / 60
+        if elapsed < MIN_POST_INTERVAL_MINUTES:
+            log(f"⏭ Skipping — last post was {elapsed:.0f} min ago (next post in ~{MIN_POST_INTERVAL_MINUTES - elapsed:.0f} min).")
+            return
+
+    log("--- Starting Instagram + Facebook post ---")
 
     caption_obj = get_next_caption(state)
     full_caption = caption_obj["text"]
@@ -489,7 +501,10 @@ def post_to_instagram():
     # ── Facebook feed + Stories ──
     post_to_facebook(media_url, full_caption, video_file)
 
+    # Record successful post time so the interval guard works correctly
+    state["last_post_time"] = datetime.utcnow().isoformat()
     save_state(state)
+    log("✅ All done. State saved.")
 
 # ─────────────────────────────────────────────
 # ENTRY POINT
