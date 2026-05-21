@@ -226,14 +226,15 @@ def publish_container(container_id):
 
 def prepare_story_image(media_path):
     """
-    Resize an image to 9:16 (1080x1920) with a blurred background fill,
-    commit it to GitHub as media/story_temp.jpg, wait for CDN, and return
-    its public raw URL.  Falls back to the original feed URL on any error.
+    Resize image to 9:16 (1080x1920) with blurred background fill,
+    commit to GitHub as media/story_temp.jpg, wait for CDN, return URL.
+    Falls back to original feed URL on any error.
+    The workflow's final step does git pull --rebase before pushing,
+    so this mid-run commit no longer conflicts with the state save.
     """
     original_url = build_media_url(media_path)
     try:
         from PIL import Image, ImageFilter
-        import io
 
         STORY_W, STORY_H = 1080, 1920
 
@@ -245,40 +246,38 @@ def prepare_story_image(media_path):
             log("Story image already 9:16 — skipping resize.")
             return original_url
 
-        # Scale the image to fit inside 1080×1920
+        # Scale foreground to fit inside canvas
         scale = min(STORY_W / orig_w, STORY_H / orig_h)
         fg_w = int(orig_w * scale)
         fg_h = int(orig_h * scale)
         foreground = img.resize((fg_w, fg_h), Image.LANCZOS)
 
-        # Build blurred background: scale to fill, then blur
+        # Blurred background: scale to fill, blur, crop
         bg_scale = max(STORY_W / orig_w, STORY_H / orig_h)
         bg_w = int(orig_w * bg_scale)
         bg_h = int(orig_h * bg_scale)
         background = img.resize((bg_w, bg_h), Image.LANCZOS)
         background = background.filter(ImageFilter.GaussianBlur(radius=30))
-
-        # Crop background to exact canvas size
         left = (bg_w - STORY_W) // 2
         top  = (bg_h - STORY_H) // 2
         background = background.crop((left, top, left + STORY_W, top + STORY_H))
 
-        # Paste foreground centred on background
+        # Paste foreground centred
         paste_x = (STORY_W - fg_w) // 2
         paste_y = (STORY_H - fg_h) // 2
         background.paste(foreground, (paste_x, paste_y))
 
         story_path = MEDIA_FOLDER / "story_temp.jpg"
         background.save(story_path, "JPEG", quality=92)
-        log(f"Story image resized to {STORY_W}×{STORY_H} → {story_path.name}")
+        log(f"Story image resized to {STORY_W}x{STORY_H} -> story_temp.jpg")
 
-        # Commit the temp file to GitHub so it's publicly accessible
+        # Commit and push — workflow final step uses git pull --rebase to handle this
         subprocess.run(["git", "config", "user.name", "github-actions[bot]"], cwd=BASE_DIR, check=True)
         subprocess.run(["git", "config", "user.email", "github-actions[bot]@users.noreply.github.com"], cwd=BASE_DIR, check=True)
         subprocess.run(["git", "add", str(story_path)], cwd=BASE_DIR, check=True)
-        subprocess.run(["git", "commit", "-m", "chore: add story temp image [skip ci]"], cwd=BASE_DIR, check=True)
+        subprocess.run(["git", "commit", "-m", "chore: story temp image [skip ci]"], cwd=BASE_DIR, check=True)
         subprocess.run(["git", "push"], cwd=BASE_DIR, check=True)
-        log("story_temp.jpg pushed to GitHub. Waiting 15 s for CDN…")
+        log("story_temp.jpg pushed. Waiting 15s for CDN...")
         time.sleep(15)
 
         story_url = f"{GITHUB_RAW_BASE}/story_temp.jpg"
@@ -286,7 +285,7 @@ def prepare_story_image(media_path):
         return story_url
 
     except Exception as e:
-        log(f"⚠️ Story image resize failed ({e}) — using original feed image for Story.")
+        log(f"Story resize failed ({e}) — using original image for Story.")
         return original_url
 
 

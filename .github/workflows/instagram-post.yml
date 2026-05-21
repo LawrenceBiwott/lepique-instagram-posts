@@ -44,6 +44,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
+          git pull --rebase origin main
           git rm -f media/story_temp.jpg 2>/dev/null || true
           git add state.json post_log.txt
 
