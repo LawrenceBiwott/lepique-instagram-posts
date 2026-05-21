@@ -243,3 +243,4 @@
 [2026-05-21 12:29:19] Posting photo to Facebook Stories...
 [2026-05-21 12:29:19] ⚠️ Facebook Story post failed: 400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/1889041611321657/photos?url=https%3A%2F%2Fraw.githubusercontent.com%2FLawrenceBiwott%2Flepique-instagram-posts%2Fmain%2Fmedia%2F29207355-3792-4ce6-a93a-cd079f7ccae6.jpeg&published=false&temporary=true&access_token=EAAoPvY2rIhYBRhHc4cMAnz7hxvchBt7TwbQoY0wvDZBzQVIRrFF67g9WBqN3CeU7u4qglwvxyAHaa05tDlNppaGBScsiWHZBCbtA98ajsekeM6K0hE2XLuZCLnZBDFdL4Bfs6zL3ZAMBQRdP6dAq8rGNz5wcloFADxNsaO9JQhsUkEjNT2MElRSXf21v63MpWmb01BehcRz7cSQFq9GkHgRauZAApZBAZCt9zWeb9L7j29GCPWNtGMxGTajRnwUZD
 [2026-05-21 12:29:19] ✅ All done. State saved.
+[2026-05-21 13:00:54] ⏭ Skipping — last post was 32 min ago (next post in ~23 min).
