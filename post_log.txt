@@ -176,3 +176,37 @@
 [2026-05-20 18:29:45] ✅ Facebook feed post successful! ID: 1889041611321657_1401856405310738
 [2026-05-20 18:29:45] Posting photo to Facebook Stories...
 [2026-05-20 18:29:54] ✅ Facebook Story posted! ID: 881846021596353
+[2026-05-21 00:17:58] --- Starting Instagram + Facebook post ---
+[2026-05-21 00:17:58] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-05-21 00:17:58] Current working directory: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts
+[2026-05-21 00:17:58] Script base directory: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts
+[2026-05-21 00:17:58] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-05-21 00:17:58] Found 41 media files (newest-first by git history)
+[2026-05-21 00:17:58]   Detected: 03f8b260-a9cb-4220-976e-4e48bf22879a.jpeg
+[2026-05-21 00:17:58]   Detected: 06d2c269-5b5b-49f4-81c2-65a4b6cbf6a1.jpeg
+[2026-05-21 00:17:58]   Detected: 0ad3683d-2f4d-48e6-baac-3dd9f25b9120.jpeg
+[2026-05-21 00:17:58]   Detected: 0bfcb9db-acd0-4f01-a1b5-01e148eded1c.jpeg
+[2026-05-21 00:17:58]   Detected: 0f7d225e-2e69-4293-a660-b7c3bc3cb995.jpeg
+[2026-05-21 00:17:58] Selected media: 24d4d837-f291-40a9-976e-9b44267582fb.jpeg
+[2026-05-21 00:17:58] Media URL: https://raw.githubusercontent.com/LawrenceBiwott/lepique-instagram-posts/main/media/24d4d837-f291-40a9-976e-9b44267582fb.jpeg
+[2026-05-21 00:17:58] Uploading image to Instagram...
+[2026-05-21 00:18:03] Waiting for Instagram processing...
+[2026-05-21 00:18:03] Container status: IN_PROGRESS
+[2026-05-21 00:18:08] Container status: FINISHED
+[2026-05-21 00:18:08] Container ID: 18530999851073384
+[2026-05-21 00:18:11] ✅ Instagram feed post successful! ID: 17923454304345865
+[2026-05-21 00:18:12] Story image resized to 1080×1920 → story_temp.jpg
+[2026-05-21 00:18:13] story_temp.jpg pushed to GitHub. Waiting 15 s for CDN…
+[2026-05-21 00:18:28] Story URL: https://raw.githubusercontent.com/LawrenceBiwott/lepique-instagram-posts/main/media/story_temp.jpg
+[2026-05-21 00:18:28] Posting to Instagram Stories...
+[2026-05-21 00:18:31] Waiting for Instagram processing...
+[2026-05-21 00:18:32] Container status: IN_PROGRESS
+[2026-05-21 00:18:37] Container status: FINISHED
+[2026-05-21 00:18:42] ✅ Instagram Story posted! ID: 17917185567366476
+[2026-05-21 00:18:42] --- Posting to Facebook ---
+[2026-05-21 00:18:42] Uploading photo to Facebook feed...
+[2026-05-21 00:18:42] ⚠️ Facebook feed post failed: 400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/1889041611321657/photos?url=https%3A%2F%2Fraw.githubusercontent.com%2FLawrenceBiwott%2Flepique-instagram-posts%2Fmain%2Fmedia%2F24d4d837-f291-40a9-976e-9b44267582fb.jpeg&caption=%F0%9F%93%8D+Platinum+Plaza%2C+Ground+Floor%2C+Shop+G16+%E2%80%93+Tom+Mboya+Street%2C+Nairobi%0A%F0%9F%93%9E+0+7+2+1+%E2%80%A2+6+7+2+%E2%80%A2+9+0+0%0A%0A%F0%9F%92%99+Perfect+fit+starts+at+Lepique+Fashions.%0A%0ADiscover+quality+ladies%27+jeans+in+Kenya+made+for+comfort%2C+confidence+and+effortless+style.+We+stock+mom+jeans%2C+high+waist+jeans%2C+low+waist+jeans%2C+cargo+jeans%2C+hipster+jeans%2C+skinny+jeans%2C+slim-fit+jeans%2C+straight+jeans%2C+wide-leg+jeans%2C+boyfriend+jeans%2C+bootcut+jeans%2C+flare+jeans+and+three-quarter+jeans.%0A%0AWhether+you+love+classy+denim%2C+casual+fashion%2C+street-style+looks+or+everyday+outfits%2C+we+have+jeans+that+match+your+body+and+your+vibe.%0A%0A%F0%9F%92%8E+Premium+Quality+%E2%80%A2+Perfect+Fit+%E2%80%A2+Effortless+Style%0A%0AVisit+Lepique+Fashions+today+in+Nairobi+CBD.%0A%0A%23LepiqueFashions+%23DenimLovers+%23NairobiFashion+%23LadiesKenya+%23AfricanFashion%0ALadies+jeans+Nairobi%2C+ladies+jeans+Kenya%2C+perfect+fit+jeans%2C+women+fashion+Kenya%2C+denim+shop+Nairobi%2C+ladies+dresses+Nairobi%2C+ladies+shoes+Kenya%2C+ladies+tops+Kenya%2C+ladies+earrings+Nairobi%2C+ladies+makeup+Kenya%2C+women+accessories+Kenya%2C+ladies+clothing+shop+Tom+Mboya+Street%2C+affordable+fashion+Nairobi+CBD%2C+Kenyan+women+fashion.&access_token=EAAoPvY2rIhYBRhHc4cMAnz7hxvchBt7TwbQoY0wvDZBzQVIRrFF67g9WBqN3CeU7u4qglwvxyAHaa05tDlNppaGBScsiWHZBCbtA98ajsekeM6K0hE2XLuZCLnZBDFdL4Bfs6zL3ZAMBQRdP6dAq8rGNz5wcloFADxNsaO9JQhsUkEjNT2MElRSXf21v63MpWmb01BehcRz7cSQFq9GkHgRauZAApZBAZCt9zWeb9L7j29GCPWNtGMxGTajRnwUZD
+[2026-05-21 00:18:42] Posting photo to Facebook Stories...
+[2026-05-21 00:18:42] ⚠️ Facebook Story post failed: 400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/1889041611321657/photos?url=https%3A%2F%2Fraw.githubusercontent.com%2FLawrenceBiwott%2Flepique-instagram-posts%2Fmain%2Fmedia%2F24d4d837-f291-40a9-976e-9b44267582fb.jpeg&published=false&temporary=true&access_token=EAAoPvY2rIhYBRhHc4cMAnz7hxvchBt7TwbQoY0wvDZBzQVIRrFF67g9WBqN3CeU7u4qglwvxyAHaa05tDlNppaGBScsiWHZBCbtA98ajsekeM6K0hE2XLuZCLnZBDFdL4Bfs6zL3ZAMBQRdP6dAq8rGNz5wcloFADxNsaO9JQhsUkEjNT2MElRSXf21v63MpWmb01BehcRz7cSQFq9GkHgRauZAApZBAZCt9zWeb9L7j29GCPWNtGMxGTajRnwUZD
+[2026-05-21 00:18:42] ✅ All done. State saved.
