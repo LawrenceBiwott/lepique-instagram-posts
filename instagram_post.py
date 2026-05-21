@@ -498,8 +498,10 @@ def post_to_instagram():
     story_url = prepare_story_image(media_path) if not video_file else media_url
     post_ig_story(story_url, video_file)
 
-    # ── Facebook feed + Stories ──
-    post_to_facebook(media_url, full_caption, video_file)
+    # ── Facebook ──
+    # Instagram is linked to the Facebook Page — posts cross-post automatically.
+    # No separate Facebook API call needed.
+    log("ℹ️ Facebook handled automatically via Instagram cross-posting.")
 
     # Record successful post time so the interval guard works correctly
     state["last_post_time"] = datetime.utcnow().isoformat()
