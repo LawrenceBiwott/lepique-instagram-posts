@@ -584,3 +584,4 @@
 [2026-05-23 19:27:21] Posting photo to Facebook Stories...
 [2026-05-23 19:27:28] ✅ Facebook Story posted! ID: 2863741360626549
 [2026-05-23 19:27:28] ✅ All done. State saved.
+[2026-05-23 19:51:54] ⏭ Skipping — last post was 24 min ago (next post in ~31 min).
