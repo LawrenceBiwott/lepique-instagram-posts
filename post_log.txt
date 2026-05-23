@@ -547,3 +547,4 @@
 [2026-05-23 18:31:09] ✅ All done. State saved.
 [2026-05-23 18:35:53] ⏭ Skipping — last post was 5 min ago (next post in ~50 min).
 [2026-05-23 18:42:00] ⏭ Skipping — last post was 11 min ago (next post in ~44 min).
+[2026-05-23 19:00:34] ⏭ Skipping — last post was 29 min ago (next post in ~26 min).
