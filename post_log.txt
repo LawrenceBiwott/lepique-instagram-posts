@@ -545,3 +545,4 @@
 [2026-05-23 18:31:09] Posting photo to Facebook Stories...
 [2026-05-23 18:31:09] ⚠️ Facebook Story post failed: 403 Client Error: Forbidden for url: https://graph.facebook.com/v21.0/1889041611321657/photos?url=https%3A%2F%2Fraw.githubusercontent.com%2FLawrenceBiwott%2Flepique-instagram-posts%2Fmain%2Fmedia%2F52ca27c3-fc9d-4f69-b0ea-c36c4bc47d45.jpeg&published=false&temporary=true&access_token=EAAoPvY2rIhYBRtc1zLojBpQ0KZBktSHSL59nkt8BvfR1GMi9yozFymm00SUOzSrWJeLit7ocxRbrY4nUO9DM7V3Yjny4fNDSE3IPbHD5Nee3UGgxHpHGXrvrQTIQ0xCUwZCE15FJ03EbpXZBGMqWZCrXRTtZB5ZCM9tzew9uEomILJR3QORZCHqt4PiAohZCp83ro4WPrglLErHW
 [2026-05-23 18:31:09] ✅ All done. State saved.
+[2026-05-23 18:35:53] ⏭ Skipping — last post was 5 min ago (next post in ~50 min).
