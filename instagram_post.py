@@ -36,8 +36,8 @@ LOG_FILE = BASE_DIR / "post_log.txt"
 STATE_FILE = BASE_DIR / "state.json"
 
 # Supported file types
-IMAGE_EXTS = {".jpg", ".jpeg", ".png"}
-VIDEO_EXTS = {".mp4", ".mov"}
+IMAGE_EXTS = {".jpg", ".jpeg", ".png", ".webp"}
+VIDEO_EXTS = {".mp4", ".mov", ".m4v"}
 
 # API base URLs
 IG_BASE_URL = "https://graph.instagram.com/v21.0"
@@ -63,7 +63,7 @@ def load_state():
     if STATE_FILE.exists():
         with open(STATE_FILE, "r", encoding="utf-8") as f:
             return json.load(f)
-    return {"caption_index": 0, "media_index": 0}
+    return {"caption_index": 0, "posted_files": []}
 
 def save_state(state):
     with open(STATE_FILE, "w", encoding="utf-8") as f:
@@ -90,55 +90,66 @@ def get_next_caption(state):
 # MEDIA
 # ─────────────────────────────────────────────
 def get_next_media(state):
-    log(f"Current working directory: {Path.cwd()}")
-    log(f"Script base directory: {BASE_DIR}")
     log(f"Checking media folder: {MEDIA_FOLDER}")
 
     if not MEDIA_FOLDER.exists():
-        log("media folder does not exist.")
-        for item in sorted(BASE_DIR.iterdir()):
-            log(f"  Root item: {item.name}")
+        log("media/ folder not found.")
         return None
 
-    # Order by git commit history — newest file added to repo posts first
+    # Build file list — newest additions first (git history), fallback to mtime
     all_files = []
     try:
         result = subprocess.run(
             ["git", "log", "--diff-filter=A", "--name-only", "--format=", "--", "media/"],
             capture_output=True, text=True, cwd=BASE_DIR
         )
+        seen = set()
         for line in result.stdout.strip().split("\n"):
             line = line.strip()
             if line:
                 fname = Path(line).name
                 fpath = MEDIA_FOLDER / fname
                 if fpath.exists() and fpath.suffix.lower() in (IMAGE_EXTS | VIDEO_EXTS):
-                    if fpath not in all_files:
+                    if fname not in seen:
+                        seen.add(fname)
                         all_files.append(fpath)
         if all_files:
             log(f"Found {len(all_files)} media files (newest-first by git history)")
         else:
-            raise Exception("Git log returned no results")
+            raise Exception("Git log returned no files")
     except Exception as e:
-        log(f"Git ordering unavailable ({e}), falling back to mtime sort")
-        all_files = sorted([
-            p for p in MEDIA_FOLDER.iterdir()
-            if p.is_file() and p.suffix.lower() in (IMAGE_EXTS | VIDEO_EXTS)
-        ], key=lambda p: p.stat().st_mtime, reverse=True)
-        log(f"Found {len(all_files)} media files in media/")
-    for f in all_files[:5]:
-        log(f"  Detected: {f.name}")
+        log(f"Git ordering unavailable ({e}) — falling back to mtime sort")
+        all_files = sorted(
+            [p for p in MEDIA_FOLDER.iterdir()
+             if p.is_file() and p.suffix.lower() in (IMAGE_EXTS | VIDEO_EXTS)],
+            key=lambda p: p.stat().st_mtime, reverse=True
+        )
+        log(f"Found {len(all_files)} media files by mtime")
 
     if not all_files:
-        log("Files currently inside media/ (all types):")
-        for item in sorted(MEDIA_FOLDER.iterdir()):
-            log(f"  media item: {item.name} (suffix: {item.suffix})")
+        log("No supported media files found in media/")
         return None
 
-    idx = state.get("media_index", 0) % len(all_files)
-    media = all_files[idx]
-    state["media_index"] = (idx + 1) % len(all_files)
-    return media
+    log(f"Latest 5: {[f.name for f in all_files[:5]]}")
+
+    # Always post the newest unposted file first
+    posted = set(state.get("posted_files", []))
+    selected = None
+    for f in all_files:
+        if f.name not in posted:
+            selected = f
+            break
+
+    # All files have been posted — reset cycle
+    if selected is None:
+        log(f"All {len(all_files)} files posted — resetting cycle, starting from newest.")
+        posted = set()
+        state["posted_files"] = []
+        selected = all_files[0]
+
+    posted.add(selected.name)
+    state["posted_files"] = list(posted)
+    return selected
 
 def is_video(path):
     return path.suffix.lower() in VIDEO_EXTS
