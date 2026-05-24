@@ -667,3 +667,31 @@
 [2026-05-24 11:56:25] Posting photo to Facebook Stories...
 [2026-05-24 11:56:36] ✅ Facebook Story posted! ID: 3079322728934072
 [2026-05-24 11:56:36] ✅ All done. State saved.
+[2026-05-24 15:48:09] --- Starting Instagram + Facebook post ---
+[2026-05-24 15:48:09] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-05-24 15:48:09] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-05-24 15:48:09] Found 41 media files (newest-first by git history)
+[2026-05-24 15:48:09] Latest 5: ['03f8b260-a9cb-4220-976e-4e48bf22879a.jpeg', '06d2c269-5b5b-49f4-81c2-65a4b6cbf6a1.jpeg', '0ad3683d-2f4d-48e6-baac-3dd9f25b9120.jpeg', '0bfcb9db-acd0-4f01-a1b5-01e148eded1c.jpeg', '0f7d225e-2e69-4293-a660-b7c3bc3cb995.jpeg']
+[2026-05-24 15:48:09] Selected media: 0bfcb9db-acd0-4f01-a1b5-01e148eded1c.jpeg
+[2026-05-24 15:48:09] Media URL: https://raw.githubusercontent.com/LawrenceBiwott/lepique-instagram-posts/main/media/0bfcb9db-acd0-4f01-a1b5-01e148eded1c.jpeg
+[2026-05-24 15:48:09] Uploading image to Instagram...
+[2026-05-24 15:48:12] Waiting for Instagram processing...
+[2026-05-24 15:48:12] Container status: IN_PROGRESS
+[2026-05-24 15:48:18] Container status: FINISHED
+[2026-05-24 15:48:18] Container ID: 18531850255073384
+[2026-05-24 15:48:20] ✅ Instagram feed post successful! ID: 17889332442376784
+[2026-05-24 15:48:20] Story image resized to 1080x1920 -> story_temp.jpg
+[2026-05-24 15:48:21] story_temp.jpg pushed. Waiting 15s for CDN...
+[2026-05-24 15:48:36] Story URL: https://raw.githubusercontent.com/LawrenceBiwott/lepique-instagram-posts/main/media/story_temp.jpg
+[2026-05-24 15:48:36] Posting to Instagram Stories...
+[2026-05-24 15:48:39] Waiting for Instagram processing...
+[2026-05-24 15:48:39] Container status: IN_PROGRESS
+[2026-05-24 15:48:44] Container status: FINISHED
+[2026-05-24 15:48:46] ✅ Instagram Story posted! ID: 18113073280885956
+[2026-05-24 15:48:46] --- Posting to Facebook ---
+[2026-05-24 15:48:46] Uploading photo to Facebook feed...
+[2026-05-24 15:49:01] ✅ Facebook feed post successful! ID: 1889041611321657_1405088024987576
+[2026-05-24 15:49:01] Posting photo to Facebook Stories...
+[2026-05-24 15:49:22] ✅ Facebook Story posted! ID: 1318437113021330
+[2026-05-24 15:49:22] ✅ All done. State saved.
