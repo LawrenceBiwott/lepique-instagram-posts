@@ -70,7 +70,7 @@ def load_state():
     if STATE_FILE.exists():
         with open(STATE_FILE, "r", encoding="utf-8") as f:
             return json.load(f)
-    return {"caption_index": 0, "posted_files": []}
+    return {"caption_index": 0, "posted_files": [], "tiktok_posted_videos": []}
 
 def save_state(state):
     with open(STATE_FILE, "w", encoding="utf-8") as f:
@@ -156,6 +156,58 @@ def get_next_media(state):
 
     posted.add(selected.name)
     state["posted_files"] = list(posted)
+    return selected
+
+def get_next_tiktok_video(state):
+    """Pick the next unposted video for TikTok independently of Instagram/Facebook."""
+    if not MEDIA_FOLDER.exists():
+        return None
+
+    # Get all video files — newest additions first (git history), fallback to mtime
+    all_videos = []
+    try:
+        result = subprocess.run(
+            ["git", "log", "--diff-filter=A", "--name-only", "--format=", "--", "media/"],
+            capture_output=True, text=True, cwd=BASE_DIR
+        )
+        seen = set()
+        for line in result.stdout.strip().split("\n"):
+            line = line.strip()
+            if line:
+                fname = Path(line).name
+                fpath = MEDIA_FOLDER / fname
+                if fpath.exists() and fpath.suffix.lower() in VIDEO_EXTS:
+                    if fname not in seen:
+                        seen.add(fname)
+                        all_videos.append(fpath)
+        if not all_videos:
+            raise Exception("No videos in git log")
+    except Exception:
+        all_videos = sorted(
+            [p for p in MEDIA_FOLDER.iterdir()
+             if p.is_file() and p.suffix.lower() in VIDEO_EXTS],
+            key=lambda p: p.stat().st_mtime, reverse=True
+        )
+
+    if not all_videos:
+        log("ℹ️  TikTok: no video files found in media/")
+        return None
+
+    posted = set(state.get("tiktok_posted_videos", []))
+    selected = None
+    for f in all_videos:
+        if f.name not in posted:
+            selected = f
+            break
+
+    if selected is None:
+        log(f"TikTok: all {len(all_videos)} videos posted — resetting TikTok cycle.")
+        state["tiktok_posted_videos"] = []
+        selected = all_videos[0]
+
+    posted.add(selected.name)
+    state["tiktok_posted_videos"] = list(posted)
+    log(f"TikTok selected video: {selected.name}")
     return selected
 
 def is_video(path):
@@ -604,10 +656,9 @@ def tiktok_poll_status(access_token, publish_id):
 def post_to_tiktok(media_path, caption):
     """
     Post a video to TikTok using the Content Posting API (Direct Post).
+    media_path is always a video — selected independently via get_next_tiktok_video().
 
     Notes:
-      • Only videos are posted — TikTok photo posts require a verified domain
-        URL, which raw.githubusercontent.com cannot provide.
       • Until your TikTok Developer app passes TikTok's audit, new posts will
         be visible only to you. Apply at:
         https://developers.tiktok.com/application/content-posting-api
@@ -616,8 +667,8 @@ def post_to_tiktok(media_path, caption):
         log("⚠️  TikTok credentials not configured — skipping TikTok.")
         return
 
-    if not is_video(media_path):
-        log("ℹ️  TikTok: skipping photo (videos only).")
+    if media_path is None:
+        log("ℹ️  TikTok: no video available to post.")
         return
 
     log("--- Posting to TikTok ---")
@@ -668,7 +719,7 @@ def post_to_instagram():
             log(f"⏭ Skipping — last post was {elapsed:.0f} min ago (next post in ~{MIN_POST_INTERVAL_MINUTES - elapsed:.0f} min).")
             return
 
-    log("--- Starting Instagram + Facebook post ---")
+    log("--- Starting Instagram + Facebook + TikTok post ---")
 
     caption_obj = get_next_caption(state)
     full_caption = caption_obj["text"]
@@ -708,8 +759,9 @@ def post_to_instagram():
     # ── Facebook feed + Stories ──
     post_to_facebook(media_url, full_caption, video_file)
 
-    # ── TikTok (videos only) ──
-    post_to_tiktok(media_path, full_caption)
+    # ── TikTok (independent video queue) ──
+    tiktok_video = get_next_tiktok_video(state)
+    post_to_tiktok(tiktok_video, full_caption)
 
     # Record successful post time so the interval guard works correctly
     state["last_post_time"] = datetime.utcnow().isoformat()
