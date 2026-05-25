@@ -1,7 +1,7 @@
 """
-Instagram + Facebook Auto-Poster
+Instagram + Facebook + TikTok Auto-Poster
 Posts photos/videos/Reels to Instagram feed & Stories,
-and to Facebook Page feed & Stories.
+Facebook Page feed & Stories, and TikTok (videos only).
 """
 import os
 import json
@@ -23,6 +23,11 @@ IG_USER_ID = os.environ.get(
 FB_PAGE_ACCESS_TOKEN = os.environ.get("FB_PAGE_ACCESS_TOKEN", "").strip()
 FB_PAGE_ID = os.environ.get("FB_PAGE_ID", "").strip()
 
+# TikTok credentials
+TIKTOK_CLIENT_KEY    = os.environ.get("TIKTOK_CLIENT_KEY", "").strip()
+TIKTOK_CLIENT_SECRET = os.environ.get("TIKTOK_CLIENT_SECRET", "").strip()
+TIKTOK_REFRESH_TOKEN = os.environ.get("TIKTOK_REFRESH_TOKEN", "").strip()
+
 GITHUB_RAW_BASE = os.environ.get(
     "MEDIA_BASE_URL",
     "https://raw.githubusercontent.com/LawrenceBiwott/lepique-instagram-posts/main/media"
@@ -40,8 +45,10 @@ IMAGE_EXTS = {".jpg", ".jpeg", ".png", ".webp"}
 VIDEO_EXTS = {".mp4", ".mov", ".m4v"}
 
 # API base URLs
-IG_BASE_URL = "https://graph.instagram.com/v21.0"
-FB_BASE_URL = "https://graph.facebook.com/v21.0"
+IG_BASE_URL      = "https://graph.instagram.com/v21.0"
+FB_BASE_URL      = "https://graph.facebook.com/v21.0"
+TIKTOK_BASE_URL  = "https://open.tiktokapis.com/v2"
+TIKTOK_CHUNK_SIZE = 10 * 1024 * 1024  # 10 MB per chunk
 
 # Minimum minutes between posts (prevents double-posting when cron runs every 10 min)
 MIN_POST_INTERVAL_MINUTES = 55
@@ -456,6 +463,196 @@ def post_to_facebook(media_url, caption, is_video_file):
         log(f"⚠️ Facebook Story post failed: {e}")
 
 # ─────────────────────────────────────────────
+# TIKTOK API
+# ─────────────────────────────────────────────
+def tiktok_get_access_token():
+    """Exchange the stored refresh token for a fresh 24-hour access token."""
+    resp = requests.post(
+        f"{TIKTOK_BASE_URL}/oauth/token/",
+        headers={"Content-Type": "application/x-www-form-urlencoded"},
+        data={
+            "client_key":     TIKTOK_CLIENT_KEY,
+            "client_secret":  TIKTOK_CLIENT_SECRET,
+            "grant_type":     "refresh_token",
+            "refresh_token":  TIKTOK_REFRESH_TOKEN,
+        },
+        timeout=30
+    )
+    resp.raise_for_status()
+    result = resp.json()
+    if result.get("error"):
+        raise Exception(f"TikTok token refresh failed: {result}")
+    data = result.get("data", result)
+    token = data.get("access_token", "")
+    if not token:
+        raise Exception(f"No access_token in TikTok refresh response: {result}")
+    return token
+
+
+def tiktok_query_creator_info(access_token):
+    """Fetch creator info — confirms the account is ready to post."""
+    resp = requests.post(
+        f"{TIKTOK_BASE_URL}/post/publish/creator_info/query/",
+        headers={
+            "Authorization": f"Bearer {access_token}",
+            "Content-Type": "application/json; charset=UTF-8",
+        },
+        timeout=30
+    )
+    resp.raise_for_status()
+    result = resp.json()
+    if result.get("error", {}).get("code", "ok") != "ok":
+        raise Exception(f"TikTok creator info failed: {result}")
+    return result.get("data", {})
+
+
+def tiktok_init_video_upload(access_token, file_size, caption):
+    """Tell TikTok we're about to upload — returns publish_id and upload_url."""
+    chunk_size    = TIKTOK_CHUNK_SIZE
+    total_chunks  = max(1, (file_size + chunk_size - 1) // chunk_size)
+
+    resp = requests.post(
+        f"{TIKTOK_BASE_URL}/post/publish/video/init/",
+        headers={
+            "Authorization": f"Bearer {access_token}",
+            "Content-Type": "application/json; charset=UTF-8",
+        },
+        json={
+            "post_info": {
+                "title":                caption[:2200],
+                "privacy_level":        "PUBLIC_TO_EVERYONE",
+                "disable_duet":         False,
+                "disable_comment":      False,
+                "disable_stitch":       False,
+            },
+            "source_info": {
+                "source":             "FILE_UPLOAD",
+                "video_size":         file_size,
+                "chunk_size":         chunk_size,
+                "total_chunk_count":  total_chunks,
+            }
+        },
+        timeout=30
+    )
+    print(resp.text)
+    resp.raise_for_status()
+    result = resp.json()
+    if result.get("error", {}).get("code", "ok") != "ok":
+        raise Exception(f"TikTok upload init failed: {result}")
+    data = result["data"]
+    return data["publish_id"], data["upload_url"], chunk_size, total_chunks
+
+
+def tiktok_upload_video_chunks(upload_url, video_path, file_size, chunk_size, total_chunks):
+    """Stream video to TikTok's upload server, one chunk at a time."""
+    with open(video_path, "rb") as f:
+        for idx in range(total_chunks):
+            start_byte = idx * chunk_size
+            chunk_data = f.read(chunk_size)
+            end_byte   = start_byte + len(chunk_data) - 1
+
+            content_range = f"bytes {start_byte}-{end_byte}/{file_size}"
+            log(f"  TikTok chunk {idx + 1}/{total_chunks}: {content_range}")
+
+            put_resp = requests.put(
+                upload_url,
+                headers={
+                    "Content-Range":  content_range,
+                    "Content-Length": str(len(chunk_data)),
+                    "Content-Type":   "video/mp4",
+                },
+                data=chunk_data,
+                timeout=120
+            )
+            if put_resp.status_code not in (200, 201, 206):
+                raise Exception(
+                    f"TikTok chunk {idx + 1} upload failed "
+                    f"({put_resp.status_code}): {put_resp.text}"
+                )
+
+
+def tiktok_poll_status(access_token, publish_id):
+    """Poll until TikTok confirms the post is live (or fails)."""
+    log("Waiting for TikTok to process the video...")
+    terminal_ok  = {"PUBLISH_COMPLETE"}
+    terminal_bad = {"FAILED", "ERROR"}
+
+    for attempt in range(36):          # up to ~6 minutes
+        resp = requests.post(
+            f"{TIKTOK_BASE_URL}/post/publish/status/fetch/",
+            headers={
+                "Authorization": f"Bearer {access_token}",
+                "Content-Type": "application/json; charset=UTF-8",
+            },
+            json={"publish_id": publish_id},
+            timeout=30
+        )
+        resp.raise_for_status()
+        result = resp.json()
+        status = result.get("data", {}).get("status", "UNKNOWN")
+        log(f"  TikTok status ({attempt + 1}): {status}")
+
+        if status in terminal_ok:
+            return True
+        if status in terminal_bad:
+            raise Exception(f"TikTok publish failed: {result}")
+        time.sleep(10)
+
+    raise TimeoutError("TikTok processing timed out after 6 minutes.")
+
+
+def post_to_tiktok(media_path, caption):
+    """
+    Post a video to TikTok using the Content Posting API (Direct Post).
+
+    Notes:
+      • Only videos are posted — TikTok photo posts require a verified domain
+        URL, which raw.githubusercontent.com cannot provide.
+      • Until your TikTok Developer app passes TikTok's audit, new posts will
+        be visible only to you. Apply at:
+        https://developers.tiktok.com/application/content-posting-api
+    """
+    if not TIKTOK_CLIENT_KEY or not TIKTOK_CLIENT_SECRET or not TIKTOK_REFRESH_TOKEN:
+        log("⚠️  TikTok credentials not configured — skipping TikTok.")
+        return
+
+    if not is_video(media_path):
+        log("ℹ️  TikTok: skipping photo (videos only).")
+        return
+
+    log("--- Posting to TikTok ---")
+    try:
+        # 1. Fresh access token (24-hour lifetime)
+        log("Refreshing TikTok access token...")
+        access_token = tiktok_get_access_token()
+        log("✅ TikTok access token ready.")
+
+        # 2. Confirm creator account is active
+        creator = tiktok_query_creator_info(access_token)
+        log(f"TikTok creator: @{creator.get('creator_username', '?')} "
+            f"(max duration: {creator.get('max_video_post_duration_sec', '?')}s)")
+
+        # 3. Initialise upload
+        file_size = media_path.stat().st_size
+        log(f"Uploading {media_path.name} ({file_size / 1024 / 1024:.1f} MB) to TikTok...")
+        publish_id, upload_url, chunk_size, total_chunks = tiktok_init_video_upload(
+            access_token, file_size, caption
+        )
+        log(f"TikTok publish_id: {publish_id}")
+
+        # 4. Stream video chunks
+        tiktok_upload_video_chunks(upload_url, media_path, file_size, chunk_size, total_chunks)
+        log("All chunks uploaded.")
+
+        # 5. Wait for TikTok to publish
+        tiktok_poll_status(access_token, publish_id)
+        log(f"✅ TikTok post live! publish_id: {publish_id}")
+
+    except Exception as e:
+        log(f"⚠️  TikTok post failed (Instagram/Facebook not affected): {e}")
+
+
+# ─────────────────────────────────────────────
 # MAIN POST FUNCTION
 # ─────────────────────────────────────────────
 def post_to_instagram():
@@ -510,6 +707,9 @@ def post_to_instagram():
 
     # ── Facebook feed + Stories ──
     post_to_facebook(media_url, full_caption, video_file)
+
+    # ── TikTok (videos only) ──
+    post_to_tiktok(media_path, full_caption)
 
     # Record successful post time so the interval guard works correctly
     state["last_post_time"] = datetime.utcnow().isoformat()
