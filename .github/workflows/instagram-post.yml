@@ -6,6 +6,15 @@ on:
     - cron: "*/10 * * * *"
 
   workflow_dispatch:
+    inputs:
+      force_post:
+        description: 'Force post now (bypasses the 55-min interval guard)'
+        required: false
+        default: 'false'
+        type: choice
+        options:
+          - 'false'
+          - 'true'
 
 jobs:
   post:
@@ -37,7 +46,9 @@ jobs:
 
           TIKTOK_CLIENT_KEY: ${{ secrets.TIKTOK_CLIENT_KEY }}
           TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
+          TIKTOK_OPEN_ID: ${{ secrets.TIKTOK_OPEN_ID }}
           TIKTOK_REFRESH_TOKEN: ${{ secrets.TIKTOK_REFRESH_TOKEN }}
+          FORCE_POST: ${{ github.event.inputs.force_post }}
 
           MEDIA_BASE_URL: "https://raw.githubusercontent.com/${{ github.repository }}/main/media"
 
