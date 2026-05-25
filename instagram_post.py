@@ -664,9 +664,67 @@ def tiktok_poll_status(access_token, publish_id):
     raise TimeoutError("TikTok processing timed out after 6 minutes.")
 
 
+def tiktok_init_story_upload(access_token, file_size):
+    """Initialize a TikTok Story video upload using the post_to_story flag."""
+    chunk_size   = TIKTOK_CHUNK_SIZE
+    total_chunks = max(1, (file_size + chunk_size - 1) // chunk_size)
+
+    resp = requests.post(
+        f"{TIKTOK_BASE_URL}/post/publish/video/init/",
+        headers={
+            "Authorization": f"Bearer {access_token}",
+            "Content-Type": "application/json; charset=UTF-8",
+        },
+        json={
+            "post_info": {
+                "privacy_level":   "PUBLIC_TO_EVERYONE",
+                "post_to_story":   True,
+                "disable_duet":    False,
+                "disable_comment": False,
+                "disable_stitch":  False,
+            },
+            "source_info": {
+                "source":            "FILE_UPLOAD",
+                "video_size":        file_size,
+                "chunk_size":        chunk_size,
+                "total_chunk_count": total_chunks,
+            }
+        },
+        timeout=30
+    )
+    print(resp.text)
+    resp.raise_for_status()
+    result = resp.json()
+    if result.get("error", {}).get("code", "ok") != "ok":
+        raise Exception(f"TikTok Story upload init failed: {result}")
+    data = result["data"]
+    return data["publish_id"], data["upload_url"], chunk_size, total_chunks
+
+
+def post_tiktok_story(media_path, access_token):
+    """Upload a video as a TikTok Story (runs after the regular feed post)."""
+    log("--- Posting to TikTok Story ---")
+    try:
+        file_size = media_path.stat().st_size
+        log(f"Initialising TikTok Story upload ({file_size / 1024 / 1024:.1f} MB)...")
+        publish_id, upload_url, chunk_size, total_chunks = tiktok_init_story_upload(
+            access_token, file_size
+        )
+        log(f"TikTok Story publish_id: {publish_id}")
+
+        tiktok_upload_video_chunks(upload_url, media_path, file_size, chunk_size, total_chunks)
+        log("Story chunks uploaded.")
+
+        tiktok_poll_status(access_token, publish_id)
+        log(f"✅ TikTok Story live! publish_id: {publish_id}")
+
+    except Exception as e:
+        log(f"⚠️  TikTok Story post failed (feed post not affected): {e}")
+
+
 def post_to_tiktok(media_path, caption):
     """
-    Post a video to TikTok using the Content Posting API (Direct Post).
+    Post a video to TikTok feed + Story using the Content Posting API (Direct Post).
     media_path is always a video — selected independently via get_next_tiktok_video().
 
     Notes:
@@ -694,7 +752,7 @@ def post_to_tiktok(media_path, caption):
         log(f"TikTok creator: @{creator.get('creator_username', '?')} "
             f"(max duration: {creator.get('max_video_post_duration_sec', '?')}s)")
 
-        # 3. Initialise upload
+        # 3. Initialise feed upload
         file_size = media_path.stat().st_size
         log(f"Uploading {media_path.name} ({file_size / 1024 / 1024:.1f} MB) to TikTok...")
         publish_id, upload_url, chunk_size, total_chunks = tiktok_init_video_upload(
@@ -706,9 +764,12 @@ def post_to_tiktok(media_path, caption):
         tiktok_upload_video_chunks(upload_url, media_path, file_size, chunk_size, total_chunks)
         log("All chunks uploaded.")
 
-        # 5. Wait for TikTok to publish
+        # 5. Wait for TikTok feed post to go live
         tiktok_poll_status(access_token, publish_id)
-        log(f"✅ TikTok post live! publish_id: {publish_id}")
+        log(f"✅ TikTok feed post live! publish_id: {publish_id}")
+
+        # 6. Also post as TikTok Story
+        post_tiktok_story(media_path, access_token)
 
     except Exception as e:
         log(f"⚠️  TikTok post failed (Instagram/Facebook not affected): {e}")
