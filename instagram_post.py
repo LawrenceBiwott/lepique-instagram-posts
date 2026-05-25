@@ -53,6 +53,9 @@ TIKTOK_CHUNK_SIZE = 10 * 1024 * 1024  # 10 MB per chunk
 # Minimum minutes between posts (prevents double-posting when cron runs every 10 min)
 MIN_POST_INTERVAL_MINUTES = 55
 
+# Set to 'true' via workflow_dispatch input to bypass the interval guard
+FORCE_POST = os.environ.get("FORCE_POST", "false").strip().lower() == "true"
+
 # ─────────────────────────────────────────────
 # LOGGING
 # ─────────────────────────────────────────────
@@ -771,11 +774,13 @@ def post_to_instagram():
 
     # ── Interval guard: skip if posted too recently ──
     last_post_time = state.get("last_post_time")
-    if last_post_time:
+    if last_post_time and not FORCE_POST:
         elapsed = (datetime.utcnow() - datetime.fromisoformat(last_post_time)).total_seconds() / 60
         if elapsed < MIN_POST_INTERVAL_MINUTES:
             log(f"⏭ Skipping — last post was {elapsed:.0f} min ago (next post in ~{MIN_POST_INTERVAL_MINUTES - elapsed:.0f} min).")
             return
+    if FORCE_POST:
+        log("⚡ FORCE_POST enabled — bypassing interval guard.")
 
     log("--- Starting Instagram + Facebook + TikTok post ---")
 
