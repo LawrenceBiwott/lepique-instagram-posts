@@ -555,7 +555,8 @@ def tiktok_query_creator_info(access_token):
 
 def tiktok_init_video_upload(access_token, file_size, caption):
     """Tell TikTok we're about to upload — returns publish_id and upload_url."""
-    chunk_size    = TIKTOK_CHUNK_SIZE
+    # Chunk size must not exceed the file size (TikTok rejects oversized chunks)
+    chunk_size    = min(TIKTOK_CHUNK_SIZE, file_size)
     total_chunks  = max(1, (file_size + chunk_size - 1) // chunk_size)
 
     resp = requests.post(
@@ -650,7 +651,8 @@ def tiktok_poll_status(access_token, publish_id):
 
 def tiktok_init_story_upload(access_token, file_size):
     """Initialize a TikTok Story video upload using the post_to_story flag."""
-    chunk_size   = TIKTOK_CHUNK_SIZE
+    # Chunk size must not exceed the file size (TikTok rejects oversized chunks)
+    chunk_size   = min(TIKTOK_CHUNK_SIZE, file_size)
     total_chunks = max(1, (file_size + chunk_size - 1) // chunk_size)
 
     resp = requests.post(
