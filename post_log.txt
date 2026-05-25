@@ -853,3 +853,4 @@
 [2026-05-25 12:49:24] Uploading Video6.mp4 (9.3 MB) to TikTok...
 [2026-05-25 12:49:24] ⚠️  TikTok post failed (Instagram/Facebook not affected): 403 Client Error: Forbidden for url: https://open.tiktokapis.com/v2/post/publish/video/init/
 [2026-05-25 12:49:24] ✅ All done. State saved.
+[2026-05-25 13:09:39] ⏭ Skipping — last post was 20 min ago (next post in ~35 min).
