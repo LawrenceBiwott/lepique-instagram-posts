@@ -816,3 +816,4 @@
 [2026-05-25 09:13:32] Uploading WhatsApp Video 2026-05-19 at 11.36.29.mp4 (1.4 MB) to TikTok...
 [2026-05-25 09:13:32] ⚠️  TikTok post failed (Instagram/Facebook not affected): 400 Client Error: Bad Request for url: https://open.tiktokapis.com/v2/post/publish/video/init/
 [2026-05-25 09:13:32] ✅ All done. State saved.
+[2026-05-25 09:16:28] ⏭ Skipping — last post was 3 min ago (next post in ~52 min).
