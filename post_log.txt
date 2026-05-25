@@ -779,3 +779,4 @@
 [2026-05-25 08:17:11] ✅ Facebook Story posted! ID: 4337371236505130
 [2026-05-25 08:17:11] ℹ️  TikTok: skipping photo (videos only).
 [2026-05-25 08:17:11] ✅ All done. State saved.
+[2026-05-25 08:56:56] ⏭ Skipping — last post was 40 min ago (next post in ~15 min).
