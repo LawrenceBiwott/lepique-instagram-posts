@@ -170,39 +170,23 @@ def get_next_media(state):
     return selected
 
 def get_next_tiktok_video(state):
-    """Pick the next unposted video for TikTok independently of Instagram/Facebook."""
+    """Pick the next unposted video for TikTok — newest to oldest by mtime, then cycle."""
     if not MEDIA_FOLDER.exists():
         return None
 
-    # Get all video files — newest additions first (git history), fallback to mtime
-    all_videos = []
-    try:
-        result = subprocess.run(
-            ["git", "log", "--diff-filter=A", "--name-only", "--format=", "--", "media/"],
-            capture_output=True, text=True, cwd=BASE_DIR
-        )
-        seen = set()
-        for line in result.stdout.strip().split("\n"):
-            line = line.strip()
-            if line:
-                fname = Path(line).name
-                fpath = MEDIA_FOLDER / fname
-                if fpath.exists() and fpath.suffix.lower() in VIDEO_EXTS:
-                    if fname not in seen:
-                        seen.add(fname)
-                        all_videos.append(fpath)
-        if not all_videos:
-            raise Exception("No videos in git log")
-    except Exception:
-        all_videos = sorted(
-            [p for p in MEDIA_FOLDER.iterdir()
-             if p.is_file() and p.suffix.lower() in VIDEO_EXTS],
-            key=lambda p: p.stat().st_mtime, reverse=True
-        )
+    # Sort all videos newest-first by file modification time
+    all_videos = sorted(
+        [p for p in MEDIA_FOLDER.iterdir()
+         if p.is_file() and p.suffix.lower() in VIDEO_EXTS],
+        key=lambda p: p.stat().st_mtime, reverse=True
+    )
 
     if not all_videos:
         log("ℹ️  TikTok: no video files found in media/")
         return None
+
+    log(f"TikTok: {len(all_videos)} videos found (newest → oldest): "
+        f"{[v.name for v in all_videos]}")
 
     posted = set(state.get("tiktok_posted_videos", []))
     selected = None
@@ -212,7 +196,7 @@ def get_next_tiktok_video(state):
             break
 
     if selected is None:
-        log(f"TikTok: all {len(all_videos)} videos posted — resetting TikTok cycle.")
+        log(f"TikTok: all {len(all_videos)} videos posted — resetting cycle, starting from newest.")
         state["tiktok_posted_videos"] = []
         selected = all_videos[0]
 
