@@ -31,6 +31,28 @@
       "used": false
     }
   ],
+  "tiktok_captions": [
+    {
+      "id": 1,
+      "text": "📍 Find us at Platinum Plaza, Shop G16 – Tom Mboya Street, Nairobi ☎ For size checks & directions: 0721 672 900\n👖 Lepique Fashions – Where Quality Meets the Perfect Fit 💙\nLooking for jeans that fit beautifully, feel comfortable, and still give that clean, confident look? We've got flattering ladies' jeans for every body shape and every vibe.\n✨ High-waist • Low-waist • Mom jeans • Skinny • Slim-fit • Straight • Wide-leg • Boyfriend • Bootcut • Flare • Cargo • Hipster • Three-quarter jeans\nPlus denim jackets, T-shirts, vests, bodysuits, crop tops, sweatpants & leather jackets for effortless everyday styling.\n💎 Perfect Fit • Premium Quality • Effortless Style\nFind your fit. Own your look. 💃\n#FYP #viral #KenyanTikTok #TikTokKE #ForYouPage #NairobiFashion #KenyaFashion #LadiesJeans #Nairobi #Mombasa #Kisumu #Nakuru #Eldoret"
+    },
+    {
+      "id": 2,
+      "text": "📍 Tom Mboya Street, Nairobi — Platinum Plaza, Shop G16 ☎ Need your size confirmed? 0721 672 900\n👖 Lepique Fashions – Jeans That Understand Your Shape 💙\nFor the ladies who want jeans that flatter the waist, shape the hips, feel comfortable, and still look stylish — this is your denim plug.\n✨ High-waist jeans for a snatched look ✨ Mom jeans for a relaxed classy vibe ✨ Skinny & slim-fit for a clean everyday fit ✨ Wide-leg, flare & bootcut for that trendy fashion look ✨ Cargo, boyfriend, hipster & three-quarter jeans for a fresh street-style vibe\nAlso available: denim jackets, crop tops, bodysuits, vests, T-shirts, sweatpants & leather jackets.\n💎 Quality you can feel. Fit you can see. Style you can own.\n#FYPシ #viralvideo #KenyanTikTok #TikTokKE #NairobiKenya #NairobiFashion #OOTDKenya #OutfitIdeas #JeansKenya #Mombasa #Kisumu #Nakuru"
+    },
+    {
+      "id": 3,
+      "text": "📍 Ladies' jeans shop in Nairobi — Platinum Plaza, Shop G16, Tom Mboya Street ☎ Call or WhatsApp: 0721 672 900\n👖 Lepique Fashions – Your Everyday Denim & Style Stop 💙\nRefresh your wardrobe with pieces that are easy to style, comfortable to wear, and perfect for casual days, outings, dates, campus, work weekends, travel looks, and everyday slay.\n✨ Ladies' jeans in different styles and vibes: High-waist • Low-waist • Mom • Skinny • Slim-fit • Straight • Wide-leg • Boyfriend • Bootcut • Flare • Cargo • Hipster • Three-quarter\nPair them with our denim jackets, crop tops, bodysuits, T-shirts, vests, sweatpants & leather jackets.\n💎 Simple. Stylish. Flattering. Quality.\nCome find your next favorite fit 💃\n#FYP #ForYou #viral #KenyanTikTok #TikTokKE #FashionKenya #LadiesFashionKenya #StreetStyleKenya #Nairobi #Mombasa #Eldoret #Nakuru"
+    },
+    {
+      "id": 4,
+      "text": "📍 Passing through Tom Mboya Street? We're at Platinum Plaza, Shop G16 ☎ Ask for available fits & sizes: 0721 672 900\n👖 Lepique Fashions – Premium Quality, Clean Fits & Effortless Style 💙\nEvery lady deserves jeans that don't just look good on the hanger — they should fit well, feel good, and bring out confidence when worn.\nFrom classic everyday denim to trendy statement pieces, we've got styles for different body shapes, sizes, and fashion moods.\n✨ High-waist • Mom • Skinny • Straight • Wide-leg • Bootcut • Flare • Cargo • Boyfriend • Hipster • Low-waist • Three-quarter jeans\nComplete the look with denim jackets, leather jackets, bodysuits, crop tops, vests, T-shirts & sweatpants.\n💎 Perfect Fit • Premium Quality • Nairobi Style\nFind your fit. Own your look. 💃\n#FYPシ❤️💞❤️ #viral #ForYouPage #KenyanTikTok #TikTokKE #NairobiFashion #KenyanFashion #DenimStyle #JeansLover #NairobiKenya #Kisumu #Mombasa #Eldoret"
+    },
+    {
+      "id": 5,
+      "text": "📍 Find us at Platinum Plaza, G16 – Tom Mboya Street, Nairobi ☎ For fit inquiries & directions: 0721 672 900\n👖 Lepique Fashions – For the Ladies Who Love a Good Fit 💙\nThat feeling when the jeans fit the waist, flatter the shape, feel comfortable, and still give you that stylish, confident look >>> 💃\nWhether your vibe is classy, casual, street-style, soft girl, baddie, campus look, weekend fit, or simple everyday fashion — we've got something for you.\n✨ Ladies' jeans: high-waist, low-waist, mom, skinny, slim-fit, straight, wide-leg, boyfriend, bootcut, flare, cargo, hipster & three-quarter ✨ Plus: denim jackets, T-shirts, vests, bodysuits, crop tops, sweatpants & leather jackets\n💎 Quality pieces. Beautiful fits. Easy styling.\nYour next favorite outfit starts here 💙\n#FYP #viral #KenyanTikTok #TikTokKE #ForYouPage #OutfitInspo #FashionGoals #LadiesFashion #JeansKenya #Nairobi #Mombasa #Kisumu #Nakuru #Eldoret"
+    }
+  ],
   "_instructions": {
     "how_to_add": "Add new caption objects to the captions array. Each needs: id, text, hashtags, used (set to false).",
     "rotation": "Captions rotate 1, 2, 3, 4, 5, 1, 2, 3... automatically.",

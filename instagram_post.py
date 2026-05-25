@@ -70,7 +70,7 @@ def load_state():
     if STATE_FILE.exists():
         with open(STATE_FILE, "r", encoding="utf-8") as f:
             return json.load(f)
-    return {"caption_index": 0, "posted_files": [], "tiktok_posted_videos": []}
+    return {"caption_index": 0, "posted_files": [], "tiktok_posted_videos": [], "tiktok_caption_index": 0}
 
 def save_state(state):
     with open(STATE_FILE, "w", encoding="utf-8") as f:
@@ -92,6 +92,17 @@ def get_next_caption(state):
     caption = captions[idx]
     state["caption_index"] = (idx + 1) % len(captions)
     return caption
+
+def get_next_tiktok_caption(state):
+    with open(CAPTIONS_FILE, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    captions = data.get("tiktok_captions", [])
+    if not captions:
+        raise ValueError("No tiktok_captions found in captions.json.")
+    idx = state.get("tiktok_caption_index", 0) % len(captions)
+    caption = captions[idx]
+    state["tiktok_caption_index"] = (idx + 1) % len(captions)
+    return caption["text"]
 
 # ─────────────────────────────────────────────
 # MEDIA
@@ -759,9 +770,10 @@ def post_to_instagram():
     # ── Facebook feed + Stories ──
     post_to_facebook(media_url, full_caption, video_file)
 
-    # ── TikTok (independent video queue) ──
+    # ── TikTok (independent video queue + separate caption) ──
     tiktok_video = get_next_tiktok_video(state)
-    post_to_tiktok(tiktok_video, full_caption)
+    tiktok_caption = get_next_tiktok_caption(state)
+    post_to_tiktok(tiktok_video, tiktok_caption)
 
     # Record successful post time so the interval guard works correctly
     state["last_post_time"] = datetime.utcnow().isoformat()
