@@ -66,4 +66,10 @@ jobs:
 
           git diff --cached --quiet || git commit -m "chore: update post state [skip ci]"
 
-          git push
+          # Retry push up to 3 times in case of transient conflicts or server errors
+          for i in 1 2 3; do
+            git push && break
+            echo "Push attempt $i failed — retrying in 10s..."
+            sleep 10
+            git pull --rebase --autostash origin main
+          done || { echo "All push attempts failed"; exit 1; }
