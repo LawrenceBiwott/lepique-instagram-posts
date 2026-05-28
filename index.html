@@ -834,6 +834,170 @@
       .hero-stats { gap: 1.5rem; }
     }
 
+    /* ── CATALOG ── */
+    .catalog-section { background: var(--white); }
+
+    .catalog-header { text-align: center; margin-bottom: 2.5rem; }
+    .catalog-header .section-sub { margin: 0 auto; }
+
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      justify-content: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .filter-btn {
+      background: var(--off-white);
+      color: var(--navy);
+      border: 1px solid var(--light-gray);
+      padding: 0.45rem 1.1rem;
+      font-size: 0.8rem;
+      font-weight: 500;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: var(--navy);
+      color: var(--white);
+      border-color: var(--navy);
+    }
+
+    .catalog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 1rem;
+    }
+
+    .catalog-item {
+      border-radius: 4px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.25s, box-shadow 0.25s;
+      background: var(--off-white);
+      position: relative;
+    }
+
+    .catalog-item:hover { transform: translateY(-4px); box-shadow: 0 10px 28px rgba(13,27,42,0.13); }
+
+    .catalog-item img {
+      width: 100%;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      display: block;
+    }
+
+    .catalog-item .cat-label {
+      padding: 0.6rem 0.8rem;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--navy);
+      background: var(--white);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .item-price {
+      font-weight: 700;
+      color: var(--denim);
+      white-space: nowrap;
+      font-size: 0.78rem;
+    }
+
+    .catalog-item.hidden { display: none; }
+
+    /* ── LIGHTBOX ── */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 500;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .lightbox.open { display: flex; }
+
+    .lb-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.85);
+    }
+
+    .lb-box {
+      position: relative;
+      z-index: 1;
+      background: var(--white);
+      border-radius: 6px;
+      overflow: hidden;
+      max-width: 480px;
+      width: 92vw;
+      max-height: 92vh;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.5);
+    }
+
+    .lb-img-wrap {
+      flex: 1;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #000;
+      max-height: 70vh;
+    }
+
+    .lb-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .lb-footer {
+      padding: 1rem 1.2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      background: var(--white);
+    }
+
+    .lb-title {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--navy);
+    }
+
+    .lb-close {
+      position: absolute;
+      top: 10px;
+      right: 12px;
+      background: rgba(0,0,0,0.5);
+      color: white;
+      border: none;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      font-size: 1rem;
+      cursor: pointer;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 1;
+    }
+
+    .lb-close:hover { background: rgba(0,0,0,0.8); }
+
     /* ── MOBILE NAV MENU ── */
     .mobile-menu {
       display: none;
@@ -986,7 +1150,7 @@
       <div class="section-tag">New Arrivals</div>
       <h2 class="section-title">Latest Styles</h2>
     </div>
-    <a href="https://wa.me/254721672900?text=Hi%20Lepique!%20Please%20show%20me%20your%20full%20catalogue." target="_blank" class="btn-primary">View Full Catalogue</a>
+    <a href="#catalog" class="btn-primary">View Full Catalogue</a>
   </div>
   <div class="product-grid">
 
@@ -1052,6 +1216,245 @@
 
   </div>
 </section>
+
+<!-- FULL CATALOG -->
+<section class="catalog-section" id="catalog">
+  <div class="catalog-header">
+    <div class="section-tag">Complete Collection</div>
+    <h2 class="section-title">Full Catalogue</h2>
+    <p class="section-sub">Browse all available styles. Click any photo to see it larger, then order via WhatsApp.</p>
+  </div>
+
+  <div class="filter-bar">
+    <button class="filter-btn active" onclick="filterCat('all')">All (47)</button>
+    <button class="filter-btn" onclick="filterCat('wide-leg')">Wide Leg (25)</button>
+    <button class="filter-btn" onclick="filterCat('skinny')">Skinny (7)</button>
+    <button class="filter-btn" onclick="filterCat('flare')">Flare (6)</button>
+    <button class="filter-btn" onclick="filterCat('straight')">Straight (3)</button>
+    <button class="filter-btn" onclick="filterCat('ripped')">Ripped (3)</button>
+    <button class="filter-btn" onclick="filterCat('cargo')">Cargo (1)</button>
+    <button class="filter-btn" onclick="filterCat('printed')">Printed (2)</button>
+  </div>
+
+  <div class="catalog-grid">
+    <!-- WIDE LEG -->
+    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-01-dark-blue-belt.jpeg','Wide Leg – Dark Blue (Belt)','Ksh 3,000')">
+      <img src="lepique-wide-leg-01-dark-blue-belt.jpeg" alt="Wide Leg Dark Blue" loading="lazy" />
+      <div class="cat-label"><span>Wide Leg – Dark Blue</span><span class="item-price">Ksh 3,000</span></div>
+    </div>
+    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-02-light-blue.jpeg','Wide Leg – Light Blue','Ksh 3,000')">
+      <img src="lepique-wide-leg-02-light-blue.jpeg" alt="Wide Leg Light Blue" loading="lazy" />
+      <div class="cat-label"><span>Wide Leg – Light Blue</span><span class="item-price">Ksh 3,000</span></div>
+    </div>
+    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-03-medium-blue.jpeg','Wide Leg – Medium Blue','Ksh 3,000')">
+      <img src="lepique-wide-leg-03-medium-blue.jpeg" alt="Wide Leg Medium Blue" loading="lazy" />
+      <div class="cat-label"><span>Wide Leg – Medium Blue</span><span class="item-price">Ksh 3,000</span></div>
+    </div>
+    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-04-light-blue.jpeg','Wide Leg – Light Blue','Ksh 3,000')">
+      <img src="lepique-wide-leg-04-light-blue.jpeg" alt="Wide Leg Light Blue 2" loading="lazy" />
+      <div class="cat-label"><span>Wide Leg – Light Blue</span><span class="item-price">Ksh 3,000</span></div>
+    </div>
+    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-05-light-blue-curly.jpeg','Wide Leg – Light Blue (Curly)','Ksh 3,000')">
+      <img src="lepique-wide-leg-05-light-blue-curly.jpeg" alt="Wide Leg Light Blue Curly" loading="lazy" />
+      <div class="cat-label"><span>Wide Leg – Light Blue</span><span class="item-price">Ksh 3,000</span></div>
+    </div>
+    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-06-dark-navy-sweater.jpeg','Wide Leg – Dark Navy','Ksh 3,000')">
+      <img src="lepique-wide-leg-06-dark-navy-sweater.jpeg" alt="Wide Leg Dark Navy" loading="lazy" />
+      <div class="cat-label"><span>Wide Leg – Dark Navy</span><span class="item-price">Ksh 3,000</span></div>
+    </div>
+    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-07-light-blue.jpeg','Wide Leg – Light Blue','Ksh 3,000')">
+      <img src="lepique-wide-leg-07-light-blue.jpeg" alt="Wide Leg Light Blue 3" loading="lazy" />
+      <div class="cat-label"><span>Wide Leg – Light Blue</span><span class="item-price">Ksh 3,000</span></div>
+    </div>
+    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-08-black.jpeg','Wide Leg – Black','Ksh 3,000')">
+      <img src="lepique-wide-leg-08-black.jpeg" alt="Wide Leg Black" loading="lazy" />
+      <div class="cat-label"><span>Wide Leg – Black</span><span class="item-price">Ksh 3,000</span></div>
+    </div>
+    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-09-light-blue.jpeg','Wide Leg – Light Wash','Ksh 3,000')">
+      <img src="lepique-wide-leg-09-light-blue.jpeg" alt="Wide Leg Light Wash" loading="lazy" />
+      <div class="cat-label"><span>Wide Leg – Light Wash</span><span class="item-price">Ksh 3,000</span></div>
+    </div>
+    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-10-light-blue-knit.jpeg','Wide Leg – Light Blue (Knit)','Ksh 3,000')">
+      <img src="lepique-wide-leg-10-light-blue-knit.jpeg" alt="Wide Leg Light Blue Knit" loading="lazy" />
+      <div class="cat-label"><span>Wide Leg – Light Blue</span><span class="item-price">Ksh 3,000</span></div>
+    </div>
+    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-11-medium-blue.jpeg','Wide Leg – Medium Blue','Ksh 3,000')">
+      <img src="lepique-wide-leg-11-medium-blue.jpeg" alt="Wide Leg Medium Blue 2" loading="lazy" />
+      <div class="cat-label"><span>Wide Leg – Medium Blue</span><span class="item-price">Ksh 3,000</span></div>
+    </div>
+    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-12-dark-navy.jpeg','Wide Leg – Dark Navy','Ksh 3,000')">
+      <img src="lepique-wide-leg-12-dark-navy.jpeg" alt="Wide Leg Dark Navy 2" loading="lazy" />
+      <div class="cat-label"><span>Wide Leg – Dark Navy</span><span class="item-price">Ksh 3,000</span></div>
+    </div>
+    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-13-medium-blue.jpeg','Wide Leg – Medium Blue','Ksh 3,000')">
+      <img src="lepique-wide-leg-13-medium-blue.jpeg" alt="Wide Leg Medium Blue 3" loading="lazy" />
+      <div class="cat-label"><span>Wide Leg – Medium Blue</span><span class="item-price">Ksh 3,000</span></div>
+    </div>
+    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-14-dark-navy.jpeg','Wide Leg – Dark Navy','Ksh 3,000')">
+      <img src="lepique-wide-leg-14-dark-navy.jpeg" alt="Wide Leg Dark Navy 3" loading="lazy" />
+      <div class="cat-label"><span>Wide Leg – Dark Navy</span><span class="item-price">Ksh 3,000</span></div>
+    </div>
+    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-15-black.jpeg','Wide Leg – Black','Ksh 3,000')">
+      <img src="lepique-wide-leg-15-black.jpeg" alt="Wide Leg Black 2" loading="lazy" />
+      <div class="cat-label"><span>Wide Leg – Black</span><span class="item-price">Ksh 3,000</span></div>
+    </div>
+    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-16-dark-navy-hero.jpeg','Wide Leg – Dark Navy','Ksh 3,000')">
+      <img src="lepique-wide-leg-16-dark-navy-hero.jpeg" alt="Wide Leg Dark Navy Hero" loading="lazy" />
+      <div class="cat-label"><span>Wide Leg – Dark Navy</span><span class="item-price">Ksh 3,000</span></div>
+    </div>
+    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-17-dark-navy.jpeg','Wide Leg – Dark Navy','Ksh 3,000')">
+      <img src="lepique-wide-leg-17-dark-navy.jpeg" alt="Wide Leg Dark Navy 4" loading="lazy" />
+      <div class="cat-label"><span>Wide Leg – Dark Navy</span><span class="item-price">Ksh 3,000</span></div>
+    </div>
+    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-18-light-blue-sweater.jpeg','Wide Leg – Light Blue','Ksh 3,000')">
+      <img src="lepique-wide-leg-18-light-blue-sweater.jpeg" alt="Wide Leg Light Blue Sweater" loading="lazy" />
+      <div class="cat-label"><span>Wide Leg – Light Blue</span><span class="item-price">Ksh 3,000</span></div>
+    </div>
+    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-19-dark-navy-belt.jpg','Wide Leg – Dark Navy (Belt)','Ksh 3,000')">
+      <img src="lepique-wide-leg-19-dark-navy-belt.jpg" alt="Wide Leg Dark Navy Belt" loading="lazy" />
+      <div class="cat-label"><span>Wide Leg – Dark Navy</span><span class="item-price">Ksh 3,000</span></div>
+    </div>
+    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-20-dark-navy.jpg','Wide Leg – Dark Navy','Ksh 3,000')">
+      <img src="lepique-wide-leg-20-dark-navy.jpg" alt="Wide Leg Dark Navy 5" loading="lazy" />
+      <div class="cat-label"><span>Wide Leg – Dark Navy</span><span class="item-price">Ksh 3,000</span></div>
+    </div>
+    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-21-light-blue-sweater.jpg','Wide Leg – Light Blue','Ksh 3,000')">
+      <img src="lepique-wide-leg-21-light-blue-sweater.jpg" alt="Wide Leg Light Blue Sweater 2" loading="lazy" />
+      <div class="cat-label"><span>Wide Leg – Light Blue</span><span class="item-price">Ksh 3,000</span></div>
+    </div>
+    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-22-medium-blue.jpeg','Wide Leg – Medium Blue','Ksh 3,000')">
+      <img src="lepique-wide-leg-22-medium-blue.jpeg" alt="Wide Leg Medium Blue Mustard" loading="lazy" />
+      <div class="cat-label"><span>Wide Leg – Medium Blue</span><span class="item-price">Ksh 3,000</span></div>
+    </div>
+    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-23-black.jpeg','Wide Leg – Black','Ksh 3,000')">
+      <img src="lepique-wide-leg-23-black.jpeg" alt="Wide Leg Black 3" loading="lazy" />
+      <div class="cat-label"><span>Wide Leg – Black</span><span class="item-price">Ksh 3,000</span></div>
+    </div>
+    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-24-medium-blue.jpeg','Wide Leg – Medium Blue','Ksh 3,000')">
+      <img src="lepique-wide-leg-24-medium-blue.jpeg" alt="Wide Leg Medium Blue Maroon" loading="lazy" />
+      <div class="cat-label"><span>Wide Leg – Medium Blue</span><span class="item-price">Ksh 3,000</span></div>
+    </div>
+    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-eyelet-01-black.jpeg','Wide Leg Eyelet – Black','Ksh 3,000')">
+      <img src="lepique-wide-leg-eyelet-01-black.jpeg" alt="Wide Leg Eyelet Black" loading="lazy" />
+      <div class="cat-label"><span>Wide Leg Eyelet – Black</span><span class="item-price">Ksh 3,000</span></div>
+    </div>
+
+    <!-- SKINNY -->
+    <div class="catalog-item" data-cat="skinny" onclick="openLightbox('lepique-skinny-01-white.jpeg','Skinny – White','Ksh 1,200')">
+      <img src="lepique-skinny-01-white.jpeg" alt="Skinny White" loading="lazy" />
+      <div class="cat-label"><span>Skinny – White</span><span class="item-price">Ksh 1,200</span></div>
+    </div>
+    <div class="catalog-item" data-cat="skinny" onclick="openLightbox('lepique-skinny-02-grey.jpeg','Skinny – Grey','Ksh 1,200')">
+      <img src="lepique-skinny-02-grey.jpeg" alt="Skinny Grey" loading="lazy" />
+      <div class="cat-label"><span>Skinny – Grey</span><span class="item-price">Ksh 1,200</span></div>
+    </div>
+    <div class="catalog-item" data-cat="skinny" onclick="openLightbox('lepique-skinny-03-dark-navy.jpeg','Skinny – Dark Navy','Ksh 1,200')">
+      <img src="lepique-skinny-03-dark-navy.jpeg" alt="Skinny Dark Navy" loading="lazy" />
+      <div class="cat-label"><span>Skinny – Dark Navy</span><span class="item-price">Ksh 1,200</span></div>
+    </div>
+    <div class="catalog-item" data-cat="skinny" onclick="openLightbox('lepique-skinny-04-dark-navy.jpeg','Skinny – Dark Navy','Ksh 1,800')">
+      <img src="lepique-skinny-04-dark-navy.jpeg" alt="Skinny Dark Navy 2" loading="lazy" />
+      <div class="cat-label"><span>Skinny – Dark Navy</span><span class="item-price">Ksh 1,800</span></div>
+    </div>
+    <div class="catalog-item" data-cat="skinny" onclick="openLightbox('lepique-skinny-05-black-plussize.jpeg','Skinny – Black (Plus Size)','Ksh 1,500')">
+      <img src="lepique-skinny-05-black-plussize.jpeg" alt="Skinny Black Plus Size" loading="lazy" />
+      <div class="cat-label"><span>Skinny – Black (Plus)</span><span class="item-price">Ksh 1,500</span></div>
+    </div>
+    <div class="catalog-item" data-cat="skinny" onclick="openLightbox('lepique-skinny-06-black.jpeg','Skinny – Black','Ksh 1,200')">
+      <img src="lepique-skinny-06-black.jpeg" alt="Skinny Black" loading="lazy" />
+      <div class="cat-label"><span>Skinny – Black</span><span class="item-price">Ksh 1,200</span></div>
+    </div>
+    <div class="catalog-item" data-cat="skinny" onclick="openLightbox('lepique-skinny-07-black.jpeg','Skinny – Black','Ksh 1,200')">
+      <img src="lepique-skinny-07-black.jpeg" alt="Skinny Black 2" loading="lazy" />
+      <div class="cat-label"><span>Skinny – Black</span><span class="item-price">Ksh 1,200</span></div>
+    </div>
+
+    <!-- FLARE -->
+    <div class="catalog-item" data-cat="flare" onclick="openLightbox('lepique-flare-01-black.jpeg','Flare – Black','Ksh 2,500')">
+      <img src="lepique-flare-01-black.jpeg" alt="Flare Black" loading="lazy" />
+      <div class="cat-label"><span>Flare – Black</span><span class="item-price">Ksh 2,500</span></div>
+    </div>
+    <div class="catalog-item" data-cat="flare" onclick="openLightbox('lepique-flare-02-grey-acidwash.jpeg','Flare – Grey Acid Wash','Ksh 2,500')">
+      <img src="lepique-flare-02-grey-acidwash.jpeg" alt="Flare Grey Acid Wash" loading="lazy" />
+      <div class="cat-label"><span>Flare – Grey Acid Wash</span><span class="item-price">Ksh 2,500</span></div>
+    </div>
+    <div class="catalog-item" data-cat="flare" onclick="openLightbox('lepique-flare-03-blue.jpeg','Flare – Blue','Ksh 2,500')">
+      <img src="lepique-flare-03-blue.jpeg" alt="Flare Blue" loading="lazy" />
+      <div class="cat-label"><span>Flare – Blue</span><span class="item-price">Ksh 2,500</span></div>
+    </div>
+    <div class="catalog-item" data-cat="flare" onclick="openLightbox('lepique-flare-04-blue.jpeg','Flare – Blue','Ksh 2,500')">
+      <img src="lepique-flare-04-blue.jpeg" alt="Flare Blue 2" loading="lazy" />
+      <div class="cat-label"><span>Flare – Blue</span><span class="item-price">Ksh 2,500</span></div>
+    </div>
+    <div class="catalog-item" data-cat="flare" onclick="openLightbox('lepique-flare-05-blue-medium.jpg','Flare – Medium Blue','Ksh 2,500')">
+      <img src="lepique-flare-05-blue-medium.jpg" alt="Flare Medium Blue" loading="lazy" />
+      <div class="cat-label"><span>Flare – Medium Blue</span><span class="item-price">Ksh 2,500</span></div>
+    </div>
+    <div class="catalog-item" data-cat="flare" onclick="openLightbox('lepique-flare-06-medium-blue.jpeg','Flare – Medium Blue','Ksh 2,500')">
+      <img src="lepique-flare-06-medium-blue.jpeg" alt="Flare Medium Blue 2" loading="lazy" />
+      <div class="cat-label"><span>Flare – Medium Blue</span><span class="item-price">Ksh 2,500</span></div>
+    </div>
+
+    <!-- STRAIGHT -->
+    <div class="catalog-item" data-cat="straight" onclick="openLightbox('lepique-straight-01-medium-blue.jpeg','Straight – Medium Blue','Ksh 2,500')">
+      <img src="lepique-straight-01-medium-blue.jpeg" alt="Straight Medium Blue" loading="lazy" />
+      <div class="cat-label"><span>Straight – Medium Blue</span><span class="item-price">Ksh 2,500</span></div>
+    </div>
+    <div class="catalog-item" data-cat="straight" onclick="openLightbox('lepique-straight-02-beige-twomodels.jpg','Straight – Beige','Ksh 2,500')">
+      <img src="lepique-straight-02-beige-twomodels.jpg" alt="Straight Beige Two Models" loading="lazy" />
+      <div class="cat-label"><span>Straight – Beige</span><span class="item-price">Ksh 2,500</span></div>
+    </div>
+    <div class="catalog-item" data-cat="straight" onclick="openLightbox('lepique-straight-03-beige.jpg','Straight – Beige','Ksh 2,500')">
+      <img src="lepique-straight-03-beige.jpg" alt="Straight Beige" loading="lazy" />
+      <div class="cat-label"><span>Straight – Beige</span><span class="item-price">Ksh 2,500</span></div>
+    </div>
+
+    <!-- RIPPED -->
+    <div class="catalog-item" data-cat="ripped" onclick="openLightbox('lepique-ripped-01-light-blue.jpeg','Ripped – Light Blue','Ksh 2,500')">
+      <img src="lepique-ripped-01-light-blue.jpeg" alt="Ripped Light Blue" loading="lazy" />
+      <div class="cat-label"><span>Ripped – Light Blue</span><span class="item-price">Ksh 2,500</span></div>
+    </div>
+    <div class="catalog-item" data-cat="ripped" onclick="openLightbox('lepique-ripped-02-grey-acidwash.jpeg','Ripped – Grey Acid Wash','Ksh 3,000')">
+      <img src="lepique-ripped-02-grey-acidwash.jpeg" alt="Ripped Grey Acid Wash" loading="lazy" />
+      <div class="cat-label"><span>Ripped – Grey Acid Wash</span><span class="item-price">Ksh 3,000</span></div>
+    </div>
+    <div class="catalog-item" data-cat="ripped" onclick="openLightbox('lepique-ripped-03-light-blue-wide.jpeg','Ripped Wide – Light Blue','Ksh 2,500')">
+      <img src="lepique-ripped-03-light-blue-wide.jpeg" alt="Ripped Wide Light Blue" loading="lazy" />
+      <div class="cat-label"><span>Ripped Wide – Light Blue</span><span class="item-price">Ksh 2,500</span></div>
+    </div>
+
+    <!-- CARGO -->
+    <div class="catalog-item" data-cat="cargo" onclick="openLightbox('lepique-cargo-01-grey-wash.jpeg','Cargo – Grey Wash','Ksh 3,000')">
+      <img src="lepique-cargo-01-grey-wash.jpeg" alt="Cargo Grey Wash" loading="lazy" />
+      <div class="cat-label"><span>Cargo – Grey Wash</span><span class="item-price">Ksh 3,000</span></div>
+    </div>
+
+    <!-- PRINTED -->
+    <div class="catalog-item" data-cat="printed" onclick="openLightbox('lepique-printed-01-ysl-light-blue.jpeg','Printed YSL – Light Blue','Ksh 3,000')">
+      <img src="lepique-printed-01-ysl-light-blue.jpeg" alt="Printed YSL Light Blue" loading="lazy" />
+      <div class="cat-label"><span>Printed YSL – Light Blue</span><span class="item-price">Ksh 3,000</span></div>
+    </div>
+    <div class="catalog-item" data-cat="printed" onclick="openLightbox('lepique-printed-02-ysl-light-blue.jpeg','Printed YSL – Light Blue','Ksh 3,000')">
+      <img src="lepique-printed-02-ysl-light-blue.jpeg" alt="Printed YSL Light Blue 2" loading="lazy" />
+      <div class="cat-label"><span>Printed YSL – Light Blue</span><span class="item-price">Ksh 3,000</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <div class="lb-overlay" onclick="closeLightbox()"></div>
+  <div class="lb-box">
+    <button class="lb-close" onclick="closeLightbox()">✕</button>
+    <div class="lb-img-wrap">
+      <img id="lb-img" src="" alt="" />
+    </div>
+    <div class="lb-footer">
+      <span class="lb-title" id="lb-title"></span>
+      <a id="lb-order" href="" target="_blank" class="whatsapp-order" style="font-size:0.82rem; padding:0.5rem 1rem;">📱 Order via WhatsApp</a>
+    </div>
+  </div>
+</div>
 
 <!-- ABOUT -->
 <section class="about" id="about">
@@ -1278,6 +1681,36 @@
       }
     });
   });
+
+  // Catalog filter
+  function filterCat(cat) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    event.target.classList.add('active');
+    document.querySelectorAll('.catalog-item').forEach(item => {
+      if (cat === 'all' || item.dataset.cat === cat) {
+        item.classList.remove('hidden');
+      } else {
+        item.classList.add('hidden');
+      }
+    });
+  }
+
+  // Lightbox
+  function openLightbox(src, title, price) {
+    document.getElementById('lb-img').src = src;
+    document.getElementById('lb-title').textContent = title + ' — ' + price;
+    const msg = encodeURIComponent('Hi Lepique Fashions! I\'d like to order the ' + title + ' (' + price + '). Please share sizes and availability.');
+    document.getElementById('lb-order').href = 'https://wa.me/254721672900?text=' + msg;
+    document.getElementById('lightbox').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
 </script>
 
 </body>
