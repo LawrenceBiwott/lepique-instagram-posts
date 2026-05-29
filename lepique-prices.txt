@@ -1,0 +1,79 @@
+LEPIQUE FASHIONS – PRICE LIST
+Last updated: 2026-05-29
+================================================
+
+WIDE LEG JEANS
+--------------
+Wide Leg – Dark Blue (Belt)         Ksh 3,000
+Wide Leg – Light Blue (01)          Ksh 3,000
+Wide Leg – Medium Blue (01)         Ksh 3,000
+Wide Leg – Light Blue (02)          Ksh 3,000
+Wide Leg – Light Blue (Curly)       Ksh 3,000
+Wide Leg – Dark Navy (Sweater)      Ksh 3,000
+Wide Leg – Light Blue (03)          Ksh 3,000
+Wide Leg – Black (01)               Ksh 3,000
+Wide Leg – Light Wash               Ksh 3,000
+Wide Leg – Light Blue (Knit top)    Ksh 3,000
+Wide Leg – Medium Blue (02)         Ksh 3,000
+Wide Leg – Dark Navy (02)           Ksh 3,000
+Wide Leg – Medium Blue (03)         Ksh 3,000
+Wide Leg – Dark Navy (03)           Ksh 3,000
+Wide Leg – Black (02)               Ksh 3,000
+Wide Leg – Dark Navy (Hero)         Ksh 3,000
+Wide Leg – Dark Navy (04)           Ksh 3,000
+Wide Leg – Light Blue (Sweater 01)  Ksh 3,000
+Wide Leg – Dark Navy (Belt)         Ksh 3,000
+Wide Leg – Dark Navy (05)           Ksh 3,000
+Wide Leg – Light Blue (Sweater 02)  Ksh 3,000
+Wide Leg – Medium Blue (Mustard)    Ksh 3,000
+Wide Leg – Black (03)               Ksh 3,000
+Wide Leg – Medium Blue (Maroon)     Ksh 3,000
+Wide Leg Eyelet – Black             Ksh 3,000
+
+SKINNY JEANS
+------------
+Skinny – White                      Ksh 1,200
+Skinny – Grey                       Ksh 1,200
+Skinny – Dark Navy (01)             Ksh 1,200
+Skinny – Dark Navy (02)             Ksh 1,800
+Skinny – Black Plus Size            Ksh 1,500
+Skinny – Black (01)                 Ksh 1,200
+Skinny – Black (02)                 Ksh 1,200
+
+FLARE JEANS
+-----------
+Flare – Black                       Ksh 2,500
+Flare – Grey Acid Wash              Ksh 2,500
+Flare – Blue (01)                   Ksh 2,500
+Flare – Blue (02)                   Ksh 2,500
+Flare – Medium Blue (01)            Ksh 2,500
+Flare – Medium Blue (02)            Ksh 2,500
+
+STRAIGHT JEANS
+--------------
+Straight – Medium Blue              Ksh 2,500
+Straight – Beige (Two models)       Ksh 2,500
+Straight – Beige (01)               Ksh 2,500
+
+RIPPED JEANS
+------------
+Ripped – Light Blue                 Ksh 2,500
+Ripped – Grey Acid Wash             Ksh 3,000
+Ripped Wide – Light Blue            Ksh 2,500
+
+CARGO JEANS
+-----------
+Cargo – Grey Wash                   Ksh 3,000
+
+PRINTED JEANS
+-------------
+Printed YSL – Light Blue (01)       Ksh 3,000
+Printed YSL – Light Blue (02)       Ksh 3,000
+
+================================================
+HOW TO UPDATE PRICES IN FUTURE
+================================================
+1. Edit the prices above in this file
+2. Send the updated file back to Claude
+3. Claude will update all photo cards on the website automatically
+4. Upload the new index.html to cPanel to go live

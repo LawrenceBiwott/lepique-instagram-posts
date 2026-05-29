@@ -18,1011 +18,190 @@
       --gray: #6b7280;
       --light-gray: #e5e7eb;
     }
-
     * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; color: var(--navy); background: var(--white); }
 
-    body {
-      font-family: 'Inter', sans-serif;
-      color: var(--navy);
-      background: var(--white);
-    }
-
-    /* ── NAV ── */
-    nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 5%;
-      height: 70px;
-      background: rgba(13, 27, 42, 0.97);
-      backdrop-filter: blur(8px);
-    }
-
-    .logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.6rem;
-      font-weight: 700;
-      color: var(--gold);
-      letter-spacing: 2px;
-      text-decoration: none;
-    }
-
+    /* NAV */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 0 5%; height: 70px; background: rgba(13,27,42,0.97); backdrop-filter: blur(8px); }
+    .logo { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 700; color: var(--gold); letter-spacing: 2px; text-decoration: none; }
     .logo span { color: var(--white); }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 2rem;
-    }
-
-    nav ul a {
-      color: var(--white);
-      text-decoration: none;
-      font-size: 0.85rem;
-      font-weight: 500;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      transition: color 0.2s;
-    }
-
+    nav ul { list-style: none; display: flex; gap: 2rem; }
+    nav ul a { color: var(--white); text-decoration: none; font-size: 0.85rem; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; transition: color 0.2s; }
     nav ul a:hover { color: var(--gold); }
-
-    .nav-cta {
-      background: var(--gold);
-      color: var(--navy) !important;
-      padding: 0.5rem 1.2rem;
-      border-radius: 2px;
-      font-weight: 600 !important;
-    }
-
+    .nav-cta { background: var(--gold); color: var(--navy) !important; padding: 0.5rem 1.2rem; border-radius: 2px; font-weight: 600 !important; }
     .nav-cta:hover { background: var(--gold-light); color: var(--navy) !important; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--white); border-radius: 2px; transition: all 0.3s; }
 
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      cursor: pointer;
-      background: none;
-      border: none;
-      padding: 4px;
-    }
-
-    .hamburger span {
-      display: block;
-      width: 24px;
-      height: 2px;
-      background: var(--white);
-      border-radius: 2px;
-      transition: all 0.3s;
-    }
-
-    /* ── HERO ── */
-    .hero {
-      min-height: 100vh;
-      background: linear-gradient(135deg, var(--navy) 0%, #1c3f6e 60%, #2a5298 100%);
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: center;
-      padding: 0 5%;
-      position: relative;
-      overflow: hidden;
-      gap: 2rem;
-    }
-
-    .hero-image {
-      display: flex;
-      justify-content: flex-end;
-      align-items: flex-end;
-      height: 100%;
-      padding-top: 70px;
-    }
-
-    .hero-image img {
-      max-height: 90vh;
-      width: auto;
-      object-fit: cover;
-      border-radius: 4px 4px 0 0;
-      filter: drop-shadow(0 20px 40px rgba(0,0,0,0.4));
-    }
-
-    @media (max-width: 900px) {
-      .hero { grid-template-columns: 1fr; }
-      .hero-image { display: none; }
-    }
-
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: -20%;
-      right: -10%;
-      width: 600px;
-      height: 600px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(201,168,76,0.15) 0%, transparent 70%);
-    }
-
-    .hero::after {
-      content: '';
-      position: absolute;
-      bottom: -10%;
-      left: 20%;
-      width: 400px;
-      height: 400px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(201,168,76,0.08) 0%, transparent 70%);
-    }
-
-    .hero-content {
-      max-width: 620px;
-      z-index: 1;
-    }
-
-    .hero-badge {
-      display: inline-block;
-      background: rgba(201,168,76,0.15);
-      border: 1px solid rgba(201,168,76,0.4);
-      color: var(--gold);
-      font-size: 0.75rem;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      padding: 0.4rem 1rem;
-      border-radius: 2px;
-      margin-bottom: 1.5rem;
-    }
-
-    .hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2.5rem, 5vw, 4rem);
-      color: var(--white);
-      line-height: 1.15;
-      margin-bottom: 1.2rem;
-    }
-
-    .hero h1 em {
-      font-style: italic;
-      color: var(--gold);
-    }
-
-    .hero p {
-      color: rgba(255,255,255,0.75);
-      font-size: 1.05rem;
-      line-height: 1.7;
-      margin-bottom: 2rem;
-      max-width: 480px;
-    }
-
-    .hero-buttons {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-
-    .btn-primary {
-      background: var(--gold);
-      color: var(--navy);
-      padding: 0.9rem 2rem;
-      font-weight: 600;
-      font-size: 0.9rem;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      border: none;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-block;
-      transition: background 0.2s, transform 0.2s;
-      border-radius: 2px;
-    }
-
+    /* HERO */
+    .hero { min-height: 100vh; background: linear-gradient(135deg, var(--navy) 0%, #1c3f6e 60%, #2a5298 100%); display: grid; grid-template-columns: 1fr 1fr; align-items: center; padding: 0 5%; position: relative; overflow: hidden; gap: 2rem; }
+    .hero-image { display: flex; justify-content: flex-end; align-items: flex-end; height: 100%; padding-top: 70px; }
+    .hero-image img { max-height: 90vh; width: auto; object-fit: cover; border-radius: 4px 4px 0 0; filter: drop-shadow(0 20px 40px rgba(0,0,0,0.4)); }
+    @media (max-width: 900px) { .hero { grid-template-columns: 1fr; } .hero-image { display: none; } }
+    .hero::before { content: ''; position: absolute; top: -20%; right: -10%; width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, rgba(201,168,76,0.15) 0%, transparent 70%); }
+    .hero::after { content: ''; position: absolute; bottom: -10%; left: 20%; width: 400px; height: 400px; border-radius: 50%; background: radial-gradient(circle, rgba(201,168,76,0.08) 0%, transparent 70%); }
+    .hero-content { max-width: 620px; z-index: 1; }
+    .hero-badge { display: inline-block; background: rgba(201,168,76,0.15); border: 1px solid rgba(201,168,76,0.4); color: var(--gold); font-size: 0.75rem; letter-spacing: 3px; text-transform: uppercase; padding: 0.4rem 1rem; border-radius: 2px; margin-bottom: 1.5rem; }
+    .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 5vw, 4rem); color: var(--white); line-height: 1.15; margin-bottom: 1.2rem; }
+    .hero h1 em { font-style: italic; color: var(--gold); }
+    .hero p { color: rgba(255,255,255,0.75); font-size: 1.05rem; line-height: 1.7; margin-bottom: 2rem; max-width: 480px; }
+    .hero-buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn-primary { background: var(--gold); color: var(--navy); padding: 0.9rem 2rem; font-weight: 600; font-size: 0.9rem; letter-spacing: 1px; text-transform: uppercase; border: none; cursor: pointer; text-decoration: none; display: inline-block; transition: background 0.2s, transform 0.2s; border-radius: 2px; }
     .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
-
-    .btn-outline {
-      background: transparent;
-      color: var(--white);
-      padding: 0.9rem 2rem;
-      font-weight: 500;
-      font-size: 0.9rem;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      border: 1px solid rgba(255,255,255,0.5);
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-block;
-      transition: all 0.2s;
-      border-radius: 2px;
-    }
-
+    .btn-outline { background: transparent; color: var(--white); padding: 0.9rem 2rem; font-weight: 500; font-size: 0.9rem; letter-spacing: 1px; text-transform: uppercase; border: 1px solid rgba(255,255,255,0.5); cursor: pointer; text-decoration: none; display: inline-block; transition: all 0.2s; border-radius: 2px; }
     .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+    .hero-stats { display: flex; gap: 2.5rem; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); }
+    .stat-num { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--gold); font-weight: 700; }
+    .stat-label { font-size: 0.75rem; color: rgba(255,255,255,0.55); text-transform: uppercase; letter-spacing: 1px; margin-top: 0.15rem; }
 
-    .hero-stats {
-      display: flex;
-      gap: 2.5rem;
-      margin-top: 3rem;
-      padding-top: 2rem;
-      border-top: 1px solid rgba(255,255,255,0.1);
-    }
+    /* MARQUEE */
+    .marquee-bar { background: var(--gold); padding: 0.7rem 0; overflow: hidden; white-space: nowrap; }
+    .marquee-inner { display: inline-block; animation: marquee 20s linear infinite; font-size: 0.75rem; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--navy); }
+    @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
-    .stat-num {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.8rem;
-      color: var(--gold);
-      font-weight: 700;
-    }
-
-    .stat-label {
-      font-size: 0.75rem;
-      color: rgba(255,255,255,0.55);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-top: 0.15rem;
-    }
-
-    /* ── MARQUEE ── */
-    .marquee-bar {
-      background: var(--gold);
-      padding: 0.7rem 0;
-      overflow: hidden;
-      white-space: nowrap;
-    }
-
-    .marquee-inner {
-      display: inline-block;
-      animation: marquee 20s linear infinite;
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: var(--navy);
-    }
-
-    @keyframes marquee {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-
-    /* ── SECTION SHARED ── */
+    /* SECTIONS */
     section { padding: 5rem 5%; }
+    .section-tag { font-size: 0.72rem; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem; }
+    .section-title { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 3vw, 2.6rem); color: var(--navy); margin-bottom: 1rem; }
+    .section-sub { color: var(--gray); font-size: 0.95rem; line-height: 1.7; max-width: 500px; }
 
-    .section-tag {
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 0.8rem;
-    }
-
-    .section-title {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(1.8rem, 3vw, 2.6rem);
-      color: var(--navy);
-      margin-bottom: 1rem;
-    }
-
-    .section-sub {
-      color: var(--gray);
-      font-size: 0.95rem;
-      line-height: 1.7;
-      max-width: 500px;
-    }
-
-    /* ── CATEGORIES ── */
+    /* CATEGORIES */
     .categories { background: var(--off-white); }
-
-    .cat-header {
-      text-align: center;
-      margin-bottom: 3rem;
-    }
-
+    .cat-header { text-align: center; margin-bottom: 3rem; }
     .cat-header .section-sub { margin: 0 auto; }
-
-    .cat-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .cat-card {
-      background: var(--white);
-      border-radius: 4px;
-      overflow: hidden;
-      cursor: pointer;
-      transition: transform 0.3s, box-shadow 0.3s;
-      text-decoration: none;
-      color: inherit;
-      display: block;
-    }
-
+    .cat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; }
+    .cat-card { background: var(--white); border-radius: 4px; overflow: hidden; cursor: pointer; transition: transform 0.3s, box-shadow 0.3s; text-decoration: none; color: inherit; display: block; }
     .cat-card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(13,27,42,0.12); }
+    .cat-img { width: 100%; aspect-ratio: 3/4; object-fit: cover; background: linear-gradient(135deg, #c9d6e3, #a8b9cc); display: flex; align-items: center; justify-content: center; font-size: 3rem; }
+    .cat-img img { width: 100%; height: 100%; object-fit: cover; }
+    .cat-info { padding: 1.2rem; }
+    .cat-info h3 { font-family: 'Playfair Display', serif; font-size: 1.1rem; margin-bottom: 0.3rem; }
+    .cat-info p { font-size: 0.8rem; color: var(--gray); }
 
-    .cat-img {
-      width: 100%;
-      aspect-ratio: 3/4;
-      object-fit: cover;
-      background: linear-gradient(135deg, #c9d6e3, #a8b9cc);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 3rem;
-    }
-
-    .cat-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .cat-info {
-      padding: 1.2rem;
-    }
-
-    .cat-info h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.1rem;
-      margin-bottom: 0.3rem;
-    }
-
-    .cat-info p {
-      font-size: 0.8rem;
-      color: var(--gray);
-    }
-
-    /* ── FEATURED PRODUCTS ── */
-    .products-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      margin-bottom: 2.5rem;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-      gap: 1.8rem;
-    }
-
-    .product-card {
-      background: var(--white);
-      border-radius: 4px;
-      overflow: hidden;
-      transition: transform 0.3s, box-shadow 0.3s;
-      cursor: pointer;
-    }
-
+    /* FEATURED PRODUCTS */
+    .products-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 2.5rem; flex-wrap: wrap; gap: 1rem; }
+    .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1.8rem; }
+    .product-card { background: var(--white); border-radius: 4px; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; cursor: pointer; }
     .product-card:hover { transform: translateY(-5px); box-shadow: 0 12px 30px rgba(13,27,42,0.1); }
-
-    .product-img {
-      width: 100%;
-      aspect-ratio: 3/4;
-      background: linear-gradient(135deg, #dce8f5, #b8cfe8);
-      position: relative;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 4rem;
-    }
-
-    .product-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .badge-new {
-      position: absolute;
-      top: 12px;
-      left: 12px;
-      background: var(--gold);
-      color: var(--navy);
-      font-size: 0.65rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      padding: 0.25rem 0.6rem;
-      border-radius: 2px;
-    }
-
-    .badge-hot {
-      position: absolute;
-      top: 12px;
-      left: 12px;
-      background: #e53e3e;
-      color: white;
-      font-size: 0.65rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      padding: 0.25rem 0.6rem;
-      border-radius: 2px;
-    }
-
-    .product-info {
-      padding: 1rem 1.2rem 1.4rem;
-    }
-
-    .product-info h3 {
-      font-weight: 600;
-      font-size: 0.95rem;
-      margin-bottom: 0.3rem;
-    }
-
-    .product-info .sub {
-      font-size: 0.8rem;
-      color: var(--gray);
-      margin-bottom: 0.7rem;
-    }
-
-    .product-footer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .price {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--navy);
-    }
-
-    .whatsapp-order {
-      background: #25d366;
-      color: white;
-      border: none;
-      padding: 0.4rem 0.9rem;
-      font-size: 0.75rem;
-      font-weight: 600;
-      border-radius: 2px;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-block;
-      transition: background 0.2s;
-    }
-
+    .product-img { width: 100%; aspect-ratio: 3/4; background: linear-gradient(135deg, #dce8f5, #b8cfe8); position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; font-size: 4rem; }
+    .product-img img { width: 100%; height: 100%; object-fit: cover; }
+    .badge-new { position: absolute; top: 12px; left: 12px; background: var(--gold); color: var(--navy); font-size: 0.65rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 0.25rem 0.6rem; border-radius: 2px; }
+    .badge-hot { position: absolute; top: 12px; left: 12px; background: #e53e3e; color: white; font-size: 0.65rem; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 0.25rem 0.6rem; border-radius: 2px; }
+    .product-info { padding: 1rem 1.2rem 1.4rem; }
+    .product-info h3 { font-weight: 600; font-size: 0.95rem; margin-bottom: 0.3rem; }
+    .product-info .sub { font-size: 0.8rem; color: var(--gray); margin-bottom: 0.7rem; }
+    .product-footer { display: flex; justify-content: space-between; align-items: center; }
+    .price { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: var(--navy); }
+    .whatsapp-order { background: #25d366; color: white; border: none; padding: 0.4rem 0.9rem; font-size: 0.75rem; font-weight: 600; border-radius: 2px; cursor: pointer; text-decoration: none; display: inline-block; transition: background 0.2s; }
     .whatsapp-order:hover { background: #128c50; }
 
-    /* ── ABOUT ── */
-    .about {
-      background: var(--navy);
-      color: var(--white);
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      align-items: center;
-    }
+    /* CATALOG */
+    .catalog-section { background: var(--off-white); }
+    .catalog-header { text-align: center; margin-bottom: 2.5rem; }
+    .catalog-header .section-sub { margin: 0 auto; }
+    .filter-bar { display: flex; flex-wrap: wrap; gap: 0.6rem; justify-content: center; margin-bottom: 2.5rem; }
+    .filter-btn { background: var(--white); color: var(--navy); border: 1px solid var(--light-gray); padding: 0.45rem 1.1rem; font-size: 0.8rem; font-weight: 500; border-radius: 20px; cursor: pointer; transition: all 0.2s; font-family: 'Inter', sans-serif; }
+    .filter-btn:hover, .filter-btn.active { background: var(--navy); color: var(--white); border-color: var(--navy); }
+    .catalog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 1rem; }
+    .catalog-item { border-radius: 4px; overflow: hidden; cursor: pointer; transition: transform 0.25s, box-shadow 0.25s; background: var(--white); position: relative; }
+    .catalog-item:hover { transform: translateY(-4px); box-shadow: 0 10px 28px rgba(13,27,42,0.13); }
+    .catalog-item img { width: 100%; aspect-ratio: 3/4; object-fit: cover; display: block; }
+    .catalog-item .cat-label { padding: 0.6rem 0.8rem; font-size: 0.75rem; font-weight: 500; color: var(--navy); background: var(--white); display: flex; justify-content: space-between; align-items: center; gap: 0.4rem; }
+    .item-price { font-weight: 700; color: var(--denim); white-space: nowrap; font-size: 0.78rem; }
+    .catalog-item.hidden { display: none; }
 
+    /* LIGHTBOX */
+    .lightbox { display: none; position: fixed; inset: 0; z-index: 500; align-items: center; justify-content: center; }
+    .lightbox.open { display: flex; }
+    .lb-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.85); }
+    .lb-box { position: relative; z-index: 1; background: var(--white); border-radius: 6px; overflow: hidden; max-width: 480px; width: 92vw; max-height: 92vh; display: flex; flex-direction: column; box-shadow: 0 24px 60px rgba(0,0,0,0.5); }
+    .lb-img-wrap { flex: 1; overflow: hidden; display: flex; align-items: center; justify-content: center; background: #000; max-height: 70vh; }
+    .lb-img-wrap img { width: 100%; height: 100%; object-fit: contain; }
+    .lb-footer { padding: 1rem 1.2rem; display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; background: var(--white); }
+    .lb-title { font-size: 0.88rem; font-weight: 600; color: var(--navy); }
+    .lb-close { position: absolute; top: 10px; right: 12px; background: rgba(0,0,0,0.5); color: white; border: none; width: 32px; height: 32px; border-radius: 50%; font-size: 1rem; cursor: pointer; z-index: 2; display: flex; align-items: center; justify-content: center; line-height: 1; }
+    .lb-close:hover { background: rgba(0,0,0,0.8); }
+
+    /* ABOUT */
+    .about { background: var(--navy); color: var(--white); display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
     .about .section-title { color: var(--white); }
+    .about p { color: rgba(255,255,255,0.75); line-height: 1.8; margin-bottom: 1.2rem; font-size: 0.95rem; }
+    .about-img { background: linear-gradient(135deg, #1c3f6e, #2a5298); border-radius: 4px; aspect-ratio: 4/5; display: flex; align-items: center; justify-content: center; font-size: 5rem; position: relative; overflow: hidden; }
+    .about-img::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 40%; background: linear-gradient(transparent, rgba(201,168,76,0.3)); }
+    .features { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem; }
+    .feature { display: flex; align-items: flex-start; gap: 0.7rem; }
+    .feature-icon { font-size: 1.2rem; margin-top: 2px; flex-shrink: 0; }
+    .feature-text h4 { font-size: 0.85rem; font-weight: 600; color: var(--gold); margin-bottom: 0.2rem; }
+    .feature-text p { font-size: 0.78rem; color: rgba(255,255,255,0.55); margin: 0; }
 
-    .about p {
-      color: rgba(255,255,255,0.75);
-      line-height: 1.8;
-      margin-bottom: 1.2rem;
-      font-size: 0.95rem;
-    }
-
-    .about-img {
-      background: linear-gradient(135deg, #1c3f6e, #2a5298);
-      border-radius: 4px;
-      aspect-ratio: 4/5;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 5rem;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .about-img::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 40%;
-      background: linear-gradient(transparent, rgba(201,168,76,0.3));
-    }
-
-    .features {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-      margin-top: 1.5rem;
-    }
-
-    .feature {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.7rem;
-    }
-
-    .feature-icon {
-      font-size: 1.2rem;
-      margin-top: 2px;
-      flex-shrink: 0;
-    }
-
-    .feature-text h4 {
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--gold);
-      margin-bottom: 0.2rem;
-    }
-
-    .feature-text p {
-      font-size: 0.78rem;
-      color: rgba(255,255,255,0.55);
-      margin: 0;
-    }
-
-    /* ── HOW TO ORDER ── */
+    /* HOW TO ORDER */
     .order-section { background: var(--off-white); text-align: center; }
+    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 2rem; margin-top: 3rem; }
+    .step { background: var(--white); padding: 2rem 1.5rem; border-radius: 4px; position: relative; }
+    .step-num { width: 44px; height: 44px; background: var(--gold); color: var(--navy); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; margin: 0 auto 1rem; font-family: 'Playfair Display', serif; }
+    .step h3 { font-size: 0.95rem; font-weight: 600; margin-bottom: 0.5rem; }
+    .step p { font-size: 0.82rem; color: var(--gray); line-height: 1.6; }
 
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 2rem;
-      margin-top: 3rem;
-    }
-
-    .step {
-      background: var(--white);
-      padding: 2rem 1.5rem;
-      border-radius: 4px;
-      position: relative;
-    }
-
-    .step-num {
-      width: 44px;
-      height: 44px;
-      background: var(--gold);
-      color: var(--navy);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      font-size: 1rem;
-      margin: 0 auto 1rem;
-      font-family: 'Playfair Display', serif;
-    }
-
-    .step h3 {
-      font-size: 0.95rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-    }
-
-    .step p {
-      font-size: 0.82rem;
-      color: var(--gray);
-      line-height: 1.6;
-    }
-
-    /* ── CONTACT ── */
-    .contact {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      align-items: start;
-    }
-
+    /* CONTACT */
+    .contact { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
     .contact-details { display: flex; flex-direction: column; gap: 1.5rem; }
-
-    .contact-item {
-      display: flex;
-      gap: 1rem;
-      align-items: flex-start;
-    }
-
-    .contact-icon {
-      width: 44px;
-      height: 44px;
-      background: var(--off-white);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.1rem;
-      flex-shrink: 0;
-    }
-
-    .contact-item h4 {
-      font-size: 0.8rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: var(--gray);
-      margin-bottom: 0.25rem;
-    }
-
-    .contact-item p, .contact-item a {
-      font-size: 0.95rem;
-      color: var(--navy);
-      text-decoration: none;
-      line-height: 1.5;
-    }
-
+    .contact-item { display: flex; gap: 1rem; align-items: flex-start; }
+    .contact-icon { width: 44px; height: 44px; background: var(--off-white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; }
+    .contact-item h4 { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--gray); margin-bottom: 0.25rem; }
+    .contact-item p, .contact-item a { font-size: 0.95rem; color: var(--navy); text-decoration: none; line-height: 1.5; }
     .contact-item a:hover { color: var(--gold); }
-
-    .contact-form {
-      background: var(--off-white);
-      padding: 2rem;
-      border-radius: 4px;
-    }
-
-    .contact-form h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.3rem;
-      margin-bottom: 1.5rem;
-    }
-
+    .contact-form { background: var(--off-white); padding: 2rem; border-radius: 4px; }
+    .contact-form h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: 1.5rem; }
     .form-group { margin-bottom: 1rem; }
-
-    .form-group label {
-      display: block;
-      font-size: 0.8rem;
-      font-weight: 500;
-      margin-bottom: 0.4rem;
-      color: var(--gray);
-    }
-
-    .form-group input,
-    .form-group textarea,
-    .form-group select {
-      width: 100%;
-      padding: 0.75rem 1rem;
-      border: 1px solid var(--light-gray);
-      border-radius: 2px;
-      font-family: 'Inter', sans-serif;
-      font-size: 0.9rem;
-      color: var(--navy);
-      background: var(--white);
-      outline: none;
-      transition: border-color 0.2s;
-    }
-
-    .form-group input:focus,
-    .form-group textarea:focus,
-    .form-group select:focus { border-color: var(--gold); }
-
+    .form-group label { display: block; font-size: 0.8rem; font-weight: 500; margin-bottom: 0.4rem; color: var(--gray); }
+    .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--light-gray); border-radius: 2px; font-family: 'Inter', sans-serif; font-size: 0.9rem; color: var(--navy); background: var(--white); outline: none; transition: border-color 0.2s; }
+    .form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: var(--gold); }
     .form-group textarea { resize: vertical; min-height: 100px; }
-
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
 
-    /* ── SOCIAL ── */
+    /* SOCIAL */
     .social-section { background: var(--navy); text-align: center; }
-
     .social-section .section-title { color: var(--white); margin-bottom: 0.8rem; }
-
     .social-section .section-sub { color: rgba(255,255,255,0.6); margin: 0 auto 2.5rem; }
-
-    .social-links {
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      flex-wrap: wrap;
-    }
-
-    .social-btn {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      padding: 0.85rem 1.8rem;
-      border-radius: 2px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      text-decoration: none;
-      transition: transform 0.2s, opacity 0.2s;
-    }
-
+    .social-links { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; }
+    .social-btn { display: flex; align-items: center; gap: 0.6rem; padding: 0.85rem 1.8rem; border-radius: 2px; font-size: 0.85rem; font-weight: 600; text-decoration: none; transition: transform 0.2s, opacity 0.2s; }
     .social-btn:hover { transform: translateY(-3px); opacity: 0.9; }
-
     .social-btn.fb { background: #1877f2; color: white; }
     .social-btn.ig { background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045); color: white; }
     .social-btn.tt { background: #010101; color: white; border: 1px solid #333; }
 
-    /* ── FOOTER ── */
-    footer {
-      background: #060d14;
-      color: rgba(255,255,255,0.6);
-      padding: 3rem 5% 1.5rem;
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr;
-      gap: 3rem;
-      margin-bottom: 2.5rem;
-    }
-
+    /* FOOTER */
+    footer { background: #060d14; color: rgba(255,255,255,0.6); padding: 3rem 5% 1.5rem; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; margin-bottom: 2.5rem; }
     .footer-brand .logo { display: block; margin-bottom: 0.8rem; }
-
-    .footer-brand p {
-      font-size: 0.85rem;
-      line-height: 1.7;
-      max-width: 280px;
-    }
-
-    .footer-col h4 {
-      color: var(--gold);
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 1rem;
-    }
-
+    .footer-brand p { font-size: 0.85rem; line-height: 1.7; max-width: 280px; }
+    .footer-col h4 { color: var(--gold); font-size: 0.75rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1rem; }
     .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
-
-    .footer-col ul a {
-      color: rgba(255,255,255,0.55);
-      text-decoration: none;
-      font-size: 0.85rem;
-      transition: color 0.2s;
-    }
-
+    .footer-col ul a { color: rgba(255,255,255,0.55); text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
     .footer-col ul a:hover { color: var(--gold); }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; font-size: 0.78rem; }
 
-    .footer-bottom {
-      border-top: 1px solid rgba(255,255,255,0.08);
-      padding-top: 1.5rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      font-size: 0.78rem;
-    }
-
-    /* ── WHATSAPP FLOAT ── */
-    .wa-float {
-      position: fixed;
-      bottom: 2rem;
-      right: 2rem;
-      z-index: 200;
-      background: #25d366;
-      color: white;
-      width: 56px;
-      height: 56px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      box-shadow: 0 4px 20px rgba(37,211,102,0.4);
-      transition: transform 0.2s, box-shadow 0.2s;
-      font-size: 1.6rem;
-    }
-
+    /* WHATSAPP FLOAT */
+    .wa-float { position: fixed; bottom: 2rem; right: 2rem; z-index: 200; background: #25d366; color: white; width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; box-shadow: 0 4px 20px rgba(37,211,102,0.4); transition: transform 0.2s, box-shadow 0.2s; font-size: 1.6rem; }
     .wa-float:hover { transform: scale(1.1); box-shadow: 0 6px 28px rgba(37,211,102,0.5); }
+    .wa-pulse { position: absolute; width: 100%; height: 100%; border-radius: 50%; background: rgba(37,211,102,0.4); animation: pulse 2s infinite; }
+    @keyframes pulse { 0% { transform: scale(1); opacity: 0.8; } 100% { transform: scale(1.8); opacity: 0; } }
 
-    .wa-pulse {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      background: rgba(37,211,102,0.4);
-      animation: pulse 2s infinite;
-    }
-
-    @keyframes pulse {
-      0% { transform: scale(1); opacity: 0.8; }
-      100% { transform: scale(1.8); opacity: 0; }
-    }
-
-    /* ── MOBILE ── */
+    /* MOBILE */
     @media (max-width: 768px) {
       nav ul { display: none; }
       .hamburger { display: flex; }
-
       .about { grid-template-columns: 1fr; }
       .about-img { display: none; }
-
       .contact { grid-template-columns: 1fr; }
-
       .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
-
       .features { grid-template-columns: 1fr; }
-
       .form-row { grid-template-columns: 1fr; }
-
       .hero-stats { gap: 1.5rem; }
     }
-
-    /* ── CATALOG ── */
-    .catalog-section { background: var(--white); }
-
-    .catalog-header { text-align: center; margin-bottom: 2.5rem; }
-    .catalog-header .section-sub { margin: 0 auto; }
-
-    .filter-bar {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.6rem;
-      justify-content: center;
-      margin-bottom: 2.5rem;
-    }
-
-    .filter-btn {
-      background: var(--off-white);
-      color: var(--navy);
-      border: 1px solid var(--light-gray);
-      padding: 0.45rem 1.1rem;
-      font-size: 0.8rem;
-      font-weight: 500;
-      border-radius: 20px;
-      cursor: pointer;
-      transition: all 0.2s;
-      font-family: 'Inter', sans-serif;
-    }
-
-    .filter-btn:hover,
-    .filter-btn.active {
-      background: var(--navy);
-      color: var(--white);
-      border-color: var(--navy);
-    }
-
-    .catalog-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-      gap: 1rem;
-    }
-
-    .catalog-item {
-      border-radius: 4px;
-      overflow: hidden;
-      cursor: pointer;
-      transition: transform 0.25s, box-shadow 0.25s;
-      background: var(--off-white);
-      position: relative;
-    }
-
-    .catalog-item:hover { transform: translateY(-4px); box-shadow: 0 10px 28px rgba(13,27,42,0.13); }
-
-    .catalog-item img {
-      width: 100%;
-      aspect-ratio: 3/4;
-      object-fit: cover;
-      display: block;
-    }
-
-    .catalog-item .cat-label {
-      padding: 0.6rem 0.8rem;
-      font-size: 0.75rem;
-      font-weight: 500;
-      color: var(--navy);
-      background: var(--white);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 0.4rem;
-    }
-
-    .item-price {
-      font-weight: 700;
-      color: var(--denim);
-      white-space: nowrap;
-      font-size: 0.78rem;
-    }
-
-    .catalog-item.hidden { display: none; }
-
-    /* ── LIGHTBOX ── */
-    .lightbox {
-      display: none;
-      position: fixed;
-      inset: 0;
-      z-index: 500;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .lightbox.open { display: flex; }
-
-    .lb-overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.85);
-    }
-
-    .lb-box {
-      position: relative;
-      z-index: 1;
-      background: var(--white);
-      border-radius: 6px;
-      overflow: hidden;
-      max-width: 480px;
-      width: 92vw;
-      max-height: 92vh;
-      display: flex;
-      flex-direction: column;
-      box-shadow: 0 24px 60px rgba(0,0,0,0.5);
-    }
-
-    .lb-img-wrap {
-      flex: 1;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #000;
-      max-height: 70vh;
-    }
-
-    .lb-img-wrap img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
-
-    .lb-footer {
-      padding: 1rem 1.2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-      background: var(--white);
-    }
-
-    .lb-title {
-      font-size: 0.88rem;
-      font-weight: 600;
-      color: var(--navy);
-    }
-
-    .lb-close {
-      position: absolute;
-      top: 10px;
-      right: 12px;
-      background: rgba(0,0,0,0.5);
-      color: white;
-      border: none;
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      font-size: 1rem;
-      cursor: pointer;
-      z-index: 2;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      line-height: 1;
-    }
-
-    .lb-close:hover { background: rgba(0,0,0,0.8); }
-
-    /* ── MOBILE NAV MENU ── */
-    .mobile-menu {
-      display: none;
-      position: fixed;
-      top: 70px;
-      left: 0;
-      right: 0;
-      background: var(--navy);
-      padding: 1.5rem 5%;
-      z-index: 99;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
+    .mobile-menu { display: none; position: fixed; top: 70px; left: 0; right: 0; background: var(--navy); padding: 1.5rem 5%; z-index: 99; flex-direction: column; gap: 1rem; }
     .mobile-menu.open { display: flex; }
-
-    .mobile-menu a {
-      color: var(--white);
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 500;
-      padding: 0.5rem 0;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-    }
-
+    .mobile-menu a { color: var(--white); text-decoration: none; font-size: 0.9rem; font-weight: 500; padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
     .mobile-menu a:last-child { border-bottom: none; }
   </style>
 </head>
@@ -1033,6 +212,7 @@
   <a href="#" class="logo">LEPIQUE<span> FASHIONS</span></a>
   <ul>
     <li><a href="#categories">Shop</a></li>
+    <li><a href="#catalog">Catalogue</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#how-to-order">How to Order</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -1046,6 +226,7 @@
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
   <a href="#categories" onclick="toggleMenu()">Shop</a>
+  <a href="#catalog" onclick="toggleMenu()">Catalogue</a>
   <a href="#about" onclick="toggleMenu()">About</a>
   <a href="#how-to-order" onclick="toggleMenu()">How to Order</a>
   <a href="#contact" onclick="toggleMenu()">Contact</a>
@@ -1059,22 +240,13 @@
     <h1>The Real<br /><em>House of Jeans</em></h1>
     <p>Discover Nairobi's ultimate collection of ladies' jeans. Wide leg, mom jeans, high waist, straight cut and more — all at unbeatable quality. Your perfect fit is waiting.</p>
     <div class="hero-buttons">
-      <a href="#categories" class="btn-primary">Shop Collection</a>
+      <a href="#catalog" class="btn-primary">Shop Collection</a>
       <a href="https://wa.me/254721672900?text=Hi%20Lepique%20Fashions!%20I'd%20like%20to%20browse%20your%20collection." target="_blank" class="btn-outline">WhatsApp Us</a>
     </div>
     <div class="hero-stats">
-      <div>
-        <div class="stat-num">65K+</div>
-        <div class="stat-label">Happy Customers</div>
-      </div>
-      <div>
-        <div class="stat-num">100+</div>
-        <div class="stat-label">Styles Available</div>
-      </div>
-      <div>
-        <div class="stat-num">🚚</div>
-        <div class="stat-label">Nationwide Delivery</div>
-      </div>
+      <div><div class="stat-num">65K+</div><div class="stat-label">Happy Customers</div></div>
+      <div><div class="stat-num">100+</div><div class="stat-label">Styles Available</div></div>
+      <div><div class="stat-num">🚚</div><div class="stat-label">Nationwide Delivery</div></div>
     </div>
   </div>
   <div class="hero-image">
@@ -1098,47 +270,29 @@
     <p class="section-sub">From classic straight cuts to trendy wide legs — we carry every style a modern woman needs.</p>
   </div>
   <div class="cat-grid">
-    <a href="https://wa.me/254721672900?text=Hi!%20I'm%20interested%20in%20Wide%20Leg%20Jeans.%20Please%20show%20me%20available%20styles." target="_blank" class="cat-card">
+    <a href="#catalog" class="cat-card">
       <div class="cat-img"><img src="lepique-wide-leg-01-dark-blue-belt.jpeg" alt="Wide Leg Jeans" /></div>
-      <div class="cat-info">
-        <h3>Wide Leg Jeans</h3>
-        <p>Relaxed, flowy & on-trend</p>
-      </div>
+      <div class="cat-info"><h3>Wide Leg Jeans</h3><p>Relaxed, flowy &amp; on-trend</p></div>
     </a>
-    <a href="https://wa.me/254721672900?text=Hi!%20I'm%20interested%20in%20Mom%20Jeans.%20Please%20show%20me%20available%20styles." target="_blank" class="cat-card">
+    <a href="#catalog" class="cat-card">
       <div class="cat-img"><img src="lepique-wide-leg-02-light-blue.jpeg" alt="Mom Jeans" /></div>
-      <div class="cat-info">
-        <h3>Mom Jeans</h3>
-        <p>Classic comfort, effortless style</p>
-      </div>
+      <div class="cat-info"><h3>Mom Jeans</h3><p>Classic comfort, effortless style</p></div>
     </a>
-    <a href="https://wa.me/254721672900?text=Hi!%20I'm%20interested%20in%20High%20Waist%20Jeans.%20Please%20show%20me%20available%20styles." target="_blank" class="cat-card">
+    <a href="#catalog" class="cat-card">
       <div class="cat-img"><img src="lepique-skinny-03-dark-navy.jpeg" alt="High Waist Jeans" /></div>
-      <div class="cat-info">
-        <h3>High Waist</h3>
-        <p>Figure-flattering, sleek silhouette</p>
-      </div>
+      <div class="cat-info"><h3>High Waist</h3><p>Figure-flattering, sleek silhouette</p></div>
     </a>
-    <a href="https://wa.me/254721672900?text=Hi!%20I'm%20interested%20in%20Straight%20Cut%20Jeans.%20Please%20show%20me%20available%20styles." target="_blank" class="cat-card">
+    <a href="#catalog" class="cat-card">
       <div class="cat-img"><img src="lepique-wide-leg-17-dark-navy.jpeg" alt="Straight Cut Jeans" /></div>
-      <div class="cat-info">
-        <h3>Straight Cut</h3>
-        <p>Timeless & versatile everyday wear</p>
-      </div>
+      <div class="cat-info"><h3>Straight Cut</h3><p>Timeless &amp; versatile everyday wear</p></div>
     </a>
-    <a href="https://wa.me/254721672900?text=Hi!%20I'm%20interested%20in%20Flare%20Jeans.%20Please%20show%20me%20available%20styles." target="_blank" class="cat-card">
+    <a href="#catalog" class="cat-card">
       <div class="cat-img"><img src="lepique-flare-01-black.jpeg" alt="Flare Jeans" /></div>
-      <div class="cat-info">
-        <h3>Flare Jeans</h3>
-        <p>Retro vibes, modern energy</p>
-      </div>
+      <div class="cat-info"><h3>Flare Jeans</h3><p>Retro vibes, modern energy</p></div>
     </a>
-    <a href="https://wa.me/254721672900?text=Hi!%20I'm%20interested%20in%20Skinny%20Jeans.%20Please%20show%20me%20available%20styles." target="_blank" class="cat-card">
+    <a href="#catalog" class="cat-card">
       <div class="cat-img"><img src="lepique-flare-02-grey-acidwash.jpeg" alt="Skinny Jeans" /></div>
-      <div class="cat-info">
-        <h3>Skinny & Slim Fit</h3>
-        <p>Sleek, fitted, always stylish</p>
-      </div>
+      <div class="cat-info"><h3>Skinny &amp; Slim Fit</h3><p>Sleek, fitted, always stylish</p></div>
     </a>
   </div>
 </section>
@@ -1153,7 +307,6 @@
     <a href="#catalog" class="btn-primary">View Full Catalogue</a>
   </div>
   <div class="product-grid">
-
     <div class="product-card">
       <div class="product-img">
         <span class="badge-new">New</span>
@@ -1163,12 +316,11 @@
         <h3>Wide Leg – Light Wash</h3>
         <p class="sub">Sizes 27–42 (Small–Plus)</p>
         <div class="product-footer">
-          <span class="price">Ksh 2,500</span>
-          <a href="https://wa.me/254721672900?text=Hi!%20I'd%20like%20to%20order%20the%20Wide%20Leg%20Light%20Wash%20jeans.%20Please%20share%20sizes%20and%20availability." target="_blank" class="whatsapp-order">📱 Order</a>
+          <span class="price">Ksh 3,000</span>
+          <a href="https://wa.me/254721672900?text=Hi!%20I'd%20like%20to%20order%20the%20Wide%20Leg%20Light%20Wash%20jeans%20(Ksh%203%2C000).%20Please%20share%20sizes%20and%20availability." target="_blank" class="whatsapp-order">📱 Order</a>
         </div>
       </div>
     </div>
-
     <div class="product-card">
       <div class="product-img">
         <span class="badge-hot">Hot</span>
@@ -1178,44 +330,42 @@
         <h3>High Waist Skinny – White</h3>
         <p class="sub">Sizes 27–42 (Small–Plus)</p>
         <div class="product-footer">
-          <span class="price">Ksh 2,500</span>
-          <a href="https://wa.me/254721672900?text=Hi!%20I'd%20like%20to%20order%20the%20High%20Waist%20White%20Skinny%20Jeans.%20Please%20share%20sizes%20and%20availability." target="_blank" class="whatsapp-order">📱 Order</a>
+          <span class="price">Ksh 1,200</span>
+          <a href="https://wa.me/254721672900?text=Hi!%20I'd%20like%20to%20order%20the%20High%20Waist%20White%20Skinny%20Jeans%20(Ksh%201%2C200).%20Please%20share%20sizes%20and%20availability." target="_blank" class="whatsapp-order">📱 Order</a>
         </div>
       </div>
     </div>
-
     <div class="product-card">
       <div class="product-img">
         <span class="badge-new">New</span>
-        <img src="lepique-skinny-02-grey.jpeg" alt="Grey Skinny Jeans" />
-      </div>
-      <div class="product-info">
-        <h3>Skinny – Grey</h3>
-        <p class="sub">Sizes 27–42 (Small–Plus)</p>
-        <div class="product-footer">
-          <span class="price">Ksh 2,500</span>
-          <a href="https://wa.me/254721672900?text=Hi!%20I'd%20like%20to%20order%20the%20Skinny%20Grey%20Jeans.%20Please%20share%20sizes%20and%20availability." target="_blank" class="whatsapp-order">📱 Order</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="product-card">
-      <div class="product-img">
-        <span class="badge-hot">Hot</span>
         <img src="lepique-flare-01-black.jpeg" alt="Black Flare Jeans" />
       </div>
       <div class="product-info">
         <h3>Flare Jeans – Black</h3>
         <p class="sub">Sizes 27–42 (Small–Plus)</p>
         <div class="product-footer">
-          <span class="price">Ksh 2,700</span>
-          <a href="https://wa.me/254721672900?text=Hi!%20I'd%20like%20to%20order%20the%20Black%20Flare%20Jeans.%20Please%20share%20sizes%20and%20availability." target="_blank" class="whatsapp-order">📱 Order</a>
+          <span class="price">Ksh 2,500</span>
+          <a href="https://wa.me/254721672900?text=Hi!%20I'd%20like%20to%20order%20the%20Black%20Flare%20Jeans%20(Ksh%202%2C500).%20Please%20share%20sizes%20and%20availability." target="_blank" class="whatsapp-order">📱 Order</a>
         </div>
       </div>
     </div>
-
+    <div class="product-card">
+      <div class="product-img">
+        <span class="badge-hot">Hot</span>
+        <img src="lepique-printed-01-ysl-light-blue.jpeg" alt="Printed YSL Jeans" />
+      </div>
+      <div class="product-info">
+        <h3>Printed YSL – Light Blue</h3>
+        <p class="sub">Sizes 27–42 (Small–Plus)</p>
+        <div class="product-footer">
+          <span class="price">Ksh 3,000</span>
+          <a href="https://wa.me/254721672900?text=Hi!%20I'd%20like%20to%20order%20the%20Printed%20YSL%20Light%20Blue%20Jeans%20(Ksh%203%2C000).%20Please%20share%20sizes%20and%20availability." target="_blank" class="whatsapp-order">📱 Order</a>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
+
 
 <!-- FULL CATALOG -->
 <section class="catalog-section" id="catalog">
@@ -1224,220 +374,64 @@
     <h2 class="section-title">Full Catalogue</h2>
     <p class="section-sub">Browse all available styles. Click any photo to see it larger, then order via WhatsApp.</p>
   </div>
-
   <div class="filter-bar">
-    <button class="filter-btn active" onclick="filterCat('all')">All (47)</button>
-    <button class="filter-btn" onclick="filterCat('wide-leg')">Wide Leg (25)</button>
-    <button class="filter-btn" onclick="filterCat('skinny')">Skinny (7)</button>
-    <button class="filter-btn" onclick="filterCat('flare')">Flare (6)</button>
-    <button class="filter-btn" onclick="filterCat('straight')">Straight (3)</button>
-    <button class="filter-btn" onclick="filterCat('ripped')">Ripped (3)</button>
-    <button class="filter-btn" onclick="filterCat('cargo')">Cargo (1)</button>
-    <button class="filter-btn" onclick="filterCat('printed')">Printed (2)</button>
+    <button class="filter-btn active" onclick="filterCat('all',this)">All (47)</button>
+    <button class="filter-btn" onclick="filterCat('wide-leg',this)">Wide Leg (25)</button>
+    <button class="filter-btn" onclick="filterCat('skinny',this)">Skinny (7)</button>
+    <button class="filter-btn" onclick="filterCat('flare',this)">Flare (6)</button>
+    <button class="filter-btn" onclick="filterCat('straight',this)">Straight (3)</button>
+    <button class="filter-btn" onclick="filterCat('ripped',this)">Ripped (3)</button>
+    <button class="filter-btn" onclick="filterCat('cargo',this)">Cargo (1)</button>
+    <button class="filter-btn" onclick="filterCat('printed',this)">Printed (2)</button>
   </div>
-
   <div class="catalog-grid">
-    <!-- WIDE LEG -->
-    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-01-dark-blue-belt.jpeg','Wide Leg – Dark Blue (Belt)','Ksh 3,000')">
-      <img src="lepique-wide-leg-01-dark-blue-belt.jpeg" alt="Wide Leg Dark Blue" loading="lazy" />
-      <div class="cat-label"><span>Wide Leg – Dark Blue</span><span class="item-price">Ksh 3,000</span></div>
-    </div>
-    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-02-light-blue.jpeg','Wide Leg – Light Blue','Ksh 3,000')">
-      <img src="lepique-wide-leg-02-light-blue.jpeg" alt="Wide Leg Light Blue" loading="lazy" />
-      <div class="cat-label"><span>Wide Leg – Light Blue</span><span class="item-price">Ksh 3,000</span></div>
-    </div>
-    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-03-medium-blue.jpeg','Wide Leg – Medium Blue','Ksh 3,000')">
-      <img src="lepique-wide-leg-03-medium-blue.jpeg" alt="Wide Leg Medium Blue" loading="lazy" />
-      <div class="cat-label"><span>Wide Leg – Medium Blue</span><span class="item-price">Ksh 3,000</span></div>
-    </div>
-    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-04-light-blue.jpeg','Wide Leg – Light Blue','Ksh 3,000')">
-      <img src="lepique-wide-leg-04-light-blue.jpeg" alt="Wide Leg Light Blue 2" loading="lazy" />
-      <div class="cat-label"><span>Wide Leg – Light Blue</span><span class="item-price">Ksh 3,000</span></div>
-    </div>
-    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-05-light-blue-curly.jpeg','Wide Leg – Light Blue (Curly)','Ksh 3,000')">
-      <img src="lepique-wide-leg-05-light-blue-curly.jpeg" alt="Wide Leg Light Blue Curly" loading="lazy" />
-      <div class="cat-label"><span>Wide Leg – Light Blue</span><span class="item-price">Ksh 3,000</span></div>
-    </div>
-    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-06-dark-navy-sweater.jpeg','Wide Leg – Dark Navy','Ksh 3,000')">
-      <img src="lepique-wide-leg-06-dark-navy-sweater.jpeg" alt="Wide Leg Dark Navy" loading="lazy" />
-      <div class="cat-label"><span>Wide Leg – Dark Navy</span><span class="item-price">Ksh 3,000</span></div>
-    </div>
-    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-07-light-blue.jpeg','Wide Leg – Light Blue','Ksh 3,000')">
-      <img src="lepique-wide-leg-07-light-blue.jpeg" alt="Wide Leg Light Blue 3" loading="lazy" />
-      <div class="cat-label"><span>Wide Leg – Light Blue</span><span class="item-price">Ksh 3,000</span></div>
-    </div>
-    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-08-black.jpeg','Wide Leg – Black','Ksh 3,000')">
-      <img src="lepique-wide-leg-08-black.jpeg" alt="Wide Leg Black" loading="lazy" />
-      <div class="cat-label"><span>Wide Leg – Black</span><span class="item-price">Ksh 3,000</span></div>
-    </div>
-    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-09-light-blue.jpeg','Wide Leg – Light Wash','Ksh 3,000')">
-      <img src="lepique-wide-leg-09-light-blue.jpeg" alt="Wide Leg Light Wash" loading="lazy" />
-      <div class="cat-label"><span>Wide Leg – Light Wash</span><span class="item-price">Ksh 3,000</span></div>
-    </div>
-    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-10-light-blue-knit.jpeg','Wide Leg – Light Blue (Knit)','Ksh 3,000')">
-      <img src="lepique-wide-leg-10-light-blue-knit.jpeg" alt="Wide Leg Light Blue Knit" loading="lazy" />
-      <div class="cat-label"><span>Wide Leg – Light Blue</span><span class="item-price">Ksh 3,000</span></div>
-    </div>
-    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-11-medium-blue.jpeg','Wide Leg – Medium Blue','Ksh 3,000')">
-      <img src="lepique-wide-leg-11-medium-blue.jpeg" alt="Wide Leg Medium Blue 2" loading="lazy" />
-      <div class="cat-label"><span>Wide Leg – Medium Blue</span><span class="item-price">Ksh 3,000</span></div>
-    </div>
-    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-12-dark-navy.jpeg','Wide Leg – Dark Navy','Ksh 3,000')">
-      <img src="lepique-wide-leg-12-dark-navy.jpeg" alt="Wide Leg Dark Navy 2" loading="lazy" />
-      <div class="cat-label"><span>Wide Leg – Dark Navy</span><span class="item-price">Ksh 3,000</span></div>
-    </div>
-    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-13-medium-blue.jpeg','Wide Leg – Medium Blue','Ksh 3,000')">
-      <img src="lepique-wide-leg-13-medium-blue.jpeg" alt="Wide Leg Medium Blue 3" loading="lazy" />
-      <div class="cat-label"><span>Wide Leg – Medium Blue</span><span class="item-price">Ksh 3,000</span></div>
-    </div>
-    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-14-dark-navy.jpeg','Wide Leg – Dark Navy','Ksh 3,000')">
-      <img src="lepique-wide-leg-14-dark-navy.jpeg" alt="Wide Leg Dark Navy 3" loading="lazy" />
-      <div class="cat-label"><span>Wide Leg – Dark Navy</span><span class="item-price">Ksh 3,000</span></div>
-    </div>
-    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-15-black.jpeg','Wide Leg – Black','Ksh 3,000')">
-      <img src="lepique-wide-leg-15-black.jpeg" alt="Wide Leg Black 2" loading="lazy" />
-      <div class="cat-label"><span>Wide Leg – Black</span><span class="item-price">Ksh 3,000</span></div>
-    </div>
-    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-16-dark-navy-hero.jpeg','Wide Leg – Dark Navy','Ksh 3,000')">
-      <img src="lepique-wide-leg-16-dark-navy-hero.jpeg" alt="Wide Leg Dark Navy Hero" loading="lazy" />
-      <div class="cat-label"><span>Wide Leg – Dark Navy</span><span class="item-price">Ksh 3,000</span></div>
-    </div>
-    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-17-dark-navy.jpeg','Wide Leg – Dark Navy','Ksh 3,000')">
-      <img src="lepique-wide-leg-17-dark-navy.jpeg" alt="Wide Leg Dark Navy 4" loading="lazy" />
-      <div class="cat-label"><span>Wide Leg – Dark Navy</span><span class="item-price">Ksh 3,000</span></div>
-    </div>
-    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-18-light-blue-sweater.jpeg','Wide Leg – Light Blue','Ksh 3,000')">
-      <img src="lepique-wide-leg-18-light-blue-sweater.jpeg" alt="Wide Leg Light Blue Sweater" loading="lazy" />
-      <div class="cat-label"><span>Wide Leg – Light Blue</span><span class="item-price">Ksh 3,000</span></div>
-    </div>
-    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-19-dark-navy-belt.jpg','Wide Leg – Dark Navy (Belt)','Ksh 3,000')">
-      <img src="lepique-wide-leg-19-dark-navy-belt.jpg" alt="Wide Leg Dark Navy Belt" loading="lazy" />
-      <div class="cat-label"><span>Wide Leg – Dark Navy</span><span class="item-price">Ksh 3,000</span></div>
-    </div>
-    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-20-dark-navy.jpg','Wide Leg – Dark Navy','Ksh 3,000')">
-      <img src="lepique-wide-leg-20-dark-navy.jpg" alt="Wide Leg Dark Navy 5" loading="lazy" />
-      <div class="cat-label"><span>Wide Leg – Dark Navy</span><span class="item-price">Ksh 3,000</span></div>
-    </div>
-    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-21-light-blue-sweater.jpg','Wide Leg – Light Blue','Ksh 3,000')">
-      <img src="lepique-wide-leg-21-light-blue-sweater.jpg" alt="Wide Leg Light Blue Sweater 2" loading="lazy" />
-      <div class="cat-label"><span>Wide Leg – Light Blue</span><span class="item-price">Ksh 3,000</span></div>
-    </div>
-    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-22-medium-blue.jpeg','Wide Leg – Medium Blue','Ksh 3,000')">
-      <img src="lepique-wide-leg-22-medium-blue.jpeg" alt="Wide Leg Medium Blue Mustard" loading="lazy" />
-      <div class="cat-label"><span>Wide Leg – Medium Blue</span><span class="item-price">Ksh 3,000</span></div>
-    </div>
-    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-23-black.jpeg','Wide Leg – Black','Ksh 3,000')">
-      <img src="lepique-wide-leg-23-black.jpeg" alt="Wide Leg Black 3" loading="lazy" />
-      <div class="cat-label"><span>Wide Leg – Black</span><span class="item-price">Ksh 3,000</span></div>
-    </div>
-    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-24-medium-blue.jpeg','Wide Leg – Medium Blue','Ksh 3,000')">
-      <img src="lepique-wide-leg-24-medium-blue.jpeg" alt="Wide Leg Medium Blue Maroon" loading="lazy" />
-      <div class="cat-label"><span>Wide Leg – Medium Blue</span><span class="item-price">Ksh 3,000</span></div>
-    </div>
-    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-eyelet-01-black.jpeg','Wide Leg Eyelet – Black','Ksh 3,000')">
-      <img src="lepique-wide-leg-eyelet-01-black.jpeg" alt="Wide Leg Eyelet Black" loading="lazy" />
-      <div class="cat-label"><span>Wide Leg Eyelet – Black</span><span class="item-price">Ksh 3,000</span></div>
-    </div>
-
-    <!-- SKINNY -->
-    <div class="catalog-item" data-cat="skinny" onclick="openLightbox('lepique-skinny-01-white.jpeg','Skinny – White','Ksh 1,200')">
-      <img src="lepique-skinny-01-white.jpeg" alt="Skinny White" loading="lazy" />
-      <div class="cat-label"><span>Skinny – White</span><span class="item-price">Ksh 1,200</span></div>
-    </div>
-    <div class="catalog-item" data-cat="skinny" onclick="openLightbox('lepique-skinny-02-grey.jpeg','Skinny – Grey','Ksh 1,200')">
-      <img src="lepique-skinny-02-grey.jpeg" alt="Skinny Grey" loading="lazy" />
-      <div class="cat-label"><span>Skinny – Grey</span><span class="item-price">Ksh 1,200</span></div>
-    </div>
-    <div class="catalog-item" data-cat="skinny" onclick="openLightbox('lepique-skinny-03-dark-navy.jpeg','Skinny – Dark Navy','Ksh 1,200')">
-      <img src="lepique-skinny-03-dark-navy.jpeg" alt="Skinny Dark Navy" loading="lazy" />
-      <div class="cat-label"><span>Skinny – Dark Navy</span><span class="item-price">Ksh 1,200</span></div>
-    </div>
-    <div class="catalog-item" data-cat="skinny" onclick="openLightbox('lepique-skinny-04-dark-navy.jpeg','Skinny – Dark Navy','Ksh 1,800')">
-      <img src="lepique-skinny-04-dark-navy.jpeg" alt="Skinny Dark Navy 2" loading="lazy" />
-      <div class="cat-label"><span>Skinny – Dark Navy</span><span class="item-price">Ksh 1,800</span></div>
-    </div>
-    <div class="catalog-item" data-cat="skinny" onclick="openLightbox('lepique-skinny-05-black-plussize.jpeg','Skinny – Black (Plus Size)','Ksh 1,500')">
-      <img src="lepique-skinny-05-black-plussize.jpeg" alt="Skinny Black Plus Size" loading="lazy" />
-      <div class="cat-label"><span>Skinny – Black (Plus)</span><span class="item-price">Ksh 1,500</span></div>
-    </div>
-    <div class="catalog-item" data-cat="skinny" onclick="openLightbox('lepique-skinny-06-black.jpeg','Skinny – Black','Ksh 1,200')">
-      <img src="lepique-skinny-06-black.jpeg" alt="Skinny Black" loading="lazy" />
-      <div class="cat-label"><span>Skinny – Black</span><span class="item-price">Ksh 1,200</span></div>
-    </div>
-    <div class="catalog-item" data-cat="skinny" onclick="openLightbox('lepique-skinny-07-black.jpeg','Skinny – Black','Ksh 1,200')">
-      <img src="lepique-skinny-07-black.jpeg" alt="Skinny Black 2" loading="lazy" />
-      <div class="cat-label"><span>Skinny – Black</span><span class="item-price">Ksh 1,200</span></div>
-    </div>
-
-    <!-- FLARE -->
-    <div class="catalog-item" data-cat="flare" onclick="openLightbox('lepique-flare-01-black.jpeg','Flare – Black','Ksh 2,500')">
-      <img src="lepique-flare-01-black.jpeg" alt="Flare Black" loading="lazy" />
-      <div class="cat-label"><span>Flare – Black</span><span class="item-price">Ksh 2,500</span></div>
-    </div>
-    <div class="catalog-item" data-cat="flare" onclick="openLightbox('lepique-flare-02-grey-acidwash.jpeg','Flare – Grey Acid Wash','Ksh 2,500')">
-      <img src="lepique-flare-02-grey-acidwash.jpeg" alt="Flare Grey Acid Wash" loading="lazy" />
-      <div class="cat-label"><span>Flare – Grey Acid Wash</span><span class="item-price">Ksh 2,500</span></div>
-    </div>
-    <div class="catalog-item" data-cat="flare" onclick="openLightbox('lepique-flare-03-blue.jpeg','Flare – Blue','Ksh 2,500')">
-      <img src="lepique-flare-03-blue.jpeg" alt="Flare Blue" loading="lazy" />
-      <div class="cat-label"><span>Flare – Blue</span><span class="item-price">Ksh 2,500</span></div>
-    </div>
-    <div class="catalog-item" data-cat="flare" onclick="openLightbox('lepique-flare-04-blue.jpeg','Flare – Blue','Ksh 2,500')">
-      <img src="lepique-flare-04-blue.jpeg" alt="Flare Blue 2" loading="lazy" />
-      <div class="cat-label"><span>Flare – Blue</span><span class="item-price">Ksh 2,500</span></div>
-    </div>
-    <div class="catalog-item" data-cat="flare" onclick="openLightbox('lepique-flare-05-blue-medium.jpg','Flare – Medium Blue','Ksh 2,500')">
-      <img src="lepique-flare-05-blue-medium.jpg" alt="Flare Medium Blue" loading="lazy" />
-      <div class="cat-label"><span>Flare – Medium Blue</span><span class="item-price">Ksh 2,500</span></div>
-    </div>
-    <div class="catalog-item" data-cat="flare" onclick="openLightbox('lepique-flare-06-medium-blue.jpeg','Flare – Medium Blue','Ksh 2,500')">
-      <img src="lepique-flare-06-medium-blue.jpeg" alt="Flare Medium Blue 2" loading="lazy" />
-      <div class="cat-label"><span>Flare – Medium Blue</span><span class="item-price">Ksh 2,500</span></div>
-    </div>
-
-    <!-- STRAIGHT -->
-    <div class="catalog-item" data-cat="straight" onclick="openLightbox('lepique-straight-01-medium-blue.jpeg','Straight – Medium Blue','Ksh 2,500')">
-      <img src="lepique-straight-01-medium-blue.jpeg" alt="Straight Medium Blue" loading="lazy" />
-      <div class="cat-label"><span>Straight – Medium Blue</span><span class="item-price">Ksh 2,500</span></div>
-    </div>
-    <div class="catalog-item" data-cat="straight" onclick="openLightbox('lepique-straight-02-beige-twomodels.jpg','Straight – Beige','Ksh 2,500')">
-      <img src="lepique-straight-02-beige-twomodels.jpg" alt="Straight Beige Two Models" loading="lazy" />
-      <div class="cat-label"><span>Straight – Beige</span><span class="item-price">Ksh 2,500</span></div>
-    </div>
-    <div class="catalog-item" data-cat="straight" onclick="openLightbox('lepique-straight-03-beige.jpg','Straight – Beige','Ksh 2,500')">
-      <img src="lepique-straight-03-beige.jpg" alt="Straight Beige" loading="lazy" />
-      <div class="cat-label"><span>Straight – Beige</span><span class="item-price">Ksh 2,500</span></div>
-    </div>
-
-    <!-- RIPPED -->
-    <div class="catalog-item" data-cat="ripped" onclick="openLightbox('lepique-ripped-01-light-blue.jpeg','Ripped – Light Blue','Ksh 2,500')">
-      <img src="lepique-ripped-01-light-blue.jpeg" alt="Ripped Light Blue" loading="lazy" />
-      <div class="cat-label"><span>Ripped – Light Blue</span><span class="item-price">Ksh 2,500</span></div>
-    </div>
-    <div class="catalog-item" data-cat="ripped" onclick="openLightbox('lepique-ripped-02-grey-acidwash.jpeg','Ripped – Grey Acid Wash','Ksh 3,000')">
-      <img src="lepique-ripped-02-grey-acidwash.jpeg" alt="Ripped Grey Acid Wash" loading="lazy" />
-      <div class="cat-label"><span>Ripped – Grey Acid Wash</span><span class="item-price">Ksh 3,000</span></div>
-    </div>
-    <div class="catalog-item" data-cat="ripped" onclick="openLightbox('lepique-ripped-03-light-blue-wide.jpeg','Ripped Wide – Light Blue','Ksh 2,500')">
-      <img src="lepique-ripped-03-light-blue-wide.jpeg" alt="Ripped Wide Light Blue" loading="lazy" />
-      <div class="cat-label"><span>Ripped Wide – Light Blue</span><span class="item-price">Ksh 2,500</span></div>
-    </div>
-
-    <!-- CARGO -->
-    <div class="catalog-item" data-cat="cargo" onclick="openLightbox('lepique-cargo-01-grey-wash.jpeg','Cargo – Grey Wash','Ksh 3,000')">
-      <img src="lepique-cargo-01-grey-wash.jpeg" alt="Cargo Grey Wash" loading="lazy" />
-      <div class="cat-label"><span>Cargo – Grey Wash</span><span class="item-price">Ksh 3,000</span></div>
-    </div>
-
-    <!-- PRINTED -->
-    <div class="catalog-item" data-cat="printed" onclick="openLightbox('lepique-printed-01-ysl-light-blue.jpeg','Printed YSL – Light Blue','Ksh 3,000')">
-      <img src="lepique-printed-01-ysl-light-blue.jpeg" alt="Printed YSL Light Blue" loading="lazy" />
-      <div class="cat-label"><span>Printed YSL – Light Blue</span><span class="item-price">Ksh 3,000</span></div>
-    </div>
-    <div class="catalog-item" data-cat="printed" onclick="openLightbox('lepique-printed-02-ysl-light-blue.jpeg','Printed YSL – Light Blue','Ksh 3,000')">
-      <img src="lepique-printed-02-ysl-light-blue.jpeg" alt="Printed YSL Light Blue 2" loading="lazy" />
-      <div class="cat-label"><span>Printed YSL – Light Blue</span><span class="item-price">Ksh 3,000</span></div>
-    </div>
+    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-01-dark-blue-belt.jpeg','Wide Leg – Dark Blue (Belt)','Ksh 3,000')"><img src="lepique-wide-leg-01-dark-blue-belt.jpeg" alt="Wide Leg Dark Blue" loading="lazy" /><div class="cat-label"><span>Wide Leg – Dark Blue</span><span class="item-price">Ksh 3,000</span></div></div>
+    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-02-light-blue.jpeg','Wide Leg – Light Blue','Ksh 3,000')"><img src="lepique-wide-leg-02-light-blue.jpeg" alt="Wide Leg Light Blue" loading="lazy" /><div class="cat-label"><span>Wide Leg – Light Blue</span><span class="item-price">Ksh 3,000</span></div></div>
+    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-03-medium-blue.jpeg','Wide Leg – Medium Blue','Ksh 3,000')"><img src="lepique-wide-leg-03-medium-blue.jpeg" alt="Wide Leg Medium Blue" loading="lazy" /><div class="cat-label"><span>Wide Leg – Medium Blue</span><span class="item-price">Ksh 3,000</span></div></div>
+    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-04-light-blue.jpeg','Wide Leg – Light Blue','Ksh 3,000')"><img src="lepique-wide-leg-04-light-blue.jpeg" alt="Wide Leg Light Blue 2" loading="lazy" /><div class="cat-label"><span>Wide Leg – Light Blue</span><span class="item-price">Ksh 3,000</span></div></div>
+    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-05-light-blue-curly.jpeg','Wide Leg – Light Blue (Curly)','Ksh 3,000')"><img src="lepique-wide-leg-05-light-blue-curly.jpeg" alt="Wide Leg Light Blue Curly" loading="lazy" /><div class="cat-label"><span>Wide Leg – Light Blue</span><span class="item-price">Ksh 3,000</span></div></div>
+    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-06-dark-navy-sweater.jpeg','Wide Leg – Dark Navy','Ksh 3,000')"><img src="lepique-wide-leg-06-dark-navy-sweater.jpeg" alt="Wide Leg Dark Navy" loading="lazy" /><div class="cat-label"><span>Wide Leg – Dark Navy</span><span class="item-price">Ksh 3,000</span></div></div>
+    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-07-light-blue.jpeg','Wide Leg – Light Blue','Ksh 3,000')"><img src="lepique-wide-leg-07-light-blue.jpeg" alt="Wide Leg Light Blue 3" loading="lazy" /><div class="cat-label"><span>Wide Leg – Light Blue</span><span class="item-price">Ksh 3,000</span></div></div>
+    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-08-black.jpeg','Wide Leg – Black','Ksh 3,000')"><img src="lepique-wide-leg-08-black.jpeg" alt="Wide Leg Black" loading="lazy" /><div class="cat-label"><span>Wide Leg – Black</span><span class="item-price">Ksh 3,000</span></div></div>
+    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-09-light-blue.jpeg','Wide Leg – Light Wash','Ksh 3,000')"><img src="lepique-wide-leg-09-light-blue.jpeg" alt="Wide Leg Light Wash" loading="lazy" /><div class="cat-label"><span>Wide Leg – Light Wash</span><span class="item-price">Ksh 3,000</span></div></div>
+    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-10-light-blue-knit.jpeg','Wide Leg – Light Blue (Knit)','Ksh 3,000')"><img src="lepique-wide-leg-10-light-blue-knit.jpeg" alt="Wide Leg Light Blue Knit" loading="lazy" /><div class="cat-label"><span>Wide Leg – Light Blue</span><span class="item-price">Ksh 3,000</span></div></div>
+    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-11-medium-blue.jpeg','Wide Leg – Medium Blue','Ksh 3,000')"><img src="lepique-wide-leg-11-medium-blue.jpeg" alt="Wide Leg Medium Blue 2" loading="lazy" /><div class="cat-label"><span>Wide Leg – Medium Blue</span><span class="item-price">Ksh 3,000</span></div></div>
+    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-12-dark-navy.jpeg','Wide Leg – Dark Navy','Ksh 3,000')"><img src="lepique-wide-leg-12-dark-navy.jpeg" alt="Wide Leg Dark Navy 2" loading="lazy" /><div class="cat-label"><span>Wide Leg – Dark Navy</span><span class="item-price">Ksh 3,000</span></div></div>
+    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-13-medium-blue.jpeg','Wide Leg – Medium Blue','Ksh 3,000')"><img src="lepique-wide-leg-13-medium-blue.jpeg" alt="Wide Leg Medium Blue 3" loading="lazy" /><div class="cat-label"><span>Wide Leg – Medium Blue</span><span class="item-price">Ksh 3,000</span></div></div>
+    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-14-dark-navy.jpeg','Wide Leg – Dark Navy','Ksh 3,000')"><img src="lepique-wide-leg-14-dark-navy.jpeg" alt="Wide Leg Dark Navy 3" loading="lazy" /><div class="cat-label"><span>Wide Leg – Dark Navy</span><span class="item-price">Ksh 3,000</span></div></div>
+    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-15-black.jpeg','Wide Leg – Black','Ksh 3,000')"><img src="lepique-wide-leg-15-black.jpeg" alt="Wide Leg Black 2" loading="lazy" /><div class="cat-label"><span>Wide Leg – Black</span><span class="item-price">Ksh 3,000</span></div></div>
+    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-16-dark-navy-hero.jpeg','Wide Leg – Dark Navy','Ksh 3,000')"><img src="lepique-wide-leg-16-dark-navy-hero.jpeg" alt="Wide Leg Dark Navy Hero" loading="lazy" /><div class="cat-label"><span>Wide Leg – Dark Navy</span><span class="item-price">Ksh 3,000</span></div></div>
+    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-17-dark-navy.jpeg','Wide Leg – Dark Navy','Ksh 3,000')"><img src="lepique-wide-leg-17-dark-navy.jpeg" alt="Wide Leg Dark Navy 4" loading="lazy" /><div class="cat-label"><span>Wide Leg – Dark Navy</span><span class="item-price">Ksh 3,000</span></div></div>
+    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-18-light-blue-sweater.jpeg','Wide Leg – Light Blue','Ksh 3,000')"><img src="lepique-wide-leg-18-light-blue-sweater.jpeg" alt="Wide Leg Light Blue Sweater" loading="lazy" /><div class="cat-label"><span>Wide Leg – Light Blue</span><span class="item-price">Ksh 3,000</span></div></div>
+    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-19-dark-navy-belt.jpg','Wide Leg – Dark Navy (Belt)','Ksh 3,000')"><img src="lepique-wide-leg-19-dark-navy-belt.jpg" alt="Wide Leg Dark Navy Belt" loading="lazy" /><div class="cat-label"><span>Wide Leg – Dark Navy</span><span class="item-price">Ksh 3,000</span></div></div>
+    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-20-dark-navy.jpg','Wide Leg – Dark Navy','Ksh 3,000')"><img src="lepique-wide-leg-20-dark-navy.jpg" alt="Wide Leg Dark Navy 5" loading="lazy" /><div class="cat-label"><span>Wide Leg – Dark Navy</span><span class="item-price">Ksh 3,000</span></div></div>
+    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-21-light-blue-sweater.jpg','Wide Leg – Light Blue','Ksh 3,000')"><img src="lepique-wide-leg-21-light-blue-sweater.jpg" alt="Wide Leg Light Blue Sweater 2" loading="lazy" /><div class="cat-label"><span>Wide Leg – Light Blue</span><span class="item-price">Ksh 3,000</span></div></div>
+    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-22-medium-blue.jpeg','Wide Leg – Medium Blue','Ksh 3,000')"><img src="lepique-wide-leg-22-medium-blue.jpeg" alt="Wide Leg Medium Blue Mustard" loading="lazy" /><div class="cat-label"><span>Wide Leg – Medium Blue</span><span class="item-price">Ksh 3,000</span></div></div>
+    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-23-black.jpeg','Wide Leg – Black','Ksh 3,000')"><img src="lepique-wide-leg-23-black.jpeg" alt="Wide Leg Black 3" loading="lazy" /><div class="cat-label"><span>Wide Leg – Black</span><span class="item-price">Ksh 3,000</span></div></div>
+    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-24-medium-blue.jpeg','Wide Leg – Medium Blue','Ksh 3,000')"><img src="lepique-wide-leg-24-medium-blue.jpeg" alt="Wide Leg Medium Blue Maroon" loading="lazy" /><div class="cat-label"><span>Wide Leg – Medium Blue</span><span class="item-price">Ksh 3,000</span></div></div>
+    <div class="catalog-item" data-cat="wide-leg" onclick="openLightbox('lepique-wide-leg-eyelet-01-black.jpeg','Wide Leg Eyelet – Black','Ksh 3,000')"><img src="lepique-wide-leg-eyelet-01-black.jpeg" alt="Wide Leg Eyelet Black" loading="lazy" /><div class="cat-label"><span>Wide Leg Eyelet – Black</span><span class="item-price">Ksh 3,000</span></div></div>
+    <div class="catalog-item" data-cat="skinny" onclick="openLightbox('lepique-skinny-01-white.jpeg','Skinny – White','Ksh 1,200')"><img src="lepique-skinny-01-white.jpeg" alt="Skinny White" loading="lazy" /><div class="cat-label"><span>Skinny – White</span><span class="item-price">Ksh 1,200</span></div></div>
+    <div class="catalog-item" data-cat="skinny" onclick="openLightbox('lepique-skinny-02-grey.jpeg','Skinny – Grey','Ksh 1,200')"><img src="lepique-skinny-02-grey.jpeg" alt="Skinny Grey" loading="lazy" /><div class="cat-label"><span>Skinny – Grey</span><span class="item-price">Ksh 1,200</span></div></div>
+    <div class="catalog-item" data-cat="skinny" onclick="openLightbox('lepique-skinny-03-dark-navy.jpeg','Skinny – Dark Navy','Ksh 1,200')"><img src="lepique-skinny-03-dark-navy.jpeg" alt="Skinny Dark Navy" loading="lazy" /><div class="cat-label"><span>Skinny – Dark Navy</span><span class="item-price">Ksh 1,200</span></div></div>
+    <div class="catalog-item" data-cat="skinny" onclick="openLightbox('lepique-skinny-04-dark-navy.jpeg','Skinny – Dark Navy','Ksh 1,800')"><img src="lepique-skinny-04-dark-navy.jpeg" alt="Skinny Dark Navy 2" loading="lazy" /><div class="cat-label"><span>Skinny – Dark Navy</span><span class="item-price">Ksh 1,800</span></div></div>
+    <div class="catalog-item" data-cat="skinny" onclick="openLightbox('lepique-skinny-05-black-plussize.jpeg','Skinny – Black (Plus Size)','Ksh 1,500')"><img src="lepique-skinny-05-black-plussize.jpeg" alt="Skinny Black Plus" loading="lazy" /><div class="cat-label"><span>Skinny – Black (Plus)</span><span class="item-price">Ksh 1,500</span></div></div>
+    <div class="catalog-item" data-cat="skinny" onclick="openLightbox('lepique-skinny-06-black.jpeg','Skinny – Black','Ksh 1,200')"><img src="lepique-skinny-06-black.jpeg" alt="Skinny Black" loading="lazy" /><div class="cat-label"><span>Skinny – Black</span><span class="item-price">Ksh 1,200</span></div></div>
+    <div class="catalog-item" data-cat="skinny" onclick="openLightbox('lepique-skinny-07-black.jpeg','Skinny – Black','Ksh 1,200')"><img src="lepique-skinny-07-black.jpeg" alt="Skinny Black 2" loading="lazy" /><div class="cat-label"><span>Skinny – Black</span><span class="item-price">Ksh 1,200</span></div></div>
+    <div class="catalog-item" data-cat="flare" onclick="openLightbox('lepique-flare-01-black.jpeg','Flare – Black','Ksh 2,500')"><img src="lepique-flare-01-black.jpeg" alt="Flare Black" loading="lazy" /><div class="cat-label"><span>Flare – Black</span><span class="item-price">Ksh 2,500</span></div></div>
+    <div class="catalog-item" data-cat="flare" onclick="openLightbox('lepique-flare-02-grey-acidwash.jpeg','Flare – Grey Acid Wash','Ksh 2,500')"><img src="lepique-flare-02-grey-acidwash.jpeg" alt="Flare Grey Acid Wash" loading="lazy" /><div class="cat-label"><span>Flare – Grey Acid Wash</span><span class="item-price">Ksh 2,500</span></div></div>
+    <div class="catalog-item" data-cat="flare" onclick="openLightbox('lepique-flare-03-blue.jpeg','Flare – Blue','Ksh 2,500')"><img src="lepique-flare-03-blue.jpeg" alt="Flare Blue" loading="lazy" /><div class="cat-label"><span>Flare – Blue</span><span class="item-price">Ksh 2,500</span></div></div>
+    <div class="catalog-item" data-cat="flare" onclick="openLightbox('lepique-flare-04-blue.jpeg','Flare – Blue','Ksh 2,500')"><img src="lepique-flare-04-blue.jpeg" alt="Flare Blue 2" loading="lazy" /><div class="cat-label"><span>Flare – Blue</span><span class="item-price">Ksh 2,500</span></div></div>
+    <div class="catalog-item" data-cat="flare" onclick="openLightbox('lepique-flare-05-blue-medium.jpg','Flare – Medium Blue','Ksh 2,500')"><img src="lepique-flare-05-blue-medium.jpg" alt="Flare Medium Blue" loading="lazy" /><div class="cat-label"><span>Flare – Medium Blue</span><span class="item-price">Ksh 2,500</span></div></div>
+    <div class="catalog-item" data-cat="flare" onclick="openLightbox('lepique-flare-06-medium-blue.jpeg','Flare – Medium Blue','Ksh 2,500')"><img src="lepique-flare-06-medium-blue.jpeg" alt="Flare Medium Blue 2" loading="lazy" /><div class="cat-label"><span>Flare – Medium Blue</span><span class="item-price">Ksh 2,500</span></div></div>
+    <div class="catalog-item" data-cat="straight" onclick="openLightbox('lepique-straight-01-medium-blue.jpeg','Straight – Medium Blue','Ksh 2,500')"><img src="lepique-straight-01-medium-blue.jpeg" alt="Straight Medium Blue" loading="lazy" /><div class="cat-label"><span>Straight – Medium Blue</span><span class="item-price">Ksh 2,500</span></div></div>
+    <div class="catalog-item" data-cat="straight" onclick="openLightbox('lepique-straight-02-beige-twomodels.jpg','Straight – Beige','Ksh 2,500')"><img src="lepique-straight-02-beige-twomodels.jpg" alt="Straight Beige Two Models" loading="lazy" /><div class="cat-label"><span>Straight – Beige</span><span class="item-price">Ksh 2,500</span></div></div>
+    <div class="catalog-item" data-cat="straight" onclick="openLightbox('lepique-straight-03-beige.jpg','Straight – Beige','Ksh 2,500')"><img src="lepique-straight-03-beige.jpg" alt="Straight Beige" loading="lazy" /><div class="cat-label"><span>Straight – Beige</span><span class="item-price">Ksh 2,500</span></div></div>
+    <div class="catalog-item" data-cat="ripped" onclick="openLightbox('lepique-ripped-01-light-blue.jpeg','Ripped – Light Blue','Ksh 2,500')"><img src="lepique-ripped-01-light-blue.jpeg" alt="Ripped Light Blue" loading="lazy" /><div class="cat-label"><span>Ripped – Light Blue</span><span class="item-price">Ksh 2,500</span></div></div>
+    <div class="catalog-item" data-cat="ripped" onclick="openLightbox('lepique-ripped-02-grey-acidwash.jpeg','Ripped – Grey Acid Wash','Ksh 3,000')"><img src="lepique-ripped-02-grey-acidwash.jpeg" alt="Ripped Grey Acid Wash" loading="lazy" /><div class="cat-label"><span>Ripped – Grey Acid Wash</span><span class="item-price">Ksh 3,000</span></div></div>
+    <div class="catalog-item" data-cat="ripped" onclick="openLightbox('lepique-ripped-03-light-blue-wide.jpeg','Ripped Wide – Light Blue','Ksh 2,500')"><img src="lepique-ripped-03-light-blue-wide.jpeg" alt="Ripped Wide Light Blue" loading="lazy" /><div class="cat-label"><span>Ripped Wide – Light Blue</span><span class="item-price">Ksh 2,500</span></div></div>
+    <div class="catalog-item" data-cat="cargo" onclick="openLightbox('lepique-cargo-01-grey-wash.jpeg','Cargo – Grey Wash','Ksh 3,000')"><img src="lepique-cargo-01-grey-wash.jpeg" alt="Cargo Grey Wash" loading="lazy" /><div class="cat-label"><span>Cargo – Grey Wash</span><span class="item-price">Ksh 3,000</span></div></div>
+    <div class="catalog-item" data-cat="printed" onclick="openLightbox('lepique-printed-01-ysl-light-blue.jpeg','Printed YSL – Light Blue','Ksh 3,000')"><img src="lepique-printed-01-ysl-light-blue.jpeg" alt="Printed YSL Light Blue" loading="lazy" /><div class="cat-label"><span>Printed YSL – Light Blue</span><span class="item-price">Ksh 3,000</span></div></div>
+    <div class="catalog-item" data-cat="printed" onclick="openLightbox('lepique-printed-02-ysl-light-blue.jpeg','Printed YSL – Light Blue','Ksh 3,000')"><img src="lepique-printed-02-ysl-light-blue.jpeg" alt="Printed YSL Light Blue 2" loading="lazy" /><div class="cat-label"><span>Printed YSL – Light Blue</span><span class="item-price">Ksh 3,000</span></div></div>
   </div>
 </section>
 
@@ -1446,12 +440,10 @@
   <div class="lb-overlay" onclick="closeLightbox()"></div>
   <div class="lb-box">
     <button class="lb-close" onclick="closeLightbox()">✕</button>
-    <div class="lb-img-wrap">
-      <img id="lb-img" src="" alt="" />
-    </div>
+    <div class="lb-img-wrap"><img id="lb-img" src="" alt="" /></div>
     <div class="lb-footer">
       <span class="lb-title" id="lb-title"></span>
-      <a id="lb-order" href="" target="_blank" class="whatsapp-order" style="font-size:0.82rem; padding:0.5rem 1rem;">📱 Order via WhatsApp</a>
+      <a id="lb-order" href="" target="_blank" class="whatsapp-order" style="font-size:0.82rem;padding:0.5rem 1rem;">📱 Order via WhatsApp</a>
     </div>
   </div>
 </div>
@@ -1464,34 +456,10 @@
     <p>Lepique Fashions is Nairobi's premier destination for ladies' denim. Located at Platinum Plaza on Tom Mboya Street, we've built a reputation for stocking the latest, most flattering jeans styles at prices every woman can afford.</p>
     <p>From wide-leg to high waist, from light wash to deep indigo — our collection is refreshed weekly so there's always something new to discover. We believe every woman deserves jeans that fit perfectly and feel amazing.</p>
     <div class="features">
-      <div class="feature">
-        <span class="feature-icon">🚚</span>
-        <div class="feature-text">
-          <h4>Nationwide Delivery</h4>
-          <p>We deliver across Kenya via courier</p>
-        </div>
-      </div>
-      <div class="feature">
-        <span class="feature-icon">✅</span>
-        <div class="feature-text">
-          <h4>Quality Guaranteed</h4>
-          <p>Every pair is checked before dispatch</p>
-        </div>
-      </div>
-      <div class="feature">
-        <span class="feature-icon">🔄</span>
-        <div class="feature-text">
-          <h4>Easy Exchange</h4>
-          <p>Wrong size? We'll sort it out</p>
-        </div>
-      </div>
-      <div class="feature">
-        <span class="feature-icon">💬</span>
-        <div class="feature-text">
-          <h4>WhatsApp Support</h4>
-          <p>Quick replies, personal styling help</p>
-        </div>
-      </div>
+      <div class="feature"><span class="feature-icon">🚚</span><div class="feature-text"><h4>Nationwide Delivery</h4><p>We deliver across Kenya via courier</p></div></div>
+      <div class="feature"><span class="feature-icon">✅</span><div class="feature-text"><h4>Quality Guaranteed</h4><p>Every pair is checked before dispatch</p></div></div>
+      <div class="feature"><span class="feature-icon">🔄</span><div class="feature-text"><h4>Easy Exchange</h4><p>Wrong size? We'll sort it out</p></div></div>
+      <div class="feature"><span class="feature-icon">💬</span><div class="feature-text"><h4>WhatsApp Support</h4><p>Quick replies, personal styling help</p></div></div>
     </div>
   </div>
   <div class="about-img">🏪</div>
@@ -1501,33 +469,15 @@
 <section class="order-section" id="how-to-order">
   <div class="section-tag" style="text-align:center;">Simple Process</div>
   <h2 class="section-title" style="text-align:center;">How to Order</h2>
-  <p class="section-sub" style="margin: 0 auto;">Getting your favourite jeans delivered to your door is quick and easy.</p>
+  <p class="section-sub" style="margin:0 auto;">Getting your favourite jeans delivered to your door is quick and easy.</p>
   <div class="steps">
-    <div class="step">
-      <div class="step-num">1</div>
-      <h3>Browse Styles</h3>
-      <p>Check our Facebook, Instagram or TikTok pages — or WhatsApp us to request our latest catalogue.</p>
-    </div>
-    <div class="step">
-      <div class="step-num">2</div>
-      <h3>Choose & Message</h3>
-      <p>Pick your style, colour and size then send us a WhatsApp message at 0721 672 900.</p>
-    </div>
-    <div class="step">
-      <div class="step-num">3</div>
-      <h3>Confirm & Pay</h3>
-      <p>We'll confirm availability, share your total, and you pay via M-Pesa. Fast & secure.</p>
-    </div>
-    <div class="step">
-      <div class="step-num">4</div>
-      <h3>We Deliver!</h3>
-      <p>Your order is packaged and dispatched. Nairobi same-day or countrywide via courier.</p>
-    </div>
+    <div class="step"><div class="step-num">1</div><h3>Browse Styles</h3><p>Check our full catalogue above or follow us on Facebook, Instagram or TikTok for new arrivals.</p></div>
+    <div class="step"><div class="step-num">2</div><h3>Choose &amp; Message</h3><p>Pick your style, colour and size then send us a WhatsApp message at 0721 672 900.</p></div>
+    <div class="step"><div class="step-num">3</div><h3>Confirm &amp; Pay</h3><p>We'll confirm availability, share your total, and you pay via M-Pesa. Fast &amp; secure.</p></div>
+    <div class="step"><div class="step-num">4</div><h3>We Deliver!</h3><p>Your order is packaged and dispatched. Nairobi same-day or countrywide via courier.</p></div>
   </div>
-  <div style="margin-top: 3rem;">
-    <a href="https://wa.me/254721672900?text=Hi%20Lepique!%20I'd%20like%20to%20place%20an%20order." target="_blank" class="btn-primary" style="font-size:1rem; padding: 1rem 2.5rem;">
-      📱 Start Your Order on WhatsApp
-    </a>
+  <div style="margin-top:3rem;">
+    <a href="https://wa.me/254721672900?text=Hi%20Lepique!%20I'd%20like%20to%20place%20an%20order." target="_blank" class="btn-primary" style="font-size:1rem;padding:1rem 2.5rem;">📱 Start Your Order on WhatsApp</a>
   </div>
 </section>
 
@@ -1537,15 +487,9 @@
   <h2 class="section-title">We're On Social Media</h2>
   <p class="section-sub">See our latest arrivals, styling videos and customer looks — updated daily.</p>
   <div class="social-links">
-    <a href="https://www.facebook.com/lepiquefashions" target="_blank" class="social-btn fb">
-      <span>f</span> Facebook · Lepique Fashions
-    </a>
-    <a href="https://www.instagram.com/lepique_fashions" target="_blank" class="social-btn ig">
-      <span>📷</span> Instagram · @lepique_fashions
-    </a>
-    <a href="https://www.tiktok.com/@lepique_fashions" target="_blank" class="social-btn tt">
-      <span>♪</span> TikTok · @lepique_fashions
-    </a>
+    <a href="https://www.facebook.com/lepiquefashions" target="_blank" class="social-btn fb"><span>f</span> Facebook · Lepique Fashions</a>
+    <a href="https://www.instagram.com/lepique_fashions" target="_blank" class="social-btn ig"><span>📷</span> Instagram · @lepique_fashions</a>
+    <a href="https://www.tiktok.com/@lepique_fashions" target="_blank" class="social-btn tt"><span>♪</span> TikTok · @lepique_fashions</a>
   </div>
 </section>
 
@@ -1555,70 +499,29 @@
     <div>
       <div class="section-tag">Get In Touch</div>
       <h2 class="section-title">Visit or Contact Us</h2>
-      <p class="section-sub" style="margin-bottom: 2rem;">We're always happy to help you find your perfect pair.</p>
+      <p class="section-sub" style="margin-bottom:2rem;">We're always happy to help you find your perfect pair.</p>
       <div class="contact-details">
-        <div class="contact-item">
-          <div class="contact-icon">📍</div>
-          <div>
-            <h4>Location</h4>
-            <p>Platinum Plaza, Shop G16<br />Tom Mboya Street (Opp. Imenti House)<br />Nairobi, Kenya</p>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-icon">📱</div>
-          <div>
-            <h4>Call / WhatsApp</h4>
-            <a href="tel:+254721672900">0721 672 900</a>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-icon">🕐</div>
-          <div>
-            <h4>Opening Hours</h4>
-            <p>Mon – Sat: 8:00 AM – 7:00 PM<br />Sunday: 10:00 AM – 5:00 PM</p>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-icon">🚚</div>
-          <div>
-            <h4>Delivery</h4>
-            <p>Nairobi same-day delivery available<br />Countrywide via G4S / courier</p>
-          </div>
-        </div>
+        <div class="contact-item"><div class="contact-icon">📍</div><div><h4>Location</h4><p>Platinum Plaza, Shop G16<br />Tom Mboya Street (Opp. Imenti House)<br />Nairobi, Kenya</p></div></div>
+        <div class="contact-item"><div class="contact-icon">📱</div><div><h4>Call / WhatsApp</h4><a href="tel:+254721672900">0721 672 900</a></div></div>
+        <div class="contact-item"><div class="contact-icon">🕐</div><div><h4>Opening Hours</h4><p>Mon – Sat: 8:00 AM – 7:00 PM<br />Sunday: 10:00 AM – 5:00 PM</p></div></div>
+        <div class="contact-item"><div class="contact-icon">🚚</div><div><h4>Delivery</h4><p>Nairobi same-day delivery available<br />Countrywide via G4S / courier</p></div></div>
       </div>
     </div>
     <div class="contact-form">
       <h3>Send Us a Message</h3>
       <div class="form-row">
-        <div class="form-group">
-          <label>Your Name</label>
-          <input type="text" placeholder="Jane Wanjiru" />
-        </div>
-        <div class="form-group">
-          <label>Phone / WhatsApp</label>
-          <input type="tel" placeholder="0712 345 678" />
-        </div>
+        <div class="form-group"><label>Your Name</label><input type="text" placeholder="Jane Wanjiru" /></div>
+        <div class="form-group"><label>Phone / WhatsApp</label><input type="tel" placeholder="0712 345 678" /></div>
       </div>
-      <div class="form-group">
-        <label>What are you looking for?</label>
+      <div class="form-group"><label>What are you looking for?</label>
         <select>
           <option value="">Select a style...</option>
-          <option>Wide Leg Jeans</option>
-          <option>Mom Jeans</option>
-          <option>High Waist Jeans</option>
-          <option>Straight Cut</option>
-          <option>Flare Jeans</option>
-          <option>Cargo Jeans</option>
-          <option>Other / Not Sure</option>
+          <option>Wide Leg Jeans</option><option>Mom Jeans</option><option>High Waist Jeans</option>
+          <option>Straight Cut</option><option>Flare Jeans</option><option>Cargo Jeans</option><option>Other / Not Sure</option>
         </select>
       </div>
-      <div class="form-group">
-        <label>Message</label>
-        <textarea placeholder="Tell us your size, colour preference, budget..."></textarea>
-      </div>
-      <a href="https://wa.me/254721672900?text=Hi%20Lepique%20Fashions!%20I'd%20like%20to%20enquire%20about%20your%20collection." target="_blank" class="btn-primary" style="width:100%; text-align:center; display:block;">
-        📱 Send via WhatsApp
-      </a>
+      <div class="form-group"><label>Message</label><textarea placeholder="Tell us your size, colour preference, budget..."></textarea></div>
+      <a href="https://wa.me/254721672900?text=Hi%20Lepique%20Fashions!%20I'd%20like%20to%20enquire%20about%20your%20collection." target="_blank" class="btn-primary" style="width:100%;text-align:center;display:block;">📱 Send via WhatsApp</a>
     </div>
   </div>
 </section>
@@ -1633,21 +536,16 @@
     <div class="footer-col">
       <h4>Shop</h4>
       <ul>
-        <li><a href="#">Wide Leg Jeans</a></li>
-        <li><a href="#">Mom Jeans</a></li>
-        <li><a href="#">High Waist</a></li>
-        <li><a href="#">Straight Cut</a></li>
-        <li><a href="#">Flare Jeans</a></li>
-        <li><a href="#">Cargo Jeans</a></li>
+        <li><a href="#catalog">Wide Leg Jeans</a></li><li><a href="#catalog">Mom Jeans</a></li>
+        <li><a href="#catalog">High Waist</a></li><li><a href="#catalog">Straight Cut</a></li>
+        <li><a href="#catalog">Flare Jeans</a></li><li><a href="#catalog">Cargo Jeans</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h4>Quick Links</h4>
       <ul>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#how-to-order">How to Order</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="https://wa.me/254721672900" target="_blank">WhatsApp</a></li>
+        <li><a href="#about">About Us</a></li><li><a href="#how-to-order">How to Order</a></li>
+        <li><a href="#contact">Contact</a></li><li><a href="https://wa.me/254721672900" target="_blank">WhatsApp</a></li>
         <li><a href="https://www.facebook.com/lepiquefashions" target="_blank">Facebook</a></li>
         <li><a href="https://www.instagram.com/lepique_fashions" target="_blank">Instagram</a></li>
       </ul>
@@ -1661,41 +559,26 @@
 
 <!-- WHATSAPP FLOAT -->
 <a href="https://wa.me/254721672900?text=Hi%20Lepique%20Fashions!%20I'd%20like%20to%20place%20an%20order." target="_blank" class="wa-float" title="Order on WhatsApp">
-  <span class="wa-pulse"></span>
-  💬
+  <span class="wa-pulse"></span>💬
 </a>
 
 <script>
   function toggleMenu() {
-    const menu = document.getElementById('mobileMenu');
-    menu.classList.toggle('open');
+    document.getElementById('mobileMenu').classList.toggle('open');
   }
-
-  // Smooth scroll
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+    anchor.addEventListener('click', function(e) {
       const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
+      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
     });
   });
-
-  // Catalog filter
-  function filterCat(cat) {
+  function filterCat(cat, btn) {
     document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-    event.target.classList.add('active');
+    btn.classList.add('active');
     document.querySelectorAll('.catalog-item').forEach(item => {
-      if (cat === 'all' || item.dataset.cat === cat) {
-        item.classList.remove('hidden');
-      } else {
-        item.classList.add('hidden');
-      }
+      item.classList.toggle('hidden', cat !== 'all' && item.dataset.cat !== cat);
     });
   }
-
-  // Lightbox
   function openLightbox(src, title, price) {
     document.getElementById('lb-img').src = src;
     document.getElementById('lb-title').textContent = title + ' — ' + price;
@@ -1704,14 +587,11 @@
     document.getElementById('lightbox').classList.add('open');
     document.body.style.overflow = 'hidden';
   }
-
   function closeLightbox() {
     document.getElementById('lightbox').classList.remove('open');
     document.body.style.overflow = '';
   }
-
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
 </script>
-
 </body>
 </html>
