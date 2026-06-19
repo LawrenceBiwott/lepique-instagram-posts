@@ -273,6 +273,7 @@ def wait_for_container(container_id):
         status = data.get("status_code")
         log(f"Container status: {status}")
         if status == "FINISHED":
+            time.sleep(10)  # Brief wait after FINISHED — Instagram CDN needs a moment before publish
             return True
         if status == "ERROR":
             raise Exception(f"Instagram processing failed: {data}")
