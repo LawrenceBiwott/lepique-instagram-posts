@@ -28,13 +28,13 @@ lepique-wide-leg-15-black.jpeg              | Wide Leg – Black (02)           
 lepique-wide-leg-16-dark-navy-hero.jpeg     | Wide Leg – Dark Navy (Hero)          | Ksh 2,500
 lepique-wide-leg-17-dark-navy.jpeg          | Wide Leg – Dark Navy (04)            | Ksh 2,500
 lepique-wide-leg-18-light-blue-sweater.jpeg | Wide Leg – Light Blue (Sweater 01)   | Ksh 3,000
-lepique-wide-leg-19-dark-navy-belt.jpg      | Wide Leg – Dark Navy (Belt)          | Ksh 3,000
-lepique-wide-leg-20-dark-navy.jpg           | Wide Leg – Dark Navy (05)            | Ksh 3,000
-lepique-wide-leg-21-light-blue-sweater.jpg  | Wide Leg – Light Blue (Sweater 02)   | Ksh 3,000
+lepique-wide-leg-19-dark-navy-belt.jpeg      | Wide Leg – Dark Navy (Belt)          | Ksh 3,000
+lepique-wide-leg-20-dark-navy.jpeg           | Wide Leg – Dark Navy (05)            | Ksh 3,000
+lepique-wide-leg-21-light-blue-sweater.jpeg  | Wide Leg – Light Blue (Sweater 02)   | Ksh 3,000
 lepique-wide-leg-22-medium-blue.jpeg        | Wide Leg – Medium Blue (Mustard)     | Ksh 2,000
 lepique-wide-leg-23-black.jpeg              | Wide Leg – Black (03)                | Ksh 3,000
 lepique-wide-leg-24-medium-blue.jpeg        | Wide Leg – Medium Blue (Maroon)      | Ksh 2,500
-lepique-wide-leg-25-medium-blue.jpg         | Wide Leg – Medium Blue               | Ksh 3,000
+lepique-wide-leg-25-medium-blue.jpeg         | Wide Leg – Medium Blue               | Ksh 3,000
 lepique-wide-leg-eyelet-01-black.jpeg       | Wide Leg Eyelet – Black              | Ksh 2,500
 
 SKINNY JEANS (7 items)
@@ -59,8 +59,8 @@ lepique-flare-06-medium-blue.jpeg           | Flare – Medium Blue (02)        
 STRAIGHT JEANS (3 items)
 -------------------------
 lepique-straight-01-medium-blue.jpeg        | Straight – Medium Blue               | Ksh 2,500
-lepique-straight-02-beige-twomodels.jpg     | Straight – Beige (Two models)        | Ksh 2,500
-lepique-straight-03-beige.jpg               | Straight – Beige (01)                | Ksh 2,500
+lepique-straight-02-beige-twomodels.jpeg     | Straight – Beige (Two models)        | Ksh 2,500
+lepique-straight-03-beige.jpeg               | Straight – Beige (01)                | Ksh 2,500
 
 RIPPED JEANS (3 items)
 -----------------------
