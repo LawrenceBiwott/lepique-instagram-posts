@@ -37,6 +37,8 @@ GITHUB_RAW_BASE = os.environ.get(
 BASE_DIR = Path(__file__).resolve().parent
 CAPTIONS_FILE = BASE_DIR / "captions.json"
 MEDIA_FOLDER = BASE_DIR / "media"
+PHOTOS_FOLDER = MEDIA_FOLDER / "photos"
+VIDEOS_FOLDER = MEDIA_FOLDER / "videos"
 LOG_FILE = BASE_DIR / "post_log.txt"
 STATE_FILE = BASE_DIR / "state.json"
 
@@ -129,8 +131,17 @@ def get_next_media(state):
             line = line.strip()
             if line:
                 fname = Path(line).name
-                fpath = MEDIA_FOLDER / fname
-                if fpath.exists() and fpath.suffix.lower() in (IMAGE_EXTS | VIDEO_EXTS):
+                # Resolve against the actual on-disk location (media/photos/, media/videos/,
+                # or — for any legacy entries — directly under media/) regardless of which
+                # subfolder git's history says it was added under.
+                candidates = [
+                    BASE_DIR / line,                # path as recorded in git history
+                    PHOTOS_FOLDER / fname,
+                    VIDEOS_FOLDER / fname,
+                    MEDIA_FOLDER / fname,
+                ]
+                fpath = next((c for c in candidates if c.exists()), None)
+                if fpath and fpath.suffix.lower() in (IMAGE_EXTS | VIDEO_EXTS):
                     if fname not in seen:
                         seen.add(fname)
                         all_files.append(fpath)
@@ -141,7 +152,7 @@ def get_next_media(state):
     except Exception as e:
         log(f"Git ordering unavailable ({e}) — falling back to mtime sort")
         all_files = sorted(
-            [p for p in MEDIA_FOLDER.iterdir()
+            [p for p in MEDIA_FOLDER.rglob("*")
              if p.is_file() and p.suffix.lower() in (IMAGE_EXTS | VIDEO_EXTS)],
             key=lambda p: p.stat().st_mtime, reverse=True
         )
@@ -174,18 +185,18 @@ def get_next_media(state):
 
 def get_next_tiktok_video(state):
     """Pick the next unposted video for TikTok — newest to oldest by mtime, then cycle."""
-    if not MEDIA_FOLDER.exists():
+    if not VIDEOS_FOLDER.exists():
         return None
 
     # Sort all videos newest-first by file modification time
     all_videos = sorted(
-        [p for p in MEDIA_FOLDER.iterdir()
+        [p for p in VIDEOS_FOLDER.iterdir()
          if p.is_file() and p.suffix.lower() in VIDEO_EXTS],
         key=lambda p: p.stat().st_mtime, reverse=True
     )
 
     if not all_videos:
-        log("ℹ️  TikTok: no video files found in media/")
+        log("ℹ️  TikTok: no video files found in media/videos/")
         return None
 
     log(f"TikTok: {len(all_videos)} videos found (newest → oldest): "
@@ -212,8 +223,11 @@ def is_video(path):
     return path.suffix.lower() in VIDEO_EXTS
 
 def build_media_url(media_path):
-    safe_filename = quote(media_path.name)
-    return f"{GITHUB_RAW_BASE}/{safe_filename}"
+    # Preserve the photos/ or videos/ subfolder in the URL so it matches
+    # wherever the file actually lives under media/.
+    rel = media_path.relative_to(MEDIA_FOLDER)
+    safe_rel = "/".join(quote(part) for part in rel.parts)
+    return f"{GITHUB_RAW_BASE}/{safe_rel}"
 
 # ─────────────────────────────────────────────
 # CONFIG CHECK
@@ -336,9 +350,9 @@ def prepare_story_image(media_path):
         paste_y = (STORY_H - fg_h) // 2
         background.paste(foreground, (paste_x, paste_y))
 
-        story_path = MEDIA_FOLDER / "story_temp.jpg"
+        story_path = PHOTOS_FOLDER / "story_temp.jpg"
         background.save(story_path, "JPEG", quality=92)
-        log(f"Story image resized to {STORY_W}x{STORY_H} -> story_temp.jpg")
+        log(f"Story image resized to {STORY_W}x{STORY_H} -> photos/story_temp.jpg")
 
         # Commit and push — workflow final step uses git pull --rebase to handle this
         subprocess.run(["git", "config", "user.name", "github-actions[bot]"], cwd=BASE_DIR, check=True)
@@ -346,10 +360,10 @@ def prepare_story_image(media_path):
         subprocess.run(["git", "add", str(story_path)], cwd=BASE_DIR, check=True)
         subprocess.run(["git", "commit", "-m", "chore: story temp image [skip ci]"], cwd=BASE_DIR, check=True)
         subprocess.run(["git", "push"], cwd=BASE_DIR, check=True)
-        log("story_temp.jpg pushed. Waiting 15s for CDN...")
+        log("photos/story_temp.jpg pushed. Waiting 15s for CDN...")
         time.sleep(15)
 
-        story_url = f"{GITHUB_RAW_BASE}/story_temp.jpg"
+        story_url = build_media_url(story_path)
         log(f"Story URL: {story_url}")
         return story_url
 

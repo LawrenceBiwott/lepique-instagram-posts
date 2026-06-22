@@ -5440,3 +5440,16 @@
 [2026-06-22 17:57:08] Uploading WhatsApp Video 2026-05-19 at 11.36.29.mp4 (1.4 MB) to TikTok...
 [2026-06-22 17:57:08] ⚠️  TikTok post failed (Instagram/Facebook not affected): 403 Client Error: Forbidden for url: https://open.tiktokapis.com/v2/post/publish/video/init/
 [2026-06-22 17:57:08] ✅ All done. State saved.
+[2026-06-22 19:39:23] Checking media folder: /sessions/epic-eager-carson/mnt/Instagram automation (1)/lepique-instagram-posts/media
+[2026-06-22 19:39:26] Found 40 media files (newest-first by git history)
+[2026-06-22 19:39:26] Latest 5: ['Video1.mp4', 'Video2.mp4', 'Video3.mp4', 'Video4.mp4', 'Video5.mp4']
+[2026-06-22 19:39:26] ℹ️  TikTok: no video files found in media/videos/
+[2026-06-22 19:40:43] Checking media folder: /sessions/epic-eager-carson/mnt/Instagram automation (1)/lepique-instagram-posts/media
+[2026-06-22 19:40:44] Found 40 media files (newest-first by git history)
+[2026-06-22 19:40:44] Latest 5: ['Video1.mp4', 'Video2.mp4', 'Video3.mp4', 'Video4.mp4', 'Video5.mp4']
+[2026-06-22 19:40:44] TikTok: 7 videos found (newest → oldest): ['Video6.mp4', 'WhatsApp Video 2026-05-19 at 11.36.29.mp4', 'Video5.mp4', 'Video4.mp4', 'Video2.mp4', 'Video3.mp4', 'Video1.mp4']
+[2026-06-22 19:40:44] TikTok: all 7 videos posted — resetting cycle, starting from newest.
+[2026-06-22 19:40:44] TikTok selected video: Video6.mp4
+[2026-06-22 19:49:04] Checking media folder: /sessions/epic-eager-carson/mnt/Instagram automation (1)/lepique-instagram-posts/media
+[2026-06-22 19:49:04] Found 40 media files (newest-first by git history)
+[2026-06-22 19:49:04] Latest 5: ['Video1.mp4', 'Video2.mp4', 'Video3.mp4', 'Video4.mp4', 'Video5.mp4']

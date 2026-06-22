@@ -61,7 +61,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
           git pull --rebase --autostash origin main
-          git rm -f media/story_temp.jpg 2>/dev/null || true
+          git rm -f media/photos/story_temp.jpg 2>/dev/null || true
           git add state.json post_log.txt
 
           git diff --cached --quiet || git commit -m "chore: update post state [skip ci]"
