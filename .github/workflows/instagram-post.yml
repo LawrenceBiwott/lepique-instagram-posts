@@ -50,7 +50,7 @@ jobs:
           TIKTOK_REFRESH_TOKEN: ${{ secrets.TIKTOK_REFRESH_TOKEN }}
           FORCE_POST: ${{ github.event.inputs.force_post }}
 
-          MEDIA_BASE_URL: "https://raw.githubusercontent.com/${{ github.repository }}/main/media"
+          MEDIA_BASE_URL: "https://lawrencebiwott.github.io/lepique-instagram-posts/media"
 
         run: python instagram_post.py
 
