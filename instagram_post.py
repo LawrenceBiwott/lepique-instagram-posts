@@ -12,6 +12,13 @@ from datetime import datetime
 from pathlib import Path
 from urllib.parse import quote
 
+try:
+    from PIL import Image, ImageFile
+    ImageFile.LOAD_TRUNCATED_IMAGES = True
+    PIL_AVAILABLE = True
+except ImportError:
+    PIL_AVAILABLE = False
+
 # ─────────────────────────────────────────────
 # CONFIGURATION
 # ─────────────────────────────────────────────
@@ -237,6 +244,45 @@ def ensure_config():
         raise ValueError("INSTAGRAM_ACCESS_TOKEN missing.")
     if not IG_USER_ID:
         raise ValueError("INSTAGRAM_USER_ID missing.")
+
+# ─────────────────────────────────────────────
+# IMAGE PRE-PROCESSING
+# ─────────────────────────────────────────────
+def pad_image_to_valid_ratio(file_path, bg_color=(255, 255, 255)):
+    """
+    If the image at file_path has an aspect ratio outside Instagram's
+    valid range (0.8–1.91), pad it with bg_color so it fits.
+    Saves in place. No-op if PIL is unavailable or ratio is already valid.
+    """
+    if not PIL_AVAILABLE:
+        log("Pillow not installed — skipping aspect ratio check.")
+        return
+    try:
+        img = Image.open(file_path).convert("RGB")
+        w, h = img.size
+        ratio = w / h
+
+        if 0.8 <= ratio <= 1.91:
+            return  # already valid
+
+        if ratio < 0.8:
+            # Too tall — add padding left & right to reach 4:5
+            new_w = int(h * 0.8)
+            canvas = Image.new("RGB", (new_w, h), bg_color)
+            canvas.paste(img, ((new_w - w) // 2, 0))
+            canvas.save(file_path, quality=95)
+            log(f"Padded {file_path.name}: {w}x{h} → {new_w}x{h} (ratio {new_w/h:.2f})")
+        else:
+            # Too wide — add padding top & bottom to reach 1.91:1
+            new_h = int(w / 1.91)
+            canvas = Image.new("RGB", (w, new_h), bg_color)
+            canvas.paste(img, (0, (new_h - h) // 2))
+            canvas.save(file_path, quality=95)
+            log(f"Padded {file_path.name}: {w}x{h} → {w}x{new_h} (ratio {w/new_h:.2f})")
+
+    except Exception as e:
+        log(f"⚠️ Could not pad image {file_path.name}: {e}")
+
 
 # ─────────────────────────────────────────────
 # INSTAGRAM API
@@ -812,10 +858,11 @@ def post_to_instagram():
         return
 
     log(f"Selected media: {media_path.name}")
+    video_file = is_video(media_path)
+    if not video_file:
+        pad_image_to_valid_ratio(media_path)
     media_url = build_media_url(media_path)
     log(f"Media URL: {media_url}")
-
-    video_file = is_video(media_path)
 
     # ── Instagram feed ──
     if video_file:
