@@ -1,5 +1,5 @@
 LEPIQUE FASHIONS – PRICE LIST
-Last updated: 2026-05-29
+Last updated: 2026-06-23
 ================================================
 
 HOW TO UPDATE:
@@ -8,7 +8,7 @@ HOW TO UPDATE:
 3. File name = data-src in index.html
 
 ================================================
-WIDE LEG JEANS (26 items)
+WIDE LEG JEANS (34 items)
 --------------------------
 photos/lepique-wide-leg-01-dark-blue-belt.jpeg     | Wide Leg – Dark Blue (Belt)          | Ksh 3,000
 photos/lepique-wide-leg-02-light-blue.jpeg         | Wide Leg – Light Blue (01)           | Ksh 2,500
@@ -28,16 +28,24 @@ photos/lepique-wide-leg-15-black.jpeg              | Wide Leg – Black (02)    
 photos/lepique-wide-leg-16-dark-navy-hero.jpeg     | Wide Leg – Dark Navy (Hero)          | Ksh 2,500
 photos/lepique-wide-leg-17-dark-navy.jpeg          | Wide Leg – Dark Navy (04)            | Ksh 2,500
 photos/lepique-wide-leg-18-light-blue-sweater.jpeg | Wide Leg – Light Blue (Sweater 01)   | Ksh 3,000
-photos/lepique-wide-leg-19-dark-navy-belt.jpeg      | Wide Leg – Dark Navy (Belt)          | Ksh 3,000
-photos/lepique-wide-leg-20-dark-navy.jpeg           | Wide Leg – Dark Navy (05)            | Ksh 3,000
-photos/lepique-wide-leg-21-light-blue-sweater.jpeg  | Wide Leg – Light Blue (Sweater 02)   | Ksh 3,000
+photos/lepique-wide-leg-19-dark-navy-belt.jpeg     | Wide Leg – Dark Navy (Belt)          | Ksh 3,000
+photos/lepique-wide-leg-20-dark-navy.jpeg          | Wide Leg – Dark Navy (05)            | Ksh 3,000
+photos/lepique-wide-leg-21-light-blue-sweater.jpeg | Wide Leg – Light Blue (Sweater 02)   | Ksh 3,000
 photos/lepique-wide-leg-22-medium-blue.jpeg        | Wide Leg – Medium Blue (Mustard)     | Ksh 2,000
 photos/lepique-wide-leg-23-black.jpeg              | Wide Leg – Black (03)                | Ksh 3,000
 photos/lepique-wide-leg-24-medium-blue.jpeg        | Wide Leg – Medium Blue (Maroon)      | Ksh 2,500
-photos/lepique-wide-leg-25-medium-blue.jpeg         | Wide Leg – Medium Blue               | Ksh 3,000
+photos/lepique-wide-leg-25-medium-blue.jpeg        | Wide Leg – Medium Blue               | Ksh 3,000
+photos/lepique-wide-leg-26-light-blue.jpeg         | Wide Leg – Light Blue (Calvin)       | Ksh 2,500
+photos/lepique-wide-leg-27-light-blue.jpeg         | Wide Leg – Light Blue (Polo)         | Ksh 2,500
+photos/lepique-wide-leg-28-grey-acidwash.jpeg      | Wide Leg – Grey Acid Wash            | Ksh 3,000
+photos/lepique-wide-leg-29-dark-navy.jpeg          | Wide Leg – Dark Navy (Yellow Crop)   | Ksh 3,000
+photos/lepique-wide-leg-30-dark-navy.jpeg          | Wide Leg – Dark Navy (LA Tee)        | Ksh 3,000
+photos/lepique-wide-leg-31-medium-blue.jpeg        | Wide Leg – Medium Blue (After Tee)   | Ksh 2,500
 photos/lepique-wide-leg-eyelet-01-black.jpeg       | Wide Leg Eyelet – Black              | Ksh 2,500
+photos/lepique-wide-leg-32-dark-navy.jpeg   | Wide Leg – Dark Navy (06)            | Ksh 2,500   [NEW]
+photos/lepique-wide-leg-33-light-blue.jpeg   | Wide Leg – Light Blue (04)           | Ksh 2,500   [NEW]
 
-SKINNY JEANS (7 items)
+SKINNY JEANS (8 items)
 -----------------------
 photos/lepique-skinny-01-white.jpeg                | Skinny – White                       | Ksh 1,200
 photos/lepique-skinny-02-grey.jpeg                 | Skinny – Grey                        | Ksh 1,200
@@ -46,36 +54,15 @@ photos/lepique-skinny-04-dark-navy.jpeg            | Skinny – Dark Navy (02)  
 photos/lepique-skinny-05-black-plussize.jpeg       | Skinny – Black Plus Size             | Ksh 1,500
 photos/lepique-skinny-06-black.jpeg                | Skinny – Black (01)                  | Ksh 1,200
 photos/lepique-skinny-07-black.jpeg                | Skinny – Black (02)                  | Ksh 1,200
+photos/lepique-skinny-08-white.jpeg   | Skinny – White (02)                  | Ksh 1,200   [NEW]
 
-FLARE JEANS (6 items)
+FLARE JEANS (7 items)
 ----------------------
 photos/lepique-flare-01-black.jpeg                 | Flare – Black                        | Ksh 2,500
 photos/lepique-flare-02-grey-acidwash.jpeg         | Flare – Grey Acid Wash               | Ksh 2,500
 photos/lepique-flare-03-blue.jpeg                  | Flare – Blue (01)                    | Ksh 2,500
 photos/lepique-flare-04-blue.jpeg                  | Flare – Blue (02)                    | Ksh 2,500
-photos/lepique-flare-05-blue-medium.jpg            | Flare – Medium Blue (01)             | Ksh 2,500
+photos/lepique-flare-05-blue-medium.jpg            | Flare – Medium Blue (01)             | Ksh 2,500   [FILE MISSING — needs photo]
 photos/lepique-flare-06-medium-blue.jpeg           | Flare – Medium Blue (02)             | Ksh 2,500
-
-STRAIGHT JEANS (3 items)
--------------------------
-photos/lepique-straight-01-medium-blue.jpeg        | Straight – Medium Blue               | Ksh 2,500
-photos/lepique-straight-02-beige-twomodels.jpeg     | Straight – Beige (Two models)        | Ksh 2,500
-photos/lepique-straight-03-beige.jpeg               | Straight – Beige (01)                | Ksh 2,500
-
-RIPPED JEANS (3 items)
------------------------
-photos/lepique-ripped-01-light-blue.jpeg           | Ripped – Light Blue                  | Ksh 2,500
-photos/lepique-ripped-02-grey-acidwash.jpeg        | Ripped – Grey Acid Wash              | Ksh 3,000
-photos/lepique-ripped-03-light-blue-wide.jpeg      | Ripped Wide – Light Blue             | Ksh 2,500
-
-CARGO JEANS (1 item)
----------------------
-photos/lepique-cargo-01-grey-wash.jpeg             | Cargo – Grey Wash                    | Ksh 3,000
-
-PRINTED JEANS (2 items)
-------------------------
-photos/lepique-printed-01-ysl-light-blue.jpeg      | Printed YSL – Light Blue (01)        | Ksh 3,000
-photos/lepique-printed-02-ysl-light-blue.jpeg      | Printed YSL – Light Blue (02)        | Ksh 3,000
-
-================================================
-TOTAL: 48 items
+photos/lepique-flare-07-navy-blue.jpeg   | Flare – Navy Blue                    | Ksh 2,500   [NEW]
+photos/lepique-flare-08-black.jpeg   | Flare – Black (02)                   | Ksh

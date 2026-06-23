@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ladies Jeans in Nairobi | Lepique Fashions | Wide Leg, High Waist &amp; Plus Size Jeans Kenya</title>
-  <meta name="description" content="Lepique Fashions – ladies' jeans shop in Nairobi CBD, Platinum Plaza Shop G16, Tom Mboya Street. Wide leg jeans, high waist jeans, mom jeans, skinny jeans, flare jeans, cargo jeans, ripped jeans and plus-size jeans sizes 27–42. WhatsApp 0721 672 900. Delivery across Kenya." />
-  <meta name="keywords" content="ladies jeans Nairobi, wide leg jeans Nairobi, high waist jeans Nairobi, mom jeans Nairobi, skinny jeans Kenya, flare jeans Nairobi, cargo jeans Nairobi, plus size jeans Kenya, ripped jeans Nairobi, jeans shop Nairobi CBD, Tom Mboya Street jeans, Platinum Plaza fashion, ladies denim Kenya, jeans delivery Kenya, ladies jeans near me" />
+  <meta name="description" content="Lepique Fashions – ladies' jeans, vests, bodysuits, T-shirts and leather jackets in Nairobi CBD, Platinum Plaza Shop G16, Tom Mboya Street. Wide leg, skinny, flare, cargo and plus-size jeans sizes 27–42. WhatsApp 0721 672 900. Delivery across Kenya." />
+  <meta name="keywords" content="ladies jeans Nairobi, wide leg jeans Nairobi, high waist jeans Nairobi, mom jeans Nairobi, skinny jeans Kenya, flare jeans Nairobi, cargo jeans Nairobi, plus size jeans Kenya, ripped jeans Nairobi, ladies vests Nairobi, ladies bodysuits Nairobi, ladies T-shirts Nairobi, leather jackets Nairobi, ladies tops Nairobi, jeans shop Nairobi CBD, Tom Mboya Street fashion, Platinum Plaza fashion, ladies denim Kenya, jeans delivery Kenya, ladies fashion Nairobi" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://lepique.co.ke/" />
   <script type="application/ld+json">
@@ -13,7 +13,7 @@
     "@context": "https://schema.org",
     "@type": "ClothingStore",
     "name": "Lepique Fashions",
-    "description": "Nairobi's premier ladies' jeans boutique. Wide leg, skinny, flare, straight, ripped, cargo and printed jeans. Sizes 27-42. Delivery across Kenya.",
+    "description": "Nairobi's ladies' fashion boutique. Wide leg, skinny, flare, straight, ripped, cargo and printed jeans (sizes 27–42). Also ladies vests, bodysuits, T-shirts and leather jackets. Delivery across Kenya.",
     "url": "https://lepique.co.ke",
     "telephone": "+254721672900",
     "address": {
@@ -143,20 +143,20 @@
     .item-code { font-size: 0.65rem; color: var(--gray); letter-spacing: 0.5px; padding: 0 0.8rem 0.5rem; font-family: monospace; }
 
     /* LIGHTBOX */
-    .lightbox { display: none; position: fixed; inset: 0; z-index: 500; align-items: center; justify-content: center; }
+    .lightbox { display: none; position: fixed; inset: 0; z-index: 500; align-items: center; justify-content: center; background: #000; }
     .lightbox.open { display: flex; }
-    .lb-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.85); }
-    .lb-box { position: relative; z-index: 1; background: var(--white); border-radius: 6px; overflow: hidden; max-width: 380px; width: 90vw; max-height: 78vh; display: flex; flex-direction: column; box-shadow: 0 24px 60px rgba(0,0,0,0.5); }
-    .lb-img-wrap { overflow: hidden; display: flex; align-items: center; justify-content: center; background: #000; height: 50vh; max-height: 50vh; }
-    .lb-img-wrap img { width: 100%; height: 100%; object-fit: contain; max-height: 50vh; }
-    .lb-img-wrap video { width: 100%; height: 100%; object-fit: contain; max-height: 50vh; }
+    .lb-overlay { position: absolute; inset: 0; background: transparent; }
+    .lb-box { position: relative; z-index: 1; background: #000; width: 100vw; height: 100vh; height: 100dvh; display: flex; flex-direction: column; overflow: hidden; border-radius: 0; }
+    .lb-img-wrap { flex: 1; min-height: 0; overflow: hidden; display: flex; align-items: center; justify-content: center; background: #000; }
+    .lb-img-wrap img { max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; display: block; }
+    .lb-img-wrap video { max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; display: block; }
     /* VIDEO CATALOG ITEMS */
     .catalog-item video { width: 100%; display: block; aspect-ratio: 9/16; object-fit: cover; }
     .video-badge { position: absolute; top: 6px; right: 6px; background: rgba(192,96,112,0.92); color: #fff; padding: 2px 7px; border-radius: 10px; font-size: 10px; font-weight: 700; z-index: 2; letter-spacing: 0.5px; }
-    .lb-footer { padding: 1rem 1.2rem; display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; background: var(--white); }
-    .lb-title { font-size: 0.88rem; font-weight: 600; color: var(--navy); }
-    .lb-close { position: absolute; top: 10px; right: 12px; background: rgba(0,0,0,0.5); color: white; border: none; width: 32px; height: 32px; border-radius: 50%; font-size: 1rem; cursor: pointer; z-index: 2; display: flex; align-items: center; justify-content: center; line-height: 1; }
-    .lb-close:hover { background: rgba(0,0,0,0.8); }
+    .lb-footer { padding: 0.75rem 1.2rem; display: flex; justify-content: space-between; align-items: center; gap: 0.8rem; flex-wrap: wrap; background: rgba(17,17,17,0.97); border-top: 1px solid rgba(255,255,255,0.1); flex-shrink: 0; }
+    .lb-title { font-size: 0.88rem; font-weight: 600; color: #fff; }
+    .lb-close { position: absolute; top: 12px; right: 14px; background: rgba(0,0,0,0.65); color: white; border: 1px solid rgba(255,255,255,0.25); width: 38px; height: 38px; border-radius: 50%; font-size: 1.1rem; cursor: pointer; z-index: 4; display: flex; align-items: center; justify-content: center; line-height: 1; touch-action: manipulation; }
+    .lb-close:hover { background: rgba(255,255,255,0.2); }
 
     /* ABOUT */
     .about { background: var(--white); color: var(--navy); display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
@@ -240,17 +240,36 @@
     /* BADGE NEW */
     .badge-new-item { position: absolute; top: 10px; left: 10px; background: var(--gold); color: var(--navy); font-size: 0.6rem; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; padding: 0.2rem 0.55rem; border-radius: 2px; z-index: 2; }
 
+    /* TOPS & JACKETS SECTION */
+    .tops-section { background: var(--white); }
+    .tops-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; margin-top: 2.5rem; }
+    .tops-card { background: var(--off-white); border-radius: 4px; overflow: hidden; text-decoration: none; color: inherit; display: block; transition: transform 0.3s, box-shadow 0.3s; }
+    .tops-card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(13,27,42,0.12); }
+    .tops-card-img { width: 100%; aspect-ratio: 3/4; object-fit: cover; display: block; background: var(--light-gray); }
+    .tops-card-info { padding: 1.2rem 1.4rem 1.5rem; }
+    .tops-card-info h3 { font-family: 'Playfair Display', serif; font-size: 1.05rem; margin-bottom: 0.3rem; color: var(--navy); }
+    .tops-card-info p { font-size: 0.8rem; color: var(--gray); line-height: 1.5; margin-bottom: 0.6rem; }
+    .tops-card-price { font-size: 0.82rem; font-weight: 700; color: var(--gold); }
+
+    /* HIDE PRICE ON VIDEO ITEMS */
+    .video-grid .item-price { display: none; }
+
+    /* FILTER GROUP LABELS */
+    .filter-group-label { font-size: 0.68rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gray); padding: 0.45rem 0.4rem 0.45rem 0.8rem; align-self: center; white-space: nowrap; }
+    .filter-divider { width: 1px; background: var(--light-gray); margin: 0.2rem 0.3rem; align-self: stretch; }
+
     /* BACK TO TOP */
     .back-top { position: fixed; bottom: 6.5rem; right: 2rem; z-index: 200; background: var(--navy); color: var(--gold); width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; border: 1px solid rgba(192,96,112,0.3); opacity: 0; transform: translateY(12px); transition: all 0.3s; font-size: 1rem; text-decoration: none; }
     .back-top.visible { opacity: 1; transform: translateY(0); }
     .back-top:hover { background: var(--denim); }
 
     /* LIGHTBOX NAV */
-    .lb-prev, .lb-next { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.55); color: white; border: none; width: 38px; height: 38px; border-radius: 50%; font-size: 1.1rem; cursor: pointer; z-index: 3; display: flex; align-items: center; justify-content: center; transition: background 0.2s; }
-    .lb-prev { left: 10px; }
-    .lb-next { right: 10px; }
-    .lb-prev:hover, .lb-next:hover { background: rgba(0,0,0,0.85); }
-    .lb-counter { font-size: 0.72rem; color: var(--gray); margin-top: 0.2rem; }
+    .lb-prev, .lb-next { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.55); color: white; border: 1px solid rgba(255,255,255,0.2); width: 44px; height: 44px; border-radius: 50%; font-size: 1.5rem; cursor: pointer; z-index: 3; display: flex; align-items: center; justify-content: center; transition: background 0.2s; touch-action: manipulation; }
+    .lb-prev { left: 12px; }
+    .lb-next { right: 12px; }
+    .lb-prev:hover, .lb-next:hover { background: rgba(255,255,255,0.2); }
+    @media (max-width: 600px) { .lb-prev, .lb-next { display: none; } }
+    .lb-counter { font-size: 0.72rem; color: rgba(255,255,255,0.55); margin-top: 0.2rem; }
 
     /* MOBILE */
     /* TRUST SECTION */
@@ -354,20 +373,22 @@
     <span>WhatsApp Orders: 0721 672 900</span>
     <span>New Arrivals Weekly</span>
     <span>Wide Leg · Skinny · Flare · Straight · Ripped · Cargo</span>
+    <span>Crop Tops · Bodysuits · T-Shirts · Leather Jackets</span>
     <span>We Deliver Countrywide</span>
     <span>WhatsApp Orders: 0721 672 900</span>
     <span>New Arrivals Weekly</span>
     <span>Wide Leg · Skinny · Flare · Straight · Ripped · Cargo</span>
+    <span>Crop Tops · Bodysuits · T-Shirts · Leather Jackets</span>
   </div>
 </div>
 
 <!-- NAV -->
 <nav>
   <div class="nav-left">
-    <a href="#categories" class="nav-link">Shop</a>
+    <a href="#categories" class="nav-link">Shop Jeans</a>
+    <a href="#tops" class="nav-link">Tops &amp; Jackets</a>
     <a href="#catalog" class="nav-link">Catalogue</a>
     <a href="#size-guide" class="nav-link">Size Guide</a>
-    <a href="#delivery" class="nav-link">Delivery</a>
   </div>
   <a href="#" class="logo"><svg class="site-logo" width="220" height="58" viewBox="0 0 220 58" xmlns="http://www.w3.org/2000/svg" aria-label="Lepique Fashions"><rect x="0" y="8" width="3" height="16" fill="#c9a455"/><rect x="0" y="24" width="3" height="12" fill="#9b1a1a"/><rect x="0" y="36" width="3" height="14" fill="#c9a455"/><text x="16" y="37" font-family="'Playfair Display',Georgia,serif" font-size="27" font-weight="700" letter-spacing="4" fill="#c9a455">LEPIQUE</text><text x="17" y="52" font-family="'Inter',Arial,sans-serif" font-size="9" font-weight="500" letter-spacing="5.5" fill="rgba(201,164,85,0.72)">FASHIONS</text></svg></a>
   <div class="nav-right">
@@ -383,7 +404,8 @@
 
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#categories" onclick="toggleMenu()">Shop</a>
+  <a href="#categories" onclick="toggleMenu()">Shop Jeans</a>
+  <a href="#tops" onclick="toggleMenu()">Tops &amp; Jackets</a>
   <a href="#catalog" onclick="toggleMenu()">Catalogue</a>
   <a href="#size-guide" onclick="toggleMenu()">Size Guide</a>
   <a href="#delivery" onclick="toggleMenu()">Delivery</a>
@@ -401,9 +423,10 @@
     <div class="hero-badge" style="margin-top:0.5rem;font-size:0.7rem;">📍 Platinum Plaza, Shop G16, Tom Mboya St, Nairobi &nbsp;|&nbsp; Delivery Across Kenya</div>
     <div class="hero-badge" style="display:none">Nairobi's #1 Jeans Destination</div>
     <h1>Nairobi's Home of<br /><em>Quality Ladies' Jeans</em></h1>
-    <p>Wide leg, high waist, mom jeans, skinny, flare, cargo, ripped &amp; plus-size jeans. Sizes 27–42. Order on WhatsApp — same-day delivery in Nairobi, countrywide courier available.</p>
+    <p style="font-size:0.82rem;color:rgba(255,255,255,0.5);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:0.6rem;">Jeans · Crop Tops · Bodysuits · T-Shirts · Leather Jackets</p>
+    <p>Shop quality ladies' jeans, crop tops, bodysuits, T-shirts and leather jackets at Lepique Fashions, Platinum Plaza Shop G16, Tom Mboya Street, Nairobi. Jeans sizes 27–42. WhatsApp ordering with same-day delivery in Nairobi and countrywide courier.</p>
     <div class="hero-buttons">
-      <a href="#catalog" class="btn-primary">Browse 46 Styles</a>
+      <a href="#catalog" class="btn-primary">Browse 98 Styles</a>
       <a href="https://wa.me/254721672900?text=Hi%20Lepique%20Fashions!%20I'd%20like%20to%20browse%20your%20collection." target="_blank" class="btn-outline">WhatsApp Us</a>
     </div>
     <div class="hero-stats">
@@ -420,8 +443,8 @@
 <!-- MARQUEE -->
 <div class="marquee-bar">
   <div class="marquee-inner">
-    &nbsp;&nbsp;Wide Leg Jeans &nbsp;✦&nbsp; Mom Jeans &nbsp;✦&nbsp; High Waist &nbsp;✦&nbsp; Straight Cut &nbsp;✦&nbsp; Boyfriend Fit &nbsp;✦&nbsp; Flare Jeans &nbsp;✦&nbsp; Skinny Jeans &nbsp;✦&nbsp; Cargo Jeans &nbsp;✦&nbsp; New Arrivals Every Week &nbsp;✦&nbsp; Countrywide Delivery &nbsp;✦&nbsp; Premium Quality &nbsp;✦&nbsp;&nbsp;
-    &nbsp;&nbsp;Wide Leg Jeans &nbsp;✦&nbsp; Mom Jeans &nbsp;✦&nbsp; High Waist &nbsp;✦&nbsp; Straight Cut &nbsp;✦&nbsp; Boyfriend Fit &nbsp;✦&nbsp; Flare Jeans &nbsp;✦&nbsp; Skinny Jeans &nbsp;✦&nbsp; Cargo Jeans &nbsp;✦&nbsp; New Arrivals Every Week &nbsp;✦&nbsp; Countrywide Delivery &nbsp;✦&nbsp; Premium Quality &nbsp;✦&nbsp;&nbsp;
+    &nbsp;&nbsp;Wide Leg Jeans &nbsp;✦&nbsp; Mom Jeans &nbsp;✦&nbsp; High Waist &nbsp;✦&nbsp; Straight Cut &nbsp;✦&nbsp; Flare Jeans &nbsp;✦&nbsp; Skinny Jeans &nbsp;✦&nbsp; Cargo Jeans &nbsp;✦&nbsp; Ladies Vests &nbsp;✦&nbsp; Bodysuits &nbsp;✦&nbsp; T-Shirts &nbsp;✦&nbsp; Leather Jackets &nbsp;✦&nbsp; New Arrivals Every Week &nbsp;✦&nbsp; Countrywide Delivery &nbsp;✦&nbsp;&nbsp;
+    &nbsp;&nbsp;Wide Leg Jeans &nbsp;✦&nbsp; Mom Jeans &nbsp;✦&nbsp; High Waist &nbsp;✦&nbsp; Straight Cut &nbsp;✦&nbsp; Flare Jeans &nbsp;✦&nbsp; Skinny Jeans &nbsp;✦&nbsp; Cargo Jeans &nbsp;✦&nbsp; Ladies Vests &nbsp;✦&nbsp; Bodysuits &nbsp;✦&nbsp; T-Shirts &nbsp;✦&nbsp; Leather Jackets &nbsp;✦&nbsp; New Arrivals Every Week &nbsp;✦&nbsp; Countrywide Delivery &nbsp;✦&nbsp;&nbsp;
   </div>
 </div>
 
@@ -459,9 +482,9 @@
 <!-- CATEGORIES -->
 <section class="categories" id="categories">
   <div class="cat-header">
-    <div class="section-tag">Shop by Style</div>
+    <div class="section-tag">Shop Jeans by Style</div>
     <h2 class="section-title">Find Your Perfect Fit</h2>
-    <p class="section-sub">From classic straight cuts to trendy wide legs — we carry every style a modern woman needs.</p>
+    <p class="section-sub">From classic straight cuts to trendy wide legs — Lepique carries every jeans style a modern woman needs.</p>
   </div>
   <div class="cat-grid">
     <a href="#catalog" class="cat-card">
@@ -487,6 +510,49 @@
     <a href="#catalog" class="cat-card">
       <div class="cat-img"><img src="photos/lepique-flare-02-grey-acidwash.jpeg" alt="Skinny Jeans" /></div>
       <div class="cat-info"><h3>Skinny &amp; Slim Fit</h3><p>Sleek, fitted, always stylish</p></div>
+    </a>
+  </div>
+</section>
+
+<!-- TOPS & JACKETS -->
+<section class="tops-section" id="tops">
+  <div class="cat-header">
+    <div class="section-tag">More from Lepique</div>
+    <h2 class="section-title">Tops, Bodysuits &amp; Jackets</h2>
+    <p class="section-sub" style="margin:0 auto;">Complete your jeans look with ladies' vests, bodysuits, T-shirts and leather jackets — all available at Lepique Fashions, Nairobi CBD.</p>
+  </div>
+  <div class="tops-grid">
+    <a href="ladies-croptops-nairobi.html" class="tops-card">
+      <img class="tops-card-img" src="photos/lepique-wide-leg-29-dark-navy.jpeg" alt="Ladies Crop Tops Nairobi – Lepique Fashions" />
+      <div class="tops-card-info">
+        <h3>Crop Tops</h3>
+        <p>Stylish crop tops to pair with high-waist, skinny and wide-leg jeans. Free size.</p>
+        <div class="tops-card-price">From Ksh 900</div>
+      </div>
+    </a>
+    <a href="bodysuits-nairobi.html" class="tops-card">
+      <img class="tops-card-img" src="photos/lepique-bodysuit-01.jpeg" alt="Ladies Bodysuits Nairobi – Lepique Fashions" />
+      <div class="tops-card-info">
+        <h3>Bodysuits</h3>
+        <p>Fitted bodysuits in 7 beautiful colours — perfect for casual and dressy looks.</p>
+        <div class="tops-card-price">Ksh 1,000 – 1,500</div>
+      </div>
+    </a>
+    <a href="ladies-tshirts-nairobi.html" class="tops-card">
+      <img class="tops-card-img" src="photos/lepique-tshirt-01.jpeg" alt="Ladies T-Shirts Nairobi – Lepique Fashions" />
+      <div class="tops-card-info">
+        <h3>Ladies T-Shirts</h3>
+        <p>Comfortable everyday T-shirts to pair with jeans. Sizes M – 5XL.</p>
+        <div class="tops-card-price">Ksh 1,000 – 1,500</div>
+      </div>
+    </a>
+    <a href="leather-jackets-nairobi.html" class="tops-card">
+      <img class="tops-card-img" src="photos/lepique-leather-jacket-01-black.jpeg" alt="Ladies Leather Jackets Nairobi – Lepique Fashions" />
+      <div class="tops-card-info">
+        <h3>Leather Jackets</h3>
+        <p>Black leather jackets for ladies. Sizes M, L, XL, 2XL, 3XL, 4XL and 5XL.</p>
+        <div class="tops-card-price">Ksh 1,800 – 3,500</div>
+      </div>
     </a>
   </div>
 </section>
@@ -546,7 +612,7 @@
     <div class="product-card">
       <div class="product-img">
         <span class="badge-hot">Hot</span>
-        <img src="photos/lepique-printed-01-ysl-light-blue.jpeg" alt="Printed YSL Jeans" />
+        <img src="photos/lepique-printed-02-ysl-light-blue.jpeg" alt="Printed YSL Jeans" />
       </div>
       <div class="product-info">
         <h3>Printed YSL – Light Blue</h3>
@@ -568,14 +634,23 @@
     <p class="section-sub">Browse all available styles. Click any photo to see it larger, then order via WhatsApp.</p>
   </div>
   <div class="filter-bar">
-    <button class="filter-btn active" onclick="filterCat('all',this)">All (77)</button>
-    <button class="filter-btn" onclick="filterCat('wide-leg',this)">Wide Leg (44)</button>
-    <button class="filter-btn" onclick="filterCat('skinny',this)">Skinny (10)</button>
-    <button class="filter-btn" onclick="filterCat('flare',this)">Flare (7)</button>
-    <button class="filter-btn" onclick="filterCat('straight',this)">Straight (7)</button>
-    <button class="filter-btn" onclick="filterCat('ripped',this)">Ripped (5)</button>
+    <button class="filter-btn active" onclick="filterCat('all',this)">All (98)</button>
+    <span class="filter-divider"></span>
+    <span class="filter-group-label">Jeans:</span>
+    <button class="filter-btn" onclick="filterCat('wide-leg',this)">Wide Leg (49)</button>
+    <button class="filter-btn" onclick="filterCat('skinny',this)">Skinny (11)</button>
+    <button class="filter-btn" onclick="filterCat('flare',this)">Flare (8)</button>
+    <button class="filter-btn" onclick="filterCat('straight',this)">Straight (8)</button>
+    <button class="filter-btn" onclick="filterCat('ripped',this)">Ripped (8)</button>
     <button class="filter-btn" onclick="filterCat('cargo',this)">Cargo (1)</button>
-    <button class="filter-btn" onclick="filterCat('printed',this)">Printed (3)</button>
+    <button class="filter-btn" onclick="filterCat('printed',this)">Printed (2)</button>
+    <span class="filter-divider"></span>
+    <span class="filter-group-label">Tops:</span>
+    <button class="filter-btn" onclick="filterCat('bodysuit',this)">Bodysuits (2)</button>
+    <button class="filter-btn" onclick="filterCat('tshirt',this)">T-Shirts (8)</button>
+    <span class="filter-divider"></span>
+    <span class="filter-group-label">Jackets:</span>
+    <button class="filter-btn" onclick="filterCat('jacket',this)">Leather Jackets (1)</button>
   </div>
   <div class="catalog-grid" style="display:flex;flex-wrap:wrap;width:100%;">
     <div class="catalog-item" data-cat="wide-leg" data-src="photos/lepique-wide-leg-01-dark-blue-belt.jpeg" data-title="LPQ-WL-001 — Wide Leg – Dark Blue (Belt)" data-price="Ksh 3,000" data-code="LPQ-WL-001"><img src="photos/lepique-wide-leg-01-dark-blue-belt.jpeg" alt="Wide Leg Dark Blue" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>Wide Leg – Dark Blue (Belt)</span><span class="item-price">Ksh 3,000</span></div><div class="item-code">LPQ-WL-001</div></div>
@@ -624,8 +699,7 @@
     <div class="catalog-item" data-cat="ripped" data-src="photos/lepique-ripped-02-grey-acidwash.jpeg" data-title="LPQ-RP-002 — Ripped – Grey Acid Wash" data-price="Ksh 3,000" data-code="LPQ-RP-002"><img src="photos/lepique-ripped-02-grey-acidwash.jpeg" alt="Ripped Grey Acid Wash" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>Ripped – Grey Acid Wash</span><span class="item-price">Ksh 3,000</span></div><div class="item-code">LPQ-RP-002</div></div>
     <div class="catalog-item" data-cat="ripped" data-src="photos/lepique-ripped-03-light-blue-wide.jpeg" data-title="LPQ-RP-003 — Ripped Wide – Light Blue" data-price="Ksh 2,500" data-code="LPQ-RP-003"><img src="photos/lepique-ripped-03-light-blue-wide.jpeg" alt="Ripped Wide Light Blue" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>Ripped Wide – Light Blue</span><span class="item-price">Ksh 2,500</span></div><div class="item-code">LPQ-RP-003</div></div>
     <div class="catalog-item" data-cat="cargo" data-src="photos/lepique-cargo-01-grey-wash.jpeg" data-title="LPQ-CG-001 — Cargo – Grey Wash" data-price="Ksh 3,000" data-code="LPQ-CG-001"><img src="photos/lepique-cargo-01-grey-wash.jpeg" alt="Cargo Grey Wash" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>Cargo – Grey Wash</span><span class="item-price">Ksh 3,000</span></div><div class="item-code">LPQ-CG-001</div></div>
-    <div class="catalog-item" data-cat="printed" data-src="photos/lepique-printed-01-ysl-light-blue.jpeg" data-title="LPQ-PR-001 — Printed YSL – Light Blue (01)" data-price="Ksh 3,000" data-code="LPQ-PR-001"><img src="photos/lepique-printed-01-ysl-light-blue.jpeg" alt="Printed YSL Light Blue" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>Printed YSL – Light Blue (01)</span><span class="item-price">Ksh 3,000</span></div><div class="item-code">LPQ-PR-001</div></div>
-    <div class="catalog-item" data-cat="printed" data-src="photos/lepique-printed-02-ysl-light-blue.jpeg" data-title="LPQ-PR-002 — Printed YSL – Light Blue (02)" data-price="Ksh 3,000" data-code="LPQ-PR-002"><img src="photos/lepique-printed-02-ysl-light-blue.jpeg" alt="Printed YSL Light Blue 2" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>Printed YSL – Light Blue (02)</span><span class="item-price">Ksh 3,000</span></div><div class="item-code">LPQ-PR-002</div></div>
+    <div class="catalog-item" data-cat="printed" data-src="photos/lepique-printed-02-ysl-light-blue.jpeg" data-title="LPQ-PR-001 — Printed YSL – Light Blue" data-price="Ksh 3,000" data-code="LPQ-PR-001"><img src="photos/lepique-printed-02-ysl-light-blue.jpeg" alt="Printed YSL Light Blue" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>Printed YSL – Light Blue</span><span class="item-price">Ksh 3,000</span></div><div class="item-code">LPQ-PR-001</div></div>
     <div class="catalog-item" data-cat="wide-leg" data-src="photos/lepique-wide-leg-26-light-blue.jpeg" data-title="LPQ-WL-026 — Wide Leg – Light Blue (Calvin)" data-price="Ksh 2,500" data-code="LPQ-WL-026"><img src="photos/lepique-wide-leg-26-light-blue.jpeg" alt="Wide Leg Light Blue Calvin" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>Wide Leg – Light Blue (Calvin)</span><span class="item-price">Ksh 2,500</span></div><div class="item-code">LPQ-WL-026</div></div>
     <div class="catalog-item" data-cat="wide-leg" data-src="photos/lepique-wide-leg-27-light-blue.jpeg" data-title="LPQ-WL-027 — Wide Leg – Light Blue (Polo)" data-price="Ksh 2,500" data-code="LPQ-WL-027"><img src="photos/lepique-wide-leg-27-light-blue.jpeg" alt="Wide Leg Light Blue Polo" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>Wide Leg – Light Blue (Polo)</span><span class="item-price">Ksh 2,500</span></div><div class="item-code">LPQ-WL-027</div></div>
     <div class="catalog-item" data-cat="wide-leg" data-src="photos/lepique-wide-leg-28-grey-acidwash.jpeg" data-title="LPQ-WL-028 — Wide Leg – Grey Acid Wash" data-price="Ksh 3,000" data-code="LPQ-WL-028"><img src="photos/lepique-wide-leg-28-grey-acidwash.jpeg" alt="Wide Leg Grey Acid Wash" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>Wide Leg – Grey Acid Wash</span><span class="item-price">Ksh 3,000</span></div><div class="item-code">LPQ-WL-028</div></div>
@@ -638,6 +712,29 @@
     <div class="catalog-item" data-cat="straight" data-src="photos/lepique-straight-07-dark-navy.jpeg" data-title="LPQ-ST-007 — Straight – Dark Navy (Polo Tee)" data-price="Ksh 2,500" data-code="LPQ-ST-007"><img src="photos/lepique-straight-07-dark-navy.jpeg" alt="Straight Dark Navy Polo Tee" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>Straight – Dark Navy (Polo Tee)</span><span class="item-price">Ksh 2,500</span></div><div class="item-code">LPQ-ST-007</div></div>
     <div class="catalog-item" data-cat="ripped" data-src="photos/lepique-ripped-04-light-blue.jpeg" data-title="LPQ-RP-004 — Ripped Wide – Light Blue" data-price="Ksh 2,500" data-code="LPQ-RP-004"><img src="photos/lepique-ripped-04-light-blue.jpeg" alt="Ripped Wide Light Blue" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>Ripped Wide – Light Blue</span><span class="item-price">Ksh 2,500</span></div><div class="item-code">LPQ-RP-004</div></div>
     <div class="catalog-item" data-cat="printed" data-src="photos/lepique-printed-03-patchwork-grey.jpeg" data-title="LPQ-PR-003 — Printed – Patchwork Grey" data-price="Ksh 3,000" data-code="LPQ-PR-003"><img src="photos/lepique-printed-03-patchwork-grey.jpeg" alt="Printed Patchwork Grey" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>Printed – Patchwork Grey</span><span class="item-price">Ksh 3,000</span></div><div class="item-code">LPQ-PR-003</div></div>
+    <div class="catalog-item" data-cat="wide-leg" data-src="photos/lepique-wide-leg-05-light-blue-curly.jpeg" data-title="LPQ-WL-032 — Wide Leg – Light Blue (Curly)" data-price="Ksh 3,000" data-code="LPQ-WL-032"><div class="badge-new-item">New</div><img src="photos/lepique-wide-leg-05-light-blue-curly.jpeg" alt="Wide Leg Light Blue Curly" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>Wide Leg – Light Blue (Curly)</span><span class="item-price">Ksh 3,000</span></div><div class="item-code">LPQ-WL-032</div></div>
+    <div class="catalog-item" data-cat="wide-leg" data-src="photos/lepique-wide-leg-32-dark-navy.jpeg" data-title="LPQ-WL-033 — Wide Leg – Dark Navy (06)" data-price="Ksh 2,500" data-code="LPQ-WL-033"><div class="badge-new-item">New</div><img src="photos/lepique-wide-leg-32-dark-navy.jpeg" alt="Wide Leg Dark Navy" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>Wide Leg – Dark Navy (06)</span><span class="item-price">Ksh 2,500</span></div><div class="item-code">LPQ-WL-033</div></div>
+    <div class="catalog-item" data-cat="wide-leg" data-src="photos/lepique-wide-leg-33-light-blue.jpeg" data-title="LPQ-WL-034 — Wide Leg – Light Blue (04)" data-price="Ksh 2,500" data-code="LPQ-WL-034"><div class="badge-new-item">New</div><img src="photos/lepique-wide-leg-33-light-blue.jpeg" alt="Wide Leg Light Blue" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>Wide Leg – Light Blue (04)</span><span class="item-price">Ksh 2,500</span></div><div class="item-code">LPQ-WL-034</div></div>
+    <div class="catalog-item" data-cat="skinny" data-src="photos/lepique-skinny-08-white.jpeg" data-title="LPQ-SK-008 — Skinny – White (02)" data-price="Ksh 1,200" data-code="LPQ-SK-008"><div class="badge-new-item">New</div><img src="photos/lepique-skinny-08-white.jpeg" alt="Skinny White" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>Skinny – White (02)</span><span class="item-price">Ksh 1,200</span></div><div class="item-code">LPQ-SK-008</div></div>
+    <div class="catalog-item" data-cat="flare" data-src="photos/lepique-flare-07-navy-blue.jpeg" data-title="LPQ-FL-006 — Flare – Navy Blue" data-price="Ksh 2,500" data-code="LPQ-FL-006"><div class="badge-new-item">New</div><img src="photos/lepique-flare-07-navy-blue.jpeg" alt="Flare Navy Blue" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>Flare – Navy Blue</span><span class="item-price">Ksh 2,500</span></div><div class="item-code">LPQ-FL-006</div></div>
+    <div class="catalog-item" data-cat="flare" data-src="photos/lepique-flare-08-black.jpeg" data-title="LPQ-FL-007 — Flare – Black (02)" data-price="Ksh 2,500" data-code="LPQ-FL-007"><div class="badge-new-item">New</div><img src="photos/lepique-flare-08-black.jpeg" alt="Flare Black" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>Flare – Black (02)</span><span class="item-price">Ksh 2,500</span></div><div class="item-code">LPQ-FL-007</div></div>
+    <div class="catalog-item" data-cat="straight" data-src="photos/lepique-straight-08-olive.jpeg" data-title="LPQ-ST-008 — Straight – Olive (Mom Fit)" data-price="Ksh 2,500" data-code="LPQ-ST-008"><div class="badge-new-item">New</div><img src="photos/lepique-straight-08-olive.jpeg" alt="Straight Olive Mom Fit" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>Straight – Olive (Mom Fit)</span><span class="item-price">Ksh 2,500</span></div><div class="item-code">LPQ-ST-008</div></div>
+    <div class="catalog-item" data-cat="ripped" data-src="photos/lepique-ripped-05-light-blue-snake.jpeg" data-title="LPQ-RP-005 — Ripped Wide – Light Blue (Snake)" data-price="Ksh 3,000" data-code="LPQ-RP-005"><div class="badge-new-item">New</div><img src="photos/lepique-ripped-05-light-blue-snake.jpeg" alt="Ripped Wide Light Blue Snake Print" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>Ripped Wide – Light Blue (Snake)</span><span class="item-price">Ksh 3,000</span></div><div class="item-code">LPQ-RP-005</div></div>
+    <div class="catalog-item" data-cat="ripped" data-src="photos/lepique-ripped-06-black-wide.jpeg" data-title="LPQ-RP-006 — Ripped Wide – Black" data-price="Ksh 3,000" data-code="LPQ-RP-006"><div class="badge-new-item">New</div><img src="photos/lepique-ripped-06-black-wide.jpeg" alt="Ripped Wide Black" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>Ripped Wide – Black</span><span class="item-price">Ksh 3,000</span></div><div class="item-code">LPQ-RP-006</div></div>
+    <div class="catalog-item" data-cat="wide-leg" data-src="photos/lepique-wide-leg-35-black.jpeg" data-title="LPQ-WL-035 — Wide Leg – Black (04)" data-price="Ksh 2,500" data-code="LPQ-WL-035"><div class="badge-new-item">New</div><img src="photos/lepique-wide-leg-35-black.jpeg" alt="Wide Leg Black" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>Wide Leg – Black (04)</span><span class="item-price">Ksh 2,500</span></div><div class="item-code">LPQ-WL-035</div></div>
+    <div class="catalog-item" data-cat="wide-leg" data-src="photos/lepique-wide-leg-36-black.jpeg" data-title="LPQ-WL-036 — Wide Leg – Black (05)" data-price="Ksh 2,500" data-code="LPQ-WL-036"><div class="badge-new-item">New</div><img src="photos/lepique-wide-leg-36-black.jpeg" alt="Wide Leg Black" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>Wide Leg – Black (05)</span><span class="item-price">Ksh 2,500</span></div><div class="item-code">LPQ-WL-036</div></div>
+    <div class="catalog-item" data-cat="ripped" data-src="photos/lepique-ripped-09-black.jpeg" data-title="LPQ-RP-009 — Ripped – Black (03)" data-price="Ksh 2,500" data-code="LPQ-RP-009"><div class="badge-new-item">New</div><img src="photos/lepique-ripped-09-black.jpeg" alt="Ripped Black" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>Ripped – Black (03)</span><span class="item-price">Ksh 2,500</span></div><div class="item-code">LPQ-RP-009</div></div>
+    <div class="catalog-item" data-cat="bodysuit" data-src="photos/lepique-bodysuit-colors-chart.jpeg" data-title="LPQ-BS-001 — Bodysuit – 7 Colours" data-price="Ksh 1,000 – 1,500" data-code="LPQ-BS-001"><div class="badge-new-item">New</div><img src="photos/lepique-bodysuit-colors-chart.jpeg" alt="Bodysuit Available Colors Chart" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>Bodysuit – 7 Colours (Maroon, Blush, Black, Mustard, Navy, White, Rust)</span><span class="item-price">Ksh 1,000 – 1,500</span></div><div class="item-code">LPQ-BS-001</div></div>
+    <div class="catalog-item" data-cat="bodysuit" data-src="photos/lepique-bodysuit-01.jpeg" data-title="LPQ-BS-002 — Bodysuit" data-price="Ksh 1,000 – 1,500" data-code="LPQ-BS-002"><div class="badge-new-item">New</div><img src="photos/lepique-bodysuit-01.jpeg" alt="Ladies Bodysuit Nairobi" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>Bodysuit</span><span class="item-price">Ksh 1,000 – 1,500</span></div><div class="item-code">LPQ-BS-002</div></div>
+    <div class="catalog-item" data-cat="tshirt" data-src="photos/lepique-tshirt-01.jpeg" data-title="LPQ-TS-001 — T-Shirt (01)" data-price="Ksh 1,000 – 1,500" data-code="LPQ-TS-001"><div class="badge-new-item">New</div><img src="photos/lepique-tshirt-01.jpeg" alt="Ladies T-Shirt Nairobi" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>T-Shirt (01)</span><span class="item-price">Ksh 1,000 – 1,500</span></div><div class="item-code">LPQ-TS-001</div></div>
+    <div class="catalog-item" data-cat="tshirt" data-src="photos/lepique-tshirt-02.jpeg" data-title="LPQ-TS-002 — T-Shirt (02)" data-price="Ksh 1,000 – 1,500" data-code="LPQ-TS-002"><div class="badge-new-item">New</div><img src="photos/lepique-tshirt-02.jpeg" alt="Ladies T-Shirt Nairobi" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>T-Shirt (02)</span><span class="item-price">Ksh 1,000 – 1,500</span></div><div class="item-code">LPQ-TS-002</div></div>
+    <div class="catalog-item" data-cat="tshirt" data-src="photos/lepique-tshirt-03.jpeg" data-title="LPQ-TS-003 — T-Shirt (03)" data-price="Ksh 1,000 – 1,500" data-code="LPQ-TS-003"><div class="badge-new-item">New</div><img src="photos/lepique-tshirt-03.jpeg" alt="Ladies T-Shirt Nairobi" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>T-Shirt (03)</span><span class="item-price">Ksh 1,000 – 1,500</span></div><div class="item-code">LPQ-TS-003</div></div>
+    <div class="catalog-item" data-cat="tshirt" data-src="photos/lepique-tshirt-04.jpeg" data-title="LPQ-TS-004 — T-Shirt (04)" data-price="Ksh 1,000 – 1,500" data-code="LPQ-TS-004"><div class="badge-new-item">New</div><img src="photos/lepique-tshirt-04.jpeg" alt="Ladies T-Shirt Nairobi" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>T-Shirt (04)</span><span class="item-price">Ksh 1,000 – 1,500</span></div><div class="item-code">LPQ-TS-004</div></div>
+    <div class="catalog-item" data-cat="tshirt" data-src="photos/lepique-tshirt-05.jpeg" data-title="LPQ-TS-005 — T-Shirt (05)" data-price="Ksh 1,000 – 1,500" data-code="LPQ-TS-005"><div class="badge-new-item">New</div><img src="photos/lepique-tshirt-05.jpeg" alt="Ladies T-Shirt Nairobi" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>T-Shirt (05)</span><span class="item-price">Ksh 1,000 – 1,500</span></div><div class="item-code">LPQ-TS-005</div></div>
+    <div class="catalog-item" data-cat="tshirt" data-src="photos/lepique-tshirt-06.jpeg" data-title="LPQ-TS-006 — T-Shirt (06)" data-price="Ksh 1,000 – 1,500" data-code="LPQ-TS-006"><div class="badge-new-item">New</div><img src="photos/lepique-tshirt-06.jpeg" alt="Ladies T-Shirt Nairobi" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>T-Shirt (06)</span><span class="item-price">Ksh 1,000 – 1,500</span></div><div class="item-code">LPQ-TS-006</div></div>
+    <div class="catalog-item" data-cat="tshirt" data-src="photos/lepique-tshirt-07.jpeg" data-title="LPQ-TS-007 — T-Shirt (07)" data-price="Ksh 1,000 – 1,500" data-code="LPQ-TS-007"><div class="badge-new-item">New</div><img src="photos/lepique-tshirt-07.jpeg" alt="Ladies T-Shirt Nairobi" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>T-Shirt (07)</span><span class="item-price">Ksh 1,000 – 1,500</span></div><div class="item-code">LPQ-TS-007</div></div>
+    <div class="catalog-item" data-cat="tshirt" data-src="photos/lepique-tshirt-08.jpeg" data-title="LPQ-TS-008 — T-Shirt (08)" data-price="Ksh 1,000 – 1,500" data-code="LPQ-TS-008"><div class="badge-new-item">New</div><img src="photos/lepique-tshirt-08.jpeg" alt="Ladies T-Shirt Nairobi" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>T-Shirt (08)</span><span class="item-price">Ksh 1,000 – 1,500</span></div><div class="item-code">LPQ-TS-008</div></div>
+    <div class="catalog-item" data-cat="jacket" data-src="photos/lepique-leather-jacket-01-black.jpeg" data-title="LPQ-JK-001 — Leather Jacket – Black" data-price="Ksh 1,800 – 3,500" data-code="LPQ-JK-001"><div class="badge-new-item">New</div><img src="photos/lepique-leather-jacket-01-black.jpeg" alt="Black Leather Jacket Nairobi" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>Leather Jacket – Black (M–5XL)</span><span class="item-price">Ksh 1,800 – 3,500</span></div><div class="item-code">LPQ-JK-001</div></div>
   </div>
 </section>
 
@@ -833,7 +930,10 @@
     <a href="https://www.facebook.com/lepiquefashions" target="_blank" class="social-btn fb"><span>f</span> Facebook · Lepique Fashions</a>
     <a href="https://www.instagram.com/lepique_fashions" target="_blank" class="social-btn ig"><span>📷</span> Instagram · @lepique_fashions</a>
     <a href="https://www.tiktok.com/@lepique_fashions" target="_blank" class="social-btn tt"><span>♪</span> TikTok · @lepique_fashions</a>
+  </div>
 
+  <p class="section-sub" style="margin:1.5rem auto 1rem;color:rgba(255,255,255,0.5);">Watch our latest styling videos — click to order on WhatsApp</p>
+  <div class="catalog-grid video-grid" style="display:flex;flex-wrap:wrap;width:100%;margin-top:0.5rem;">
     <!-- VIDEO ITEMS — 9 named + 10 from Download -->
     <div class="catalog-item" data-cat="wide-leg" data-src="" data-video="lepique-video-01-wide-leg-dark-navy.mp4" data-title="Wide Leg – Dark Navy [Video]" data-price="Ksh 3,000" data-code="LPQ-WL-V01"><video src="videos/lepique-video-01-wide-leg-dark-navy.mp4" autoplay muted loop playsinline></video><div class="video-badge">▶ Video</div><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>Wide Leg – Dark Navy</span><span class="item-price">Ksh 3,000</span></div><div class="item-code">LPQ-WL-V01</div></div>
     <div class="catalog-item" data-cat="wide-leg" data-src="" data-video="lepique-video-02-wide-leg-light-blue.mp4" data-title="Wide Leg – Light Blue [Video]" data-price="Ksh 2,500" data-code="LPQ-WL-V02"><video src="videos/lepique-video-02-wide-leg-light-blue.mp4" autoplay muted loop playsinline></video><div class="video-badge">▶ Video</div><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>Wide Leg – Light Blue</span><span class="item-price">Ksh 2,500</span></div><div class="item-code">LPQ-WL-V02</div></div>
@@ -852,80 +952,14 @@
     <div class="catalog-item" data-cat="wide-leg" data-src="" data-video="lepique-video-17-wide-leg-dark-navy-stitch.mp4" data-title="Wide Leg – Dark Navy White Stitch [Video]" data-price="Ksh 3,000" data-code="LPQ-WL-V11"><video src="videos/lepique-video-17-wide-leg-dark-navy-stitch.mp4" autoplay muted loop playsinline></video><div class="video-badge">▶ Video</div><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>Wide Leg – Dark Navy White Stitch</span><span class="item-price">Ksh 3,000</span></div><div class="item-code">LPQ-WL-V11</div></div>
     <div class="catalog-item" data-cat="wide-leg" data-src="" data-video="lepique-video-19-wide-leg-dark-navy-rust.mp4" data-title="Wide Leg – Dark Navy (Rust Tank) [Video]" data-price="Ksh 3,000" data-code="LPQ-WL-V12"><video src="videos/lepique-video-19-wide-leg-dark-navy-rust.mp4" autoplay muted loop playsinline></video><div class="video-badge">▶ Video</div><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>Wide Leg – Dark Navy (Rust Tank)</span><span class="item-price">Ksh 3,000</span></div><div class="item-code">LPQ-WL-V12</div></div>
     <div class="catalog-item" data-cat="ripped" data-src="" data-video="lepique-video-20-ripped-black.mp4" data-title="Ripped Wide Leg – Black [Video]" data-price="Ksh 2,500" data-code="LPQ-RP-V01"><video src="videos/lepique-video-20-ripped-black.mp4" autoplay muted loop playsinline></video><div class="video-badge">▶ Video</div><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>Ripped Wide Leg – Black</span><span class="item-price">Ksh 2,500</span></div><div class="item-code">LPQ-RP-V01</div></div>
-    <div class="catalog-item" data-cat="wide-leg" data-src="" data-video="lepique-video-21-wide-leg-dark-navy-black-tank.mp4" data-title="Wide Leg – Dark Navy (Black Tank) [Video]" data-price="Ksh 3,000" data-code="LPQ-WL-V13"><video src="videos/lepique-video-21-wide-leg-dark-navy-black-tank.mp4" autoplay muted loop playsinline></video><div class="video-badge">▶ Video</div><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>Wide Leg – Dark Navy (Black Tank)</span><span class="item-price">Ksh 3,000</span></div><div class="item-code">LPQ-WL-V13</div></div>
-    <div class="catalog-item" data-cat="flare" data-src="" data-video="lepique-video-22-flare-light-blue.mp4" data-title="Flare – Light Blue [Video]" data-price="Ksh 2,500" data-code="LPQ-FL-V02"><video src="videos/lepique-video-22-flare-light-blue.mp4" autoplay muted loop playsinline></video><div class="video-badge">▶ Video</div><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>Flare – Light Blue</span><span class="item-price">Ksh 2,500</span></div><div class="item-code">LPQ-FL-V02</div></div>
-  </div>
+  </div><!-- end video-grid -->
 </section>
-
-<!-- CONTACT -->
-<section id="contact">
-  <div class="contact">
-    <div>
-      <div class="section-tag">Get In Touch</div>
-      <h2 class="section-title">Visit or Contact Us</h2>
-      <p class="section-sub" style="margin-bottom:2rem;">We're always happy to help you find your perfect pair.</p>
-      <div class="contact-details">
-        <div class="contact-item"><div class="contact-icon">📍</div><div><h4>Location</h4><p>Platinum Plaza, Shop G16<br />Tom Mboya Street (Opp. Imenti House)<br />Nairobi, Kenya</p><a href="https://maps.google.com/?q=Platinum+Plaza+Tom+Mboya+Street+Nairobi" target="_blank" class="btn-primary" style="font-size:0.75rem;padding:0.5rem 1rem;margin-top:0.8rem;display:inline-block;">📍 Open in Google Maps</a></div></div>
-        <div class="contact-item"><div class="contact-icon">📱</div><div><h4>Call / WhatsApp</h4><a href="tel:+254721672900">0721 672 900</a></div></div>
-        <div class="contact-item"><div class="contact-icon">🕐</div><div><h4>Opening Hours</h4><p>Mon – Sat: 8:00 AM – 7:00 PM<br />Sunday: 10:00 AM – 5:00 PM</p></div></div>
-        <div class="contact-item"><div class="contact-icon">🚚</div><div><h4>Delivery</h4><p>Nairobi same-day delivery available<br />Countrywide via <div class="form-group"><label>What are you looking for?</label><textarea rows="3" placeholder="e.g. Wide leg dark blue, size 30..."></textarea></div>
-      <a href="https://wa.me/254721672900?text=Hi%20Lepique%20Fashions!%20I'd%20like%20to%20enquire%20about%20your%20jeans." target="_blank" class="btn-primary" style="display:inline-block;width:100%;text-align:center;padding:0.9rem;">📱 Send via WhatsApp</a>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="footer-grid">
-    <div class="footer-col">
-      <svg class="site-logo" width="160" height="42" viewBox="0 0 220 58" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="8" width="3" height="16" fill="#c9a455"/><rect x="0" y="24" width="3" height="12" fill="#9b1a1a"/><rect x="0" y="36" width="3" height="14" fill="#c9a455"/><text x="16" y="37" font-family="'Playfair Display',Georgia,serif" font-size="27" font-weight="700" letter-spacing="4" fill="#c9a455">LEPIQUE</text><text x="17" y="52" font-family="'Inter',Arial,sans-serif" font-size="9" font-weight="500" letter-spacing="5.5" fill="rgba(201,164,85,0.72)">FASHIONS</text></svg>
-      <p style="color:rgba(255,255,255,0.6);font-size:0.85rem;margin-top:0.8rem;line-height:1.6;">Nairobi's home of quality ladies' jeans. Wide leg, skinny, flare, straight, cargo and more. Sizes 27–42.</p>
-    </div>
-    <div class="footer-col">
-      <h4>Shop by Style</h4>
-      <ul>
-        <li><a href="wide-leg-jeans-nairobi.html">Wide Leg Jeans</a></li>
-        <li><a href="high-waist-jeans-nairobi.html">High Waist Jeans</a></li>
-        <li><a href="mom-jeans-nairobi.html">Mom Jeans</a></li>
-        <li><a href="skinny-jeans-nairobi.html">Skinny Jeans</a></li>
-        <li><a href="flare-jeans-nairobi.html">Flare Jeans</a></li>
-        <li><a href="cargo-jeans-nairobi.html">Cargo Jeans</a></li>
-        <li><a href="plus-size-jeans-kenya.html">Plus Size Jeans</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="#catalog">Full Catalogue</a></li>
-        <li><a href="#size-guide">Size Guide</a></li>
-        <li><a href="#delivery">Delivery Info</a></li>
-        <li><a href="#exchange">Exchange Policy</a></li>
-        <li><a href="#how-to-order">How to Order</a></li>
-        <li><a href="#about">About Us</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Contact</h4>
-      <ul>
-        <li>📍 Platinum Plaza, Shop G16</li>
-        <li>Tom Mboya Street, Nairobi</li>
-        <li><a href="tel:+254721672900">📱 0721 672 900</a></li>
-        <li><a href="https://wa.me/254721672900" target="_blank">💬 WhatsApp Us</a></li>
-        <li><a href="https://www.instagram.com/lepique_fashions" target="_blank">📷 @lepique_fashions</a></li>
-        <li><a href="https://www.tiktok.com/@lepique_fashions" target="_blank">♪ TikTok</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>© 2025 Lepique Fashions. All rights reserved. | Platinum Plaza Shop G16, Tom Mboya Street, Nairobi</p>
-  </div>
-</footer>
 
 <script>
 // MENU TOGGLE
 function toggleMenu(){document.querySelector('.mobile-menu').classList.toggle('open');}
 
-// CATALOG CLICK — event delegation (handles both image and video items)
+// CATALOG CLICK — opens lightbox (image items in main catalog-grid only)
 document.querySelector('.catalog-grid').addEventListener('click',function(e){
   var item=e.target.closest('.catalog-item');
   if(!item||e.target.closest('.quick-order-btn'))return;
@@ -934,19 +968,21 @@ document.querySelector('.catalog-grid').addEventListener('click',function(e){
   if(idx>=0)openLightboxAt(idx,items);
 });
 
-// QUICK ORDER buttons
-document.querySelector('.catalog-grid').addEventListener('click',function(e){
-  var btn=e.target.closest('.quick-order-btn');
-  if(!btn)return;
-  var item=btn.closest('.catalog-item');
-  var code=item.dataset.code||'';
-  var title=item.dataset.title||'this item';
-  var price=item.dataset.price||'';
-  var msg=encodeURIComponent('Hi Lepique! I\'d like to order:\n'+title+(price?' — '+price:'')+(code?'\nProduct code: '+code:'')+'\nPlease confirm availability and sizes.');
-  window.open('https://wa.me/254721672900?text='+msg,'_blank');
+// QUICK ORDER buttons — open WhatsApp with item details (catalog + video grid)
+document.querySelectorAll('.catalog-grid,.video-grid').forEach(function(grid){
+  grid.addEventListener('click',function(e){
+    var btn=e.target.closest('.quick-order-btn');
+    if(!btn)return;
+    var item=btn.closest('.catalog-item');
+    var code=item.dataset.code||'';
+    var title=item.dataset.title||'this item';
+    var price=item.dataset.price||'';
+    var msg=encodeURIComponent('Hi Lepique! I\'d like to order:\n'+title+(price?' — '+price:'')+(code?'\nProduct code: '+code:'')+'\nPlease confirm availability and sizes.');
+    window.open('https://wa.me/254721672900?text='+msg,'_blank');
+  });
 });
 
-// LIGHTBOX — supports both image and video items
+// LIGHTBOX
 var lbItems=[];var lbIdx=0;
 function openLightboxAt(idx,items){
   lbItems=items||[...document.querySelectorAll('.catalog-item:not(.hidden)')];
@@ -994,6 +1030,16 @@ document.addEventListener('keydown',function(e){
     else if(e.key==='Escape')closeLightbox();
   }
 });
+// Touch swipe for mobile
+(function(){
+  var tx=0;
+  var lbEl=document.getElementById('lightbox');
+  lbEl.addEventListener('touchstart',function(e){tx=e.touches[0].clientX;},{passive:true});
+  lbEl.addEventListener('touchend',function(e){
+    var dx=e.changedTouches[0].clientX-tx;
+    if(Math.abs(dx)>50){if(dx<0)lbNav(1);else lbNav(-1);}
+  },{passive:true});
+})();
 
 // FILTER
 function filterCat(cat,btn){
@@ -1001,7 +1047,6 @@ function filterCat(cat,btn){
   btn.classList.add('active');
   document.querySelectorAll('.catalog-item').forEach(function(item){
     item.classList.toggle('hidden', cat!=='all' && item.dataset.cat!==cat);
-    // pause videos when hidden
     var v=item.querySelector('video');
     if(v){if(item.classList.contains('hidden')){v.pause();}else{v.play().catch(()=>{});}}
   });
