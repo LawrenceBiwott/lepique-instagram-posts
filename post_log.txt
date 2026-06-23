@@ -5819,3 +5819,4 @@
 [2026-06-23 19:59:15] Uploading lepique-video-13-wide-leg-dark-navy-bow.mp4 (5.9 MB) to TikTok...
 [2026-06-23 19:59:15] ⚠️  TikTok post failed (Instagram/Facebook not affected): 403 Client Error: Forbidden for url: https://open.tiktokapis.com/v2/post/publish/video/init/
 [2026-06-23 19:59:15] ✅ All done. State saved.
+[2026-06-23 20:03:07] ⏭ Skipping — last post was 4 min ago (next post in ~51 min).
