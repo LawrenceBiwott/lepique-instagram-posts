@@ -406,11 +406,24 @@ def prepare_story_image(media_path):
         subprocess.run(["git", "add", str(story_path)], cwd=BASE_DIR, check=True)
         subprocess.run(["git", "commit", "-m", "chore: story temp image [skip ci]"], cwd=BASE_DIR, check=True)
         subprocess.run(["git", "push"], cwd=BASE_DIR, check=True)
-        log("photos/story_temp.jpg pushed. Waiting 15s for CDN...")
-        time.sleep(15)
 
         story_url = build_media_url(story_path)
-        log(f"Story URL: {story_url}")
+        log(f"Story URL: {story_url} — waiting for GitHub Pages to deploy...")
+
+        # Poll until the URL returns 200 (Pages typically updates in 60–120s)
+        for attempt in range(24):  # up to 2 minutes
+            time.sleep(5)
+            try:
+                r = requests.head(story_url, timeout=10)
+                if r.status_code == 200:
+                    log(f"Story image live after {(attempt + 1) * 5}s.")
+                    break
+            except Exception:
+                pass
+        else:
+            log("⚠️ Story image not live after 120s — falling back to feed image URL.")
+            return original_url
+
         return story_url
 
     except Exception as e:
