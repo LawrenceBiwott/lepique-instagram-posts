@@ -69,6 +69,7 @@
     .quick-order-btn { background:#25d366; color:white; border:none; padding:0.55rem 1.3rem; font-size:0.78rem; font-weight:700; border-radius:2px; cursor:pointer; font-family:'Inter',sans-serif; white-space:nowrap; letter-spacing:0.5px; }
     .quick-order-btn:hover { background:#128c50; }
     .badge-new-item { position:absolute; top:10px; left:10px; background:var(--gold); color:var(--navy); font-size:0.6rem; font-weight:800; letter-spacing:1.5px; text-transform:uppercase; padding:0.2rem 0.55rem; border-radius:2px; z-index:2; }
+    .badge-few { position:absolute; top:10px; right:10px; background:#e53e3e; color:white; font-size:0.6rem; font-weight:800; letter-spacing:1.5px; text-transform:uppercase; padding:0.2rem 0.55rem; border-radius:2px; z-index:2; }
     /* LIGHTBOX */
     .lightbox { display:none; position:fixed; inset:0; z-index:500; align-items:center; justify-content:center; background:#000; }
     .lightbox.open { display:flex; }
@@ -157,8 +158,8 @@
     <button class="filter-btn" onclick="filterCat('printed',this)">Printed (2)</button>
     <span class="filter-divider"></span>
     <span class="filter-group-label">Tops:</span>
-    <button class="filter-btn" onclick="filterCat('bodysuit',this)">Bodysuits (2)</button>
-    <button class="filter-btn" onclick="filterCat('tshirt',this)">T-Shirts (8)</button>
+    <button class="filter-btn" onclick="filterCat('bodysuit',this)">Bodysuits (3)</button>
+    <button class="filter-btn" onclick="filterCat('tshirt',this)">T-Shirts (9)</button>
     <span class="filter-divider"></span>
     <span class="filter-group-label">Jackets:</span>
     <button class="filter-btn" onclick="filterCat('jacket',this)">Leather Jackets (1)</button>
@@ -172,6 +173,13 @@
     <button class="color-btn" onclick="filterColor('medium-blue',this)"><span class="color-dot" style="background:#5580b0;"></span>Medium Blue</button>
     <button class="color-btn" onclick="filterColor('light-blue',this)"><span class="color-dot" style="background:#9ab8d8;"></span>Light Blue</button>
     <button class="color-btn" onclick="filterColor('grey',this)"><span class="color-dot" style="background:#888;"></span>Grey</button>
+  </div>
+  <div class="filter-bar" style="margin-top:0.5rem;">
+    <span class="filter-group-label">Price:</span>
+    <button class="filter-btn active" onclick="filterPrice('all',this)">All Prices</button>
+    <button class="filter-btn" onclick="filterPrice('budget',this)">Under Ksh 1,500</button>
+    <button class="filter-btn" onclick="filterPrice('mid',this)">Ksh 1,500–2,500</button>
+    <button class="filter-btn" onclick="filterPrice('premium',this)">Ksh 2,500+</button>
   </div>
   <div class="catalog-grid" style="display:flex;flex-wrap:wrap;width:100%;">
     <div class="catalog-item" data-cat="wide-leg" data-src="photos/lepique-wide-leg-01-dark-blue-belt.jpeg" data-title="LPQ-WL-001 — Wide Leg – Dark Blue (Belt)" data-price="Ksh 3,000" data-code="LPQ-WL-001"><img src="photos/lepique-wide-leg-01-dark-blue-belt.jpeg" alt="Wide Leg Dark Blue" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>Wide Leg – Dark Blue (Belt)</span><span class="item-price">Ksh 3,000</span></div><div class="item-code">LPQ-WL-001</div></div>
@@ -204,7 +212,7 @@
     <div class="catalog-item" data-cat="skinny" data-src="photos/lepique-skinny-02-grey.jpeg" data-title="LPQ-SK-002 — Skinny – Grey" data-price="Ksh 1,200" data-code="LPQ-SK-002"><img src="photos/lepique-skinny-02-grey.jpeg" alt="Skinny Grey" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>Skinny – Grey</span><span class="item-price">Ksh 1,200</span></div><div class="item-code">LPQ-SK-002</div></div>
     <div class="catalog-item" data-cat="skinny" data-src="photos/lepique-skinny-03-dark-navy.jpeg" data-title="LPQ-SK-003 — Skinny – Dark Navy (01)" data-price="Ksh 1,200" data-code="LPQ-SK-003"><img src="photos/lepique-skinny-03-dark-navy.jpeg" alt="Skinny Dark Navy" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>Skinny – Dark Navy (01)</span><span class="item-price">Ksh 1,200</span></div><div class="item-code">LPQ-SK-003</div></div>
     <div class="catalog-item" data-cat="skinny" data-src="photos/lepique-skinny-04-dark-navy.jpeg" data-title="LPQ-SK-004 — Skinny – Dark Navy (02)" data-price="Ksh 1,800" data-code="LPQ-SK-004"><img src="photos/lepique-skinny-04-dark-navy.jpeg" alt="Skinny Dark Navy 2" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>Skinny – Dark Navy (02)</span><span class="item-price">Ksh 1,800</span></div><div class="item-code">LPQ-SK-004</div></div>
-    <div class="catalog-item" data-cat="skinny" data-src="photos/lepique-skinny-05-black-plussize.jpeg" data-title="LPQ-SK-005 — Skinny – Black Plus Size" data-price="Ksh 1,500" data-code="LPQ-SK-005"><img src="photos/lepique-skinny-05-black-plussize.jpeg" alt="Skinny Black Plus" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>Skinny – Black Plus Size</span><span class="item-price">Ksh 1,500</span></div><div class="item-code">LPQ-SK-005</div></div>
+    <div class="catalog-item" data-cat="skinny" data-src="photos/lepique-skinny-05-black-plussize.jpeg" data-title="LPQ-SK-005 — Skinny – Black Plus Size" data-price="Ksh 1,500" data-code="LPQ-SK-005"><div class="badge-few">Few Left</div><img src="photos/lepique-skinny-05-black-plussize.jpeg" alt="Skinny Black Plus" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>Skinny – Black Plus Size</span><span class="item-price">Ksh 1,500</span></div><div class="item-code">LPQ-SK-005</div></div>
     <div class="catalog-item" data-cat="skinny" data-src="photos/lepique-skinny-06-black.jpeg" data-title="LPQ-SK-006 — Skinny – Black (01)" data-price="Ksh 1,200" data-code="LPQ-SK-006"><img src="photos/lepique-skinny-06-black.jpeg" alt="Skinny Black" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>Skinny – Black (01)</span><span class="item-price">Ksh 1,200</span></div><div class="item-code">LPQ-SK-006</div></div>
     <div class="catalog-item" data-cat="skinny" data-src="photos/lepique-skinny-07-black.jpeg" data-title="LPQ-SK-007 — Skinny – Black (02)" data-price="Ksh 1,200" data-code="LPQ-SK-007"><img src="photos/lepique-skinny-07-black.jpeg" alt="Skinny Black 2" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>Skinny – Black (02)</span><span class="item-price">Ksh 1,200</span></div><div class="item-code">LPQ-SK-007</div></div>
     <div class="catalog-item" data-cat="flare" data-src="photos/lepique-flare-01-black.jpeg" data-title="LPQ-FL-001 — Flare – Black" data-price="Ksh 2,500" data-code="LPQ-FL-001"><img src="photos/lepique-flare-01-black.jpeg" alt="Flare Black" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>Flare – Black</span><span class="item-price">Ksh 2,500</span></div><div class="item-code">LPQ-FL-001</div></div>
@@ -219,7 +227,7 @@
     <div class="catalog-item" data-cat="ripped" data-src="photos/lepique-ripped-01-light-blue.jpeg" data-title="LPQ-RP-001 — Ripped – Light Blue" data-price="Ksh 2,500" data-code="LPQ-RP-001"><img src="photos/lepique-ripped-01-light-blue.jpeg" alt="Ripped Light Blue" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>Ripped – Light Blue</span><span class="item-price">Ksh 2,500</span></div><div class="item-code">LPQ-RP-001</div></div>
     <div class="catalog-item" data-cat="ripped" data-src="photos/lepique-ripped-02-grey-acidwash.jpeg" data-title="LPQ-RP-002 — Ripped – Grey Acid Wash" data-price="Ksh 3,000" data-code="LPQ-RP-002"><img src="photos/lepique-ripped-02-grey-acidwash.jpeg" alt="Ripped Grey Acid Wash" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>Ripped – Grey Acid Wash</span><span class="item-price">Ksh 3,000</span></div><div class="item-code">LPQ-RP-002</div></div>
     <div class="catalog-item" data-cat="ripped" data-src="photos/lepique-ripped-03-light-blue-wide.jpeg" data-title="LPQ-RP-003 — Ripped Wide – Light Blue" data-price="Ksh 2,500" data-code="LPQ-RP-003"><img src="photos/lepique-ripped-03-light-blue-wide.jpeg" alt="Ripped Wide Light Blue" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>Ripped Wide – Light Blue</span><span class="item-price">Ksh 2,500</span></div><div class="item-code">LPQ-RP-003</div></div>
-    <div class="catalog-item" data-cat="cargo" data-src="photos/lepique-cargo-01-grey-wash.jpeg" data-title="LPQ-CG-001 — Cargo – Grey Wash" data-price="Ksh 3,000" data-code="LPQ-CG-001"><img src="photos/lepique-cargo-01-grey-wash.jpeg" alt="Cargo Grey Wash" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>Cargo – Grey Wash</span><span class="item-price">Ksh 3,000</span></div><div class="item-code">LPQ-CG-001</div></div>
+    <div class="catalog-item" data-cat="cargo" data-src="photos/lepique-cargo-01-grey-wash.jpeg" data-title="LPQ-CG-001 — Cargo – Grey Wash" data-price="Ksh 3,000" data-code="LPQ-CG-001"><div class="badge-few">Few Left</div><img src="photos/lepique-cargo-01-grey-wash.jpeg" alt="Cargo Grey Wash" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>Cargo – Grey Wash</span><span class="item-price">Ksh 3,000</span></div><div class="item-code">LPQ-CG-001</div></div>
     <div class="catalog-item" data-cat="printed" data-src="photos/lepique-printed-02-ysl-light-blue.jpeg" data-title="LPQ-PR-001 — Printed YSL – Light Blue" data-price="Ksh 3,000" data-code="LPQ-PR-001"><img src="photos/lepique-printed-02-ysl-light-blue.jpeg" alt="Printed YSL Light Blue" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>Printed YSL – Light Blue</span><span class="item-price">Ksh 3,000</span></div><div class="item-code">LPQ-PR-001</div></div>
     <div class="catalog-item" data-cat="wide-leg" data-src="photos/lepique-wide-leg-26-light-blue.jpeg" data-title="LPQ-WL-026 — Wide Leg – Light Blue (Calvin)" data-price="Ksh 2,500" data-code="LPQ-WL-026"><img src="photos/lepique-wide-leg-26-light-blue.jpeg" alt="Wide Leg Light Blue Calvin" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>Wide Leg – Light Blue (Calvin)</span><span class="item-price">Ksh 2,500</span></div><div class="item-code">LPQ-WL-026</div></div>
     <div class="catalog-item" data-cat="wide-leg" data-src="photos/lepique-wide-leg-27-light-blue.jpeg" data-title="LPQ-WL-027 — Wide Leg – Light Blue (Polo)" data-price="Ksh 2,500" data-code="LPQ-WL-027"><img src="photos/lepique-wide-leg-27-light-blue.jpeg" alt="Wide Leg Light Blue Polo" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>Wide Leg – Light Blue (Polo)</span><span class="item-price">Ksh 2,500</span></div><div class="item-code">LPQ-WL-027</div></div>
@@ -247,6 +255,8 @@
     <div class="catalog-item" data-cat="ripped" data-src="photos/lepique-ripped-09-black.jpeg" data-title="LPQ-RP-009 — Ripped – Black (03)" data-price="Ksh 2,500" data-code="LPQ-RP-009"><div class="badge-new-item">New</div><img src="photos/lepique-ripped-09-black.jpeg" alt="Ripped Black" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>Ripped – Black (03)</span><span class="item-price">Ksh 2,500</span></div><div class="item-code">LPQ-RP-009</div></div>
     <div class="catalog-item" data-cat="bodysuit" data-src="photos/lepique-bodysuit-colors-chart.jpeg" data-title="LPQ-BS-001 — Bodysuit – 7 Colours" data-price="Ksh 1,000 – 1,500" data-code="LPQ-BS-001"><div class="badge-new-item">New</div><img src="photos/lepique-bodysuit-colors-chart.jpeg" alt="Bodysuit Available Colors Chart" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>Bodysuit – 7 Colours (Maroon, Blush, Black, Mustard, Navy, White, Rust)</span><span class="item-price">Ksh 1,000 – 1,500</span></div><div class="item-code">LPQ-BS-001</div></div>
     <div class="catalog-item" data-cat="bodysuit" data-src="photos/lepique-bodysuit-01.jpeg" data-title="LPQ-BS-002 — Bodysuit" data-price="Ksh 1,000 – 1,500" data-code="LPQ-BS-002"><div class="badge-new-item">New</div><img src="photos/lepique-bodysuit-01.jpeg" alt="Ladies Bodysuit Nairobi" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>Bodysuit</span><span class="item-price">Ksh 1,000 – 1,500</span></div><div class="item-code">LPQ-BS-002</div></div>
+    <div class="catalog-item" data-cat="bodysuit" data-src="photos/lepique-bodysuit-longsleeve-colors-chart.jpeg" data-title="LPQ-BS-003 — Long-Sleeve Bodysuit – 7 Colours" data-price="Ksh 1,000 – 1,500" data-code="LPQ-BS-003"><div class="badge-new-item">New</div><img src="photos/lepique-bodysuit-longsleeve-colors-chart.jpeg" alt="Long-Sleeve Bodysuit 7 Colours Nairobi" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>Long-Sleeve Bodysuit – 7 Colours (Wine, Pink, Black, Mustard, Navy, White, Rust)</span><span class="item-price">Ksh 1,000 – 1,500</span></div><div class="item-code">LPQ-BS-003</div></div>
+    <div class="catalog-item" data-cat="tshirt" data-src="photos/lepique-longsleeve-top-colors-chart.jpeg" data-title="LPQ-TS-009 — Long-Sleeve Top – 7 Colours" data-price="Ksh 1,000 – 1,500" data-code="LPQ-TS-009"><div class="badge-new-item">New</div><img src="photos/lepique-longsleeve-top-colors-chart.jpeg" alt="Long-Sleeve Top 7 Colours Nairobi" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>Long-Sleeve Top – 7 Colours (Black, White, Fuchsia, Mustard, Wine, Pink, Navy)</span><span class="item-price">Ksh 1,000 – 1,500</span></div><div class="item-code">LPQ-TS-009</div></div>
     <div class="catalog-item" data-cat="tshirt" data-src="photos/lepique-tshirt-01.jpeg" data-title="LPQ-TS-001 — T-Shirt (01)" data-price="Ksh 1,000 – 1,500" data-code="LPQ-TS-001"><div class="badge-new-item">New</div><img src="photos/lepique-tshirt-01.jpeg" alt="Ladies T-Shirt Nairobi" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>T-Shirt (01)</span><span class="item-price">Ksh 1,000 – 1,500</span></div><div class="item-code">LPQ-TS-001</div></div>
     <div class="catalog-item" data-cat="tshirt" data-src="photos/lepique-tshirt-02.jpeg" data-title="LPQ-TS-002 — T-Shirt (02)" data-price="Ksh 1,000 – 1,500" data-code="LPQ-TS-002"><div class="badge-new-item">New</div><img src="photos/lepique-tshirt-02.jpeg" alt="Ladies T-Shirt Nairobi" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>T-Shirt (02)</span><span class="item-price">Ksh 1,000 – 1,500</span></div><div class="item-code">LPQ-TS-002</div></div>
     <div class="catalog-item" data-cat="tshirt" data-src="photos/lepique-tshirt-03.jpeg" data-title="LPQ-TS-003 — T-Shirt (03)" data-price="Ksh 1,000 – 1,500" data-code="LPQ-TS-003"><div class="badge-new-item">New</div><img src="photos/lepique-tshirt-03.jpeg" alt="Ladies T-Shirt Nairobi" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>T-Shirt (03)</span><span class="item-price">Ksh 1,000 – 1,500</span></div><div class="item-code">LPQ-TS-003</div></div>
@@ -285,13 +295,23 @@
 function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open');}
 
 // FILTER
-var activeCat='all', activeColor='all';
+var activeCat='all', activeColor='all', activePriceFilter='all';
+function getItemPrice(item){
+  var p=item.dataset.price||'';
+  var m=p.match(/Ksh\s*([\d,]+)/);
+  return m?parseInt(m[1].replace(',',''),10):9999;
+}
 function applyFilters(){
   document.querySelectorAll('.catalog-item').forEach(function(item){
     var catMatch = activeCat==='all' || item.dataset.cat===activeCat;
     var src = (item.dataset.src||'').toLowerCase();
     var colorMatch = activeColor==='all' || src.indexOf(activeColor)!==-1;
-    var hide = !catMatch || !colorMatch;
+    var pv = getItemPrice(item);
+    var priceMatch = activePriceFilter==='all'
+      || (activePriceFilter==='budget' && pv < 1500)
+      || (activePriceFilter==='mid' && pv >= 1500 && pv <= 2500)
+      || (activePriceFilter==='premium' && pv > 2500);
+    var hide = !catMatch || !colorMatch || !priceMatch;
     item.classList.toggle('hidden', hide);
     var v=item.querySelector('video');
     if(v){if(hide){v.pause();}else{v.play().catch(()=>{});}}
@@ -306,6 +326,13 @@ function filterCat(cat,btn){
 function filterColor(color,btn){
   activeColor=color;
   document.querySelectorAll('.color-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  applyFilters();
+}
+function filterPrice(p,btn){
+  activePriceFilter=p;
+  // only reset price-row active states
+  btn.closest('.filter-bar').querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
   btn.classList.add('active');
   applyFilters();
 }
@@ -344,11 +371,11 @@ function showLb(){
   var code=item.dataset.code||'';
   var price=item.dataset.price||'';
   var imgSrc=item.dataset.src||'';
-  var lbImg=document.getElementById('lb-img');
-  var lbVid=document.getElementById('lb-video');
-  lbVid.style.display='none'; lbVid.pause(); lbVid.src='';
-  lbImg.style.display='block';
-  lbImg.src=imgSrc; lbImg.alt=title;
+  var isVid=imgSrc.match(/\.(mp4|mov|webm)$/i);
+  var img=document.getElementById('lb-img');
+  var vid=document.getElementById('lb-video');
+  if(isVid){img.style.display='none';vid.style.display='block';vid.src=imgSrc;}
+  else{vid.style.display='none';vid.pause();img.style.display='block';img.src=imgSrc;img.alt=title;}
   document.getElementById('lb-title').textContent=title;
   document.getElementById('lb-counter').textContent=(lbIdx+1)+' / '+lbItems.length;
   var msg=encodeURIComponent('Hi Lepique! I\'d like to order: '+title+(price?' — '+price:'')+(code?' ('+code+')':''));
@@ -357,7 +384,8 @@ function showLb(){
 function lbNav(d){lbIdx=(lbIdx+d+lbItems.length)%lbItems.length;showLb();}
 function closeLightbox(){
   document.getElementById('lightbox').classList.remove('open');
-  var v=document.getElementById('lb-video');if(v){v.pause();v.src='';}
+  var vid=document.getElementById('lb-video');
+  if(vid){vid.pause();vid.src='';}
 }
 document.addEventListener('keydown',function(e){
   if(document.getElementById('lightbox').classList.contains('open')){
@@ -367,9 +395,9 @@ document.addEventListener('keydown',function(e){
   }
 });
 (function(){
-  var tx=0;var lbEl=document.getElementById('lightbox');
-  lbEl.addEventListener('touchstart',function(e){tx=e.touches[0].clientX;},{passive:true});
-  lbEl.addEventListener('touchend',function(e){
+  var tx=0;
+  document.getElementById('lightbox').addEventListener('touchstart',function(e){tx=e.touches[0].clientX;},{passive:true});
+  document.getElementById('lightbox').addEventListener('touchend',function(e){
     var dx=e.changedTouches[0].clientX-tx;
     if(Math.abs(dx)>50){if(dx<0)lbNav(1);else lbNav(-1);}
   },{passive:true});
