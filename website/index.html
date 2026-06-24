@@ -36,7 +36,7 @@
   }
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
     :root {
       --navy: #111111;
@@ -47,9 +47,11 @@
       --off-white: #fdf8f9;
       --gray: #6b7280;
       --light-gray: #ece0e3;
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body: 'Inter', Arial, sans-serif;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Inter', sans-serif; color: var(--navy); background: var(--white); }
+    body { font-family: var(--font-body); font-size: 16px; line-height: 1.6; color: var(--navy); background: var(--white); }
 
     /* NAV */
     nav { position: fixed; top: 36px; left: 0; right: 0; z-index: 100; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding: 0 3%; height: 76px; background: rgba(13,27,42,0.97); backdrop-filter: blur(8px); }
@@ -57,7 +59,7 @@
     .nav-right { display: flex; align-items: center; gap: 1.6rem; justify-content: flex-end; }
     .logo { text-decoration: none; display: flex; align-items: center; justify-content: center; }
     .logo img { height: 62px; width: auto; display: block; }
-    nav a.nav-link { color: var(--white); text-decoration: none; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.2s; white-space: nowrap; }
+    nav a.nav-link { color: var(--white); text-decoration: none; font-family: var(--font-body); font-size: 0.74rem; font-weight: 700; letter-spacing: 0.075em; text-transform: uppercase; transition: color 0.2s; white-space: nowrap; }
     nav a.nav-link:hover { color: var(--gold); }
     .nav-cta { background: var(--gold); color: var(--navy) !important; padding: 0.42rem 1rem; border-radius: 2px; font-weight: 700 !important; font-size: 0.7rem; letter-spacing: 0.09em; text-transform: uppercase; text-decoration: none; white-space: nowrap; transition: background 0.2s; }
     .nav-cta:hover { background: var(--gold-light); }
@@ -67,8 +69,9 @@
     /* HERO */
     .hero { min-height: 100vh; background: linear-gradient(135deg, #111111 0%, #2b1f22 60%, #3d2530 100%); display: grid; grid-template-columns: 1fr 1fr; align-items: center; padding: 0 5%; position: relative; overflow: hidden; gap: 2rem; }
     .hero-image { position: relative; display: flex; justify-content: flex-end; align-items: flex-end; height: 100%; padding-top: 70px; overflow: hidden; }
-    .hero-slide { position: absolute; bottom: 0; right: 0; max-height: 90vh; width: auto; object-fit: cover; border-radius: 4px 4px 0 0; filter: drop-shadow(0 20px 40px rgba(0,0,0,0.4)); opacity: 0; transform: scale(1.012); transition: opacity 1.2s ease, transform 5s ease; pointer-events: none; z-index: 1; }
-    .hero-slide.active { opacity: 1; transform: scale(1); pointer-events: none; z-index: 2; }
+    .hero-slide { position: absolute; bottom: 0; right: 0; max-height: 90vh; width: auto; object-fit: cover; object-position: center 18%; border-radius: 4px 4px 0 0; filter: drop-shadow(0 20px 40px rgba(0,0,0,0.4)); opacity: 0; transition: opacity 1.4s ease; pointer-events: none; z-index: 1; }
+    .hero-slide.active { opacity: 1; pointer-events: none; z-index: 2; }
+    .hero-slide.leaving { opacity: 0; z-index: 1; }
     .hero-dots { position: absolute; bottom: 28px; right: 36px; display: flex; gap: 10px; z-index: 10; }
     .hero-dot { width: 8px; height: 8px; border-radius: 999px; border: 1.5px solid rgba(255,255,255,0.75); background: transparent; cursor: pointer; transition: all 0.3s; padding: 0; }
     .hero-dot.active { background: var(--gold); border-color: var(--gold); width: 22px; }
@@ -77,34 +80,40 @@
     .hero::after { content: ''; position: absolute; bottom: -10%; left: 20%; width: 400px; height: 400px; border-radius: 50%; background: radial-gradient(circle, rgba(192,96,112,0.08) 0%, transparent 70%); }
     .hero-content { max-width: 620px; z-index: 1; }
     .hero-badge { display: inline-block; background: rgba(192,96,112,0.12); border: 1px solid rgba(192,96,112,0.35); color: var(--gold); font-size: 0.68rem; letter-spacing: 2.5px; text-transform: uppercase; padding: 0.35rem 0.9rem; border-radius: 2px; margin-bottom: 1.2rem; }
-    .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.1rem, 3.8vw, 3.4rem); color: var(--white); line-height: 1.04; letter-spacing: -0.035em; margin-bottom: 1rem; }
+    .hero h1 { font-family: var(--font-display); font-size: clamp(2.2rem, 4vw, 3.6rem); color: var(--white); line-height: 1.02; letter-spacing: -0.035em; margin-bottom: 1rem; max-width: 620px; }
     .hero h1 em { font-style: italic; color: var(--gold); }
-    .hero p { color: rgba(255,255,255,0.78); font-size: 0.97rem; line-height: 1.7; margin-bottom: 1.8rem; max-width: 460px; }
+    .hero p { font-family: var(--font-body); color: rgba(255,255,255,0.75); font-size: 0.98rem; line-height: 1.68; margin-bottom: 1.8rem; max-width: 540px; }
     .hero-buttons { display: flex; gap: 0.8rem; flex-wrap: wrap; }
-    .btn-primary { background: var(--gold); color: var(--navy); padding: 0.85rem 1.8rem; font-weight: 700; font-size: 0.76rem; letter-spacing: 0.09em; text-transform: uppercase; border: none; cursor: pointer; text-decoration: none; display: inline-block; transition: background 0.2s, transform 0.2s; border-radius: 2px; }
+    .btn-primary { background: var(--gold); color: var(--navy); padding: 0.9rem 1.8rem; font-family: var(--font-body); font-weight: 800; font-size: 0.76rem; letter-spacing: 0.08em; text-transform: uppercase; border: none; cursor: pointer; text-decoration: none; display: inline-block; transition: background 0.2s, transform 0.2s; border-radius: 2px; }
     .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
-    .btn-outline { background: transparent; color: var(--white); padding: 0.85rem 1.8rem; font-weight: 500; font-size: 0.76rem; letter-spacing: 0.09em; text-transform: uppercase; border: 1px solid rgba(255,255,255,0.4); cursor: pointer; text-decoration: none; display: inline-block; transition: all 0.2s; border-radius: 2px; }
+    .btn-outline { background: transparent; color: var(--white); padding: 0.9rem 1.8rem; font-family: var(--font-body); font-weight: 700; font-size: 0.76rem; letter-spacing: 0.08em; text-transform: uppercase; border: 1px solid rgba(255,255,255,0.4); cursor: pointer; text-decoration: none; display: inline-block; transition: all 0.2s; border-radius: 2px; }
     .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
     .hero-stats { display: flex; gap: 2.5rem; margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.08); }
     .stat-num { font-family: 'Playfair Display', serif; font-size: clamp(1.4rem, 2vw, 1.9rem); color: var(--gold); font-weight: 700; line-height: 1; }
     .stat-label { font-size: 0.68rem; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 0.25rem; }
 
-    /* MARQUEE */
-    .marquee-bar { background: #111111; padding: 0.7rem 0; overflow: hidden; white-space: nowrap; }
-    .marquee-inner { display: inline-block; animation: marquee 20s linear infinite; font-size: 0.68rem; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); }
+    /* MARQUEE — hidden on desktop, shown only on mobile */
+    .marquee-bar { display: none; background: #111111; padding: 0.6rem 0; overflow: hidden; white-space: nowrap; }
+    .marquee-inner { display: inline-block; animation: marquee 22s linear infinite; font-family: var(--font-body); font-size: 0.63rem; font-weight: 500; letter-spacing: 1.8px; text-transform: uppercase; color: var(--gold); }
     @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+    @media (max-width: 768px) { .marquee-bar { display: block; } }
+
+    /* CONTAINERS */
+    .container { width: min(100% - 48px, 1240px); margin-inline: auto; }
+    .container-wide { width: min(100% - 48px, 1440px); margin-inline: auto; }
+    .container-narrow { width: min(100% - 48px, 860px); margin-inline: auto; }
 
     /* SECTIONS */
     section { padding: 5rem 5%; }
-    .section-tag { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.7rem; }
-    .section-title { font-family: 'Playfair Display', serif; font-size: clamp(1.7rem, 2.8vw, 2.4rem); color: var(--navy); margin-bottom: 0.9rem; letter-spacing: -0.02em; line-height: 1.05; }
-    .section-sub { color: var(--gray); font-size: 0.95rem; line-height: 1.7; max-width: 500px; }
+    .section-tag { font-family: var(--font-body); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.7rem; }
+    .section-title { font-family: var(--font-display); font-size: clamp(2rem, 3vw, 3.1rem); color: var(--navy); margin-bottom: 0.9rem; letter-spacing: -0.025em; line-height: 1.08; }
+    .section-sub { font-family: var(--font-body); color: var(--gray); font-size: 0.98rem; line-height: 1.65; max-width: 540px; }
 
     /* CATEGORIES */
     .categories { background: var(--off-white); }
     .cat-header { text-align: center; margin-bottom: 3rem; }
     .cat-header .section-sub { margin: 0 auto; }
-    .cat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; }
+    .cat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; max-width: 1280px; margin: 0 auto; }
     .cat-card { background: var(--white); border-radius: 4px; overflow: hidden; cursor: pointer; transition: transform 0.3s, box-shadow 0.3s; text-decoration: none; color: inherit; display: block; }
     .cat-card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(13,27,42,0.12); }
     .cat-img { width: 100%; aspect-ratio: 3/4; object-fit: cover; background: linear-gradient(135deg, #c9d6e3, #a8b9cc); display: flex; align-items: center; justify-content: center; font-size: 3rem; }
@@ -130,25 +139,35 @@
     .whatsapp-order { background: #25d366; color: white; border: none; padding: 0.4rem 0.9rem; font-size: 0.75rem; font-weight: 600; border-radius: 2px; cursor: pointer; text-decoration: none; display: inline-block; transition: background 0.2s; }
     .whatsapp-order:hover { background: #128c50; }
 
+    /* NEED CARDS */
+    .need-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; max-width: 1080px; margin: 0 auto; }
+    .need-card { background: var(--off-white); border: 1.5px solid var(--light-gray); border-radius: 14px; padding: 1.8rem 1.5rem; text-decoration: none; display: flex; flex-direction: column; align-items: center; text-align: center; min-height: 160px; transition: border-color 0.2s, background 0.2s, box-shadow 0.2s; }
+    .need-card:hover { border-color: var(--gold); background: var(--white); box-shadow: 0 6px 24px rgba(192,96,112,0.1); }
+    .need-card-icon { font-size: 2rem; margin-bottom: 0.75rem; }
+    .need-card h3 { font-family: var(--font-body); font-size: 0.95rem; font-weight: 700; color: var(--navy); margin-bottom: 0.4rem; line-height: 1.3; }
+    .need-card p { font-size: 0.82rem; color: var(--gray); line-height: 1.55; }
+    @media (max-width: 768px) { .need-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 480px) { .need-grid { grid-template-columns: 1fr; } }
+
     /* CATALOG */
     .catalog-section { background: var(--off-white); }
     .catalog-header { text-align: center; margin-bottom: 2.5rem; }
     .catalog-header .section-sub { margin: 0 auto; }
     .filter-bar { display: flex; flex-wrap: wrap; gap: 0.6rem; justify-content: center; margin-bottom: 2.5rem; }
-    .filter-btn { background: var(--white); color: var(--navy); border: 1px solid var(--light-gray); padding: 0.4rem 1rem; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.04em; border-radius: 20px; cursor: pointer; transition: all 0.2s; font-family: 'Inter', sans-serif; }
+    .filter-btn { background: var(--white); color: var(--navy); border: 1px solid var(--light-gray); padding: 0.4rem 1rem; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.04em; border-radius: 20px; cursor: pointer; transition: all 0.2s; font-family: var(--font-body); }
     .filter-btn:hover, .filter-btn.active { background: var(--navy); color: var(--white); border-color: var(--navy); }
-    .color-btn { background: var(--white); color: var(--navy); border: 1px solid var(--light-gray); padding: 0.35rem 0.85rem; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.03em; border-radius: 20px; cursor: pointer; transition: all 0.2s; font-family: 'Inter', sans-serif; display: inline-flex; align-items: center; gap: 0.4rem; }
+    .color-btn { background: var(--white); color: var(--navy); border: 1px solid var(--light-gray); padding: 0.35rem 0.85rem; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.03em; border-radius: 20px; cursor: pointer; transition: all 0.2s; font-family: var(--font-body); display: inline-flex; align-items: center; gap: 0.4rem; }
     .color-btn:hover, .color-btn.active { background: var(--navy); color: var(--white); border-color: var(--navy); }
     .color-dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; border: 1px solid rgba(0,0,0,0.15); flex-shrink: 0; }
     .catalog-grid { display: flex; flex-wrap: wrap; width: 100%; }
-    .catalog-item { width: 16.6666%; padding: 0.4rem; border-radius: 4px; overflow: hidden; cursor: pointer; transition: transform 0.25s, box-shadow 0.25s; background: var(--white); position: relative; box-sizing: border-box; }
+    .catalog-item { width: 25%; padding: 0.5rem; border-radius: 4px; overflow: hidden; cursor: pointer; transition: transform 0.25s, box-shadow 0.25s; background: var(--white); position: relative; box-sizing: border-box; }
     .catalog-item:hover { transform: translateY(-4px); box-shadow: 0 10px 28px rgba(13,27,42,0.13); }
     .catalog-item img { width: 100%; aspect-ratio: 3/4; object-fit: cover; display: block; max-width: 100%; }
-    .catalog-item .cat-label { padding: 0.6rem 0.75rem 0.2rem; background: var(--white); display: block; }
-    .cat-label span:first-child { display: block; font-size: 0.73rem; font-weight: 500; color: var(--navy); line-height: 1.3; margin-bottom: 0.28rem; }
-    .item-price { display: block; font-weight: 800; color: var(--denim); font-size: 0.88rem; white-space: nowrap; }
+    .catalog-item .cat-label { padding: 0.7rem 0.75rem 0.25rem; background: var(--white); display: block; }
+    .cat-label span:first-child { display: block; font-family: 'Inter', sans-serif; font-size: 0.78rem; font-weight: 600; color: var(--navy); line-height: 1.35; margin-bottom: 0.3rem; }
+    .item-price { display: block; font-family: 'Playfair Display', serif; font-weight: 700; color: var(--navy); font-size: 0.92rem; margin: 0.25rem 0 0; white-space: nowrap; }
     .catalog-item.hidden { display: none; }
-    .item-code { font-size: 0.6rem; color: var(--gray); letter-spacing: 0.5px; padding: 0.22rem 0.75rem 0.55rem; font-family: monospace; opacity: 0.75; }
+    .item-code { font-size: 0.58rem; color: var(--gray); letter-spacing: 0.08em; text-transform: uppercase; padding: 0.2rem 0.75rem 0.6rem; font-family: 'Inter', sans-serif; opacity: 0.65; }
 
     /* LIGHTBOX */
     .lightbox { display: none; position: fixed; inset: 0; z-index: 500; align-items: center; justify-content: center; background: #000; }
@@ -196,6 +215,12 @@
     .contact-item a:hover { color: var(--gold); }
     .contact-form { background: var(--off-white); padding: 2rem; border-radius: 4px; }
     .contact-form h3 { font-family: 'Playfair Display', serif; font-size: 1.3rem; margin-bottom: 1.5rem; }
+    .contact-actions { display: grid; gap: 12px; max-width: 100%; margin-top: 0.5rem; }
+    .contact-actions a { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; padding: 14px 18px; border-radius: 2px; font-family: 'Inter', Arial, sans-serif; font-size: 0.76rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; transition: all 0.2s ease; }
+    .whatsapp-btn { background: #c85f72; color: #111111 !important; border: 1px solid #c85f72; }
+    .whatsapp-btn:hover { background: #b5536a; border-color: #b5536a; }
+    .secondary-btn { background: #ffffff; color: #1b1b1f !important; border: 1px solid rgba(25,25,30,0.18); box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+    .secondary-btn:hover { background: #f7eef1; border-color: #c85f72; color: #111111 !important; }
     .form-group { margin-bottom: 1rem; }
     .form-group label { display: block; font-size: 0.8rem; font-weight: 500; margin-bottom: 0.4rem; color: var(--gray); }
     .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--light-gray); border-radius: 2px; font-family: 'Inter', sans-serif; font-size: 0.9rem; color: var(--navy); background: var(--white); outline: none; transition: border-color 0.2s; }
@@ -234,8 +259,8 @@
     /* ANNOUNCEMENT BAR */
     .announce-bar { position: fixed; top: 0; left: 0; right: 0; z-index: 102; background: #000000; height: 36px; overflow: hidden; display: flex; align-items: center; }
     .announce-inner { display: inline-flex; align-items: center; gap: 0; animation: marquee 30s linear infinite; white-space: nowrap; }
-    .announce-inner span { font-size: 0.62rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #f5c6d3; padding: 0 2.5rem; }
-    .announce-inner span::before { content: '✦'; margin-right: 1.2rem; opacity: 0.6; }
+    .announce-inner span { font-family: var(--font-body); font-size: 0.65rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #f5c6d3; padding: 0 2.8rem; }
+    .announce-inner span::before { content: '·'; margin-right: 1.5rem; opacity: 0.5; }
 
     /* CATALOG HOVER EFFECTS */
     .catalog-item img { transition: transform 0.45s ease; }
@@ -296,17 +321,19 @@
     @media (max-width: 600px) { .lb-prev, .lb-next { display: none; } }
     .lb-counter { font-size: 0.72rem; color: rgba(255,255,255,0.55); margin-top: 0.2rem; }
 
-    /* MOBILE */
     /* TRUST SECTION */
-    .trust-section { background: var(--white); padding: 3rem 5%; border-bottom: 1px solid var(--light-gray); }
-    .trust-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; }
-    .trust-item { display: flex; align-items: flex-start; gap: 0.8rem; }
-    .trust-icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 2px; }
-    .trust-text h4 { font-size: 0.82rem; font-weight: 700; color: var(--navy); margin-bottom: 0.2rem; text-transform: uppercase; letter-spacing: 0.5px; }
-    .trust-text p { font-size: 0.78rem; color: var(--gray); line-height: 1.5; }
-    .trust-header { text-align: center; margin-bottom: 2rem; }
-    .trust-header h2 { font-family: 'Playfair Display', serif; font-size: 1.4rem; color: var(--navy); }
-    .trust-header p { font-size: 0.85rem; color: var(--gray); margin-top: 0.3rem; }
+    .trust-section { background: var(--white); padding: 4.5rem 5%; border-top: 1px solid rgba(0,0,0,0.06); border-bottom: 1px solid var(--light-gray); }
+    .trust-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1.25rem; max-width: 1180px; margin: 0 auto; }
+    .trust-item { background: var(--white); border: 1px solid rgba(0,0,0,0.08); border-radius: 10px; padding: 1.5rem 1.25rem; display: flex; flex-direction: column; align-items: flex-start; gap: 0.7rem; transition: box-shadow 0.2s; }
+    .trust-item:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.08); }
+    .trust-icon { font-size: 1.6rem; }
+    .trust-text h4 { font-family: var(--font-body); font-size: 0.88rem; font-weight: 700; color: var(--navy); margin-bottom: 0.3rem; }
+    .trust-text p { font-size: 0.82rem; color: var(--gray); line-height: 1.55; }
+    .trust-header { text-align: center; margin-bottom: 2.5rem; }
+    .trust-header h2 { font-family: var(--font-display); font-size: clamp(1.5rem, 2.2vw, 2rem); color: var(--navy); }
+    .trust-header p { font-family: var(--font-body); font-size: 0.92rem; color: var(--gray); margin-top: 0.4rem; }
+    @media (max-width: 900px) { .trust-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 600px) { .trust-grid { grid-template-columns: 1fr 1fr; } }
 
     /* SIZE GUIDE */
     .size-section { background: var(--off-white); }
@@ -365,7 +392,7 @@
     @media (max-width: 768px) {
       .delivery-grid { grid-template-columns: 1fr; gap: 2rem; }
     }
-    @media (max-width: 1100px) { .catalog-item { width: 25%; } }
+    @media (max-width: 1100px) { .catalog-item { width: 33.3333%; } }
     @media (max-width: 900px) {
       nav { grid-template-columns: 1fr auto; }
       .nav-left { display: none; }
@@ -374,6 +401,7 @@
       .logo img { height: 52px; }
     }
     @media (max-width: 768px) {
+      body { font-size: 15.5px; }
       .catalog-item { width: 50%; }
       .about { grid-template-columns: 1fr; }
       .about-img { display: none; }
@@ -383,11 +411,14 @@
       .form-row { grid-template-columns: 1fr; }
       .hero-stats { gap: 1.5rem; }
       /* Mobile typography */
-      .hero h1 { font-size: clamp(2.1rem, 9vw, 3rem); letter-spacing: -0.02em; }
-      .hero p { font-size: 0.92rem; line-height: 1.65; }
-      .section-title { font-size: clamp(1.55rem, 7vw, 2.2rem); }
-      .btn-primary, .btn-outline { font-size: 0.72rem; padding: 0.8rem 1.4rem; }
-      nav a.nav-link { font-size: 0.7rem; }
+      .hero h1 { font-size: clamp(2.1rem, 10vw, 3rem); line-height: 1.04; letter-spacing: -0.025em; }
+      .hero p { font-size: 0.95rem; line-height: 1.6; max-width: 100%; }
+      .section-title { font-size: clamp(1.75rem, 8vw, 2.4rem); }
+      .section-sub { font-size: 0.95rem; }
+      .btn-primary, .btn-outline { font-size: 0.74rem; padding: 0.85rem 1.3rem; }
+      nav a.nav-link { font-size: 0.74rem; letter-spacing: 0.06em; }
+      .product-info h3 { font-size: 0.93rem; }
+      .price { font-size: 0.98rem; }
     }
     .mobile-menu { display: none; position: fixed; top: 106px; left: 0; right: 0; background: var(--navy); padding: 1.5rem 5%; z-index: 99; flex-direction: column; gap: 1rem; }
     .mobile-menu.open { display: flex; }
@@ -395,12 +426,14 @@
     .mobile-menu a:last-child { border-bottom: none; }
 
     /* MOBILE STICKY BAR */
-    .mobile-sticky-bar { display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 300; background: var(--navy); border-top: 1px solid rgba(255,255,255,0.1); padding: 0.6rem 0; }
+    .mobile-sticky-bar { display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 300; background: #0d0d0d; border-top: 1px solid rgba(255,255,255,0.08); padding: 0.5rem 0 0.6rem; }
     .mobile-sticky-bar .bar-links { display: flex; justify-content: space-around; align-items: center; }
-    .mobile-sticky-bar a { display: flex; flex-direction: column; align-items: center; gap: 0.25rem; color: rgba(255,255,255,0.75); text-decoration: none; font-size: 0.62rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.2s; }
-    .mobile-sticky-bar a.wa-bar { color: #25d366; }
-    .mobile-sticky-bar .bar-icon { font-size: 1.25rem; }
-    @media (max-width: 600px) { .mobile-sticky-bar { display: block; } body { padding-bottom: 70px; } }
+    .mobile-sticky-bar a { display: flex; flex-direction: column; align-items: center; gap: 0.22rem; color: rgba(255,255,255,0.65); text-decoration: none; font-family: var(--font-body); font-size: 0.6rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.2s; padding: 0.2rem 0.8rem; }
+    .mobile-sticky-bar a.wa-bar { color: #25d366; font-weight: 800; }
+    .mobile-sticky-bar a.wa-bar .bar-icon { font-size: 1.4rem; }
+    .mobile-sticky-bar a:active { color: var(--gold); }
+    .mobile-sticky-bar .bar-icon { font-size: 1.2rem; }
+    @media (max-width: 768px) { .mobile-sticky-bar { display: block; } body { padding-bottom: 72px; } }
   </style>
 </head>
 <body>
@@ -408,16 +441,14 @@
 <!-- ANNOUNCEMENT BAR -->
 <div class="announce-bar">
   <div class="announce-inner">
-    <span>We Deliver Countrywide</span>
-    <span>WhatsApp Orders: 0721 672 900</span>
     <span>New Arrivals Weekly</span>
-    <span>Wide Leg · Skinny · Flare · Straight · Ripped · Cargo</span>
-    <span>Crop Tops · Bodysuits · T-Shirts · Leather Jackets</span>
-    <span>We Deliver Countrywide</span>
-    <span>WhatsApp Orders: 0721 672 900</span>
+    <span>Jeans, Bodysuits, T-Shirts &amp; Jackets</span>
+    <span>Countrywide Delivery</span>
+    <span>WhatsApp 0721 672 900</span>
     <span>New Arrivals Weekly</span>
-    <span>Wide Leg · Skinny · Flare · Straight · Ripped · Cargo</span>
-    <span>Crop Tops · Bodysuits · T-Shirts · Leather Jackets</span>
+    <span>Jeans, Bodysuits, T-Shirts &amp; Jackets</span>
+    <span>Countrywide Delivery</span>
+    <span>WhatsApp 0721 672 900</span>
   </div>
 </div>
 
@@ -425,7 +456,7 @@
 <nav>
   <div class="nav-left">
     <a href="#categories" class="nav-link">Shop Jeans</a>
-    <a href="new-arrivals-nairobi.html" class="nav-link" style="color:var(--gold);">New In</a>
+    <a href="new-arrivals-kenya.html" class="nav-link" style="color:var(--gold);">New In</a>
     <a href="#tops" class="nav-link">Tops &amp; Jackets</a>
     <a href="catalogue.html" class="nav-link">Catalogue</a>
     <a href="#size-guide" class="nav-link">Size Guide</a>
@@ -445,7 +476,7 @@
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
   <a href="#categories" onclick="toggleMenu()">Shop Jeans</a>
-  <a href="new-arrivals-nairobi.html" onclick="toggleMenu()" style="color:var(--gold);">✦ New Arrivals</a>
+  <a href="new-arrivals-kenya.html" onclick="toggleMenu()" style="color:var(--gold);">✦ New Arrivals</a>
   <a href="#tops" onclick="toggleMenu()">Tops &amp; Jackets</a>
   <a href="catalogue.html" onclick="toggleMenu()">Catalogue</a>
   <a href="#size-guide" onclick="toggleMenu()">Size Guide</a>
@@ -464,10 +495,10 @@
     <div class="hero-badge" style="margin-top:0.5rem;font-size:0.7rem;">📍 Based in Nairobi CBD &nbsp;|&nbsp; Delivery Across Kenya</div>
     <h1>Kenya's Home of<br /><em>Quality Ladies' Jeans &amp; Everyday Fashion</em></h1>
     <p style="font-size:0.82rem;color:rgba(255,255,255,0.5);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:0.6rem;">Jeans · Crop Tops · Bodysuits · T-Shirts · Leather Jackets</p>
-    <p>Shop quality ladies' jeans, crop tops, bodysuits, T-shirts and leather jackets from Lepique Fashions. Visit us at Platinum Plaza, Shop G16, Tom Mboya Street, Nairobi, or order via WhatsApp for delivery across Kenya. Jeans sizes 27–42.</p>
+    <p>Discover flattering ladies' jeans, polished crop tops, smooth bodysuits, everyday T-shirts and statement leather jackets from Lepique Fashions. Visit us at Platinum Plaza, Shop G16, Tom Mboya Street, Nairobi — or order on WhatsApp for delivery across Kenya. Jeans in sizes 27–42.</p>
     <div class="hero-buttons">
-      <a href="#catalog" class="btn-primary">Browse All 80 Styles</a>
-      <a href="https://wa.me/254721672900?text=Hi%20Lepique%20Fashions!%20I'd%20like%20to%20browse%20your%20collection." target="_blank" class="btn-outline">WhatsApp Us</a>
+      <a href="#catalog" class="btn-primary">Shop the Collection</a>
+      <a href="https://wa.me/254721672900?text=Hi%20Lepique%20Fashions!%20I'd%20like%20to%20browse%20your%20collection." target="_blank" class="btn-outline">Order on WhatsApp</a>
     </div>
     <div class="hero-stats">
       <div><div class="stat-num">80</div><div class="stat-label">Styles Listed</div></div>
@@ -480,11 +511,13 @@
     <img class="hero-slide" src="photos/lepique-straight-05-black.jpeg" alt="Straight Jeans Black – Lepique Fashions Nairobi" />
     <img class="hero-slide" src="photos/lepique-flare-07-navy-blue.jpeg" alt="Flare Jeans Navy Blue – Lepique Fashions Nairobi" />
     <img class="hero-slide" src="photos/lepique-ripped-04-light-blue.jpeg" alt="Ripped Jeans Light Blue – Lepique Fashions Nairobi" />
+    <img class="hero-slide" src="photos/lepique-wide-leg-29-dark-navy.jpeg" alt="Complete the Look – Wide Leg Jeans + Crop Top | Lepique Fashions Kenya" />
     <div class="hero-dots">
       <button class="hero-dot active" aria-label="Wide Leg Jeans"></button>
       <button class="hero-dot" aria-label="Straight Jeans"></button>
       <button class="hero-dot" aria-label="Flare Jeans"></button>
       <button class="hero-dot" aria-label="Ripped Jeans"></button>
+      <button class="hero-dot" aria-label="Complete the Look"></button>
     </div>
   </div>
 </section>
@@ -502,29 +535,78 @@
 <section class="trust-section">
   <div class="trust-header">
     <h2>Why Buy From Lepique?</h2>
-    <p>We're a real Nairobi boutique — not just an online page</p>
+    <p>A real Nairobi boutique — serving customers across Kenya.</p>
   </div>
   <div class="trust-grid">
     <div class="trust-item">
       <span class="trust-icon">📍</span>
-      <div class="trust-text"><h4>Physical Shop</h4><p>Platinum Plaza, Shop G16, Tom Mboya Street, Nairobi CBD — visit us anytime</p></div>
+      <div class="trust-text"><h4>Visit Our Shop</h4><p>Find us at Platinum Plaza, Shop G16, Tom Mboya Street, Nairobi CBD.</p></div>
     </div>
     <div class="trust-item">
       <span class="trust-icon">📏</span>
-      <div class="trust-text"><h4>Size Support</h4><p>We help you pick the right size before dispatch — just WhatsApp your waist measurement</p></div>
+      <div class="trust-text"><h4>Personal Size Support</h4><p>Unsure of your size? Send us your waist measurement or usual jeans size on WhatsApp — we'll guide you before dispatch.</p></div>
     </div>
     <div class="trust-item">
       <span class="trust-icon">🔄</span>
-      <div class="trust-text"><h4>Exchange Support</h4><p>Wrong size? We guide you on exchange options so you're never stuck</p></div>
+      <div class="trust-text"><h4>Exchange Assistance</h4><p>If the fit isn't right, we'll guide you through our exchange process within the policy period.</p></div>
     </div>
     <div class="trust-item">
       <span class="trust-icon">✅</span>
-      <div class="trust-text"><h4>Quality Checked</h4><p>Every pair is inspected before it leaves our shop — no surprises on delivery</p></div>
+      <div class="trust-text"><h4>Quality Checked</h4><p>Every item is checked before dispatch so you receive exactly what you ordered.</p></div>
     </div>
     <div class="trust-item">
       <span class="trust-icon">📞</span>
-      <div class="trust-text"><h4>Real Business</h4><p>Call or WhatsApp: <strong><a href="tel:+254721672900" style="color:var(--navy);text-decoration:none;">0721 672 900</a></strong> — real people, real replies</p></div>
+      <div class="trust-text"><h4>Real People. Real Service.</h4><p>Call or WhatsApp <strong><a href="tel:+254721672900" style="color:var(--navy);text-decoration:none;">0721 672 900</a></strong> for quick, personal assistance.</p></div>
     </div>
+  </div>
+</section>
+
+
+<!-- SHOP BY NEED -->
+<section style="padding:4.5rem 5%;background:var(--white);">
+  <div style="text-align:center;margin-bottom:2.5rem;">
+    <div class="section-tag">Personalised Shopping</div>
+    <h2 class="section-title">Shop by What You Need</h2>
+    <p class="section-sub" style="margin:0 auto;">Not sure where to start? Pick what you're looking for.</p>
+  </div>
+  <div class="need-grid">
+
+    <a href="plus-size-jeans-kenya.html" class="need-card">
+      <div class="need-card-icon">👗</div>
+      <h3>Need a Curvy Fit?</h3>
+      <p>Shop plus-size jeans in sizes 27–42 with personal size help on WhatsApp.</p>
+    </a>
+
+    <a href="https://wa.me/254721672900?text=Hi%20Lepique!%20I%27d%20like%20help%20choosing%20the%20right%20jeans%20size.%20Can%20you%20help%3F" target="_blank" class="need-card">
+      <div class="need-card-icon">📏</div>
+      <h3>Not Sure of Your Size?</h3>
+      <p>Send your waist measurement and we'll guide you to the right size before dispatch.</p>
+    </a>
+
+    <a href="bodysuits-nairobi.html" class="need-card">
+      <div class="need-card-icon">✨</div>
+      <h3>Want a Polished Look?</h3>
+      <p>Pair a bodysuit with high-waist jeans for a clean, confident outfit.</p>
+    </a>
+
+    <a href="leather-jackets-nairobi.html" class="need-card">
+      <div class="need-card-icon">🖤</div>
+      <h3>Want a Bold Look?</h3>
+      <p>Style skinny jeans with a leather jacket — sharp, versatile, always on trend.</p>
+    </a>
+
+    <a href="https://wa.me/254721672900?text=Hi%20Lepique!%20I%27d%20like%20to%20order%20for%20delivery%20outside%20Nairobi.%20What%20are%20your%20delivery%20rates%3F" target="_blank" class="need-card">
+      <div class="need-card-icon">🚚</div>
+      <h3>Outside Nairobi?</h3>
+      <p>We deliver countrywide through courier. WhatsApp us for rates to your town.</p>
+    </a>
+
+    <a href="complete-the-look.html" class="need-card">
+      <div class="need-card-icon">🛍️</div>
+      <h3>Want the Full Outfit?</h3>
+      <p>Browse complete looks — jeans, top and jacket styled together.</p>
+    </a>
+
   </div>
 </section>
 
@@ -533,32 +615,32 @@
   <div class="cat-header">
     <div class="section-tag">Shop Jeans by Style</div>
     <h2 class="section-title">Find Your Perfect Fit</h2>
-    <p class="section-sub">From classic straight cuts to trendy wide legs — Lepique carries every jeans style a modern woman needs.</p>
+    <p class="section-sub">From relaxed wide-leg denim to sleek skinny cuts and flattering high-waist styles — explore jeans designed to fit your shape, your style and your everyday wardrobe.</p>
   </div>
   <div class="cat-grid">
     <a href="#catalog" class="cat-card">
       <div class="cat-img"><img src="photos/lepique-wide-leg-01-dark-blue-belt.jpeg" alt="Wide Leg Jeans" /></div>
-      <div class="cat-info"><h3>Wide Leg Jeans</h3><p>Relaxed, flowy &amp; on-trend</p></div>
+      <div class="cat-info"><h3>Wide Leg Jeans</h3><p>Relaxed, flowy and effortlessly modern.</p></div>
     </a>
     <a href="#catalog" class="cat-card">
       <div class="cat-img"><img src="photos/lepique-wide-leg-02-light-blue.jpeg" alt="Mom Jeans" /></div>
-      <div class="cat-info"><h3>Mom Jeans</h3><p>Classic comfort, effortless style</p></div>
+      <div class="cat-info"><h3>Mom Jeans</h3><p>Comfortable denim with an easy, everyday shape.</p></div>
     </a>
     <a href="#catalog" class="cat-card">
       <div class="cat-img"><img src="photos/lepique-skinny-03-dark-navy.jpeg" alt="High Waist Jeans" /></div>
-      <div class="cat-info"><h3>High Waist</h3><p>Figure-flattering, sleek silhouette</p></div>
+      <div class="cat-info"><h3>High Waist</h3><p>A flattering rise for a smooth, feminine silhouette.</p></div>
     </a>
     <a href="#catalog" class="cat-card">
       <div class="cat-img"><img src="photos/lepique-wide-leg-17-dark-navy.jpeg" alt="Straight Cut Jeans" /></div>
-      <div class="cat-info"><h3>Straight Cut</h3><p>Timeless &amp; versatile everyday wear</p></div>
+      <div class="cat-info"><h3>Straight Cut</h3><p>Clean, timeless denim for everyday styling.</p></div>
     </a>
     <a href="#catalog" class="cat-card">
       <div class="cat-img"><img src="photos/lepique-flare-01-black.jpeg" alt="Flare Jeans" /></div>
-      <div class="cat-info"><h3>Flare Jeans</h3><p>Retro vibes, modern energy</p></div>
+      <div class="cat-info"><h3>Flare Jeans</h3><p>Retro-inspired shape with modern confidence.</p></div>
     </a>
     <a href="#catalog" class="cat-card">
       <div class="cat-img"><img src="photos/lepique-flare-02-grey-acidwash.jpeg" alt="Skinny Jeans" /></div>
-      <div class="cat-info"><h3>Skinny &amp; Slim Fit</h3><p>Sleek, fitted, always stylish</p></div>
+      <div class="cat-info"><h3>Skinny &amp; Slim Fit</h3><p>Sleek, fitted and easy to dress up or down.</p></div>
     </a>
   </div>
 </section>
@@ -568,14 +650,14 @@
   <div class="cat-header">
     <div class="section-tag">More from Lepique</div>
     <h2 class="section-title">Tops, Bodysuits &amp; Jackets</h2>
-    <p class="section-sub" style="margin:0 auto;">Complete your jeans look with crop tops, long sleeve tops, bodysuits, T-shirts and leather jackets — all available at Lepique Fashions, Nairobi CBD.</p>
+    <p class="section-sub" style="margin:0 auto;">Complete your denim look with polished crop tops, smooth bodysuits, everyday T-shirts, long-sleeve tops and statement leather jackets — available from our Nairobi boutique with delivery across Kenya.</p>
   </div>
   <div class="tops-grid">
     <a href="ladies-croptops-nairobi.html" class="tops-card">
       <img class="tops-card-img" src="photos/lepique-wide-leg-29-dark-navy.jpeg" alt="Ladies Crop Tops Nairobi – Lepique Fashions" />
       <div class="tops-card-info">
         <h3>Crop Tops</h3>
-        <p>Stylish crop tops to pair with high-waist, skinny and wide-leg jeans. Free size.</p>
+        <p>Easy, stylish crop tops made to pair beautifully with high-waist, skinny and wide-leg jeans.</p>
         <div class="tops-card-price">Ksh 1,000</div>
       </div>
     </a>
@@ -583,7 +665,7 @@
       <img class="tops-card-img" src="photos/lepique-bodysuit-longsleeve-colors-chart.jpeg" alt="Ladies Bodysuits Nairobi – Lepique Fashions" />
       <div class="tops-card-info">
         <h3>Bodysuits</h3>
-        <p>Fitted bodysuits in 7 beautiful colours — perfect for casual and dressy looks.</p>
+        <p>Smooth, fitted bodysuits in beautiful colours for clean casual and polished dressy looks.</p>
         <div class="tops-card-price">Ksh 1,000 – 1,500</div>
       </div>
     </a>
@@ -591,7 +673,7 @@
       <img class="tops-card-img" src="photos/lepique-longsleeve-top-colors-chart.jpeg" alt="Ladies Long Sleeve Tops Nairobi – Lepique Fashions" />
       <div class="tops-card-info">
         <h3>Long Sleeve Tops</h3>
-        <p>Soft long-sleeve tops in 7 colours — black, white, fuchsia, mustard, wine, pink and navy. Free size.</p>
+        <p>Soft long-sleeve tops in versatile colours for effortless everyday styling. Free size.</p>
         <div class="tops-card-price">Ksh 1,000 – 1,500</div>
       </div>
     </a>
@@ -599,7 +681,7 @@
       <img class="tops-card-img" src="photos/lepique-tshirt-01.jpeg" alt="Ladies T-Shirts Nairobi – Lepique Fashions" />
       <div class="tops-card-info">
         <h3>Ladies T-Shirts</h3>
-        <p>Comfortable everyday T-shirts to pair with jeans. Sizes M – 5XL.</p>
+        <p>Comfortable everyday T-shirts designed to pair easily with denim. Sizes M–5XL.</p>
         <div class="tops-card-price">Ksh 1,000 – 1,500</div>
       </div>
     </a>
@@ -619,6 +701,7 @@
   <div class="section-tag">Outfit Ideas</div>
   <h2 class="section-title">Complete the Look</h2>
   <p class="section-sub">Jeans, tops and jackets styled together — order the full look on WhatsApp.</p>
+  <p style="text-align:center;margin-top:0.5rem;"><a href="complete-the-look.html" style="color:var(--gold);font-size:0.82rem;font-weight:600;letter-spacing:0.05em;text-decoration:underline;">View all outfit looks →</a></p>
   <div class="look-grid">
     <div class="look-card">
       <div class="look-card-img">
@@ -927,14 +1010,16 @@
 <section class="about" id="about">
   <div>
     <div class="section-tag">Our Story</div>
-    <h2 class="section-title">Where It's All About Quality</h2>
-    <p>Lepique Fashions is a ladies' jeans shop in Nairobi CBD, located at Platinum Plaza, Shop G16, Tom Mboya Street. We stock quality ladies' jeans including wide leg jeans, high waist jeans, mom jeans, skinny jeans, flare jeans, straight jeans, cargo jeans, ripped jeans, and plus-size jeans from sizes 27–42. Order on WhatsApp or visit our Nairobi shop. We deliver across Kenya.</p>
-    <p>From wide-leg to high waist, from light wash to deep indigo — our collection is refreshed weekly so there's always something new to discover. We believe every woman deserves jeans that fit perfectly and feel amazing.</p>
+    <h2 class="section-title">Kenya's Boutique for Quality Ladies' Fashion</h2>
+    <p>Lepique Fashions is a Kenya-wide ladies' fashion boutique based in Nairobi CBD. We specialise in flattering ladies' jeans, polished crop tops, smooth bodysuits, everyday T-shirts and statement leather jackets — refreshed regularly so there is always something new to discover.
+
+      Visit us at Platinum Plaza, Shop G16, Tom Mboya Street, Nairobi — or order on WhatsApp for delivery anywhere in Kenya. Jeans in sizes 27–42.</p>
+    <p>From wide-leg denim and high-waist jeans to bodysuits, crop tops and jackets that complete the look — every piece is chosen for real wardrobes and real women.</p>
     <div class="features">
-      <div class="feature"><span class="feature-icon">🚚</span><div class="feature-text"><h4>Nationwide Delivery</h4><p>We deliver across Kenya via courier</p></div></div>
-      <div class="feature"><span class="feature-icon">✅</span><div class="feature-text"><h4>Quality Guaranteed</h4><p>Every pair is checked before dispatch</p></div></div>
-      <div class="feature"><span class="feature-icon">🔄</span><div class="feature-text"><h4>Easy Exchange</h4><p>Wrong size? We'll sort it out</p></div></div>
-      <div class="feature"><span class="feature-icon">💬</span><div class="feature-text"><h4>WhatsApp Support</h4><p>Quick replies, personal styling help</p></div></div>
+      <div class="feature"><span class="feature-icon">🚚</span><div class="feature-text"><h4>Countrywide Delivery</h4><p>We deliver across Kenya through trusted courier partners.</p></div></div>
+      <div class="feature"><span class="feature-icon">✅</span><div class="feature-text"><h4>Quality Checked</h4><p>Every item is inspected before dispatch.</p></div></div>
+      <div class="feature"><span class="feature-icon">🔄</span><div class="feature-text"><h4>Easy Exchange</h4><p>Wrong size? We'll guide you through the exchange process.</p></div></div>
+      <div class="feature"><span class="feature-icon">💬</span><div class="feature-text"><h4>WhatsApp Support</h4><p>Quick replies, size help and personal order assistance.</p></div></div>
     </div>
   </div>
   <div class="about-img">
@@ -978,7 +1063,7 @@
     <div class="contact-details">
       <div class="contact-item">
         <div class="contact-icon">📍</div>
-        <div><h4>Visit Us</h4><p>Platinum Plaza, Shop G16<br/>Tom Mboya Street, Nairobi CBD<br/>Mon–Sat, 8am–6pm</p></div>
+        <div><h4>Visit Us</h4><p>Platinum Plaza, Shop G16<br/>Tom Mboya Street, Nairobi CBD<br/>Mon–Sun, 8am–8pm</p></div>
       </div>
       <div class="contact-item">
         <div class="contact-icon">📱</div>
@@ -990,12 +1075,27 @@
       </div>
     </div>
     <div class="contact-form">
-      <h3>Send a WhatsApp Message</h3>
-      <p style="font-size:0.85rem;color:var(--gray);margin-bottom:1.5rem;">The fastest way to reach us is WhatsApp. Tap below to start a conversation.</p>
-      <a href="https://wa.me/254721672900?text=Hi%20Lepique%20Fashions!%20I%27d%20like%20to%20know%20more%20about%20your%20products." target="_blank" class="btn-primary" style="display:block;text-align:center;padding:1rem;">📱 Chat on WhatsApp</a>
-      <div style="margin-top:1.5rem;display:flex;flex-direction:column;gap:0.8rem;">
-        <a href="https://maps.google.com/?q=Platinum+Plaza+Tom+Mboya+Street+Nairobi" target="_blank" class="btn-outline" style="display:block;text-align:center;padding:0.85rem;">🗺️ Get Directions</a>
-        <a href="tel:+254721672900" class="btn-outline" style="display:block;text-align:center;padding:0.85rem;">📞 Call Us</a>
+      <h3>Reach Us Directly</h3>
+      <p style="font-size:0.88rem;color:#6b7280;margin-bottom:1.5rem;line-height:1.65;">The fastest way to place an order or ask a question is WhatsApp. We're available Mon–Sun, 8am–8pm.</p>
+
+      <div class="contact-actions">
+        <a class="whatsapp-btn" href="https://wa.me/254721672900?text=Hi%20Lepique%20Fashions!%20I%27d%20like%20to%20know%20more%20about%20your%20products." target="_blank">
+          💬 Chat on WhatsApp
+        </a>
+        <a class="secondary-btn" href="https://maps.google.com/?q=Platinum+Plaza+Tom+Mboya+Street+Nairobi" target="_blank">
+          🗺️ Get Directions
+        </a>
+        <a class="secondary-btn" href="tel:+254721672900">
+          📞 Call Us
+        </a>
+      </div>
+
+      <div style="margin-top:1.5rem;padding-top:1.2rem;border-top:1px solid #ece0e3;">
+        <p style="font-size:0.8rem;color:#6b7280;line-height:1.65;">
+          <strong style="color:#111111;display:block;margin-bottom:0.3rem;">📍 Visit Our Shop</strong>
+          Platinum Plaza, Shop G16<br>Tom Mboya Street, Nairobi CBD<br>
+          <span style="color:#c06070;font-weight:600;">Mon–Sun · 8am–8pm</span>
+        </p>
       </div>
     </div>
   </div>
@@ -1006,7 +1106,7 @@
   <div class="footer-grid">
     <div class="footer-brand">
       <a href="/" class="logo"><svg width="160" height="44" viewBox="0 0 220 58" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="8" width="3" height="16" fill="#c9a455"/><rect x="0" y="24" width="3" height="12" fill="#9b1a1a"/><rect x="0" y="36" width="3" height="14" fill="#c9a455"/><text x="16" y="37" font-family="serif" font-size="27" font-weight="700" letter-spacing="4" fill="#c9a455">LEPIQUE</text><text x="17" y="52" font-family="sans-serif" font-size="9" font-weight="500" letter-spacing="5.5" fill="rgba(201,164,85,0.72)">FASHIONS</text></svg></a>
-      <p>Ladies' jeans, tops and jackets in Nairobi CBD. Platinum Plaza, Shop G16, Tom Mboya Street. WhatsApp 0721 672 900.</p>
+      <p>Ladies' jeans, bodysuits, tops, T-shirts and leather jackets across Kenya. Based at Platinum Plaza, Shop G16, Tom Mboya Street, Nairobi. WhatsApp 0721 672 900.</p>
     </div>
     <div class="footer-col">
       <h4>Shop</h4>
@@ -1016,7 +1116,7 @@
         <li><a href="flare-jeans-nairobi.html">Flare Jeans</a></li>
         <li><a href="high-waist-jeans-nairobi.html">High Waist Jeans</a></li>
         <li><a href="cargo-jeans-nairobi.html">Cargo Jeans</a></li>
-        <li><a href="new-arrivals-nairobi.html">New Arrivals</a></li>
+        <li><a href="new-arrivals-kenya.html">New Arrivals</a></li>
         <li><a href="catalogue.html">Full Catalogue</a></li>
       </ul>
     </div>
@@ -1034,7 +1134,7 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© 2026 Lepique Fashions · Nairobi CBD</span>
+    <span>© 2026 Lepique Fashions · Kenya</span>
     <span>Platinum Plaza, Shop G16, Tom Mboya Street · <a href="tel:+254721672900" style="color:var(--gold);">0721 672 900</a></span>
   </div>
 </footer>
@@ -1082,39 +1182,48 @@ function toggleMenu(){
 }
 
 // HERO SLIDER
-(function(){
+try{(function(){
   var slides=document.querySelectorAll('.hero-slide');
   var dots=document.querySelectorAll('.hero-dot');
-  if(!slides.length)return;
+  if(!slides.length||!dots.length)return;
   var cur=0,timer;
   function show(i){
-    slides[cur].classList.remove('active');dots[cur].classList.remove('active');
+    var prev=cur;
     cur=(i+slides.length)%slides.length;
-    slides[cur].classList.add('active');dots[cur].classList.add('active');
+    slides[prev].classList.remove('active');
+    slides[prev].classList.add('leaving');
+    dots[prev].classList.remove('active');
+    setTimeout(function(){slides[prev].classList.remove('leaving');},900);
+    slides[cur].classList.add('active');
+    dots[cur].classList.add('active');
   }
   function next(){show(cur+1);}
   function start(){timer=setInterval(next,6000);}
   function stop(){clearInterval(timer);}
   dots.forEach(function(d,i){d.addEventListener('click',function(){stop();show(i);start();});});
+  // pause on hover
+  var heroImg=document.querySelector('.hero-image');
+  if(heroImg){heroImg.addEventListener('mouseenter',stop);heroImg.addEventListener('mouseleave',start);}
   start();
-})();
+})();}catch(e){console.warn('Hero slider error:',e);}
 
 // BACK TO TOP
-(function(){
+try{(function(){
   var btn=document.getElementById('backTop');
+  if(!btn)return;
   window.addEventListener('scroll',function(){
     btn.classList.toggle('visible',window.scrollY>400);
   });
   btn.addEventListener('click',function(e){e.preventDefault();window.scrollTo({top:0,behavior:'smooth'});});
-})();
+})();}catch(e){console.warn('Back to top error:',e);}
 
 // FAQ
-document.querySelectorAll('.faq-q').forEach(function(btn){
+try{document.querySelectorAll('.faq-q').forEach(function(btn){
   btn.addEventListener('click',function(){
     var item=this.closest('.faq-item');
-    item.classList.toggle('open');
+    if(item)item.classList.toggle('open');
   });
-});
+});}catch(e){console.warn('FAQ error:',e);}
 
 // HOMEPAGE CATALOG FILTER (category + price)
 var hActiveCat='all', hActivePrice='all';
