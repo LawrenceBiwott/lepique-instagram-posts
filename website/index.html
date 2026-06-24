@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ladies Jeans in Nairobi | Lepique Fashions | Wide Leg, High Waist &amp; Plus Size Jeans Kenya</title>
-  <meta name="description" content="Lepique Fashions – ladies' jeans, vests, bodysuits, T-shirts and leather jackets in Nairobi CBD, Platinum Plaza Shop G16, Tom Mboya Street. Wide leg, skinny, flare, cargo and plus-size jeans sizes 27–42. WhatsApp 0721 672 900. Delivery across Kenya." />
+  <title>Ladies Jeans, Tops &amp; Everyday Fashion in Kenya | Lepique Fashions</title>
+  <meta name="description" content="Shop quality ladies' jeans, crop tops, bodysuits, T-shirts and leather jackets in Kenya at Lepique Fashions. Visit Platinum Plaza Shop G16, Tom Mboya Street, Nairobi, or order via WhatsApp for delivery across Kenya. Sizes 27–42." />
   <meta name="keywords" content="ladies jeans Nairobi, wide leg jeans Nairobi, high waist jeans Nairobi, mom jeans Nairobi, skinny jeans Kenya, flare jeans Nairobi, cargo jeans Nairobi, plus size jeans Kenya, ripped jeans Nairobi, ladies vests Nairobi, ladies bodysuits Nairobi, ladies T-shirts Nairobi, leather jackets Nairobi, ladies tops Nairobi, jeans shop Nairobi CBD, Tom Mboya Street fashion, Platinum Plaza fashion, ladies denim Kenya, jeans delivery Kenya, ladies fashion Nairobi" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://lepique.co.ke/" />
@@ -67,9 +67,9 @@
     /* HERO */
     .hero { min-height: 100vh; background: linear-gradient(135deg, #111111 0%, #2b1f22 60%, #3d2530 100%); display: grid; grid-template-columns: 1fr 1fr; align-items: center; padding: 0 5%; position: relative; overflow: hidden; gap: 2rem; }
     .hero-image { position: relative; display: flex; justify-content: flex-end; align-items: flex-end; height: 100%; padding-top: 70px; overflow: hidden; }
-    .hero-slide { position: absolute; bottom: 0; right: 0; max-height: 90vh; width: auto; object-fit: cover; border-radius: 4px 4px 0 0; filter: drop-shadow(0 20px 40px rgba(0,0,0,0.4)); opacity: 0; transform: scale(1.012); transition: opacity 1.2s ease, transform 5s ease; pointer-events: none; }
-    .hero-slide.active { opacity: 1; transform: scale(1); pointer-events: auto; }
-    .hero-dots { position: absolute; bottom: 28px; right: 36px; display: flex; gap: 10px; z-index: 5; }
+    .hero-slide { position: absolute; bottom: 0; right: 0; max-height: 90vh; width: auto; object-fit: cover; border-radius: 4px 4px 0 0; filter: drop-shadow(0 20px 40px rgba(0,0,0,0.4)); opacity: 0; transform: scale(1.012); transition: opacity 1.2s ease, transform 5s ease; pointer-events: none; z-index: 1; }
+    .hero-slide.active { opacity: 1; transform: scale(1); pointer-events: none; z-index: 2; }
+    .hero-dots { position: absolute; bottom: 28px; right: 36px; display: flex; gap: 10px; z-index: 10; }
     .hero-dot { width: 8px; height: 8px; border-radius: 999px; border: 1.5px solid rgba(255,255,255,0.75); background: transparent; cursor: pointer; transition: all 0.3s; padding: 0; }
     .hero-dot.active { background: var(--gold); border-color: var(--gold); width: 22px; }
     @media (max-width: 900px) { .hero { grid-template-columns: 1fr; } .hero-image { display: none; } }
@@ -460,12 +460,11 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-content">
-    <div class="hero-badge">Nairobi's Home of Quality Ladies' Jeans</div>
-    <div class="hero-badge" style="margin-top:0.5rem;font-size:0.7rem;">📍 Platinum Plaza, Shop G16, Tom Mboya St, Nairobi &nbsp;|&nbsp; Delivery Across Kenya</div>
-    <div class="hero-badge" style="display:none">Nairobi's #1 Jeans Destination</div>
-    <h1>Nairobi's Home of<br /><em>Quality Ladies' Jeans</em></h1>
+    <div class="hero-badge">Kenya's Home of Quality Ladies' Jeans &amp; Everyday Fashion</div>
+    <div class="hero-badge" style="margin-top:0.5rem;font-size:0.7rem;">📍 Based in Nairobi CBD &nbsp;|&nbsp; Delivery Across Kenya</div>
+    <h1>Kenya's Home of<br /><em>Quality Ladies' Jeans &amp; Everyday Fashion</em></h1>
     <p style="font-size:0.82rem;color:rgba(255,255,255,0.5);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:0.6rem;">Jeans · Crop Tops · Bodysuits · T-Shirts · Leather Jackets</p>
-    <p>Shop quality ladies' jeans, crop tops, bodysuits, T-shirts and leather jackets at Lepique Fashions, Platinum Plaza Shop G16, Tom Mboya Street, Nairobi. Jeans sizes 27–42. WhatsApp ordering with same-day delivery in Nairobi and countrywide courier.</p>
+    <p>Shop quality ladies' jeans, crop tops, bodysuits, T-shirts and leather jackets from Lepique Fashions. Visit us at Platinum Plaza, Shop G16, Tom Mboya Street, Nairobi, or order via WhatsApp for delivery across Kenya. Jeans sizes 27–42.</p>
     <div class="hero-buttons">
       <a href="#catalog" class="btn-primary">Browse All 80 Styles</a>
       <a href="https://wa.me/254721672900?text=Hi%20Lepique%20Fashions!%20I'd%20like%20to%20browse%20your%20collection." target="_blank" class="btn-outline">WhatsApp Us</a>
@@ -477,17 +476,15 @@
     </div>
   </div>
   <div class="hero-image">
-    <img class="hero-slide active" src="photos/lepique-wide-leg-16-dark-navy-hero.jpeg" alt="Lepique Fashions – Wide Leg Jeans Nairobi" />
-    <img class="hero-slide" src="photos/lepique-wide-leg-29-dark-navy.jpeg" alt="Wide Leg Jeans with Crop Top – Lepique Fashions" />
-    <img class="hero-slide" src="photos/lepique-bodysuit-01.jpeg" alt="Ladies Bodysuit – Lepique Fashions Nairobi" />
-    <img class="hero-slide" src="photos/lepique-leather-jacket-01-black.jpeg" alt="Ladies Leather Jacket Nairobi – Lepique Fashions" />
-    <img class="hero-slide" src="photos/lepique-flare-01-black.jpeg" alt="Flare Jeans Black – Lepique Fashions Nairobi" />
+    <img class="hero-slide active" src="photos/lepique-wide-leg-16-dark-navy-hero.jpeg" alt="Wide Leg Jeans – Lepique Fashions Nairobi" />
+    <img class="hero-slide" src="photos/lepique-straight-05-black.jpeg" alt="Straight Jeans Black – Lepique Fashions Nairobi" />
+    <img class="hero-slide" src="photos/lepique-flare-07-navy-blue.jpeg" alt="Flare Jeans Navy Blue – Lepique Fashions Nairobi" />
+    <img class="hero-slide" src="photos/lepique-ripped-04-light-blue.jpeg" alt="Ripped Jeans Light Blue – Lepique Fashions Nairobi" />
     <div class="hero-dots">
-      <button class="hero-dot active" aria-label="Slide 1"></button>
-      <button class="hero-dot" aria-label="Slide 2"></button>
-      <button class="hero-dot" aria-label="Slide 3"></button>
-      <button class="hero-dot" aria-label="Slide 4"></button>
-      <button class="hero-dot" aria-label="Slide 5"></button>
+      <button class="hero-dot active" aria-label="Wide Leg Jeans"></button>
+      <button class="hero-dot" aria-label="Straight Jeans"></button>
+      <button class="hero-dot" aria-label="Flare Jeans"></button>
+      <button class="hero-dot" aria-label="Ripped Jeans"></button>
     </div>
   </div>
 </section>
@@ -571,7 +568,7 @@
   <div class="cat-header">
     <div class="section-tag">More from Lepique</div>
     <h2 class="section-title">Tops, Bodysuits &amp; Jackets</h2>
-    <p class="section-sub" style="margin:0 auto;">Complete your jeans look with ladies' vests, bodysuits, T-shirts and leather jackets — all available at Lepique Fashions, Nairobi CBD.</p>
+    <p class="section-sub" style="margin:0 auto;">Complete your jeans look with crop tops, long sleeve tops, bodysuits, T-shirts and leather jackets — all available at Lepique Fashions, Nairobi CBD.</p>
   </div>
   <div class="tops-grid">
     <a href="ladies-croptops-nairobi.html" class="tops-card">
@@ -583,10 +580,18 @@
       </div>
     </a>
     <a href="bodysuits-nairobi.html" class="tops-card">
-      <img class="tops-card-img" src="photos/lepique-bodysuit-01.jpeg" alt="Ladies Bodysuits Nairobi – Lepique Fashions" />
+      <img class="tops-card-img" src="photos/lepique-bodysuit-longsleeve-colors-chart.jpeg" alt="Ladies Bodysuits Nairobi – Lepique Fashions" />
       <div class="tops-card-info">
         <h3>Bodysuits</h3>
         <p>Fitted bodysuits in 7 beautiful colours — perfect for casual and dressy looks.</p>
+        <div class="tops-card-price">Ksh 1,000 – 1,500</div>
+      </div>
+    </a>
+    <a href="ladies-longsleeve-tops-nairobi.html" class="tops-card">
+      <img class="tops-card-img" src="photos/lepique-longsleeve-top-colors-chart.jpeg" alt="Ladies Long Sleeve Tops Nairobi – Lepique Fashions" />
+      <div class="tops-card-info">
+        <h3>Long Sleeve Tops</h3>
+        <p>Soft long-sleeve tops in 7 colours — black, white, fuchsia, mustard, wine, pink and navy. Free size.</p>
         <div class="tops-card-price">Ksh 1,000 – 1,500</div>
       </div>
     </a>
@@ -761,6 +766,8 @@
     <div class="catalog-item" data-cat="flare" data-src="photos/lepique-flare-01-black.jpeg" data-title="LPQ-FL-001 — Flare – Black" data-price="Ksh 2,500" data-code="LPQ-FL-001"><img src="photos/lepique-flare-01-black.jpeg" alt="Flare Black" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>Flare – Black</span><span class="item-price">Ksh 2,500</span></div><div class="item-code">LPQ-FL-001</div></div>
     <div class="catalog-item" data-cat="skinny" data-src="photos/lepique-skinny-05-black-plussize.jpeg" data-title="LPQ-SK-005 — Skinny – Black Plus Size" data-price="Ksh 1,500" data-code="LPQ-SK-005"><div class="badge-few">Few Left</div><img src="photos/lepique-skinny-05-black-plussize.jpeg" alt="Skinny Black Plus Size" /><div class="quick-overlay"><button class="quick-order-btn">📱 Quick Order</button></div><div class="cat-label"><span>Skinny – Black Plus Size</span><span class="item-price">Ksh 1,500</span></div><div class="item-code">LPQ-SK-005</div></div>
     <div class="catalog-item" data-cat="bodysuit" data-src="photos/lepique-bodysuit-colors-chart.jpeg" data-title="LPQ-BS-001 — Bodysuit – 7 Colours" data-price="Ksh 1,000 – 1,500" data-code="LPQ-BS-001"><div class="badge-new-item">New</div><img src="photos/lepique-bodysuit-colors-chart.jpeg" alt="Bodysuit 7 Colours" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>Bodysuit – 7 Colours</span><span class="item-price">Ksh 1,000 – 1,500</span></div><div class="item-code">LPQ-BS-001</div></div>
+    <div class="catalog-item" data-cat="bodysuit" data-src="photos/lepique-bodysuit-longsleeve-colors-chart.jpeg" data-title="LPQ-BS-003 — Long-Sleeve Bodysuit – 7 Colours" data-price="Ksh 1,000 – 1,500" data-code="LPQ-BS-003"><div class="badge-new-item">New</div><img src="photos/lepique-bodysuit-longsleeve-colors-chart.jpeg" alt="Long-Sleeve Bodysuit 7 Colours" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>Long-Sleeve Bodysuit – 7 Colours</span><span class="item-price">Ksh 1,000 – 1,500</span></div><div class="item-code">LPQ-BS-003</div></div>
+    <div class="catalog-item" data-cat="tshirt" data-src="photos/lepique-longsleeve-top-colors-chart.jpeg" data-title="LPQ-TS-009 — Long-Sleeve Top – 7 Colours" data-price="Ksh 1,000 – 1,500" data-code="LPQ-TS-009"><div class="badge-new-item">New</div><img src="photos/lepique-longsleeve-top-colors-chart.jpeg" alt="Long-Sleeve Top 7 Colours" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>Long-Sleeve Top – 7 Colours</span><span class="item-price">Ksh 1,000 – 1,500</span></div><div class="item-code">LPQ-TS-009</div></div>
     <div class="catalog-item" data-cat="tshirt" data-src="photos/lepique-tshirt-01.jpeg" data-title="LPQ-TS-001 — T-Shirt (01)" data-price="Ksh 1,000 – 1,500" data-code="LPQ-TS-001"><div class="badge-new-item">New</div><img src="photos/lepique-tshirt-01.jpeg" alt="Ladies T-Shirt Nairobi" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>T-Shirt (01)</span><span class="item-price">Ksh 1,000 – 1,500</span></div><div class="item-code">LPQ-TS-001</div></div>
     <div class="catalog-item" data-cat="jacket" data-src="photos/lepique-leather-jacket-01-black.jpeg" data-title="LPQ-JK-001 — Leather Jacket – Black" data-price="Ksh 1,800 – 3,500" data-code="LPQ-JK-001"><div class="badge-new-item">New</div><div class="badge-few">Hot Pick</div><img src="photos/lepique-leather-jacket-01-black.jpeg" alt="Black Leather Jacket Nairobi" /><div class="quick-overlay"><button class="quick-order-btn">📱 Quick Order</button></div><div class="cat-label"><span>Leather Jacket – Black (M–5XL)</span><span class="item-price">Ksh 1,800 – 3,500</span></div><div class="item-code">LPQ-JK-001</div></div>
   </div>
@@ -1082,14 +1089,13 @@ function toggleMenu(){
   var cur=0,timer;
   function show(i){
     slides[cur].classList.remove('active');dots[cur].classList.remove('active');
-    cur=i;slides[cur].classList.add('active');dots[cur].classList.add('active');
+    cur=(i+slides.length)%slides.length;
+    slides[cur].classList.add('active');dots[cur].classList.add('active');
   }
-  function next(){show((cur+1)%slides.length);}
-  function start(){timer=setInterval(next,6500);}
+  function next(){show(cur+1);}
+  function start(){timer=setInterval(next,6000);}
   function stop(){clearInterval(timer);}
   dots.forEach(function(d,i){d.addEventListener('click',function(){stop();show(i);start();});});
-  var heroImg=document.querySelector('.hero-image');
-  if(heroImg){heroImg.addEventListener('mouseenter',stop);heroImg.addEventListener('mouseleave',start);}
   start();
 })();
 
@@ -1179,21 +1185,7 @@ function showLb(){
   document.getElementById('lb-img').alt=title;
   document.getElementById('lb-title').textContent=title;
   document.getElementById('lb-counter').textContent=(lbIdx+1)+' / '+lbItems.length;
-  var msg=encodeURIComponent('Hi Lepique! I\'d like to order: '+title+(price?' — '+price:'')+(code?' ('+code+')':''));
-  document.getElementById('lb-order').href='https://wa.me/254721672900?text='+msg;
-}
-function lbNav(d){lbIdx=(lbIdx+d+lbItems.length)%lbItems.length;showLb();}
-function closeLightbox(){document.getElementById('lightbox').classList.remove('open');}
-document.addEventListener('keydown',function(e){
-  if(document.getElementById('lightbox').classList.contains('open')){
-    if(e.key==='ArrowRight')lbNav(1);
-    else if(e.key==='ArrowLeft')lbNav(-1);
-    else if(e.key==='Escape')closeLightbox();
-  }
-});
-(function(){
-  var tx=0;var lbEl=document.getElementById('lightbox');
-  lbEl.addEventListener('touchstart',function(e){tx=e.touches[0].clientX;},{passive:true});
+  var msg=encodeURICompo  lbEl.addEventListener('touchstart',function(e){tx=e.touches[0].clientX;},{passive:true});
   lbEl.addEventListener('touchend',function(e){
     var dx=e.changedTouches[0].clientX-tx;
     if(Math.abs(dx)>50){if(dx<0)lbNav(1);else lbNav(-1);}
@@ -1202,3 +1194,4 @@ document.addEventListener('keydown',function(e){
 </script>
 </body>
 </html>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
