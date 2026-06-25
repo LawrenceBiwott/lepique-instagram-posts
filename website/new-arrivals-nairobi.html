@@ -42,7 +42,7 @@
     .catalog-grid{display:flex;flex-wrap:wrap;width:100%;}
     .catalog-item{width:16.6666%;padding:0.4rem;overflow:hidden;cursor:pointer;transition:transform 0.25s,box-shadow 0.25s;background:var(--white);position:relative;box-sizing:border-box;}
     .catalog-item:hover{transform:translateY(-4px);box-shadow:0 10px 28px rgba(13,27,42,0.13);}
-    .catalog-item img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block;transition:transform 0.45s ease;}
+    .catalog-item img{width:100%;aspect-ratio:4/5;object-fit:contain;background:#fdf8f9;display:block;transition:transform 0.45s ease;}
     .catalog-item:hover img{transform:scale(1.06);}
     .catalog-item .cat-label{padding:0.6rem 0.75rem 0.2rem;background:var(--white);display:block;}
     .cat-label span:first-child{display:block;font-size:0.73rem;font-weight:500;color:var(--navy);line-height:1.3;margin-bottom:0.28rem;}
@@ -104,7 +104,7 @@
     </svg>
   </a>
   <div class="nav-right">
-    <a href="catalogue.html" class="nav-link">All Styles</a>
+    <a href="/catalogue.html" class="nav-link">All Styles</a>
     <a href="https://wa.me/254721672900?text=Hi%20Lepique%20Fashions!%20I%27d%20like%20to%20order%20a%20new%20arrival." target="_blank" class="nav-cta">Order Now</a>
     <button class="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
@@ -114,7 +114,7 @@
   <a href="/" onclick="toggleMenu()">Home</a>
   <a href="/#categories" onclick="toggleMenu()">Shop Jeans</a>
   <a href="/#tops" onclick="toggleMenu()">Tops &amp; Jackets</a>
-  <a href="catalogue.html" onclick="toggleMenu()">Full Catalogue</a>
+  <a href="/catalogue.html" onclick="toggleMenu()">Full Catalogue</a>
   <a href="https://wa.me/254721672900" target="_blank" style="color:#25d366;">📱 WhatsApp Order</a>
 </div>
 
@@ -156,7 +156,7 @@
     <div class="catalog-item" data-cat="tshirt" data-src="photos/lepique-tshirt-08.jpeg" data-title="LPQ-TS-008 — T-Shirt (08)" data-price="Ksh 1,000 – 1,500" data-code="LPQ-TS-008"><div class="badge-new-item">New</div><img src="photos/lepique-tshirt-08.jpeg" alt="Ladies T-Shirt Nairobi" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>T-Shirt (08)</span><span class="item-price">Ksh 1,000 – 1,500</span></div><div class="item-code">LPQ-TS-008</div></div>
     <div class="catalog-item" data-cat="jacket" data-src="photos/lepique-leather-jacket-01-black.jpeg" data-title="LPQ-JK-001 — Leather Jacket – Black" data-price="Ksh 1,800 – 3,500" data-code="LPQ-JK-001"><div class="badge-new-item">New</div><img src="photos/lepique-leather-jacket-01-black.jpeg" alt="Black Leather Jacket Nairobi" /><div class="quick-overlay"><button class="quick-order-btn" onclick="event.stopPropagation()">📱 Quick Order</button></div><div class="cat-label"><span>Leather Jacket – Black (M–5XL)</span><span class="item-price">Ksh 1,800 – 3,500</span></div><div class="item-code">LPQ-JK-001</div></div>  </div>
   <div style="text-align:center;margin-top:3rem;">
-    <a href="catalogue.html" style="display:inline-block;background:var(--navy);color:white;text-decoration:none;padding:0.9rem 2.2rem;font-size:0.82rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;border-radius:2px;">VIEW ALL 80 STYLES →</a>
+    <a href="/catalogue.html" style="display:inline-block;background:var(--navy);color:white;text-decoration:none;padding:0.9rem 2.2rem;font-size:0.82rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;border-radius:2px;">VIEW ALL 80 STYLES →</a>
   </div>
 </section>
 
@@ -185,7 +185,7 @@
 <a href="https://wa.me/254721672900?text=Hi%20Lepique%20Fashions!%20I'd%20like%20to%20order%20a%20new%20arrival." target="_blank" class="wa-float" aria-label="WhatsApp Order">📱</a>
 
 <footer>
-  <p>© 2026 Lepique Fashions · Platinum Plaza, Shop G16, Tom Mboya Street, Nairobi CBD · <a href="/">Home</a> · <a href="catalogue.html">Full Catalogue</a> · <a href="privacy.html">Privacy</a></p>
+  <p>© 2026 Lepique Fashions · Platinum Plaza, Shop G16, Tom Mboya Street, Nairobi CBD · <a href="/">Home</a> · <a href="/catalogue.html">Full Catalogue</a> · <a href="/privacy.html">Privacy</a></p>
 </footer>
 
 <script>
@@ -228,4 +228,4 @@ document.addEventListener('keydown',function(e){
 });
 </script>
 </body>
-</html>
+</h
