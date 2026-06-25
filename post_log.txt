@@ -5982,3 +5982,429 @@
 [2026-06-24 05:47:56] Uploading lepique-video-08-skinny-black.mp4 (3.0 MB) to TikTok...
 [2026-06-24 05:47:56] ⚠️  TikTok post failed (Instagram/Facebook not affected): 403 Client Error: Forbidden for url: https://open.tiktokapis.com/v2/post/publish/video/init/
 [2026-06-24 05:47:56] ✅ All done. State saved.
+[2026-06-24 08:45:15] --- Starting Instagram + Facebook + TikTok post ---
+[2026-06-24 08:45:15] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-06-24 08:45:15] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-06-24 08:45:15] Found 120 media files (newest-first by git history)
+[2026-06-24 08:45:15] Latest 5: ['lepique-bodysuit-colors-chart.jpeg', 'lepique-bodysuit-longsleeve-colors-chart.jpeg', 'lepique-cargo-01-grey-wash.jpeg', 'lepique-flare-01-black.jpeg', 'lepique-flare-02-grey-acidwash.jpeg']
+[2026-06-24 08:45:15] Selected media: lepique-bodysuit-longsleeve-colors-chart.jpeg
+[2026-06-24 08:45:15] Padded lepique-bodysuit-longsleeve-colors-chart.jpeg: 928x1280 → 1024x1280 (ratio 0.80)
+[2026-06-24 08:45:15] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/lepique-bodysuit-longsleeve-colors-chart.jpeg
+[2026-06-24 08:45:15] Uploading image to Instagram...
+[2026-06-24 08:45:27] Waiting for Instagram processing...
+[2026-06-24 08:45:27] Container status: IN_PROGRESS
+[2026-06-24 08:45:32] Container status: FINISHED
+[2026-06-24 08:45:42] Container ID: 18538937803073384
+[2026-06-24 08:45:44] ✅ Instagram feed post successful! ID: 18132874300608832
+[2026-06-24 08:45:45] Story image resized to 1080x1920 -> photos/story_temp.jpg
+[2026-06-24 08:45:46] Story URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/story_temp.jpg — waiting for GitHub Pages to deploy...
+[2026-06-24 08:46:57] Story image live after 70s.
+[2026-06-24 08:46:57] Posting to Instagram Stories...
+[2026-06-24 08:46:59] Waiting for Instagram processing...
+[2026-06-24 08:46:59] Container status: IN_PROGRESS
+[2026-06-24 08:47:05] Container status: FINISHED
+[2026-06-24 08:47:17] ✅ Instagram Story posted! ID: 18096561341462405
+[2026-06-24 08:47:17] --- Posting to Facebook ---
+[2026-06-24 08:47:17] Uploading photo to Facebook feed...
+[2026-06-24 08:47:21] ✅ Facebook feed post successful! ID: 1889041611321657_1432636795566032
+[2026-06-24 08:47:21] Posting photo to Facebook Stories...
+[2026-06-24 08:47:29] ✅ Facebook Story posted! ID: 1321880032864906
+[2026-06-24 08:47:29] TikTok: 37 videos found (newest → oldest): ['lepique-video-22-flare-light-blue.mp4', 'lepique-video-21-wide-leg-dark-navy-black-tank.mp4', 'lepique-video-20-ripped-black.mp4', 'lepique-video-19-wide-leg-dark-navy-rust.mp4', 'lepique-video-17-wide-leg-dark-navy-stitch.mp4', 'lepique-video-16-wide-leg-medium-blue.mp4', 'lepique-video-15-wide-leg-black-wash.mp4', 'lepique-video-14-skinny-black.mp4', 'lepique-video-13-wide-leg-dark-navy-bow.mp4', 'lepique-video-12-wide-leg-dark-navy.mp4', 'lepique-video-11-transition.mp4', 'lepique-video-10-wide-leg-black.mp4', 'lepique-video-09-wide-leg-dark-navy.mp4', 'lepique-video-08-skinny-black.mp4', 'lepique-video-07-wide-leg-light-blue.mp4', 'lepique-video-06-wide-leg-grey.mp4', 'lepique-video-05-skinny-dark-navy.mp4', 'lepique-video-04-transition.mp4', 'lepique-video-03-flare-black.mp4', 'lepique-video-02-wide-leg-light-blue.mp4', 'lepique-video-01-wide-leg-dark-navy.mp4', 'lepique-clip-wide-leg-pink.mp4', 'lepique-clip-wide-leg-medium-blue-02.mp4', 'lepique-clip-wide-leg-grey-closeup.mp4', 'lepique-clip-wide-leg-dark-navy-stitch-02.mp4', 'lepique-clip-wide-leg-black-wash-04.mp4', 'lepique-clip-wide-leg-black-wash-03.mp4', 'lepique-clip-wide-leg-black-wash-02.mp4', 'lepique-clip-transition-02.mp4', 'lepique-clip-transition-01.mp4', 'lepique-clip-straight-light-blue.mp4', 'lepique-clip-skinny-black-purple.mp4', 'lepique-clip-skinny-black-03.mp4', 'lepique-clip-skinny-black-02.mp4', 'lepique-clip-medium-blue-closeup.mp4', 'lepique-clip-light-blue-transition.mp4', 'lepique-clip-dark-navy-closeup.mp4']
+[2026-06-24 08:47:29] TikTok selected video: lepique-clip-wide-leg-pink.mp4
+[2026-06-24 08:47:29] --- Posting to TikTok ---
+[2026-06-24 08:47:29] Refreshing TikTok access token...
+[2026-06-24 08:47:29] ✅ TikTok access token ready.
+[2026-06-24 08:47:30] TikTok creator: @lepique_fashions (max duration: 3600s)
+[2026-06-24 08:47:30] Uploading lepique-clip-wide-leg-pink.mp4 (0.4 MB) to TikTok...
+[2026-06-24 08:47:30] ⚠️  TikTok post failed (Instagram/Facebook not affected): 403 Client Error: Forbidden for url: https://open.tiktokapis.com/v2/post/publish/video/init/
+[2026-06-24 08:47:30] ✅ All done. State saved.
+[2026-06-24 11:32:23] --- Starting Instagram + Facebook + TikTok post ---
+[2026-06-24 11:32:23] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-06-24 11:32:23] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-06-24 11:32:23] Found 120 media files (newest-first by git history)
+[2026-06-24 11:32:23] Latest 5: ['lepique-bodysuit-colors-chart.jpeg', 'lepique-bodysuit-longsleeve-colors-chart.jpeg', 'lepique-cargo-01-grey-wash.jpeg', 'lepique-flare-01-black.jpeg', 'lepique-flare-02-grey-acidwash.jpeg']
+[2026-06-24 11:32:23] Selected media: lepique-longsleeve-top-colors-chart.jpeg
+[2026-06-24 11:32:23] Padded lepique-longsleeve-top-colors-chart.jpeg: 1226x1600 → 1280x1600 (ratio 0.80)
+[2026-06-24 11:32:23] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/lepique-longsleeve-top-colors-chart.jpeg
+[2026-06-24 11:32:23] Uploading image to Instagram...
+[2026-06-24 11:32:27] Waiting for Instagram processing...
+[2026-06-24 11:32:27] Container status: IN_PROGRESS
+[2026-06-24 11:32:33] Container status: FINISHED
+[2026-06-24 11:32:43] Container ID: 18538964962073384
+[2026-06-24 11:32:46] ✅ Instagram feed post successful! ID: 18088748546383214
+[2026-06-24 11:32:46] Story image resized to 1080x1920 -> photos/story_temp.jpg
+[2026-06-24 11:32:48] Story URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/story_temp.jpg — waiting for GitHub Pages to deploy...
+[2026-06-24 11:34:24] Story image live after 95s.
+[2026-06-24 11:34:24] Posting to Instagram Stories...
+[2026-06-24 11:34:27] Waiting for Instagram processing...
+[2026-06-24 11:34:27] Container status: IN_PROGRESS
+[2026-06-24 11:34:32] Container status: FINISHED
+[2026-06-24 11:34:45] ✅ Instagram Story posted! ID: 18127835815561812
+[2026-06-24 11:34:45] --- Posting to Facebook ---
+[2026-06-24 11:34:45] Uploading photo to Facebook feed...
+[2026-06-24 11:34:53] ✅ Facebook feed post successful! ID: 1889041611321657_1432746845555027
+[2026-06-24 11:34:53] Posting photo to Facebook Stories...
+[2026-06-24 11:35:09] ✅ Facebook Story posted! ID: 1381155483882738
+[2026-06-24 11:35:09] TikTok: 37 videos found (newest → oldest): ['lepique-video-22-flare-light-blue.mp4', 'lepique-video-21-wide-leg-dark-navy-black-tank.mp4', 'lepique-video-20-ripped-black.mp4', 'lepique-video-19-wide-leg-dark-navy-rust.mp4', 'lepique-video-17-wide-leg-dark-navy-stitch.mp4', 'lepique-video-16-wide-leg-medium-blue.mp4', 'lepique-video-15-wide-leg-black-wash.mp4', 'lepique-video-14-skinny-black.mp4', 'lepique-video-13-wide-leg-dark-navy-bow.mp4', 'lepique-video-12-wide-leg-dark-navy.mp4', 'lepique-video-11-transition.mp4', 'lepique-video-10-wide-leg-black.mp4', 'lepique-video-09-wide-leg-dark-navy.mp4', 'lepique-video-08-skinny-black.mp4', 'lepique-video-07-wide-leg-light-blue.mp4', 'lepique-video-06-wide-leg-grey.mp4', 'lepique-video-05-skinny-dark-navy.mp4', 'lepique-video-04-transition.mp4', 'lepique-video-03-flare-black.mp4', 'lepique-video-02-wide-leg-light-blue.mp4', 'lepique-video-01-wide-leg-dark-navy.mp4', 'lepique-clip-wide-leg-pink.mp4', 'lepique-clip-wide-leg-medium-blue-02.mp4', 'lepique-clip-wide-leg-grey-closeup.mp4', 'lepique-clip-wide-leg-dark-navy-stitch-02.mp4', 'lepique-clip-wide-leg-black-wash-04.mp4', 'lepique-clip-wide-leg-black-wash-03.mp4', 'lepique-clip-wide-leg-black-wash-02.mp4', 'lepique-clip-transition-02.mp4', 'lepique-clip-transition-01.mp4', 'lepique-clip-straight-light-blue.mp4', 'lepique-clip-skinny-black-purple.mp4', 'lepique-clip-skinny-black-03.mp4', 'lepique-clip-skinny-black-02.mp4', 'lepique-clip-medium-blue-closeup.mp4', 'lepique-clip-light-blue-transition.mp4', 'lepique-clip-dark-navy-closeup.mp4']
+[2026-06-24 11:35:09] TikTok selected video: lepique-clip-wide-leg-medium-blue-02.mp4
+[2026-06-24 11:35:09] --- Posting to TikTok ---
+[2026-06-24 11:35:09] Refreshing TikTok access token...
+[2026-06-24 11:35:10] ✅ TikTok access token ready.
+[2026-06-24 11:35:10] TikTok creator: @lepique_fashions (max duration: 3600s)
+[2026-06-24 11:35:10] Uploading lepique-clip-wide-leg-medium-blue-02.mp4 (0.8 MB) to TikTok...
+[2026-06-24 11:35:10] ⚠️  TikTok post failed (Instagram/Facebook not affected): 403 Client Error: Forbidden for url: https://open.tiktokapis.com/v2/post/publish/video/init/
+[2026-06-24 11:35:10] ✅ All done. State saved.
+[2026-06-24 13:49:34] --- Starting Instagram + Facebook + TikTok post ---
+[2026-06-24 13:49:34] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-06-24 13:49:34] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-06-24 13:49:34] Found 120 media files (newest-first by git history)
+[2026-06-24 13:49:34] Latest 5: ['lepique-bodysuit-colors-chart.jpeg', 'lepique-bodysuit-longsleeve-colors-chart.jpeg', 'lepique-cargo-01-grey-wash.jpeg', 'lepique-flare-01-black.jpeg', 'lepique-flare-02-grey-acidwash.jpeg']
+[2026-06-24 13:49:34] Selected media: lepique-printed-02-ysl-light-blue.jpeg
+[2026-06-24 13:49:34] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/lepique-printed-02-ysl-light-blue.jpeg
+[2026-06-24 13:49:34] Uploading image to Instagram...
+[2026-06-24 13:49:38] Waiting for Instagram processing...
+[2026-06-24 13:49:38] Container status: IN_PROGRESS
+[2026-06-24 13:49:44] Container status: FINISHED
+[2026-06-24 13:49:54] Container ID: 18538989802073384
+[2026-06-24 13:49:56] ✅ Instagram feed post successful! ID: 18074340626329276
+[2026-06-24 13:49:57] Story image resized to 1080x1920 -> photos/story_temp.jpg
+[2026-06-24 13:49:58] Story URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/story_temp.jpg — waiting for GitHub Pages to deploy...
+[2026-06-24 13:51:59] ⚠️ Story image not live after 120s — falling back to feed image URL.
+[2026-06-24 13:51:59] Posting to Instagram Stories...
+[2026-06-24 13:52:02] Waiting for Instagram processing...
+[2026-06-24 13:52:02] Container status: IN_PROGRESS
+[2026-06-24 13:52:07] Container status: FINISHED
+[2026-06-24 13:52:19] ✅ Instagram Story posted! ID: 17927237622356967
+[2026-06-24 13:52:19] --- Posting to Facebook ---
+[2026-06-24 13:52:19] Uploading photo to Facebook feed...
+[2026-06-24 13:52:32] ✅ Facebook feed post successful! ID: 1889041611321657_1432842658878779
+[2026-06-24 13:52:32] Posting photo to Facebook Stories...
+[2026-06-24 13:52:39] ✅ Facebook Story posted! ID: 2863233344024025
+[2026-06-24 13:52:39] TikTok: 37 videos found (newest → oldest): ['lepique-video-22-flare-light-blue.mp4', 'lepique-video-21-wide-leg-dark-navy-black-tank.mp4', 'lepique-video-20-ripped-black.mp4', 'lepique-video-19-wide-leg-dark-navy-rust.mp4', 'lepique-video-17-wide-leg-dark-navy-stitch.mp4', 'lepique-video-16-wide-leg-medium-blue.mp4', 'lepique-video-15-wide-leg-black-wash.mp4', 'lepique-video-14-skinny-black.mp4', 'lepique-video-13-wide-leg-dark-navy-bow.mp4', 'lepique-video-12-wide-leg-dark-navy.mp4', 'lepique-video-11-transition.mp4', 'lepique-video-10-wide-leg-black.mp4', 'lepique-video-09-wide-leg-dark-navy.mp4', 'lepique-video-08-skinny-black.mp4', 'lepique-video-07-wide-leg-light-blue.mp4', 'lepique-video-06-wide-leg-grey.mp4', 'lepique-video-05-skinny-dark-navy.mp4', 'lepique-video-04-transition.mp4', 'lepique-video-03-flare-black.mp4', 'lepique-video-02-wide-leg-light-blue.mp4', 'lepique-video-01-wide-leg-dark-navy.mp4', 'lepique-clip-wide-leg-pink.mp4', 'lepique-clip-wide-leg-medium-blue-02.mp4', 'lepique-clip-wide-leg-grey-closeup.mp4', 'lepique-clip-wide-leg-dark-navy-stitch-02.mp4', 'lepique-clip-wide-leg-black-wash-04.mp4', 'lepique-clip-wide-leg-black-wash-03.mp4', 'lepique-clip-wide-leg-black-wash-02.mp4', 'lepique-clip-transition-02.mp4', 'lepique-clip-transition-01.mp4', 'lepique-clip-straight-light-blue.mp4', 'lepique-clip-skinny-black-purple.mp4', 'lepique-clip-skinny-black-03.mp4', 'lepique-clip-skinny-black-02.mp4', 'lepique-clip-medium-blue-closeup.mp4', 'lepique-clip-light-blue-transition.mp4', 'lepique-clip-dark-navy-closeup.mp4']
+[2026-06-24 13:52:39] TikTok selected video: lepique-clip-wide-leg-grey-closeup.mp4
+[2026-06-24 13:52:39] --- Posting to TikTok ---
+[2026-06-24 13:52:39] Refreshing TikTok access token...
+[2026-06-24 13:52:39] ✅ TikTok access token ready.
+[2026-06-24 13:52:40] TikTok creator: @lepique_fashions (max duration: 3600s)
+[2026-06-24 13:52:40] Uploading lepique-clip-wide-leg-grey-closeup.mp4 (2.1 MB) to TikTok...
+[2026-06-24 13:52:40] ⚠️  TikTok post failed (Instagram/Facebook not affected): 403 Client Error: Forbidden for url: https://open.tiktokapis.com/v2/post/publish/video/init/
+[2026-06-24 13:52:40] ✅ All done. State saved.
+[2026-06-24 16:04:32] --- Starting Instagram + Facebook + TikTok post ---
+[2026-06-24 16:04:32] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-06-24 16:04:32] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-06-24 16:04:32] Found 120 media files (newest-first by git history)
+[2026-06-24 16:04:32] Latest 5: ['lepique-bodysuit-colors-chart.jpeg', 'lepique-bodysuit-longsleeve-colors-chart.jpeg', 'lepique-cargo-01-grey-wash.jpeg', 'lepique-flare-01-black.jpeg', 'lepique-flare-02-grey-acidwash.jpeg']
+[2026-06-24 16:04:32] Selected media: lepique-printed-03-patchwork-grey.jpeg
+[2026-06-24 16:04:32] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/lepique-printed-03-patchwork-grey.jpeg
+[2026-06-24 16:04:32] Uploading image to Instagram...
+[2026-06-24 16:04:37] Waiting for Instagram processing...
+[2026-06-24 16:04:37] Container status: FINISHED
+[2026-06-24 16:04:47] Container ID: 18539019646073384
+[2026-06-24 16:04:51] ✅ Instagram feed post successful! ID: 17976626261889249
+[2026-06-24 16:04:52] Story image resized to 1080x1920 -> photos/story_temp.jpg
+[2026-06-24 16:04:53] Story URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/story_temp.jpg — waiting for GitHub Pages to deploy...
+[2026-06-24 16:06:54] ⚠️ Story image not live after 120s — falling back to feed image URL.
+[2026-06-24 16:06:54] Posting to Instagram Stories...
+[2026-06-24 16:06:58] Waiting for Instagram processing...
+[2026-06-24 16:06:58] Container status: FINISHED
+[2026-06-24 16:07:11] ✅ Instagram Story posted! ID: 17882792886600531
+[2026-06-24 16:07:11] --- Posting to Facebook ---
+[2026-06-24 16:07:11] Uploading photo to Facebook feed...
+[2026-06-24 16:07:18] ✅ Facebook feed post successful! ID: 1889041611321657_1432938865535825
+[2026-06-24 16:07:18] Posting photo to Facebook Stories...
+[2026-06-24 16:07:26] ✅ Facebook Story posted! ID: 1010290861390308
+[2026-06-24 16:07:26] TikTok: 37 videos found (newest → oldest): ['lepique-video-22-flare-light-blue.mp4', 'lepique-video-21-wide-leg-dark-navy-black-tank.mp4', 'lepique-video-20-ripped-black.mp4', 'lepique-video-19-wide-leg-dark-navy-rust.mp4', 'lepique-video-17-wide-leg-dark-navy-stitch.mp4', 'lepique-video-16-wide-leg-medium-blue.mp4', 'lepique-video-15-wide-leg-black-wash.mp4', 'lepique-video-14-skinny-black.mp4', 'lepique-video-13-wide-leg-dark-navy-bow.mp4', 'lepique-video-12-wide-leg-dark-navy.mp4', 'lepique-video-11-transition.mp4', 'lepique-video-10-wide-leg-black.mp4', 'lepique-video-09-wide-leg-dark-navy.mp4', 'lepique-video-08-skinny-black.mp4', 'lepique-video-07-wide-leg-light-blue.mp4', 'lepique-video-06-wide-leg-grey.mp4', 'lepique-video-05-skinny-dark-navy.mp4', 'lepique-video-04-transition.mp4', 'lepique-video-03-flare-black.mp4', 'lepique-video-02-wide-leg-light-blue.mp4', 'lepique-video-01-wide-leg-dark-navy.mp4', 'lepique-clip-wide-leg-pink.mp4', 'lepique-clip-wide-leg-medium-blue-02.mp4', 'lepique-clip-wide-leg-grey-closeup.mp4', 'lepique-clip-wide-leg-dark-navy-stitch-02.mp4', 'lepique-clip-wide-leg-black-wash-04.mp4', 'lepique-clip-wide-leg-black-wash-03.mp4', 'lepique-clip-wide-leg-black-wash-02.mp4', 'lepique-clip-transition-02.mp4', 'lepique-clip-transition-01.mp4', 'lepique-clip-straight-light-blue.mp4', 'lepique-clip-skinny-black-purple.mp4', 'lepique-clip-skinny-black-03.mp4', 'lepique-clip-skinny-black-02.mp4', 'lepique-clip-medium-blue-closeup.mp4', 'lepique-clip-light-blue-transition.mp4', 'lepique-clip-dark-navy-closeup.mp4']
+[2026-06-24 16:07:26] TikTok selected video: lepique-clip-wide-leg-dark-navy-stitch-02.mp4
+[2026-06-24 16:07:26] --- Posting to TikTok ---
+[2026-06-24 16:07:26] Refreshing TikTok access token...
+[2026-06-24 16:07:27] ✅ TikTok access token ready.
+[2026-06-24 16:07:28] TikTok creator: @lepique_fashions (max duration: 3600s)
+[2026-06-24 16:07:28] Uploading lepique-clip-wide-leg-dark-navy-stitch-02.mp4 (0.6 MB) to TikTok...
+[2026-06-24 16:07:28] ⚠️  TikTok post failed (Instagram/Facebook not affected): 403 Client Error: Forbidden for url: https://open.tiktokapis.com/v2/post/publish/video/init/
+[2026-06-24 16:07:28] ✅ All done. State saved.
+[2026-06-24 18:04:47] --- Starting Instagram + Facebook + TikTok post ---
+[2026-06-24 18:04:47] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-06-24 18:04:47] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-06-24 18:04:47] Found 120 media files (newest-first by git history)
+[2026-06-24 18:04:47] Latest 5: ['lepique-bodysuit-colors-chart.jpeg', 'lepique-bodysuit-longsleeve-colors-chart.jpeg', 'lepique-cargo-01-grey-wash.jpeg', 'lepique-flare-01-black.jpeg', 'lepique-flare-02-grey-acidwash.jpeg']
+[2026-06-24 18:04:47] Selected media: lepique-ripped-01-light-blue.jpeg
+[2026-06-24 18:04:47] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/lepique-ripped-01-light-blue.jpeg
+[2026-06-24 18:04:47] Uploading image to Instagram...
+[2026-06-24 18:04:52] Waiting for Instagram processing...
+[2026-06-24 18:04:52] Container status: FINISHED
+[2026-06-24 18:05:02] Container ID: 18539042803073384
+[2026-06-24 18:05:05] ✅ Instagram feed post successful! ID: 18207529192355361
+[2026-06-24 18:05:05] Story image resized to 1080x1920 -> photos/story_temp.jpg
+[2026-06-24 18:05:07] Story URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/story_temp.jpg — waiting for GitHub Pages to deploy...
+[2026-06-24 18:07:08] ⚠️ Story image not live after 120s — falling back to feed image URL.
+[2026-06-24 18:07:08] Posting to Instagram Stories...
+[2026-06-24 18:07:13] Waiting for Instagram processing...
+[2026-06-24 18:07:13] Container status: FINISHED
+[2026-06-24 18:07:25] ✅ Instagram Story posted! ID: 18119060398823236
+[2026-06-24 18:07:25] --- Posting to Facebook ---
+[2026-06-24 18:07:25] Uploading photo to Facebook feed...
+[2026-06-24 18:07:33] ✅ Facebook feed post successful! ID: 1889041611321657_1433021455527566
+[2026-06-24 18:07:33] Posting photo to Facebook Stories...
+[2026-06-24 18:07:49] ✅ Facebook Story posted! ID: 2103152551079815
+[2026-06-24 18:07:49] TikTok: 37 videos found (newest → oldest): ['lepique-video-22-flare-light-blue.mp4', 'lepique-video-21-wide-leg-dark-navy-black-tank.mp4', 'lepique-video-20-ripped-black.mp4', 'lepique-video-19-wide-leg-dark-navy-rust.mp4', 'lepique-video-17-wide-leg-dark-navy-stitch.mp4', 'lepique-video-16-wide-leg-medium-blue.mp4', 'lepique-video-15-wide-leg-black-wash.mp4', 'lepique-video-14-skinny-black.mp4', 'lepique-video-13-wide-leg-dark-navy-bow.mp4', 'lepique-video-12-wide-leg-dark-navy.mp4', 'lepique-video-11-transition.mp4', 'lepique-video-10-wide-leg-black.mp4', 'lepique-video-09-wide-leg-dark-navy.mp4', 'lepique-video-08-skinny-black.mp4', 'lepique-video-07-wide-leg-light-blue.mp4', 'lepique-video-06-wide-leg-grey.mp4', 'lepique-video-05-skinny-dark-navy.mp4', 'lepique-video-04-transition.mp4', 'lepique-video-03-flare-black.mp4', 'lepique-video-02-wide-leg-light-blue.mp4', 'lepique-video-01-wide-leg-dark-navy.mp4', 'lepique-clip-wide-leg-pink.mp4', 'lepique-clip-wide-leg-medium-blue-02.mp4', 'lepique-clip-wide-leg-grey-closeup.mp4', 'lepique-clip-wide-leg-dark-navy-stitch-02.mp4', 'lepique-clip-wide-leg-black-wash-04.mp4', 'lepique-clip-wide-leg-black-wash-03.mp4', 'lepique-clip-wide-leg-black-wash-02.mp4', 'lepique-clip-transition-02.mp4', 'lepique-clip-transition-01.mp4', 'lepique-clip-straight-light-blue.mp4', 'lepique-clip-skinny-black-purple.mp4', 'lepique-clip-skinny-black-03.mp4', 'lepique-clip-skinny-black-02.mp4', 'lepique-clip-medium-blue-closeup.mp4', 'lepique-clip-light-blue-transition.mp4', 'lepique-clip-dark-navy-closeup.mp4']
+[2026-06-24 18:07:49] TikTok selected video: lepique-clip-wide-leg-black-wash-04.mp4
+[2026-06-24 18:07:49] --- Posting to TikTok ---
+[2026-06-24 18:07:49] Refreshing TikTok access token...
+[2026-06-24 18:07:50] ✅ TikTok access token ready.
+[2026-06-24 18:07:50] TikTok creator: @lepique_fashions (max duration: 3600s)
+[2026-06-24 18:07:50] Uploading lepique-clip-wide-leg-black-wash-04.mp4 (1.2 MB) to TikTok...
+[2026-06-24 18:07:51] ⚠️  TikTok post failed (Instagram/Facebook not affected): 403 Client Error: Forbidden for url: https://open.tiktokapis.com/v2/post/publish/video/init/
+[2026-06-24 18:07:51] ✅ All done. State saved.
+[2026-06-24 20:02:06] --- Starting Instagram + Facebook + TikTok post ---
+[2026-06-24 20:02:06] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-06-24 20:02:06] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-06-24 20:02:06] Found 120 media files (newest-first by git history)
+[2026-06-24 20:02:06] Latest 5: ['lepique-bodysuit-colors-chart.jpeg', 'lepique-bodysuit-longsleeve-colors-chart.jpeg', 'lepique-cargo-01-grey-wash.jpeg', 'lepique-flare-01-black.jpeg', 'lepique-flare-02-grey-acidwash.jpeg']
+[2026-06-24 20:02:06] Selected media: lepique-ripped-02-grey-acidwash.jpeg
+[2026-06-24 20:02:06] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/lepique-ripped-02-grey-acidwash.jpeg
+[2026-06-24 20:02:06] Uploading image to Instagram...
+[2026-06-24 20:02:11] Waiting for Instagram processing...
+[2026-06-24 20:02:12] Container status: IN_PROGRESS
+[2026-06-24 20:02:17] Container status: FINISHED
+[2026-06-24 20:02:27] Container ID: 18539064739073384
+[2026-06-24 20:02:31] ✅ Instagram feed post successful! ID: 18324560173257071
+[2026-06-24 20:02:31] Story image resized to 1080x1920 -> photos/story_temp.jpg
+[2026-06-24 20:02:33] Story URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/story_temp.jpg — waiting for GitHub Pages to deploy...
+[2026-06-24 20:03:49] Story image live after 75s.
+[2026-06-24 20:03:49] Posting to Instagram Stories...
+[2026-06-24 20:03:53] Waiting for Instagram processing...
+[2026-06-24 20:03:53] Container status: IN_PROGRESS
+[2026-06-24 20:03:59] Container status: FINISHED
+[2026-06-24 20:04:11] ✅ Instagram Story posted! ID: 17937447888072272
+[2026-06-24 20:04:11] --- Posting to Facebook ---
+[2026-06-24 20:04:11] Uploading photo to Facebook feed...
+[2026-06-24 20:04:21] ✅ Facebook feed post successful! ID: 1889041611321657_1433089318854113
+[2026-06-24 20:04:21] Posting photo to Facebook Stories...
+[2026-06-24 20:04:29] ✅ Facebook Story posted! ID: 2433014023887695
+[2026-06-24 20:04:29] TikTok: 37 videos found (newest → oldest): ['lepique-video-22-flare-light-blue.mp4', 'lepique-video-21-wide-leg-dark-navy-black-tank.mp4', 'lepique-video-20-ripped-black.mp4', 'lepique-video-19-wide-leg-dark-navy-rust.mp4', 'lepique-video-17-wide-leg-dark-navy-stitch.mp4', 'lepique-video-16-wide-leg-medium-blue.mp4', 'lepique-video-15-wide-leg-black-wash.mp4', 'lepique-video-14-skinny-black.mp4', 'lepique-video-13-wide-leg-dark-navy-bow.mp4', 'lepique-video-12-wide-leg-dark-navy.mp4', 'lepique-video-11-transition.mp4', 'lepique-video-10-wide-leg-black.mp4', 'lepique-video-09-wide-leg-dark-navy.mp4', 'lepique-video-08-skinny-black.mp4', 'lepique-video-07-wide-leg-light-blue.mp4', 'lepique-video-06-wide-leg-grey.mp4', 'lepique-video-05-skinny-dark-navy.mp4', 'lepique-video-04-transition.mp4', 'lepique-video-03-flare-black.mp4', 'lepique-video-02-wide-leg-light-blue.mp4', 'lepique-video-01-wide-leg-dark-navy.mp4', 'lepique-clip-wide-leg-pink.mp4', 'lepique-clip-wide-leg-medium-blue-02.mp4', 'lepique-clip-wide-leg-grey-closeup.mp4', 'lepique-clip-wide-leg-dark-navy-stitch-02.mp4', 'lepique-clip-wide-leg-black-wash-04.mp4', 'lepique-clip-wide-leg-black-wash-03.mp4', 'lepique-clip-wide-leg-black-wash-02.mp4', 'lepique-clip-transition-02.mp4', 'lepique-clip-transition-01.mp4', 'lepique-clip-straight-light-blue.mp4', 'lepique-clip-skinny-black-purple.mp4', 'lepique-clip-skinny-black-03.mp4', 'lepique-clip-skinny-black-02.mp4', 'lepique-clip-medium-blue-closeup.mp4', 'lepique-clip-light-blue-transition.mp4', 'lepique-clip-dark-navy-closeup.mp4']
+[2026-06-24 20:04:29] TikTok selected video: lepique-clip-wide-leg-black-wash-03.mp4
+[2026-06-24 20:04:29] --- Posting to TikTok ---
+[2026-06-24 20:04:29] Refreshing TikTok access token...
+[2026-06-24 20:04:29] ✅ TikTok access token ready.
+[2026-06-24 20:04:29] TikTok creator: @lepique_fashions (max duration: 3600s)
+[2026-06-24 20:04:29] Uploading lepique-clip-wide-leg-black-wash-03.mp4 (3.6 MB) to TikTok...
+[2026-06-24 20:04:30] ⚠️  TikTok post failed (Instagram/Facebook not affected): 403 Client Error: Forbidden for url: https://open.tiktokapis.com/v2/post/publish/video/init/
+[2026-06-24 20:04:30] ✅ All done. State saved.
+[2026-06-24 21:41:19] --- Starting Instagram + Facebook + TikTok post ---
+[2026-06-24 21:41:19] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-06-24 21:41:19] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-06-24 21:41:19] Found 120 media files (newest-first by git history)
+[2026-06-24 21:41:19] Latest 5: ['lepique-bodysuit-colors-chart.jpeg', 'lepique-bodysuit-longsleeve-colors-chart.jpeg', 'lepique-cargo-01-grey-wash.jpeg', 'lepique-flare-01-black.jpeg', 'lepique-flare-02-grey-acidwash.jpeg']
+[2026-06-24 21:41:19] Selected media: lepique-ripped-03-light-blue-wide.jpeg
+[2026-06-24 21:41:19] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/lepique-ripped-03-light-blue-wide.jpeg
+[2026-06-24 21:41:19] Uploading image to Instagram...
+[2026-06-24 21:41:25] Waiting for Instagram processing...
+[2026-06-24 21:41:25] Container status: FINISHED
+[2026-06-24 21:41:35] Container ID: 18539083456073384
+[2026-06-24 21:41:38] ✅ Instagram feed post successful! ID: 17858868882662042
+[2026-06-24 21:41:39] Story image resized to 1080x1920 -> photos/story_temp.jpg
+[2026-06-24 21:41:40] Story URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/story_temp.jpg — waiting for GitHub Pages to deploy...
+[2026-06-24 21:42:36] Story image live after 55s.
+[2026-06-24 21:42:36] Posting to Instagram Stories...
+[2026-06-24 21:42:40] Waiting for Instagram processing...
+[2026-06-24 21:42:40] Container status: IN_PROGRESS
+[2026-06-24 21:42:46] Container status: FINISHED
+[2026-06-24 21:42:59] ✅ Instagram Story posted! ID: 17931886044331658
+[2026-06-24 21:42:59] --- Posting to Facebook ---
+[2026-06-24 21:42:59] Uploading photo to Facebook feed...
+[2026-06-24 21:43:07] ✅ Facebook feed post successful! ID: 1889041611321657_1433141922182186
+[2026-06-24 21:43:07] Posting photo to Facebook Stories...
+[2026-06-24 21:43:13] ✅ Facebook Story posted! ID: 2144194616146442
+[2026-06-24 21:43:13] TikTok: 37 videos found (newest → oldest): ['lepique-video-22-flare-light-blue.mp4', 'lepique-video-21-wide-leg-dark-navy-black-tank.mp4', 'lepique-video-20-ripped-black.mp4', 'lepique-video-19-wide-leg-dark-navy-rust.mp4', 'lepique-video-17-wide-leg-dark-navy-stitch.mp4', 'lepique-video-16-wide-leg-medium-blue.mp4', 'lepique-video-15-wide-leg-black-wash.mp4', 'lepique-video-14-skinny-black.mp4', 'lepique-video-13-wide-leg-dark-navy-bow.mp4', 'lepique-video-12-wide-leg-dark-navy.mp4', 'lepique-video-11-transition.mp4', 'lepique-video-10-wide-leg-black.mp4', 'lepique-video-09-wide-leg-dark-navy.mp4', 'lepique-video-08-skinny-black.mp4', 'lepique-video-07-wide-leg-light-blue.mp4', 'lepique-video-06-wide-leg-grey.mp4', 'lepique-video-05-skinny-dark-navy.mp4', 'lepique-video-04-transition.mp4', 'lepique-video-03-flare-black.mp4', 'lepique-video-02-wide-leg-light-blue.mp4', 'lepique-video-01-wide-leg-dark-navy.mp4', 'lepique-clip-wide-leg-pink.mp4', 'lepique-clip-wide-leg-medium-blue-02.mp4', 'lepique-clip-wide-leg-grey-closeup.mp4', 'lepique-clip-wide-leg-dark-navy-stitch-02.mp4', 'lepique-clip-wide-leg-black-wash-04.mp4', 'lepique-clip-wide-leg-black-wash-03.mp4', 'lepique-clip-wide-leg-black-wash-02.mp4', 'lepique-clip-transition-02.mp4', 'lepique-clip-transition-01.mp4', 'lepique-clip-straight-light-blue.mp4', 'lepique-clip-skinny-black-purple.mp4', 'lepique-clip-skinny-black-03.mp4', 'lepique-clip-skinny-black-02.mp4', 'lepique-clip-medium-blue-closeup.mp4', 'lepique-clip-light-blue-transition.mp4', 'lepique-clip-dark-navy-closeup.mp4']
+[2026-06-24 21:43:13] TikTok selected video: lepique-clip-wide-leg-black-wash-02.mp4
+[2026-06-24 21:43:13] --- Posting to TikTok ---
+[2026-06-24 21:43:13] Refreshing TikTok access token...
+[2026-06-24 21:43:14] ✅ TikTok access token ready.
+[2026-06-24 21:43:15] TikTok creator: @lepique_fashions (max duration: 3600s)
+[2026-06-24 21:43:15] Uploading lepique-clip-wide-leg-black-wash-02.mp4 (5.4 MB) to TikTok...
+[2026-06-24 21:43:15] ⚠️  TikTok post failed (Instagram/Facebook not affected): 403 Client Error: Forbidden for url: https://open.tiktokapis.com/v2/post/publish/video/init/
+[2026-06-24 21:43:15] ✅ All done. State saved.
+[2026-06-24 22:53:47] --- Starting Instagram + Facebook + TikTok post ---
+[2026-06-24 22:53:47] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-06-24 22:53:47] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-06-24 22:53:47] Found 120 media files (newest-first by git history)
+[2026-06-24 22:53:47] Latest 5: ['lepique-bodysuit-colors-chart.jpeg', 'lepique-bodysuit-longsleeve-colors-chart.jpeg', 'lepique-cargo-01-grey-wash.jpeg', 'lepique-flare-01-black.jpeg', 'lepique-flare-02-grey-acidwash.jpeg']
+[2026-06-24 22:53:47] Selected media: lepique-ripped-04-light-blue.jpeg
+[2026-06-24 22:53:47] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/lepique-ripped-04-light-blue.jpeg
+[2026-06-24 22:53:47] Uploading image to Instagram...
+[2026-06-24 22:53:51] Waiting for Instagram processing...
+[2026-06-24 22:53:51] Container status: IN_PROGRESS
+[2026-06-24 22:53:56] Container status: FINISHED
+[2026-06-24 22:54:06] Container ID: 18539093002073384
+[2026-06-24 22:54:09] ✅ Instagram feed post successful! ID: 18171637330427346
+[2026-06-24 22:54:09] Story image resized to 1080x1920 -> photos/story_temp.jpg
+[2026-06-24 22:54:10] Story URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/story_temp.jpg — waiting for GitHub Pages to deploy...
+[2026-06-24 22:55:11] Story image live after 60s.
+[2026-06-24 22:55:11] Posting to Instagram Stories...
+[2026-06-24 22:55:13] Waiting for Instagram processing...
+[2026-06-24 22:55:13] Container status: IN_PROGRESS
+[2026-06-24 22:55:19] Container status: FINISHED
+[2026-06-24 22:55:31] ✅ Instagram Story posted! ID: 18402369232154648
+[2026-06-24 22:55:31] --- Posting to Facebook ---
+[2026-06-24 22:55:31] Uploading photo to Facebook feed...
+[2026-06-24 22:55:43] ✅ Facebook feed post successful! ID: 1889041611321657_1433180268845018
+[2026-06-24 22:55:43] Posting photo to Facebook Stories...
+[2026-06-24 22:55:49] ✅ Facebook Story posted! ID: 1001132132506936
+[2026-06-24 22:55:49] TikTok: 37 videos found (newest → oldest): ['lepique-video-22-flare-light-blue.mp4', 'lepique-video-21-wide-leg-dark-navy-black-tank.mp4', 'lepique-video-20-ripped-black.mp4', 'lepique-video-19-wide-leg-dark-navy-rust.mp4', 'lepique-video-17-wide-leg-dark-navy-stitch.mp4', 'lepique-video-16-wide-leg-medium-blue.mp4', 'lepique-video-15-wide-leg-black-wash.mp4', 'lepique-video-14-skinny-black.mp4', 'lepique-video-13-wide-leg-dark-navy-bow.mp4', 'lepique-video-12-wide-leg-dark-navy.mp4', 'lepique-video-11-transition.mp4', 'lepique-video-10-wide-leg-black.mp4', 'lepique-video-09-wide-leg-dark-navy.mp4', 'lepique-video-08-skinny-black.mp4', 'lepique-video-07-wide-leg-light-blue.mp4', 'lepique-video-06-wide-leg-grey.mp4', 'lepique-video-05-skinny-dark-navy.mp4', 'lepique-video-04-transition.mp4', 'lepique-video-03-flare-black.mp4', 'lepique-video-02-wide-leg-light-blue.mp4', 'lepique-video-01-wide-leg-dark-navy.mp4', 'lepique-clip-wide-leg-pink.mp4', 'lepique-clip-wide-leg-medium-blue-02.mp4', 'lepique-clip-wide-leg-grey-closeup.mp4', 'lepique-clip-wide-leg-dark-navy-stitch-02.mp4', 'lepique-clip-wide-leg-black-wash-04.mp4', 'lepique-clip-wide-leg-black-wash-03.mp4', 'lepique-clip-wide-leg-black-wash-02.mp4', 'lepique-clip-transition-02.mp4', 'lepique-clip-transition-01.mp4', 'lepique-clip-straight-light-blue.mp4', 'lepique-clip-skinny-black-purple.mp4', 'lepique-clip-skinny-black-03.mp4', 'lepique-clip-skinny-black-02.mp4', 'lepique-clip-medium-blue-closeup.mp4', 'lepique-clip-light-blue-transition.mp4', 'lepique-clip-dark-navy-closeup.mp4']
+[2026-06-24 22:55:49] TikTok selected video: lepique-clip-transition-02.mp4
+[2026-06-24 22:55:49] --- Posting to TikTok ---
+[2026-06-24 22:55:49] Refreshing TikTok access token...
+[2026-06-24 22:55:49] ✅ TikTok access token ready.
+[2026-06-24 22:55:50] TikTok creator: @lepique_fashions (max duration: 3600s)
+[2026-06-24 22:55:50] Uploading lepique-clip-transition-02.mp4 (1.6 MB) to TikTok...
+[2026-06-24 22:55:50] ⚠️  TikTok post failed (Instagram/Facebook not affected): 403 Client Error: Forbidden for url: https://open.tiktokapis.com/v2/post/publish/video/init/
+[2026-06-24 22:55:50] ✅ All done. State saved.
+[2026-06-25 00:05:20] --- Starting Instagram + Facebook + TikTok post ---
+[2026-06-25 00:05:20] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-06-25 00:05:20] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-06-25 00:05:20] Found 120 media files (newest-first by git history)
+[2026-06-25 00:05:20] Latest 5: ['lepique-bodysuit-colors-chart.jpeg', 'lepique-bodysuit-longsleeve-colors-chart.jpeg', 'lepique-cargo-01-grey-wash.jpeg', 'lepique-flare-01-black.jpeg', 'lepique-flare-02-grey-acidwash.jpeg']
+[2026-06-25 00:05:20] Selected media: lepique-ripped-05-light-blue-snake.jpeg
+[2026-06-25 00:05:20] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/lepique-ripped-05-light-blue-snake.jpeg
+[2026-06-25 00:05:20] Uploading image to Instagram...
+[2026-06-25 00:05:25] Waiting for Instagram processing...
+[2026-06-25 00:05:26] Container status: IN_PROGRESS
+[2026-06-25 00:05:31] Container status: FINISHED
+[2026-06-25 00:05:41] Container ID: 18539105140073384
+[2026-06-25 00:05:44] ✅ Instagram feed post successful! ID: 17924009967142315
+[2026-06-25 00:05:45] Story image resized to 1080x1920 -> photos/story_temp.jpg
+[2026-06-25 00:05:46] Story URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/story_temp.jpg — waiting for GitHub Pages to deploy...
+[2026-06-25 00:06:47] Story image live after 60s.
+[2026-06-25 00:06:47] Posting to Instagram Stories...
+[2026-06-25 00:06:50] Waiting for Instagram processing...
+[2026-06-25 00:06:50] Container status: IN_PROGRESS
+[2026-06-25 00:06:55] Container status: FINISHED
+[2026-06-25 00:07:08] ✅ Instagram Story posted! ID: 18129248302616521
+[2026-06-25 00:07:08] --- Posting to Facebook ---
+[2026-06-25 00:07:08] Uploading photo to Facebook feed...
+[2026-06-25 00:07:16] ✅ Facebook feed post successful! ID: 1889041611321657_1433222488840796
+[2026-06-25 00:07:16] Posting photo to Facebook Stories...
+[2026-06-25 00:07:26] ✅ Facebook Story posted! ID: 2285432565562417
+[2026-06-25 00:07:26] TikTok: 37 videos found (newest → oldest): ['lepique-video-22-flare-light-blue.mp4', 'lepique-video-21-wide-leg-dark-navy-black-tank.mp4', 'lepique-video-20-ripped-black.mp4', 'lepique-video-19-wide-leg-dark-navy-rust.mp4', 'lepique-video-17-wide-leg-dark-navy-stitch.mp4', 'lepique-video-16-wide-leg-medium-blue.mp4', 'lepique-video-15-wide-leg-black-wash.mp4', 'lepique-video-14-skinny-black.mp4', 'lepique-video-13-wide-leg-dark-navy-bow.mp4', 'lepique-video-12-wide-leg-dark-navy.mp4', 'lepique-video-11-transition.mp4', 'lepique-video-10-wide-leg-black.mp4', 'lepique-video-09-wide-leg-dark-navy.mp4', 'lepique-video-08-skinny-black.mp4', 'lepique-video-07-wide-leg-light-blue.mp4', 'lepique-video-06-wide-leg-grey.mp4', 'lepique-video-05-skinny-dark-navy.mp4', 'lepique-video-04-transition.mp4', 'lepique-video-03-flare-black.mp4', 'lepique-video-02-wide-leg-light-blue.mp4', 'lepique-video-01-wide-leg-dark-navy.mp4', 'lepique-clip-wide-leg-pink.mp4', 'lepique-clip-wide-leg-medium-blue-02.mp4', 'lepique-clip-wide-leg-grey-closeup.mp4', 'lepique-clip-wide-leg-dark-navy-stitch-02.mp4', 'lepique-clip-wide-leg-black-wash-04.mp4', 'lepique-clip-wide-leg-black-wash-03.mp4', 'lepique-clip-wide-leg-black-wash-02.mp4', 'lepique-clip-transition-02.mp4', 'lepique-clip-transition-01.mp4', 'lepique-clip-straight-light-blue.mp4', 'lepique-clip-skinny-black-purple.mp4', 'lepique-clip-skinny-black-03.mp4', 'lepique-clip-skinny-black-02.mp4', 'lepique-clip-medium-blue-closeup.mp4', 'lepique-clip-light-blue-transition.mp4', 'lepique-clip-dark-navy-closeup.mp4']
+[2026-06-25 00:07:26] TikTok selected video: lepique-clip-transition-01.mp4
+[2026-06-25 00:07:26] --- Posting to TikTok ---
+[2026-06-25 00:07:26] Refreshing TikTok access token...
+[2026-06-25 00:07:26] ✅ TikTok access token ready.
+[2026-06-25 00:07:27] TikTok creator: @lepique_fashions (max duration: 3600s)
+[2026-06-25 00:07:27] Uploading lepique-clip-transition-01.mp4 (1.1 MB) to TikTok...
+[2026-06-25 00:07:27] ⚠️  TikTok post failed (Instagram/Facebook not affected): 403 Client Error: Forbidden for url: https://open.tiktokapis.com/v2/post/publish/video/init/
+[2026-06-25 00:07:28] ✅ All done. State saved.
+[2026-06-25 04:20:19] --- Starting Instagram + Facebook + TikTok post ---
+[2026-06-25 04:20:19] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-06-25 04:20:19] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-06-25 04:20:19] Found 120 media files (newest-first by git history)
+[2026-06-25 04:20:19] Latest 5: ['lepique-bodysuit-colors-chart.jpeg', 'lepique-bodysuit-longsleeve-colors-chart.jpeg', 'lepique-cargo-01-grey-wash.jpeg', 'lepique-flare-01-black.jpeg', 'lepique-flare-02-grey-acidwash.jpeg']
+[2026-06-25 04:20:19] Selected media: lepique-ripped-06-black-wide.jpeg
+[2026-06-25 04:20:19] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/lepique-ripped-06-black-wide.jpeg
+[2026-06-25 04:20:19] Uploading image to Instagram...
+[2026-06-25 04:20:24] Waiting for Instagram processing...
+[2026-06-25 04:20:24] Container status: IN_PROGRESS
+[2026-06-25 04:20:29] Container status: FINISHED
+[2026-06-25 04:20:39] Container ID: 18539146651073384
+[2026-06-25 04:20:43] ✅ Instagram feed post successful! ID: 18134509441509347
+[2026-06-25 04:20:43] Story image resized to 1080x1920 -> photos/story_temp.jpg
+[2026-06-25 04:20:44] Story URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/story_temp.jpg — waiting for GitHub Pages to deploy...
+[2026-06-25 04:21:40] Story image live after 55s.
+[2026-06-25 04:21:40] Posting to Instagram Stories...
+[2026-06-25 04:21:44] Waiting for Instagram processing...
+[2026-06-25 04:21:44] Container status: IN_PROGRESS
+[2026-06-25 04:21:49] Container status: FINISHED
+[2026-06-25 04:22:02] ✅ Instagram Story posted! ID: 17976559635043026
+[2026-06-25 04:22:02] --- Posting to Facebook ---
+[2026-06-25 04:22:02] Uploading photo to Facebook feed...
+[2026-06-25 04:22:11] ✅ Facebook feed post successful! ID: 1889041611321657_1433366782159700
+[2026-06-25 04:22:11] Posting photo to Facebook Stories...
+[2026-06-25 04:22:20] ✅ Facebook Story posted! ID: 1395395405980294
+[2026-06-25 04:22:20] TikTok: 37 videos found (newest → oldest): ['lepique-video-22-flare-light-blue.mp4', 'lepique-video-21-wide-leg-dark-navy-black-tank.mp4', 'lepique-video-20-ripped-black.mp4', 'lepique-video-19-wide-leg-dark-navy-rust.mp4', 'lepique-video-17-wide-leg-dark-navy-stitch.mp4', 'lepique-video-16-wide-leg-medium-blue.mp4', 'lepique-video-15-wide-leg-black-wash.mp4', 'lepique-video-14-skinny-black.mp4', 'lepique-video-13-wide-leg-dark-navy-bow.mp4', 'lepique-video-12-wide-leg-dark-navy.mp4', 'lepique-video-11-transition.mp4', 'lepique-video-10-wide-leg-black.mp4', 'lepique-video-09-wide-leg-dark-navy.mp4', 'lepique-video-08-skinny-black.mp4', 'lepique-video-07-wide-leg-light-blue.mp4', 'lepique-video-06-wide-leg-grey.mp4', 'lepique-video-05-skinny-dark-navy.mp4', 'lepique-video-04-transition.mp4', 'lepique-video-03-flare-black.mp4', 'lepique-video-02-wide-leg-light-blue.mp4', 'lepique-video-01-wide-leg-dark-navy.mp4', 'lepique-clip-wide-leg-pink.mp4', 'lepique-clip-wide-leg-medium-blue-02.mp4', 'lepique-clip-wide-leg-grey-closeup.mp4', 'lepique-clip-wide-leg-dark-navy-stitch-02.mp4', 'lepique-clip-wide-leg-black-wash-04.mp4', 'lepique-clip-wide-leg-black-wash-03.mp4', 'lepique-clip-wide-leg-black-wash-02.mp4', 'lepique-clip-transition-02.mp4', 'lepique-clip-transition-01.mp4', 'lepique-clip-straight-light-blue.mp4', 'lepique-clip-skinny-black-purple.mp4', 'lepique-clip-skinny-black-03.mp4', 'lepique-clip-skinny-black-02.mp4', 'lepique-clip-medium-blue-closeup.mp4', 'lepique-clip-light-blue-transition.mp4', 'lepique-clip-dark-navy-closeup.mp4']
+[2026-06-25 04:22:20] TikTok selected video: lepique-clip-straight-light-blue.mp4
+[2026-06-25 04:22:20] --- Posting to TikTok ---
+[2026-06-25 04:22:20] Refreshing TikTok access token...
+[2026-06-25 04:22:21] ✅ TikTok access token ready.
+[2026-06-25 04:22:21] TikTok creator: @lepique_fashions (max duration: 3600s)
+[2026-06-25 04:22:21] Uploading lepique-clip-straight-light-blue.mp4 (0.6 MB) to TikTok...
+[2026-06-25 04:22:21] ⚠️  TikTok post failed (Instagram/Facebook not affected): 403 Client Error: Forbidden for url: https://open.tiktokapis.com/v2/post/publish/video/init/
+[2026-06-25 04:22:21] ✅ All done. State saved.
+[2026-06-25 07:59:07] --- Starting Instagram + Facebook + TikTok post ---
+[2026-06-25 07:59:07] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-06-25 07:59:07] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-06-25 07:59:07] Found 120 media files (newest-first by git history)
+[2026-06-25 07:59:07] Latest 5: ['lepique-bodysuit-colors-chart.jpeg', 'lepique-bodysuit-longsleeve-colors-chart.jpeg', 'lepique-cargo-01-grey-wash.jpeg', 'lepique-flare-01-black.jpeg', 'lepique-flare-02-grey-acidwash.jpeg']
+[2026-06-25 07:59:07] Selected media: lepique-ripped-09-black.jpeg
+[2026-06-25 07:59:07] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/lepique-ripped-09-black.jpeg
+[2026-06-25 07:59:07] Uploading image to Instagram...
+[2026-06-25 07:59:13] Waiting for Instagram processing...
+[2026-06-25 07:59:13] Container status: FINISHED
+[2026-06-25 07:59:23] Container ID: 18539176138073384
+[2026-06-25 07:59:27] ✅ Instagram feed post successful! ID: 18097258669964047
+[2026-06-25 07:59:27] Story image resized to 1080x1920 -> photos/story_temp.jpg
+[2026-06-25 07:59:29] Story URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/story_temp.jpg — waiting for GitHub Pages to deploy...
+[2026-06-25 08:00:30] Story image live after 60s.
+[2026-06-25 08:00:30] Posting to Instagram Stories...
+[2026-06-25 08:00:33] Waiting for Instagram processing...
+[2026-06-25 08:00:33] Container status: IN_PROGRESS
+[2026-06-25 08:00:39] Container status: FINISHED
+[2026-06-25 08:00:51] ✅ Instagram Story posted! ID: 17938393182267188
+[2026-06-25 08:00:51] --- Posting to Facebook ---
+[2026-06-25 08:00:51] Uploading photo to Facebook feed...
+[2026-06-25 08:00:56] ✅ Facebook feed post successful! ID: 1889041611321657_1433499898813055
+[2026-06-25 08:00:56] Posting photo to Facebook Stories...
+[2026-06-25 08:01:03] ✅ Facebook Story posted! ID: 1002183075865239
+[2026-06-25 08:01:03] TikTok: 37 videos found (newest → oldest): ['lepique-video-22-flare-light-blue.mp4', 'lepique-video-21-wide-leg-dark-navy-black-tank.mp4', 'lepique-video-20-ripped-black.mp4', 'lepique-video-19-wide-leg-dark-navy-rust.mp4', 'lepique-video-17-wide-leg-dark-navy-stitch.mp4', 'lepique-video-16-wide-leg-medium-blue.mp4', 'lepique-video-15-wide-leg-black-wash.mp4', 'lepique-video-14-skinny-black.mp4', 'lepique-video-13-wide-leg-dark-navy-bow.mp4', 'lepique-video-12-wide-leg-dark-navy.mp4', 'lepique-video-11-transition.mp4', 'lepique-video-10-wide-leg-black.mp4', 'lepique-video-09-wide-leg-dark-navy.mp4', 'lepique-video-08-skinny-black.mp4', 'lepique-video-07-wide-leg-light-blue.mp4', 'lepique-video-06-wide-leg-grey.mp4', 'lepique-video-05-skinny-dark-navy.mp4', 'lepique-video-04-transition.mp4', 'lepique-video-03-flare-black.mp4', 'lepique-video-02-wide-leg-light-blue.mp4', 'lepique-video-01-wide-leg-dark-navy.mp4', 'lepique-clip-wide-leg-pink.mp4', 'lepique-clip-wide-leg-medium-blue-02.mp4', 'lepique-clip-wide-leg-grey-closeup.mp4', 'lepique-clip-wide-leg-dark-navy-stitch-02.mp4', 'lepique-clip-wide-leg-black-wash-04.mp4', 'lepique-clip-wide-leg-black-wash-03.mp4', 'lepique-clip-wide-leg-black-wash-02.mp4', 'lepique-clip-transition-02.mp4', 'lepique-clip-transition-01.mp4', 'lepique-clip-straight-light-blue.mp4', 'lepique-clip-skinny-black-purple.mp4', 'lepique-clip-skinny-black-03.mp4', 'lepique-clip-skinny-black-02.mp4', 'lepique-clip-medium-blue-closeup.mp4', 'lepique-clip-light-blue-transition.mp4', 'lepique-clip-dark-navy-closeup.mp4']
+[2026-06-25 08:01:03] TikTok selected video: lepique-clip-skinny-black-purple.mp4
+[2026-06-25 08:01:03] --- Posting to TikTok ---
+[2026-06-25 08:01:03] Refreshing TikTok access token...
+[2026-06-25 08:01:04] ✅ TikTok access token ready.
+[2026-06-25 08:01:04] TikTok creator: @lepique_fashions (max duration: 3600s)
+[2026-06-25 08:01:04] Uploading lepique-clip-skinny-black-purple.mp4 (2.1 MB) to TikTok...
+[2026-06-25 08:01:05] ⚠️  TikTok post failed (Instagram/Facebook not affected): 403 Client Error: Forbidden for url: https://open.tiktokapis.com/v2/post/publish/video/init/
+[2026-06-25 08:01:05] ✅ All done. State saved.
+[2026-06-25 10:47:50] --- Starting Instagram + Facebook + TikTok post ---
+[2026-06-25 10:47:50] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-06-25 10:47:50] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-06-25 10:47:50] Found 120 media files (newest-first by git history)
+[2026-06-25 10:47:50] Latest 5: ['lepique-bodysuit-colors-chart.jpeg', 'lepique-bodysuit-longsleeve-colors-chart.jpeg', 'lepique-cargo-01-grey-wash.jpeg', 'lepique-flare-01-black.jpeg', 'lepique-flare-02-grey-acidwash.jpeg']
+[2026-06-25 10:47:50] Selected media: lepique-skinny-03-dark-navy.jpeg
+[2026-06-25 10:47:50] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/lepique-skinny-03-dark-navy.jpeg
+[2026-06-25 10:47:50] Uploading image to Instagram...
+[2026-06-25 10:47:54] Waiting for Instagram processing...
+[2026-06-25 10:47:55] Container status: FINISHED
+[2026-06-25 10:48:05] Container ID: 18539205391073384
+[2026-06-25 10:48:08] ✅ Instagram feed post successful! ID: 17966015825934691
+[2026-06-25 10:48:08] Story image resized to 1080x1920 -> photos/story_temp.jpg
+[2026-06-25 10:48:10] Story URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/story_temp.jpg — waiting for GitHub Pages to deploy...
+[2026-06-25 10:49:05] Story image live after 55s.
+[2026-06-25 10:49:05] Posting to Instagram Stories...
+[2026-06-25 10:49:09] Waiting for Instagram processing...
+[2026-06-25 10:49:10] Container status: FINISHED
+[2026-06-25 10:49:22] ✅ Instagram Story posted! ID: 18441694369138840
+[2026-06-25 10:49:22] --- Posting to Facebook ---
+[2026-06-25 10:49:22] Uploading photo to Facebook feed...
+[2026-06-25 10:49:30] ✅ Facebook feed post successful! ID: 1889041611321657_1433630315466680
+[2026-06-25 10:49:30] Posting photo to Facebook Stories...
+[2026-06-25 10:49:37] ✅ Facebook Story posted! ID: 2408594136219046
+[2026-06-25 10:49:37] TikTok: 37 videos found (newest → oldest): ['lepique-video-22-flare-light-blue.mp4', 'lepique-video-21-wide-leg-dark-navy-black-tank.mp4', 'lepique-video-20-ripped-black.mp4', 'lepique-video-19-wide-leg-dark-navy-rust.mp4', 'lepique-video-17-wide-leg-dark-navy-stitch.mp4', 'lepique-video-16-wide-leg-medium-blue.mp4', 'lepique-video-15-wide-leg-black-wash.mp4', 'lepique-video-14-skinny-black.mp4', 'lepique-video-13-wide-leg-dark-navy-bow.mp4', 'lepique-video-12-wide-leg-dark-navy.mp4', 'lepique-video-11-transition.mp4', 'lepique-video-10-wide-leg-black.mp4', 'lepique-video-09-wide-leg-dark-navy.mp4', 'lepique-video-08-skinny-black.mp4', 'lepique-video-07-wide-leg-light-blue.mp4', 'lepique-video-06-wide-leg-grey.mp4', 'lepique-video-05-skinny-dark-navy.mp4', 'lepique-video-04-transition.mp4', 'lepique-video-03-flare-black.mp4', 'lepique-video-02-wide-leg-light-blue.mp4', 'lepique-video-01-wide-leg-dark-navy.mp4', 'lepique-clip-wide-leg-pink.mp4', 'lepique-clip-wide-leg-medium-blue-02.mp4', 'lepique-clip-wide-leg-grey-closeup.mp4', 'lepique-clip-wide-leg-dark-navy-stitch-02.mp4', 'lepique-clip-wide-leg-black-wash-04.mp4', 'lepique-clip-wide-leg-black-wash-03.mp4', 'lepique-clip-wide-leg-black-wash-02.mp4', 'lepique-clip-transition-02.mp4', 'lepique-clip-transition-01.mp4', 'lepique-clip-straight-light-blue.mp4', 'lepique-clip-skinny-black-purple.mp4', 'lepique-clip-skinny-black-03.mp4', 'lepique-clip-skinny-black-02.mp4', 'lepique-clip-medium-blue-closeup.mp4', 'lepique-clip-light-blue-transition.mp4', 'lepique-clip-dark-navy-closeup.mp4']
+[2026-06-25 10:49:37] TikTok selected video: lepique-clip-skinny-black-03.mp4
+[2026-06-25 10:49:37] --- Posting to TikTok ---
+[2026-06-25 10:49:37] Refreshing TikTok access token...
+[2026-06-25 10:49:38] ✅ TikTok access token ready.
+[2026-06-25 10:49:38] TikTok creator: @lepique_fashions (max duration: 3600s)
+[2026-06-25 10:49:38] Uploading lepique-clip-skinny-black-03.mp4 (1.1 MB) to TikTok...
+[2026-06-25 10:49:39] ⚠️  TikTok post failed (Instagram/Facebook not affected): 403 Client Error: Forbidden for url: https://open.tiktokapis.com/v2/post/publish/video/init/
+[2026-06-25 10:49:39] ✅ All done. State saved.
