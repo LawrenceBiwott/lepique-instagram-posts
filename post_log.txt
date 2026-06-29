@@ -8315,3 +8315,4 @@
 [2026-06-29 21:48:01] Uploading lepique-video-22-flare-light-blue.mp4 (3.2 MB) to TikTok...
 [2026-06-29 21:48:01] ⚠️  TikTok post failed (Instagram/Facebook not affected): 403 Client Error: Forbidden for url: https://open.tiktokapis.com/v2/post/publish/video/init/
 [2026-06-29 21:48:01] ✅ All done. State saved.
+[2026-06-29 22:42:06] ⏭ Skipping — last post was 54 min ago (next post in ~1 min).
