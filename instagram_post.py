@@ -574,14 +574,14 @@ def post_to_facebook(media_url, caption, is_video_file):
     except Exception as e:
         log(f"⚠️ Facebook feed post failed: {e}")
 
-    # Story
+    # Story — video Stories via file_url consistently fail (Facebook can't reach GitHub Pages CDN),
+    # so skip Facebook Stories for videos entirely.
     try:
         if is_video_file:
-            log("Posting video to Facebook Stories...")
-            story_id = post_fb_video_story(media_url)
-        else:
-            log("Posting photo to Facebook Stories...")
-            story_id = post_fb_photo_story(media_url)
+            log("ℹ️  Skipping Facebook Story for video (not supported via public URL).")
+            return
+        log("Posting photo to Facebook Stories...")
+        story_id = post_fb_photo_story(media_url)
         log(f"✅ Facebook Story posted! ID: {story_id}")
     except Exception as e:
         log(f"⚠️ Facebook Story post failed: {e}")
@@ -910,9 +910,4 @@ def post_to_instagram():
 # ─────────────────────────────────────────────
 # ENTRY POINT
 # ─────────────────────────────────────────────
-if __name__ == "__main__":
-    try:
-        post_to_instagram()
-    except Exception as e:
-        log(f"Error: {e}")
-        raise
+if __name__ == "
