@@ -910,9 +910,4 @@ def post_to_instagram():
 # ─────────────────────────────────────────────
 # ENTRY POINT
 # ─────────────────────────────────────────────
-if __name__ == "__main__":
-    try:
-        post_to_instagram()
-    except Exception as e:
-        log(f"Error: {e}")
-        raise
+if __name__ == "
