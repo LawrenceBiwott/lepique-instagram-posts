@@ -10166,3 +10166,39 @@
 [2026-07-04 09:55:13] Uploading lepique-video-11-transition.mp4 (3.5 MB) to TikTok...
 [2026-07-04 09:55:14] ⚠️  TikTok post failed (Instagram/Facebook not affected): 403 Client Error: Forbidden for url: https://open.tiktokapis.com/v2/post/publish/video/init/
 [2026-07-04 09:55:14] ✅ All done. State saved.
+[2026-07-04 11:22:23] --- Starting Instagram + Facebook + TikTok post ---
+[2026-07-04 11:22:23] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-07-04 11:22:23] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-07-04 11:22:23] Found 92 media files (newest-first by git history)
+[2026-07-04 11:22:23] Latest 5: ['lepique-bodysuit-colors-chart.jpeg', 'lepique-bodysuit-longsleeve-colors-chart.jpeg', 'lepique-cargo-01-grey-wash.jpeg', 'lepique-flare-01-black.jpeg', 'lepique-flare-02-grey-acidwash.jpeg']
+[2026-07-04 11:22:23] Selected media: lepique-skinny-05-black-plussize.jpeg
+[2026-07-04 11:22:23] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/lepique-skinny-05-black-plussize.jpeg
+[2026-07-04 11:22:23] Uploading image to Instagram...
+[2026-07-04 11:22:27] Waiting for Instagram processing...
+[2026-07-04 11:22:27] Container status: IN_PROGRESS
+[2026-07-04 11:22:33] Container status: FINISHED
+[2026-07-04 11:22:43] Container ID: 18541500205073384
+[2026-07-04 11:22:45] ✅ Instagram feed post successful! ID: 18084403865171983
+[2026-07-04 11:22:46] Story image resized to 1080x1920 -> photos/story_temp.jpg
+[2026-07-04 11:22:47] Story URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/story_temp.jpg — waiting for GitHub Pages to deploy...
+[2026-07-04 11:22:52] Story image live after 5s.
+[2026-07-04 11:22:52] Posting to Instagram Stories...
+[2026-07-04 11:22:56] Waiting for Instagram processing...
+[2026-07-04 11:22:56] Container status: FINISHED
+[2026-07-04 11:23:09] ✅ Instagram Story posted! ID: 17946417477217809
+[2026-07-04 11:23:09] --- Posting to Facebook ---
+[2026-07-04 11:23:09] Uploading photo to Facebook feed...
+[2026-07-04 11:23:20] ⚠️ Facebook feed post failed: 500 Server Error: Internal Server Error for url: https://graph.facebook.com/v21.0/1889041611321657/photos?url=https%3A%2F%2Flawrencebiwott.github.io%2Flepique-instagram-posts%2Fmedia%2Fphotos%2Flepique-skinny-05-black-plussize.jpeg&caption=%F0%9F%93%8D+Platinum+Plaza%2C+Ground+Floor%2C+Shop+G16+%E2%80%93+Tom+Mboya+Street%2C+Nairobi%0A%F0%9F%93%9E+0+7+2+1+%E2%80%A2+6+7+2+%E2%80%A2+9+0+0%0A%F0%9F%8C%90+https%3A%2F%2Flepique.co.ke%2F%0A%0A%F0%9F%92%99+Perfect+fit+starts+at+Lepique+Fashions.%0A%0ADiscover+quality+ladies%27+jeans+in+Kenya+made+for+comfort%2C+confidence+and+effortless+style.+We+stock+mom+jeans%2C+high+waist+jeans%2C+low+waist+jeans%2C+cargo+jeans%2C+hipster+jeans%2C+skinny+jeans%2C+slim-fit+jeans%2C+straight+jeans%2C+wide-leg+jeans%2C+boyfriend+jeans%2C+bootcut+jeans%2C+flare+jeans+and+three-quarter+jeans.%0A%0AWhether+you+love+classy+denim%2C+casual+fashion%2C+street-style+looks+or+everyday+outfits%2C+we+have+jeans+that+match+your+body+and+your+vibe.%0A%0A%F0%9F%92%8E+Premium+Quality+%E2%80%A2+Perfect+Fit+%E2%80%A2+Effortless+Style%0A%0AShop+online+%F0%9F%91%89+https%3A%2F%2Flepique.co.ke%2F%0AVisit+Lepique+Fashions+today+in+Nairobi+CBD.%0A%0A%23LepiqueFashions+%23DenimLovers+%23NairobiFashion+%23LadiesKenya+%23AfricanFashion%0ALadies+jeans+Nairobi%2C+ladies+jeans+Kenya%2C+perfect+fit+jeans%2C+women+fashion+Kenya%2C+denim+shop+Nairobi%2C+ladies+dresses+Nairobi%2C+ladies+shoes+Kenya%2C+ladies+tops+Kenya%2C+ladies+earrings+Nairobi%2C+ladies+makeup+Kenya%2C+women+accessories+Kenya%2C+ladies+clothing+shop+Tom+Mboya+Street%2C+affordable+fashion+Nairobi+CBD%2C+Kenyan+women+fashion.&access_token=EAAoPvY2rIhYBRo8nh5nuHG1G2XllMeJPgGLwBLH7IYDHaTd5I0UTbDGEQV1ZBEwXU4q0pamWKdXDUbgkF9mVfFdsEjTE4gi8ZCPAZCPccCbFNIQPZCIDfArYZCbVBizko1SzL9ZCVBbVScKIIRemSyZBZBYtZBJXMmtPC6PsCleVWyKEoxabuv2AhNvyR22oGyP8kpcnf7jZBZBZCAI4ZCl65QzLHVD67
+[2026-07-04 11:23:20] Posting photo to Facebook Stories...
+[2026-07-04 11:23:34] ✅ Facebook Story posted! ID: 1038648135648088
+[2026-07-04 11:23:34] TikTok: 11 videos found (newest → oldest): ['lepique-video-11-transition.mp4', 'lepique-video-10-wide-leg-black.mp4', 'lepique-video-09-wide-leg-dark-navy.mp4', 'lepique-video-08-skinny-black.mp4', 'lepique-video-07-wide-leg-light-blue.mp4', 'lepique-video-06-wide-leg-grey.mp4', 'lepique-video-05-skinny-dark-navy.mp4', 'lepique-video-04-transition.mp4', 'lepique-video-03-flare-black.mp4', 'lepique-video-02-wide-leg-light-blue.mp4', 'lepique-video-01-wide-leg-dark-navy.mp4']
+[2026-07-04 11:23:34] TikTok: all 11 videos posted — resetting cycle, starting from newest.
+[2026-07-04 11:23:34] TikTok selected video: lepique-video-11-transition.mp4
+[2026-07-04 11:23:34] --- Posting to TikTok ---
+[2026-07-04 11:23:34] Refreshing TikTok access token...
+[2026-07-04 11:23:34] ✅ TikTok access token ready.
+[2026-07-04 11:23:35] TikTok creator: @lepique_fashions (max duration: 3600s)
+[2026-07-04 11:23:35] Uploading lepique-video-11-transition.mp4 (3.5 MB) to TikTok...
+[2026-07-04 11:23:35] ⚠️  TikTok post failed (Instagram/Facebook not affected): 403 Client Error: Forbidden for url: https://open.tiktokapis.com/v2/post/publish/video/init/
+[2026-07-04 11:23:35] ✅ All done. State saved.
