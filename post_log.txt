@@ -11554,3 +11554,39 @@
 [2026-07-07 08:40:53] Uploading lepique-video-11-transition.mp4 (3.5 MB) to TikTok...
 [2026-07-07 08:40:53] ⚠️  TikTok post failed (Instagram/Facebook not affected): 403 Client Error: Forbidden for url: https://open.tiktokapis.com/v2/post/publish/video/init/
 [2026-07-07 08:40:53] ✅ All done. State saved.
+[2026-07-07 11:29:06] --- Starting Instagram + Facebook + TikTok post ---
+[2026-07-07 11:29:06] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-07-07 11:29:06] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-07-07 11:29:06] Found 92 media files (newest-first by git history)
+[2026-07-07 11:29:06] Latest 5: ['lepique-bodysuit-colors-chart.jpeg', 'lepique-bodysuit-longsleeve-colors-chart.jpeg', 'lepique-cargo-01-grey-wash.jpeg', 'lepique-flare-01-black.jpeg', 'lepique-flare-02-grey-acidwash.jpeg']
+[2026-07-07 11:29:06] Selected media: lepique-wide-leg-19-dark-navy-belt.jpeg
+[2026-07-07 11:29:06] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/lepique-wide-leg-19-dark-navy-belt.jpeg
+[2026-07-07 11:29:06] Uploading image to Instagram...
+[2026-07-07 11:29:10] Waiting for Instagram processing...
+[2026-07-07 11:29:10] Container status: FINISHED
+[2026-07-07 11:29:20] Container ID: 18542280538073384
+[2026-07-07 11:29:23] ✅ Instagram feed post successful! ID: 17861988816648489
+[2026-07-07 11:29:23] Story image resized to 1080x1920 -> photos/story_temp.jpg
+[2026-07-07 11:29:25] Story URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/story_temp.jpg — waiting for GitHub Pages to deploy...
+[2026-07-07 11:30:20] Story image live after 55s.
+[2026-07-07 11:30:20] Posting to Instagram Stories...
+[2026-07-07 11:30:23] Waiting for Instagram processing...
+[2026-07-07 11:30:24] Container status: IN_PROGRESS
+[2026-07-07 11:30:29] Container status: FINISHED
+[2026-07-07 11:30:41] ✅ Instagram Story posted! ID: 17925124206370371
+[2026-07-07 11:30:41] --- Posting to Facebook ---
+[2026-07-07 11:30:41] Uploading photo to Facebook feed...
+[2026-07-07 11:30:47] ✅ Facebook feed post successful! ID: 1889041611321657_1444696807693364
+[2026-07-07 11:30:47] Posting photo to Facebook Stories...
+[2026-07-07 11:30:54] ✅ Facebook Story posted! ID: 803646042739272
+[2026-07-07 11:30:54] TikTok: 11 videos found (newest → oldest): ['lepique-video-11-transition.mp4', 'lepique-video-10-wide-leg-black.mp4', 'lepique-video-09-wide-leg-dark-navy.mp4', 'lepique-video-08-skinny-black.mp4', 'lepique-video-07-wide-leg-light-blue.mp4', 'lepique-video-06-wide-leg-grey.mp4', 'lepique-video-05-skinny-dark-navy.mp4', 'lepique-video-04-transition.mp4', 'lepique-video-03-flare-black.mp4', 'lepique-video-02-wide-leg-light-blue.mp4', 'lepique-video-01-wide-leg-dark-navy.mp4']
+[2026-07-07 11:30:54] TikTok: all 11 videos posted — resetting cycle, starting from newest.
+[2026-07-07 11:30:54] TikTok selected video: lepique-video-11-transition.mp4
+[2026-07-07 11:30:54] --- Posting to TikTok ---
+[2026-07-07 11:30:54] Refreshing TikTok access token...
+[2026-07-07 11:30:55] ✅ TikTok access token ready.
+[2026-07-07 11:30:55] TikTok creator: @lepique_fashions (max duration: 3600s)
+[2026-07-07 11:30:55] Uploading lepique-video-11-transition.mp4 (3.5 MB) to TikTok...
+[2026-07-07 11:30:56] ⚠️  TikTok post failed (Instagram/Facebook not affected): 403 Client Error: Forbidden for url: https://open.tiktokapis.com/v2/post/publish/video/init/
+[2026-07-07 11:30:56] ✅ All done. State saved.
