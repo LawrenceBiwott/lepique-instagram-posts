@@ -13594,3 +13594,4 @@
 [2026-07-11 19:50:00] Uploading WhatsApp Video 2026-07-09 at 19.13.25.mp4 (3.0 MB) to TikTok...
 [2026-07-11 19:50:00] ⚠️  TikTok post failed (Instagram/Facebook not affected): 403 Client Error: Forbidden for url: https://open.tiktokapis.com/v2/post/publish/video/init/
 [2026-07-11 19:50:00] ✅ All done. State saved.
+[2026-07-11 20:32:30] ⏭ Skipping — last post was 43 min ago (next post in ~12 min).
