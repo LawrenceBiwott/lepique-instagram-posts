@@ -14141,3 +14141,4 @@
 [2026-07-12 21:25:36] Uploading lepique-video-11-transition.mp4 (3.5 MB) to TikTok...
 [2026-07-12 21:25:36] ⚠️  TikTok post failed (Instagram/Facebook not affected): 403 Client Error: Forbidden for url: https://open.tiktokapis.com/v2/post/publish/video/init/
 [2026-07-12 21:25:36] ✅ All done. State saved.
+[2026-07-12 22:13:49] ⏭ Skipping — last post was 48 min ago (next post in ~7 min).
