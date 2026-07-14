@@ -51,8 +51,9 @@ jobs:
           FORCE_POST: ${{ github.event.inputs.force_post }}
 
           MEDIA_BASE_URL: "https://lawrencebiwott.github.io/lepique-instagram-posts/media"
+          PYTHONUNBUFFERED: "1"
 
-        run: python instagram_post.py
+        run: python -u instagram_post.py
 
       - name: Save updated state back to repo
         if: always()
