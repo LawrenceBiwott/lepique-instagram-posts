@@ -645,7 +645,7 @@ def tiktok_init_video_upload(access_token, file_size, caption):
         json={
             "post_info": {
                 "title":                caption[:2200],
-                "privacy_level":        "PUBLIC_TO_EVERYONE",
+                "privacy_level":        "SELF_ONLY",
                 "disable_duet":         False,
                 "disable_comment":      False,
                 "disable_stitch":       False,
@@ -740,7 +740,7 @@ def tiktok_init_story_upload(access_token, file_size):
         },
         json={
             "post_info": {
-                "privacy_level":   "PUBLIC_TO_EVERYONE",
+                "privacy_level":   "SELF_ONLY",
                 "post_to_story":   True,
                 "disable_duet":    False,
                 "disable_comment": False,
