@@ -15,6 +15,14 @@ on:
         options:
           - 'false'
           - 'true'
+      force_peak_bypass:
+        description: 'Post now even if outside Nairobi peak hours (07-09, 12-14, 18-21 EAT)'
+        required: false
+        default: 'false'
+        type: choice
+        options:
+          - 'false'
+          - 'true'
 
 jobs:
   post:
@@ -48,7 +56,9 @@ jobs:
           TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
           TIKTOK_OPEN_ID: ${{ secrets.TIKTOK_OPEN_ID }}
           TIKTOK_REFRESH_TOKEN: ${{ secrets.TIKTOK_REFRESH_TOKEN }}
+          FB_PLACE_ID: ${{ secrets.FB_PLACE_ID }}
           FORCE_POST: ${{ github.event.inputs.force_post }}
+          FORCE_PEAK_BYPASS: ${{ github.event.inputs.force_peak_bypass }}
 
           MEDIA_BASE_URL: "https://lawrencebiwott.github.io/lepique-instagram-posts/media"
           PYTHONUNBUFFERED: "1"

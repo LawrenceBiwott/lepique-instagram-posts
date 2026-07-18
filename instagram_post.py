@@ -65,6 +65,18 @@ MIN_POST_INTERVAL_MINUTES = 55
 # Set to 'true' via workflow_dispatch input to bypass the interval guard
 FORCE_POST = os.environ.get("FORCE_POST", "false").strip().lower() == "true"
 
+# Nairobi peak posting hours (EAT = UTC+3)
+# Script only posts when the current EAT hour falls within these windows
+# 07:00–09:00, 12:00–14:00, 18:00–21:00
+PEAK_HOURS_EAT = set(range(7, 10)) | set(range(12, 15)) | set(range(18, 22))
+
+# Set to 'true' via workflow_dispatch input to bypass peak-hours check
+FORCE_PEAK_BYPASS = os.environ.get("FORCE_PEAK_BYPASS", "false").strip().lower() == "true"
+
+# Nairobi Facebook Place ID for location tagging (Platinum Plaza, Tom Mboya St)
+# Find yours: https://www.facebook.com/pages/Platinum-Plaza-Nairobi/
+FB_PLACE_ID = os.environ.get("FB_PLACE_ID", "").strip()   # optional — set in GitHub secrets
+
 # ─────────────────────────────────────────────
 # LOGGING
 # ─────────────────────────────────────────────
@@ -245,6 +257,43 @@ def ensure_config():
     if not IG_USER_ID:
         raise ValueError("INSTAGRAM_USER_ID missing.")
 
+def check_peak_hours():
+    """Return True if current EAT time is inside a peak posting window."""
+    import datetime as dt
+    eat_hour = (dt.datetime.utcnow().hour + 3) % 24
+    return eat_hour in PEAK_HOURS_EAT
+
+def check_ig_token_expiry():
+    """
+    Fetch token debug info and warn (via log) if expiry is within 14 days.
+    Instagram long-lived tokens last 60 days; this gives early warning.
+    Returns days_remaining or None if unknown.
+    """
+    try:
+        resp = requests.get(
+            "https://graph.instagram.com/v21.0/me",
+            params={
+                "fields": "token_expiry_time",
+                "access_token": ACCESS_TOKEN
+            },
+            timeout=15
+        )
+        data = resp.json()
+        expiry_ts = data.get("token_expiry_time")
+        if expiry_ts:
+            from datetime import datetime, timezone
+            expiry = datetime.fromtimestamp(int(expiry_ts), tz=timezone.utc)
+            days_left = (expiry - datetime.now(tz=timezone.utc)).days
+            if days_left <= 14:
+                log(f"⚠️  TOKEN EXPIRY WARNING: Instagram access token expires in {days_left} days!")
+                log("    Refresh it at: https://developers.facebook.com/tools/debug/accesstoken/")
+            else:
+                log(f"✅ Instagram token valid for {days_left} more days.")
+            return days_left
+    except Exception as e:
+        log(f"ℹ️  Could not check token expiry: {e}")
+    return None
+
 # ─────────────────────────────────────────────
 # IMAGE PRE-PROCESSING
 # ─────────────────────────────────────────────
@@ -287,14 +336,18 @@ def pad_image_to_valid_ratio(file_path, bg_color=(255, 255, 255)):
 # ─────────────────────────────────────────────
 # INSTAGRAM API
 # ─────────────────────────────────────────────
-def create_image_container(image_url, caption):
+def create_image_container(image_url, caption, alt_text=None):
+    params = {
+        "image_url": image_url,
+        "caption": caption,
+        "access_token": ACCESS_TOKEN
+    }
+    # Alt text improves accessibility and Instagram search discovery
+    if alt_text:
+        params["alt_text"] = alt_text
     response = requests.post(
         f"{IG_BASE_URL}/{IG_USER_ID}/media",
-        params={
-            "image_url": image_url,
-            "caption": caption,
-            "access_token": ACCESS_TOKEN
-        },
+        params=params,
         timeout=30
     )
     print(response.text)
@@ -465,14 +518,18 @@ def post_ig_story(media_url, is_video_file):
 # FACEBOOK API
 # ─────────────────────────────────────────────
 def post_fb_photo(image_url, caption):
-    """Post a photo to the Facebook Page feed."""
+    """Post a photo to the Facebook Page feed, with optional location tagging."""
+    params = {
+        "url": image_url,
+        "caption": caption,
+        "access_token": FB_PAGE_ACCESS_TOKEN
+    }
+    # Location tag: ~79% more engagement when tagged to Platinum Plaza, Nairobi
+    if FB_PLACE_ID:
+        params["place"] = FB_PLACE_ID
     response = requests.post(
         f"{FB_BASE_URL}/{FB_PAGE_ID}/photos",
-        params={
-            "url": image_url,
-            "caption": caption,
-            "access_token": FB_PAGE_ACCESS_TOKEN
-        },
+        params=params,
         timeout=30
     )
     print(response.text)
@@ -841,6 +898,42 @@ def post_to_tiktok(media_path, caption):
 # ─────────────────────────────────────────────
 # MAIN POST FUNCTION
 # ─────────────────────────────────────────────
+def build_alt_text(media_name):
+    """
+    Generate an SEO-friendly alt text from the media filename.
+    Instagram uses alt text for accessibility and content discovery.
+    Examples:
+      lepique-wide-leg-29-dark-navy.jpeg  → "Ladies wide-leg dark navy jeans – Lepique Fashions Nairobi"
+      lepique-leather-jacket-01-black.jpeg → "Ladies black leather jacket – Lepique Fashions Nairobi"
+    """
+    name = media_name.lower()
+    # Map filename keywords to human-readable descriptions
+    style_map = {
+        "wide-leg": "wide-leg jeans",
+        "skinny": "skinny jeans",
+        "straight": "straight-leg jeans",
+        "flare": "flare jeans",
+        "ripped": "ripped jeans",
+        "cargo": "cargo jeans",
+        "printed": "printed jeans",
+        "bodysuit": "ladies bodysuit",
+        "leather-jacket": "ladies leather jacket",
+        "tshirt": "ladies T-shirt",
+        "longsleeve": "ladies long-sleeve top",
+        "croptop": "ladies crop top",
+    }
+    colour_map = {
+        "dark-navy": "dark navy", "light-blue": "light blue",
+        "medium-blue": "medium blue", "black": "black",
+        "grey": "grey", "beige": "beige", "white": "white",
+        "olive": "olive", "blue": "blue", "acidwash": "acid wash",
+    }
+    style = next((v for k, v in style_map.items() if k in name), "ladies fashion")
+    colour = next((v for k, v in colour_map.items() if k in name), "")
+    desc = f"Ladies {colour + ' ' if colour else ''}{style} – Lepique Fashions Nairobi"
+    return desc[:255]  # Instagram alt text max
+
+
 def post_to_instagram():
     ensure_config()
 
@@ -856,7 +949,19 @@ def post_to_instagram():
     if FORCE_POST:
         log("⚡ FORCE_POST enabled — bypassing interval guard.")
 
+    # ── Peak hours guard: only post during high-engagement windows (EAT) ──
+    if not FORCE_POST and not FORCE_PEAK_BYPASS:
+        import datetime as dt
+        eat_hour = (dt.datetime.utcnow().hour + 3) % 24
+        if not check_peak_hours():
+            log(f"⏭ Skipping — current Nairobi time is {eat_hour:02d}:xx (outside peak hours 07–09, 12–14, 18–21 EAT).")
+            return
+        log(f"✅ Peak hours check passed — Nairobi hour: {eat_hour:02d}.")
+
     log("--- Starting Instagram + Facebook + TikTok post ---")
+
+    # ── Token expiry check (warns but does not block posting) ──
+    check_ig_token_expiry()
 
     caption_obj = get_next_caption(state)
     full_caption = caption_obj["text"]
@@ -883,12 +988,20 @@ def post_to_instagram():
         container_id = create_video_container(media_url, full_caption)
     else:
         log("Uploading image to Instagram...")
-        container_id = create_image_container(media_url, full_caption)
+        alt_text = build_alt_text(media_path.name)
+        log(f"Alt text: {alt_text}")
+        container_id = create_image_container(media_url, full_caption, alt_text=alt_text)
 
     wait_for_container(container_id)
     log(f"Container ID: {container_id}")
     post_id = publish_container(container_id)
     log(f"✅ Instagram feed post successful! ID: {post_id}")
+
+    # ── Save state immediately after successful Instagram post ──
+    # This prevents re-posting the same image if Facebook/TikTok crashes.
+    state["last_post_time"] = datetime.utcnow().isoformat()
+    save_state(state)
+    log("State saved after Instagram post.")
 
     # ── Instagram Stories ──
     story_url = prepare_story_image(media_path) if not video_file else media_url
@@ -902,10 +1015,8 @@ def post_to_instagram():
     tiktok_caption = get_next_tiktok_caption(state)
     post_to_tiktok(tiktok_video, tiktok_caption)
 
-    # Record successful post time so the interval guard works correctly
-    state["last_post_time"] = datetime.utcnow().isoformat()
     save_state(state)
-    log("✅ All done. State saved.")
+    log("✅ All done. Final state saved.")
 
 # ─────────────────────────────────────────────
 # ENTRY POINT
