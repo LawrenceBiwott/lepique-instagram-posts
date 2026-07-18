@@ -2443,3 +2443,4 @@ continue appending new entries below as usual.
 [2026-07-18 21:13:55] ⚠️  TikTok post failed (Instagram/Facebook not affected): 403 Client Error: Forbidden for url: https://open.tiktokapis.com/v2/post/publish/video/init/
 [2026-07-18 21:13:55] ✅ All done. State saved.
 >>>>>>> Stashed changes
+[2026-07-18 22:09:00] Error: Expecting property name enclosed in double quotes: line 3 column 1 (char 24)
