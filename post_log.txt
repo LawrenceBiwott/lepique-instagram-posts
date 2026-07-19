@@ -2580,3 +2580,35 @@ continue appending new entries below as usual.
 [2026-07-19 15:14:08] Facebook Story posted! ID: 1521207866153713
 [2026-07-19 15:14:08] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
 [2026-07-19 15:14:08] All done. Final state saved.
+[2026-07-19 16:12:41] Peak hours check passed - Nairobi hour: 19.
+[2026-07-19 16:12:41] --- Starting Instagram + Facebook post ---
+[2026-07-19 16:12:41] Instagram token OK - account: @lepique_fashions (ID: 27435596712725786)
+[2026-07-19 16:12:41] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-07-19 16:12:41] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-07-19 16:12:41] Found 147 media files (newest-first by git history)
+[2026-07-19 16:12:41] Latest 5: ['13edd28f-ad5b-496e-b914-707ccdb3a814.jpg', '16256cef-c6b0-4133-870b-e39c114e74c6.jpg', '1748f425-f552-49d2-aaa4-ee6a77d71b2d.jpg', '267f3bfb-fde9-41d4-a022-61b18ae47e6a.jpg', '28928d6c-c9f1-4f3c-9025-ef40355317ca.jpg']
+[2026-07-19 16:12:41] Selected media: 396c3964-00a0-40f7-b621-114c3134e8cf.jpg
+[2026-07-19 16:12:41] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/396c3964-00a0-40f7-b621-114c3134e8cf.jpg
+[2026-07-19 16:12:41] Uploading image to Instagram...
+[2026-07-19 16:12:41] Alt text: Ladies ladies fashion - Lepique Fashions Nairobi
+[2026-07-19 16:12:44] Waiting for Instagram processing...
+[2026-07-19 16:12:44] Container status: FINISHED
+[2026-07-19 16:12:54] Container ID: 18545293510073384
+[2026-07-19 16:12:57] Instagram feed post successful! ID: 18087099629217178
+[2026-07-19 16:12:57] State saved after Instagram post.
+[2026-07-19 16:12:57] Story image resized to 1080x1920 -> photos/story_temp.jpg
+[2026-07-19 16:12:59] Story URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/story_temp.jpg - waiting for GitHub Pages to deploy...
+[2026-07-19 16:13:54] Story image live after 55s.
+[2026-07-19 16:13:54] Posting to Instagram Stories...
+[2026-07-19 16:13:57] Waiting for Instagram processing...
+[2026-07-19 16:13:57] Container status: IN_PROGRESS
+[2026-07-19 16:14:02] Container status: FINISHED
+[2026-07-19 16:14:14] Instagram Story posted! ID: 18081956441670811
+[2026-07-19 16:14:14] --- Posting to Facebook ---
+[2026-07-19 16:14:14] Uploading photo to Facebook feed...
+[2026-07-19 16:14:20] Facebook feed post successful! ID: 1889041611321657_1455097819986596
+[2026-07-19 16:14:20] Posting photo to Facebook Stories...
+[2026-07-19 16:14:28] Facebook Story posted! ID: 1017190031021434
+[2026-07-19 16:14:28] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
+[2026-07-19 16:14:28] All done. Final state saved.
