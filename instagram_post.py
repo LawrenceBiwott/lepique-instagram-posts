@@ -1,7 +1,8 @@
 """
-Instagram + Facebook + TikTok Auto-Poster
+Instagram + Facebook Auto-Poster
 Posts photos/videos/Reels to Instagram feed & Stories,
-Facebook Page feed & Stories, and TikTok (videos only).
+and Facebook Page feed & Stories.
+(TikTok posting disabled — re-enable by setting TIKTOK_ENABLED=true after app audit approval)
 """
 import os
 import json
@@ -30,7 +31,7 @@ IG_USER_ID = os.environ.get(
 FB_PAGE_ACCESS_TOKEN = os.environ.get("FB_PAGE_ACCESS_TOKEN", "").strip()
 FB_PAGE_ID = os.environ.get("FB_PAGE_ID", "").strip()
 
-# TikTok credentials
+# TikTok credentials (kept for when audit is approved — not used while disabled)
 TIKTOK_CLIENT_KEY    = os.environ.get("TIKTOK_CLIENT_KEY", "").strip()
 TIKTOK_CLIENT_SECRET = os.environ.get("TIKTOK_CLIENT_SECRET", "").strip()
 TIKTOK_REFRESH_TOKEN = os.environ.get("TIKTOK_REFRESH_TOKEN", "").strip()
@@ -54,9 +55,9 @@ IMAGE_EXTS = {".jpg", ".jpeg", ".png", ".webp"}
 VIDEO_EXTS = {".mp4", ".mov", ".m4v"}
 
 # API base URLs
-IG_BASE_URL      = "https://graph.instagram.com/v21.0"
-FB_BASE_URL      = "https://graph.facebook.com/v21.0"
-TIKTOK_BASE_URL  = "https://open.tiktokapis.com/v2"
+IG_BASE_URL     = "https://graph.instagram.com/v21.0"
+FB_BASE_URL     = "https://graph.facebook.com/v21.0"
+TIKTOK_BASE_URL = "https://open.tiktokapis.com/v2"
 TIKTOK_CHUNK_SIZE = 10 * 1024 * 1024  # 10 MB per chunk
 
 # Minimum minutes between posts (prevents double-posting when cron runs every 10 min)
@@ -65,17 +66,21 @@ MIN_POST_INTERVAL_MINUTES = 55
 # Set to 'true' via workflow_dispatch input to bypass the interval guard
 FORCE_POST = os.environ.get("FORCE_POST", "false").strip().lower() == "true"
 
+# TikTok posting — disabled by default until TikTok app audit is approved.
+# Set TIKTOK_ENABLED=true in GitHub secrets/env to re-enable.
+TIKTOK_ENABLED = os.environ.get("TIKTOK_ENABLED", "false").strip().lower() == "true"
+
 # Nairobi peak posting hours (EAT = UTC+3)
-# Script only posts when the current EAT hour falls within these windows
-# 07:00–09:00, 12:00–14:00, 18:00–21:00
+# Script only posts when the current EAT hour falls within these windows:
+# 07:00-09:00, 12:00-14:00, 18:00-21:00
 PEAK_HOURS_EAT = set(range(7, 10)) | set(range(12, 15)) | set(range(18, 22))
 
 # Set to 'true' via workflow_dispatch input to bypass peak-hours check
 FORCE_PEAK_BYPASS = os.environ.get("FORCE_PEAK_BYPASS", "false").strip().lower() == "true"
 
-# Nairobi Facebook Place ID for location tagging (Platinum Plaza, Tom Mboya St)
-# Find yours: https://www.facebook.com/pages/Platinum-Plaza-Nairobi/
-FB_PLACE_ID = os.environ.get("FB_PLACE_ID", "").strip()   # optional — set in GitHub secrets
+# Optional Facebook Place ID for location tagging (Platinum Plaza, Tom Mboya St, Nairobi)
+# Find the page ID on Facebook, then add as a GitHub secret named FB_PLACE_ID
+FB_PLACE_ID = os.environ.get("FB_PLACE_ID", "").strip()
 
 # ─────────────────────────────────────────────
 # LOGGING
@@ -94,7 +99,12 @@ def load_state():
     if STATE_FILE.exists():
         with open(STATE_FILE, "r", encoding="utf-8") as f:
             return json.load(f)
-    return {"caption_index": 0, "posted_files": [], "tiktok_posted_videos": [], "tiktok_caption_index": 0}
+    return {
+        "caption_index": 0,
+        "posted_files": [],
+        "tiktok_posted_videos": [],
+        "tiktok_caption_index": 0
+    }
 
 def save_state(state):
     with open(STATE_FILE, "w", encoding="utf-8") as f:
@@ -138,7 +148,7 @@ def get_next_media(state):
         log("media/ folder not found.")
         return None
 
-    # Build file list — newest additions first (git history), fallback to mtime
+    # Build file list - newest additions first (git history), fallback to mtime
     all_files = []
     try:
         result = subprocess.run(
@@ -150,11 +160,8 @@ def get_next_media(state):
             line = line.strip()
             if line:
                 fname = Path(line).name
-                # Resolve against the actual on-disk location (media/photos/, media/videos/,
-                # or — for any legacy entries — directly under media/) regardless of which
-                # subfolder git's history says it was added under.
                 candidates = [
-                    BASE_DIR / line,                # path as recorded in git history
+                    BASE_DIR / line,
                     PHOTOS_FOLDER / fname,
                     VIDEOS_FOLDER / fname,
                     MEDIA_FOLDER / fname,
@@ -169,7 +176,7 @@ def get_next_media(state):
         else:
             raise Exception("Git log returned no files")
     except Exception as e:
-        log(f"Git ordering unavailable ({e}) — falling back to mtime sort")
+        log(f"Git ordering unavailable ({e}) - falling back to mtime sort")
         all_files = sorted(
             [p for p in MEDIA_FOLDER.rglob("*")
              if p.is_file() and p.suffix.lower() in (IMAGE_EXTS | VIDEO_EXTS)],
@@ -183,7 +190,6 @@ def get_next_media(state):
 
     log(f"Latest 5: {[f.name for f in all_files[:5]]}")
 
-    # Always post the newest unposted file first
     posted = set(state.get("posted_files", []))
     selected = None
     for f in all_files:
@@ -191,9 +197,8 @@ def get_next_media(state):
             selected = f
             break
 
-    # All files have been posted — reset cycle
     if selected is None:
-        log(f"All {len(all_files)} files posted — resetting cycle, starting from newest.")
+        log(f"All {len(all_files)} files posted - resetting cycle, starting from newest.")
         posted = set()
         state["posted_files"] = []
         selected = all_files[0]
@@ -203,11 +208,10 @@ def get_next_media(state):
     return selected
 
 def get_next_tiktok_video(state):
-    """Pick the next unposted video for TikTok — newest to oldest by mtime, then cycle."""
+    """Pick the next unposted video for TikTok - newest to oldest by mtime, then cycle."""
     if not VIDEOS_FOLDER.exists():
         return None
 
-    # Sort all videos newest-first by file modification time
     all_videos = sorted(
         [p for p in VIDEOS_FOLDER.iterdir()
          if p.is_file() and p.suffix.lower() in VIDEO_EXTS],
@@ -215,10 +219,10 @@ def get_next_tiktok_video(state):
     )
 
     if not all_videos:
-        log("ℹ️  TikTok: no video files found in media/videos/")
+        log("TikTok: no video files found in media/videos/")
         return None
 
-    log(f"TikTok: {len(all_videos)} videos found (newest → oldest): "
+    log(f"TikTok: {len(all_videos)} videos found (newest to oldest): "
         f"{[v.name for v in all_videos]}")
 
     posted = set(state.get("tiktok_posted_videos", []))
@@ -229,7 +233,7 @@ def get_next_tiktok_video(state):
             break
 
     if selected is None:
-        log(f"TikTok: all {len(all_videos)} videos posted — resetting cycle, starting from newest.")
+        log(f"TikTok: all {len(all_videos)} videos posted - resetting cycle.")
         state["tiktok_posted_videos"] = []
         selected = all_videos[0]
 
@@ -242,14 +246,12 @@ def is_video(path):
     return path.suffix.lower() in VIDEO_EXTS
 
 def build_media_url(media_path):
-    # Preserve the photos/ or videos/ subfolder in the URL so it matches
-    # wherever the file actually lives under media/.
     rel = media_path.relative_to(MEDIA_FOLDER)
     safe_rel = "/".join(quote(part) for part in rel.parts)
     return f"{GITHUB_RAW_BASE}/{safe_rel}"
 
 # ─────────────────────────────────────────────
-# CONFIG CHECK
+# CONFIG + HEALTH CHECKS
 # ─────────────────────────────────────────────
 def ensure_config():
     if not ACCESS_TOKEN:
@@ -257,54 +259,58 @@ def ensure_config():
     if not IG_USER_ID:
         raise ValueError("INSTAGRAM_USER_ID missing.")
 
+def current_eat_hour():
+    """Return the current hour in Nairobi time (EAT = UTC+3)."""
+    return (datetime.utcnow().hour + 3) % 24
+
 def check_peak_hours():
     """Return True if current EAT time is inside a peak posting window."""
-    import datetime as dt
-    eat_hour = (dt.datetime.utcnow().hour + 3) % 24
-    return eat_hour in PEAK_HOURS_EAT
+    return current_eat_hour() in PEAK_HOURS_EAT
 
-def check_ig_token_expiry():
+def check_ig_token_health():
     """
-    Fetch token debug info and warn (via log) if expiry is within 14 days.
-    Instagram long-lived tokens last 60 days; this gives early warning.
-    Returns days_remaining or None if unknown.
+    Ping /me to confirm the Instagram access token is alive.
+    Logs the account username on success, or a clear EXPIRED warning on failure.
+
+    Instagram long-lived tokens last 60 days. If this call returns error code 190,
+    the token has expired and must be regenerated at:
+    https://developers.facebook.com/tools/explorer/
+    Then update the INSTAGRAM_ACCESS_TOKEN GitHub secret.
     """
     try:
         resp = requests.get(
-            "https://graph.instagram.com/v21.0/me",
-            params={
-                "fields": "token_expiry_time",
-                "access_token": ACCESS_TOKEN
-            },
+            f"{IG_BASE_URL}/me",
+            params={"fields": "id,username", "access_token": ACCESS_TOKEN},
             timeout=15
         )
         data = resp.json()
-        expiry_ts = data.get("token_expiry_time")
-        if expiry_ts:
-            from datetime import datetime, timezone
-            expiry = datetime.fromtimestamp(int(expiry_ts), tz=timezone.utc)
-            days_left = (expiry - datetime.now(tz=timezone.utc)).days
-            if days_left <= 14:
-                log(f"⚠️  TOKEN EXPIRY WARNING: Instagram access token expires in {days_left} days!")
-                log("    Refresh it at: https://developers.facebook.com/tools/debug/accesstoken/")
+        if "error" in data:
+            code = data["error"].get("code")
+            msg  = data["error"].get("message", "")
+            if code == 190:
+                log("CRITICAL: Instagram access token has EXPIRED or been revoked!")
+                log("  Generate a new 60-day token at:")
+                log("  https://developers.facebook.com/tools/explorer/")
+                log("  Then update the INSTAGRAM_ACCESS_TOKEN GitHub secret.")
             else:
-                log(f"✅ Instagram token valid for {days_left} more days.")
-            return days_left
+                log(f"Instagram token warning (code {code}): {msg}")
+        else:
+            log(f"Instagram token OK - account: @{data.get('username','?')} (ID: {data.get('id')})")
     except Exception as e:
-        log(f"ℹ️  Could not check token expiry: {e}")
-    return None
+        log(f"Token health check skipped: {e}")
 
 # ─────────────────────────────────────────────
 # IMAGE PRE-PROCESSING
 # ─────────────────────────────────────────────
 def pad_image_to_valid_ratio(file_path, bg_color=(255, 255, 255)):
     """
-    If the image at file_path has an aspect ratio outside Instagram's
-    valid range (0.8–1.91), pad it with bg_color so it fits.
-    Saves in place. No-op if PIL is unavailable or ratio is already valid.
+    Guard against Instagram rejecting images with ratio outside 0.8-1.91.
+    All current Lepique photos are 1122x1402px (ratio 0.80) which is exactly
+    at the minimum valid boundary, so this is a no-op for existing photos.
+    Pads the local checkout copy in-place. No-op if PIL is unavailable.
     """
     if not PIL_AVAILABLE:
-        log("Pillow not installed — skipping aspect ratio check.")
+        log("Pillow not installed - skipping aspect ratio check.")
         return
     try:
         img = Image.open(file_path).convert("RGB")
@@ -315,23 +321,22 @@ def pad_image_to_valid_ratio(file_path, bg_color=(255, 255, 255)):
             return  # already valid
 
         if ratio < 0.8:
-            # Too tall — add padding left & right to reach 4:5
+            # Too tall - add padding left & right to reach 4:5
             new_w = int(h * 0.8)
             canvas = Image.new("RGB", (new_w, h), bg_color)
             canvas.paste(img, ((new_w - w) // 2, 0))
             canvas.save(file_path, quality=95)
-            log(f"Padded {file_path.name}: {w}x{h} → {new_w}x{h} (ratio {new_w/h:.2f})")
+            log(f"Padded {file_path.name}: {w}x{h} -> {new_w}x{h} (ratio {new_w/h:.2f})")
         else:
-            # Too wide — add padding top & bottom to reach 1.91:1
+            # Too wide - add padding top & bottom to reach 1.91:1
             new_h = int(w / 1.91)
             canvas = Image.new("RGB", (w, new_h), bg_color)
             canvas.paste(img, (0, (new_h - h) // 2))
             canvas.save(file_path, quality=95)
-            log(f"Padded {file_path.name}: {w}x{h} → {w}x{new_h} (ratio {w/new_h:.2f})")
+            log(f"Padded {file_path.name}: {w}x{h} -> {w}x{new_h} (ratio {w/new_h:.2f})")
 
     except Exception as e:
-        log(f"⚠️ Could not pad image {file_path.name}: {e}")
-
+        log(f"Could not pad image {file_path.name}: {e}")
 
 # ─────────────────────────────────────────────
 # INSTAGRAM API
@@ -342,7 +347,6 @@ def create_image_container(image_url, caption, alt_text=None):
         "caption": caption,
         "access_token": ACCESS_TOKEN
     }
-    # Alt text improves accessibility and Instagram search discovery
     if alt_text:
         params["alt_text"] = alt_text
     response = requests.post(
@@ -386,7 +390,7 @@ def wait_for_container(container_id):
         status = data.get("status_code")
         log(f"Container status: {status}")
         if status == "FINISHED":
-            time.sleep(10)  # Brief wait after FINISHED — Instagram CDN needs a moment before publish
+            time.sleep(10)  # Brief wait - Instagram CDN needs a moment before publish
             return True
         if status == "ERROR":
             raise Exception(f"Instagram processing failed: {data}")
@@ -409,10 +413,8 @@ def publish_container(container_id):
 def prepare_story_image(media_path):
     """
     Resize image to 9:16 (1080x1920) with blurred background fill,
-    commit to GitHub as media/story_temp.jpg, wait for CDN, return URL.
+    commit to GitHub as media/photos/story_temp.jpg, wait for CDN, return URL.
     Falls back to original feed URL on any error.
-    The workflow's final step does git pull --rebase before pushing,
-    so this mid-run commit no longer conflicts with the state save.
     """
     original_url = build_media_url(media_path)
     try:
@@ -423,18 +425,15 @@ def prepare_story_image(media_path):
         img = Image.open(media_path).convert("RGB")
         orig_w, orig_h = img.size
 
-        # Already 9:16 — nothing to do
         if orig_w == STORY_W and orig_h == STORY_H:
-            log("Story image already 9:16 — skipping resize.")
+            log("Story image already 9:16 - skipping resize.")
             return original_url
 
-        # Scale foreground to fit inside canvas
         scale = min(STORY_W / orig_w, STORY_H / orig_h)
         fg_w = int(orig_w * scale)
         fg_h = int(orig_h * scale)
         foreground = img.resize((fg_w, fg_h), Image.LANCZOS)
 
-        # Blurred background: scale to fill, blur, crop
         bg_scale = max(STORY_W / orig_w, STORY_H / orig_h)
         bg_w = int(orig_w * bg_scale)
         bg_h = int(orig_h * bg_scale)
@@ -444,7 +443,6 @@ def prepare_story_image(media_path):
         top  = (bg_h - STORY_H) // 2
         background = background.crop((left, top, left + STORY_W, top + STORY_H))
 
-        # Paste foreground centred
         paste_x = (STORY_W - fg_w) // 2
         paste_y = (STORY_H - fg_h) // 2
         background.paste(foreground, (paste_x, paste_y))
@@ -453,7 +451,6 @@ def prepare_story_image(media_path):
         background.save(story_path, "JPEG", quality=92)
         log(f"Story image resized to {STORY_W}x{STORY_H} -> photos/story_temp.jpg")
 
-        # Commit and push — workflow final step uses git pull --rebase to handle this
         subprocess.run(["git", "config", "user.name", "github-actions[bot]"], cwd=BASE_DIR, check=True)
         subprocess.run(["git", "config", "user.email", "github-actions[bot]@users.noreply.github.com"], cwd=BASE_DIR, check=True)
         subprocess.run(["git", "add", str(story_path)], cwd=BASE_DIR, check=True)
@@ -461,9 +458,8 @@ def prepare_story_image(media_path):
         subprocess.run(["git", "push"], cwd=BASE_DIR, check=True)
 
         story_url = build_media_url(story_path)
-        log(f"Story URL: {story_url} — waiting for GitHub Pages to deploy...")
+        log(f"Story URL: {story_url} - waiting for GitHub Pages to deploy...")
 
-        # Poll until the URL returns 200 (Pages typically updates in 60–120s)
         for attempt in range(24):  # up to 2 minutes
             time.sleep(5)
             try:
@@ -474,18 +470,16 @@ def prepare_story_image(media_path):
             except Exception:
                 pass
         else:
-            log("⚠️ Story image not live after 120s — falling back to feed image URL.")
+            log("Story image not live after 120s - falling back to feed image URL.")
             return original_url
 
         return story_url
 
     except Exception as e:
-        log(f"Story resize failed ({e}) — using original image for Story.")
+        log(f"Story resize failed ({e}) - using original image for Story.")
         return original_url
 
-
 def create_ig_story_container(media_url, is_video_file):
-    """Create an Instagram Stories container."""
     params = {
         "media_type": "STORIES",
         "access_token": ACCESS_TOKEN
@@ -504,15 +498,14 @@ def create_ig_story_container(media_url, is_video_file):
     return response.json()["id"]
 
 def post_ig_story(media_url, is_video_file):
-    """Post to Instagram Stories."""
     log("Posting to Instagram Stories...")
     try:
         story_container = create_ig_story_container(media_url, is_video_file)
         wait_for_container(story_container)
         story_id = publish_container(story_container)
-        log(f"✅ Instagram Story posted! ID: {story_id}")
+        log(f"Instagram Story posted! ID: {story_id}")
     except Exception as e:
-        log(f"⚠️ Instagram Story post failed (feed post still succeeded): {e}")
+        log(f"Instagram Story post failed (feed post still succeeded): {e}")
 
 # ─────────────────────────────────────────────
 # FACEBOOK API
@@ -524,7 +517,6 @@ def post_fb_photo(image_url, caption):
         "caption": caption,
         "access_token": FB_PAGE_ACCESS_TOKEN
     }
-    # Location tag: ~79% more engagement when tagged to Platinum Plaza, Nairobi
     if FB_PLACE_ID:
         params["place"] = FB_PLACE_ID
     response = requests.post(
@@ -537,7 +529,6 @@ def post_fb_photo(image_url, caption):
     return response.json().get("post_id") or response.json().get("id")
 
 def post_fb_video(video_url, caption):
-    """Post a video to the Facebook Page feed."""
     response = requests.post(
         f"{FB_BASE_URL}/{FB_PAGE_ID}/videos",
         params={
@@ -552,14 +543,12 @@ def post_fb_video(video_url, caption):
     return response.json().get("id")
 
 def post_fb_photo_story(image_url):
-    """Post a photo to Facebook Page Stories."""
-    # Step 1: upload photo (unpublished) to get a photo ID
+    """Post a photo to Facebook Page Stories (two-step: upload then publish)."""
     upload_resp = requests.post(
         f"{FB_BASE_URL}/{FB_PAGE_ID}/photos",
         params={
             "url": image_url,
             "published": "false",
-            "temporary": "true",
             "access_token": FB_PAGE_ACCESS_TOKEN
         },
         timeout=30
@@ -568,7 +557,6 @@ def post_fb_photo_story(image_url):
     upload_resp.raise_for_status()
     photo_id = upload_resp.json().get("id")
 
-    # Step 2: publish as Story
     story_resp = requests.post(
         f"{FB_BASE_URL}/{FB_PAGE_ID}/photo_stories",
         params={
@@ -581,45 +569,14 @@ def post_fb_photo_story(image_url):
     story_resp.raise_for_status()
     return story_resp.json().get("post_id") or story_resp.json().get("id")
 
-def post_fb_video_story(video_url):
-    """Post a video to Facebook Page Stories (two-step upload)."""
-    # Step 1: initialise upload session
-    init_resp = requests.post(
-        f"{FB_BASE_URL}/{FB_PAGE_ID}/video_stories",
-        params={
-            "upload_phase": "start",
-            "access_token": FB_PAGE_ACCESS_TOKEN
-        },
-        timeout=30
-    )
-    print(init_resp.text)
-    init_resp.raise_for_status()
-    video_id = init_resp.json().get("video_id")
-
-    # Step 2: finish with public URL
-    finish_resp = requests.post(
-        f"{FB_BASE_URL}/{FB_PAGE_ID}/video_stories",
-        params={
-            "upload_phase": "finish",
-            "video_id": video_id,
-            "file_url": video_url,
-            "access_token": FB_PAGE_ACCESS_TOKEN
-        },
-        timeout=60
-    )
-    print(finish_resp.text)
-    finish_resp.raise_for_status()
-    return video_id
-
 def post_to_facebook(media_url, caption, is_video_file):
-    """Post to Facebook Page feed AND Stories."""
+    """Post to Facebook Page feed AND Stories (photo only)."""
     if not FB_PAGE_ACCESS_TOKEN or not FB_PAGE_ID:
-        log("⚠️ Facebook credentials not set — skipping Facebook post.")
+        log("Facebook credentials not set - skipping Facebook post.")
         return
 
     log("--- Posting to Facebook ---")
 
-    # Feed post
     try:
         if is_video_file:
             log("Uploading video to Facebook feed...")
@@ -627,35 +584,35 @@ def post_to_facebook(media_url, caption, is_video_file):
         else:
             log("Uploading photo to Facebook feed...")
             fb_post_id = post_fb_photo(media_url, caption)
-        log(f"✅ Facebook feed post successful! ID: {fb_post_id}")
+        log(f"Facebook feed post successful! ID: {fb_post_id}")
     except Exception as e:
-        log(f"⚠️ Facebook feed post failed: {e}")
+        log(f"Facebook feed post failed: {e}")
 
-    # Story — video Stories via file_url consistently fail (Facebook can't reach GitHub Pages CDN),
-    # so skip Facebook Stories for videos entirely.
+    # Facebook Stories: photo only (video Stories via public URL consistently fail)
     try:
         if is_video_file:
-            log("ℹ️  Skipping Facebook Story for video (not supported via public URL).")
+            log("Skipping Facebook Story for video (not supported via public URL).")
             return
         log("Posting photo to Facebook Stories...")
         story_id = post_fb_photo_story(media_url)
-        log(f"✅ Facebook Story posted! ID: {story_id}")
+        log(f"Facebook Story posted! ID: {story_id}")
     except Exception as e:
-        log(f"⚠️ Facebook Story post failed: {e}")
+        log(f"Facebook Story post failed: {e}")
 
 # ─────────────────────────────────────────────
-# TIKTOK API
+# TIKTOK API  (disabled - kept for re-enablement after audit approval)
+# To enable: set TIKTOK_ENABLED=true in GitHub secrets
+# Apply for audit at: https://developers.tiktok.com/application/content-posting-api
 # ─────────────────────────────────────────────
 def tiktok_get_access_token():
-    """Exchange the stored refresh token for a fresh 24-hour access token."""
     resp = requests.post(
         f"{TIKTOK_BASE_URL}/oauth/token/",
         headers={"Content-Type": "application/x-www-form-urlencoded"},
         data={
-            "client_key":     TIKTOK_CLIENT_KEY,
-            "client_secret":  TIKTOK_CLIENT_SECRET,
-            "grant_type":     "refresh_token",
-            "refresh_token":  TIKTOK_REFRESH_TOKEN,
+            "client_key":    TIKTOK_CLIENT_KEY,
+            "client_secret": TIKTOK_CLIENT_SECRET,
+            "grant_type":    "refresh_token",
+            "refresh_token": TIKTOK_REFRESH_TOKEN,
         },
         timeout=30
     )
@@ -669,9 +626,7 @@ def tiktok_get_access_token():
         raise Exception(f"No access_token in TikTok refresh response: {result}")
     return token
 
-
 def tiktok_query_creator_info(access_token):
-    """Fetch creator info — confirms the account is ready to post."""
     resp = requests.post(
         f"{TIKTOK_BASE_URL}/post/publish/creator_info/query/",
         headers={
@@ -686,109 +641,9 @@ def tiktok_query_creator_info(access_token):
         raise Exception(f"TikTok creator info failed: {result}")
     return result.get("data", {})
 
-
 def tiktok_init_video_upload(access_token, file_size, caption):
-    """Tell TikTok we're about to upload — returns publish_id and upload_url."""
-    # Chunk size must not exceed the file size (TikTok rejects oversized chunks)
-    chunk_size    = min(TIKTOK_CHUNK_SIZE, file_size)
-    total_chunks  = max(1, (file_size + chunk_size - 1) // chunk_size)
-
-    resp = requests.post(
-        f"{TIKTOK_BASE_URL}/post/publish/video/init/",
-        headers={
-            "Authorization": f"Bearer {access_token}",
-            "Content-Type": "application/json; charset=UTF-8",
-        },
-        json={
-            "post_info": {
-                "title":                caption[:2200],
-                "privacy_level":        "SELF_ONLY",
-                "disable_duet":         False,
-                "disable_comment":      False,
-                "disable_stitch":       False,
-            },
-            "source_info": {
-                "source":             "FILE_UPLOAD",
-                "video_size":         file_size,
-                "chunk_size":         chunk_size,
-                "total_chunk_count":  total_chunks,
-            }
-        },
-        timeout=30
-    )
-    print(resp.text)
-    resp.raise_for_status()
-    result = resp.json()
-    if result.get("error", {}).get("code", "ok") != "ok":
-        raise Exception(f"TikTok upload init failed: {result}")
-    data = result["data"]
-    return data["publish_id"], data["upload_url"], chunk_size, total_chunks
-
-
-def tiktok_upload_video_chunks(upload_url, video_path, file_size, chunk_size, total_chunks):
-    """Stream video to TikTok's upload server, one chunk at a time."""
-    with open(video_path, "rb") as f:
-        for idx in range(total_chunks):
-            start_byte = idx * chunk_size
-            chunk_data = f.read(chunk_size)
-            end_byte   = start_byte + len(chunk_data) - 1
-
-            content_range = f"bytes {start_byte}-{end_byte}/{file_size}"
-            log(f"  TikTok chunk {idx + 1}/{total_chunks}: {content_range}")
-
-            put_resp = requests.put(
-                upload_url,
-                headers={
-                    "Content-Range":  content_range,
-                    "Content-Length": str(len(chunk_data)),
-                    "Content-Type":   "video/mp4",
-                },
-                data=chunk_data,
-                timeout=120
-            )
-            if put_resp.status_code not in (200, 201, 206):
-                raise Exception(
-                    f"TikTok chunk {idx + 1} upload failed "
-                    f"({put_resp.status_code}): {put_resp.text}"
-                )
-
-
-def tiktok_poll_status(access_token, publish_id):
-    """Poll until TikTok confirms the post is live (or fails)."""
-    log("Waiting for TikTok to process the video...")
-    terminal_ok  = {"PUBLISH_COMPLETE"}
-    terminal_bad = {"FAILED", "ERROR"}
-
-    for attempt in range(36):          # up to ~6 minutes
-        resp = requests.post(
-            f"{TIKTOK_BASE_URL}/post/publish/status/fetch/",
-            headers={
-                "Authorization": f"Bearer {access_token}",
-                "Content-Type": "application/json; charset=UTF-8",
-            },
-            json={"publish_id": publish_id},
-            timeout=30
-        )
-        resp.raise_for_status()
-        result = resp.json()
-        status = result.get("data", {}).get("status", "UNKNOWN")
-        log(f"  TikTok status ({attempt + 1}): {status}")
-
-        if status in terminal_ok:
-            return True
-        if status in terminal_bad:
-            raise Exception(f"TikTok publish failed: {result}")
-        time.sleep(10)
-
-    raise TimeoutError("TikTok processing timed out after 6 minutes.")
-
-
-def tiktok_init_story_upload(access_token, file_size):
-    """Initialize a TikTok Story video upload using the post_to_story flag."""
-    # Chunk size must not exceed the file size (TikTok rejects oversized chunks)
     chunk_size   = min(TIKTOK_CHUNK_SIZE, file_size)
     total_chunks = max(1, (file_size + chunk_size - 1) // chunk_size)
-
     resp = requests.post(
         f"{TIKTOK_BASE_URL}/post/publish/video/init/",
         headers={
@@ -797,8 +652,8 @@ def tiktok_init_story_upload(access_token, file_size):
         },
         json={
             "post_info": {
+                "title":           caption[:2200],
                 "privacy_level":   "SELF_ONLY",
-                "post_to_story":   True,
                 "disable_duet":    False,
                 "disable_comment": False,
                 "disable_stitch":  False,
@@ -816,111 +671,103 @@ def tiktok_init_story_upload(access_token, file_size):
     resp.raise_for_status()
     result = resp.json()
     if result.get("error", {}).get("code", "ok") != "ok":
-        raise Exception(f"TikTok Story upload init failed: {result}")
+        raise Exception(f"TikTok upload init failed: {result}")
     data = result["data"]
     return data["publish_id"], data["upload_url"], chunk_size, total_chunks
 
+def tiktok_upload_video_chunks(upload_url, video_path, file_size, chunk_size, total_chunks):
+    with open(video_path, "rb") as f:
+        for idx in range(total_chunks):
+            start_byte = idx * chunk_size
+            chunk_data = f.read(chunk_size)
+            end_byte   = start_byte + len(chunk_data) - 1
+            content_range = f"bytes {start_byte}-{end_byte}/{file_size}"
+            log(f"  TikTok chunk {idx + 1}/{total_chunks}: {content_range}")
+            put_resp = requests.put(
+                upload_url,
+                headers={
+                    "Content-Range":  content_range,
+                    "Content-Length": str(len(chunk_data)),
+                    "Content-Type":   "video/mp4",
+                },
+                data=chunk_data,
+                timeout=120
+            )
+            if put_resp.status_code not in (200, 201, 206):
+                raise Exception(
+                    f"TikTok chunk {idx + 1} upload failed "
+                    f"({put_resp.status_code}): {put_resp.text}"
+                )
 
-def post_tiktok_story(media_path, access_token):
-    """Upload a video as a TikTok Story (runs after the regular feed post)."""
-    log("--- Posting to TikTok Story ---")
-    try:
-        file_size = media_path.stat().st_size
-        log(f"Initialising TikTok Story upload ({file_size / 1024 / 1024:.1f} MB)...")
-        publish_id, upload_url, chunk_size, total_chunks = tiktok_init_story_upload(
-            access_token, file_size
+def tiktok_poll_status(access_token, publish_id):
+    log("Waiting for TikTok to process the video...")
+    terminal_ok  = {"PUBLISH_COMPLETE"}
+    terminal_bad = {"FAILED", "ERROR"}
+    for attempt in range(36):
+        resp = requests.post(
+            f"{TIKTOK_BASE_URL}/post/publish/status/fetch/",
+            headers={
+                "Authorization": f"Bearer {access_token}",
+                "Content-Type": "application/json; charset=UTF-8",
+            },
+            json={"publish_id": publish_id},
+            timeout=30
         )
-        log(f"TikTok Story publish_id: {publish_id}")
-
-        tiktok_upload_video_chunks(upload_url, media_path, file_size, chunk_size, total_chunks)
-        log("Story chunks uploaded.")
-
-        tiktok_poll_status(access_token, publish_id)
-        log(f"✅ TikTok Story live! publish_id: {publish_id}")
-
-    except Exception as e:
-        log(f"⚠️  TikTok Story post failed (feed post not affected): {e}")
-
+        resp.raise_for_status()
+        result = resp.json()
+        status = result.get("data", {}).get("status", "UNKNOWN")
+        log(f"  TikTok status ({attempt + 1}): {status}")
+        if status in terminal_ok:
+            return True
+        if status in terminal_bad:
+            raise Exception(f"TikTok publish failed: {result}")
+        time.sleep(10)
+    raise TimeoutError("TikTok processing timed out after 6 minutes.")
 
 def post_to_tiktok(media_path, caption):
-    """
-    Post a video to TikTok feed + Story using the Content Posting API (Direct Post).
-    media_path is always a video — selected independently via get_next_tiktok_video().
-
-    Notes:
-      • Until your TikTok Developer app passes TikTok's audit, new posts will
-        be visible only to you. Apply at:
-        https://developers.tiktok.com/application/content-posting-api
-    """
     if not TIKTOK_CLIENT_KEY or not TIKTOK_CLIENT_SECRET or not TIKTOK_REFRESH_TOKEN:
-        log("⚠️  TikTok credentials not configured — skipping TikTok.")
+        log("TikTok credentials not configured - skipping TikTok.")
         return
-
     if media_path is None:
-        log("ℹ️  TikTok: no video available to post.")
+        log("TikTok: no video available to post.")
         return
-
     log("--- Posting to TikTok ---")
     try:
-        # 1. Fresh access token (24-hour lifetime)
         log("Refreshing TikTok access token...")
         access_token = tiktok_get_access_token()
-        log("✅ TikTok access token ready.")
-
-        # 2. Confirm creator account is active
+        log("TikTok access token ready.")
         creator = tiktok_query_creator_info(access_token)
         log(f"TikTok creator: @{creator.get('creator_username', '?')} "
             f"(max duration: {creator.get('max_video_post_duration_sec', '?')}s)")
-
-        # 3. Initialise feed upload
         file_size = media_path.stat().st_size
         log(f"Uploading {media_path.name} ({file_size / 1024 / 1024:.1f} MB) to TikTok...")
         publish_id, upload_url, chunk_size, total_chunks = tiktok_init_video_upload(
             access_token, file_size, caption
         )
         log(f"TikTok publish_id: {publish_id}")
-
-        # 4. Stream video chunks
         tiktok_upload_video_chunks(upload_url, media_path, file_size, chunk_size, total_chunks)
         log("All chunks uploaded.")
-
-        # 5. Wait for TikTok feed post to go live
         tiktok_poll_status(access_token, publish_id)
-        log(f"✅ TikTok feed post live! publish_id: {publish_id}")
-
-        # 6. Also post as TikTok Story
-        post_tiktok_story(media_path, access_token)
-
+        log(f"TikTok feed post live! publish_id: {publish_id}")
     except Exception as e:
-        log(f"⚠️  TikTok post failed (Instagram/Facebook not affected): {e}")
-
+        log(f"TikTok post failed (Instagram/Facebook not affected): {e}")
 
 # ─────────────────────────────────────────────
-# MAIN POST FUNCTION
+# ALT TEXT GENERATOR
 # ─────────────────────────────────────────────
 def build_alt_text(media_name):
     """
-    Generate an SEO-friendly alt text from the media filename.
+    Generate SEO-friendly alt text from the media filename.
     Instagram uses alt text for accessibility and content discovery.
-    Examples:
-      lepique-wide-leg-29-dark-navy.jpeg  → "Ladies wide-leg dark navy jeans – Lepique Fashions Nairobi"
-      lepique-leather-jacket-01-black.jpeg → "Ladies black leather jacket – Lepique Fashions Nairobi"
     """
     name = media_name.lower()
-    # Map filename keywords to human-readable descriptions
     style_map = {
-        "wide-leg": "wide-leg jeans",
-        "skinny": "skinny jeans",
-        "straight": "straight-leg jeans",
-        "flare": "flare jeans",
-        "ripped": "ripped jeans",
-        "cargo": "cargo jeans",
-        "printed": "printed jeans",
-        "bodysuit": "ladies bodysuit",
-        "leather-jacket": "ladies leather jacket",
-        "tshirt": "ladies T-shirt",
-        "longsleeve": "ladies long-sleeve top",
-        "croptop": "ladies crop top",
+        "wide-leg": "wide-leg jeans", "skinny": "skinny jeans",
+        "straight": "straight-leg jeans", "flare": "flare jeans",
+        "ripped": "ripped jeans", "cargo": "cargo jeans",
+        "printed": "printed jeans", "bodysuit": "ladies bodysuit",
+        "leather-jacket": "ladies leather jacket", "tshirt": "ladies T-shirt",
+        "longsleeve": "ladies long-sleeve top", "croptop": "ladies crop top",
     }
     colour_map = {
         "dark-navy": "dark navy", "light-blue": "light blue",
@@ -928,40 +775,43 @@ def build_alt_text(media_name):
         "grey": "grey", "beige": "beige", "white": "white",
         "olive": "olive", "blue": "blue", "acidwash": "acid wash",
     }
-    style = next((v for k, v in style_map.items() if k in name), "ladies fashion")
+    style  = next((v for k, v in style_map.items() if k in name), "ladies fashion")
     colour = next((v for k, v in colour_map.items() if k in name), "")
-    desc = f"Ladies {colour + ' ' if colour else ''}{style} – Lepique Fashions Nairobi"
-    return desc[:255]  # Instagram alt text max
+    desc = f"Ladies {colour + ' ' if colour else ''}{style} - Lepique Fashions Nairobi"
+    return desc[:255]
 
-
+# ─────────────────────────────────────────────
+# MAIN POST FUNCTION
+# ─────────────────────────────────────────────
 def post_to_instagram():
     ensure_config()
 
     state = load_state()
 
-    # ── Interval guard: skip if posted too recently ──
+    # -- Interval guard: skip if posted too recently --
     last_post_time = state.get("last_post_time")
     if last_post_time and not FORCE_POST:
         elapsed = (datetime.utcnow() - datetime.fromisoformat(last_post_time)).total_seconds() / 60
         if elapsed < MIN_POST_INTERVAL_MINUTES:
-            log(f"⏭ Skipping — last post was {elapsed:.0f} min ago (next post in ~{MIN_POST_INTERVAL_MINUTES - elapsed:.0f} min).")
+            log(f"Skipping - last post was {elapsed:.0f} min ago "
+                f"(next post in ~{MIN_POST_INTERVAL_MINUTES - elapsed:.0f} min).")
             return
     if FORCE_POST:
-        log("⚡ FORCE_POST enabled — bypassing interval guard.")
+        log("FORCE_POST enabled - bypassing interval guard.")
 
-    # ── Peak hours guard: only post during high-engagement windows (EAT) ──
+    # -- Peak hours guard: only post during high-engagement windows (EAT) --
     if not FORCE_POST and not FORCE_PEAK_BYPASS:
-        import datetime as dt
-        eat_hour = (dt.datetime.utcnow().hour + 3) % 24
+        eat_hour = current_eat_hour()
         if not check_peak_hours():
-            log(f"⏭ Skipping — current Nairobi time is {eat_hour:02d}:xx (outside peak hours 07–09, 12–14, 18–21 EAT).")
+            log(f"Skipping - current Nairobi time is {eat_hour:02d}:xx "
+                f"(outside peak hours 07-09, 12-14, 18-21 EAT).")
             return
-        log(f"✅ Peak hours check passed — Nairobi hour: {eat_hour:02d}.")
+        log(f"Peak hours check passed - Nairobi hour: {eat_hour:02d}.")
 
-    log("--- Starting Instagram + Facebook + TikTok post ---")
+    log("--- Starting Instagram + Facebook post ---")
 
-    # ── Token expiry check (warns but does not block posting) ──
-    check_ig_token_expiry()
+    # -- Token health check (warns but does not block posting) --
+    check_ig_token_health()
 
     caption_obj = get_next_caption(state)
     full_caption = caption_obj["text"]
@@ -982,7 +832,7 @@ def post_to_instagram():
     media_url = build_media_url(media_path)
     log(f"Media URL: {media_url}")
 
-    # ── Instagram feed ──
+    # -- Instagram feed --
     if video_file:
         log("Uploading video/reel to Instagram...")
         container_id = create_video_container(media_url, full_caption)
@@ -995,28 +845,31 @@ def post_to_instagram():
     wait_for_container(container_id)
     log(f"Container ID: {container_id}")
     post_id = publish_container(container_id)
-    log(f"✅ Instagram feed post successful! ID: {post_id}")
+    log(f"Instagram feed post successful! ID: {post_id}")
 
-    # ── Save state immediately after successful Instagram post ──
-    # This prevents re-posting the same image if Facebook/TikTok crashes.
+    # -- Save state immediately after successful Instagram post --
+    # Prevents re-posting the same image if Facebook crashes before final save.
     state["last_post_time"] = datetime.utcnow().isoformat()
     save_state(state)
     log("State saved after Instagram post.")
 
-    # ── Instagram Stories ──
+    # -- Instagram Stories --
     story_url = prepare_story_image(media_path) if not video_file else media_url
     post_ig_story(story_url, video_file)
 
-    # ── Facebook feed + Stories ──
+    # -- Facebook feed + Stories --
     post_to_facebook(media_url, full_caption, video_file)
 
-    # ── TikTok (independent video queue + separate caption) ──
-    tiktok_video = get_next_tiktok_video(state)
-    tiktok_caption = get_next_tiktok_caption(state)
-    post_to_tiktok(tiktok_video, tiktok_caption)
+    # -- TikTok (disabled until app audit approved) --
+    if TIKTOK_ENABLED:
+        tiktok_video = get_next_tiktok_video(state)
+        tiktok_caption = get_next_tiktok_caption(state)
+        post_to_tiktok(tiktok_video, tiktok_caption)
+    else:
+        log("TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.")
 
     save_state(state)
-    log("✅ All done. Final state saved.")
+    log("All done. Final state saved.")
 
 # ─────────────────────────────────────────────
 # ENTRY POINT
