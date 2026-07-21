@@ -47,7 +47,7 @@
   <div class="card" id="card">
     <div class="spinner" id="spinner"></div>
     <div class="status-title" id="statusTitle">Authorization received</div>
-    <div class="status-sub" id="statusSub">Publishing your video to TikTok…</div>
+    <div class="status-sub" id="statusSub">Connecting your TikTok account…</div>
     <div id="extra"></div>
   </div>
 </main>
@@ -82,7 +82,7 @@
   } else if (!code) {
     showError("No authorization code was returned.");
   } else {
-    statusSub.textContent = "Authorization received. Publishing your video to TikTok…";
+    statusSub.textContent = "Authorization received. Connecting your TikTok account…";
 
     var attempts = 0;
     var maxAttempts = 40; // ~2 minutes at 3s interval
@@ -99,13 +99,12 @@
               icon.className = "success-icon";
               icon.textContent = "✓";
               spinner.parentNode.insertBefore(icon, statusTitle);
-              statusTitle.textContent = "Published to TikTok";
-              statusSub.textContent = "Your video is live for @" + (data.creator_username || "your account") + ".";
+              statusTitle.textContent = "Connected to TikTok";
+              statusSub.textContent = "Verified as @" + (data.creator_username || "your account") + ". Your video is queued and will publish once review is complete.";
               extra.innerHTML = "<div class='profile-row'><div class='avatar'>" +
                 (data.creator_nickname ? data.creator_nickname.charAt(0).toUpperCase() : "L") +
                 "</div><div style='text-align:left'><strong>" + (data.creator_nickname || "") +
-                "</strong><div style='font-size:0.85rem;color:#6b7280'>@" + (data.creator_username || "") + "</div></div></div>" +
-                "<div class='meta'>Post ID: " + data.publish_id + "</div>";
+                "</strong><div style='font-size:0.85rem;color:#6b7280'>@" + (data.creator_username || "") + "</div></div></div>";
             } else {
               showError(data.message || "Something went wrong while publishing.");
             }
