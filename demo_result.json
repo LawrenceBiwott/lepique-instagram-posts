@@ -1,8 +1,9 @@
 {
-  "code": "8QcFYEPvjdIHXT-ej7adzEKFaZUIpJvT0DkN6jzCtOL-4zMo1JXKGU7KaIS-KVXLa-5ovwP7G-cGxlzqoWySPaHTWq85jOxA_o5foBjye1fwb0WIpaYxKI2KndDuZjlymPmwqr_v40dz11DAIB8x6-CLhO1IN5Ea4ihLHxU2c7FtCfhnVTksX8QcmYy8NzyimQRlWVufw4Aw2yZLsLmynlPdZTYdSHIqPyw6xIRgIiZWygkspw_OLYjs8m0ozkJFS4U_KEBOyVVrGi3Pe4Sw8CuQrLHyoc0-ZGg7MQ*v!5438.s1",
-  "status": "error",
-  "message": "Init failed: {'code': 'unaudited_client_can_only_post_to_private_accounts', 'message': 'Please review our integration guidelines at https://developers.tiktok.com/doc/content-sharing-guidelines/', 'log_id': '2026072120214066316FBCC5EF6E021F5B'}",
-  "timestamp": "2026-07-21 12:21:39",
+  "code": "jmLnkciH3ChG5R-75JbqQ7AlQyHrCh3cWO39IDGnFUmcz_LVBv_YKXQdzAgbga8shRCj7DpmI6peQkaJYlulXGZrExtelvrPKioBEwLJEJU0AIbJQPI49u3eSucpvDNfNI8IDp-mgniqGoKMan5ZFTCdHMKk5V7CyruPywPnBybDCPandmkVil7jKzlMCv_5b3BaqPA-8A95wry9SHmfywfH_ZvUV73KbFpIG78RxFFM117-6UIaw_gzASzPW-EexTdljXZR0_pHuc0UTbnkiy9V2WXsqFsAfPt2Ew*v!5439.s1",
+  "status": "success",
+  "message": "",
+  "timestamp": "2026-07-21 12:34:35",
   "creator_username": "lepique_fashions",
-  "creator_nickname": "Lepique Fashions | Nairobi"
+  "creator_nickname": "Lepique Fashions | Nairobi",
+  "stage": "connected"
 }
