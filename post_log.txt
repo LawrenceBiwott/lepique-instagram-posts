@@ -2447,3 +2447,550 @@ continue appending new entries below as usual.
 [2026-07-18 23:07:21] Error: Expecting property name enclosed in double quotes: line 3 column 1 (char 24)
 [2026-07-19 00:05:13] Error: Expecting property name enclosed in double quotes: line 3 column 1 (char 24)
 [2026-07-19 03:46:20] Error: Expecting property name enclosed in double quotes: line 3 column 1 (char 24)
+[2026-07-19 06:17:17] Peak hours check passed - Nairobi hour: 09.
+[2026-07-19 06:17:17] --- Starting Instagram + Facebook post ---
+[2026-07-19 06:17:17] Instagram token OK - account: @lepique_fashions (ID: 27435596712725786)
+[2026-07-19 06:17:17] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-07-19 06:17:17] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-07-19 06:17:17] Found 147 media files (newest-first by git history)
+[2026-07-19 06:17:17] Latest 5: ['13edd28f-ad5b-496e-b914-707ccdb3a814.jpg', '16256cef-c6b0-4133-870b-e39c114e74c6.jpg', '1748f425-f552-49d2-aaa4-ee6a77d71b2d.jpg', '267f3bfb-fde9-41d4-a022-61b18ae47e6a.jpg', '28928d6c-c9f1-4f3c-9025-ef40355317ca.jpg']
+[2026-07-19 06:17:17] Selected media: 13edd28f-ad5b-496e-b914-707ccdb3a814.jpg
+[2026-07-19 06:17:17] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/13edd28f-ad5b-496e-b914-707ccdb3a814.jpg
+[2026-07-19 06:17:17] Uploading image to Instagram...
+[2026-07-19 06:17:17] Alt text: Ladies ladies fashion - Lepique Fashions Nairobi
+[2026-07-19 06:17:22] Waiting for Instagram processing...
+[2026-07-19 06:17:23] Container status: IN_PROGRESS
+[2026-07-19 06:17:28] Container status: FINISHED
+[2026-07-19 06:17:38] Container ID: 18545174833073384
+[2026-07-19 06:17:41] Instagram feed post successful! ID: 18181038022409404
+[2026-07-19 06:17:41] State saved after Instagram post.
+[2026-07-19 06:17:41] Story image resized to 1080x1920 -> photos/story_temp.jpg
+[2026-07-19 06:17:43] Story URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/story_temp.jpg - waiting for GitHub Pages to deploy...
+[2026-07-19 06:18:39] Story image live after 55s.
+[2026-07-19 06:18:39] Posting to Instagram Stories...
+[2026-07-19 06:18:42] Waiting for Instagram processing...
+[2026-07-19 06:18:42] Container status: FINISHED
+[2026-07-19 06:18:55] Instagram Story posted! ID: 17917775013408934
+[2026-07-19 06:18:55] --- Posting to Facebook ---
+[2026-07-19 06:18:55] Uploading photo to Facebook feed...
+[2026-07-19 06:19:03] Facebook feed post successful! ID: 1889041611321657_1454713996691645
+[2026-07-19 06:19:03] Posting photo to Facebook Stories...
+[2026-07-19 06:19:14] Facebook Story posted! ID: 970942459304513
+[2026-07-19 06:19:14] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
+[2026-07-19 06:19:14] All done. Final state saved.
+[2026-07-19 08:36:56] Skipping - current Nairobi time is 11:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-07-19 10:11:43] Peak hours check passed - Nairobi hour: 13.
+[2026-07-19 10:11:43] --- Starting Instagram + Facebook post ---
+[2026-07-19 10:11:44] Instagram token OK - account: @lepique_fashions (ID: 27435596712725786)
+[2026-07-19 10:11:44] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-07-19 10:11:44] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-07-19 10:11:44] Found 147 media files (newest-first by git history)
+[2026-07-19 10:11:44] Latest 5: ['13edd28f-ad5b-496e-b914-707ccdb3a814.jpg', '16256cef-c6b0-4133-870b-e39c114e74c6.jpg', '1748f425-f552-49d2-aaa4-ee6a77d71b2d.jpg', '267f3bfb-fde9-41d4-a022-61b18ae47e6a.jpg', '28928d6c-c9f1-4f3c-9025-ef40355317ca.jpg']
+[2026-07-19 10:11:44] Selected media: 28928d6c-c9f1-4f3c-9025-ef40355317ca.jpg
+[2026-07-19 10:11:44] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/28928d6c-c9f1-4f3c-9025-ef40355317ca.jpg
+[2026-07-19 10:11:44] Uploading image to Instagram...
+[2026-07-19 10:11:44] Alt text: Ladies ladies fashion - Lepique Fashions Nairobi
+[2026-07-19 10:11:48] Waiting for Instagram processing...
+[2026-07-19 10:11:49] Container status: FINISHED
+[2026-07-19 10:11:59] Container ID: 18545218339073384
+[2026-07-19 10:12:02] Instagram feed post successful! ID: 17957542229984110
+[2026-07-19 10:12:02] State saved after Instagram post.
+[2026-07-19 10:12:03] Story image resized to 1080x1920 -> photos/story_temp.jpg
+[2026-07-19 10:12:05] Story URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/story_temp.jpg - waiting for GitHub Pages to deploy...
+[2026-07-19 10:13:00] Story image live after 55s.
+[2026-07-19 10:13:00] Posting to Instagram Stories...
+[2026-07-19 10:13:04] Waiting for Instagram processing...
+[2026-07-19 10:13:04] Container status: IN_PROGRESS
+[2026-07-19 10:13:09] Container status: FINISHED
+[2026-07-19 10:13:23] Instagram Story posted! ID: 18113202080477850
+[2026-07-19 10:13:23] --- Posting to Facebook ---
+[2026-07-19 10:13:23] Uploading photo to Facebook feed...
+[2026-07-19 10:13:29] Facebook feed post successful! ID: 1889041611321657_1454816186681426
+[2026-07-19 10:13:29] Posting photo to Facebook Stories...
+[2026-07-19 10:13:39] Facebook Story posted! ID: 2948642528805037
+[2026-07-19 10:13:39] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
+[2026-07-19 10:13:39] All done. Final state saved.
+[2026-07-19 11:32:34] Peak hours check passed - Nairobi hour: 14.
+[2026-07-19 11:32:34] --- Starting Instagram + Facebook post ---
+[2026-07-19 11:32:34] Instagram token OK - account: @lepique_fashions (ID: 27435596712725786)
+[2026-07-19 11:32:34] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-07-19 11:32:34] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-07-19 11:32:34] Found 147 media files (newest-first by git history)
+[2026-07-19 11:32:34] Latest 5: ['13edd28f-ad5b-496e-b914-707ccdb3a814.jpg', '16256cef-c6b0-4133-870b-e39c114e74c6.jpg', '1748f425-f552-49d2-aaa4-ee6a77d71b2d.jpg', '267f3bfb-fde9-41d4-a022-61b18ae47e6a.jpg', '28928d6c-c9f1-4f3c-9025-ef40355317ca.jpg']
+[2026-07-19 11:32:34] Selected media: 2e6ca7d8-ad95-4f97-9d72-ea8cbed9f71d.jpg
+[2026-07-19 11:32:34] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/2e6ca7d8-ad95-4f97-9d72-ea8cbed9f71d.jpg
+[2026-07-19 11:32:34] Uploading image to Instagram...
+[2026-07-19 11:32:34] Alt text: Ladies ladies fashion - Lepique Fashions Nairobi
+[2026-07-19 11:32:39] Waiting for Instagram processing...
+[2026-07-19 11:32:39] Container status: IN_PROGRESS
+[2026-07-19 11:32:44] Container status: FINISHED
+[2026-07-19 11:32:54] Container ID: 18545231950073384
+[2026-07-19 11:32:57] Instagram feed post successful! ID: 18544243672079670
+[2026-07-19 11:32:57] State saved after Instagram post.
+[2026-07-19 11:32:57] Story image resized to 1080x1920 -> photos/story_temp.jpg
+[2026-07-19 11:32:59] Story URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/story_temp.jpg - waiting for GitHub Pages to deploy...
+[2026-07-19 11:33:55] Story image live after 55s.
+[2026-07-19 11:33:55] Posting to Instagram Stories...
+[2026-07-19 11:34:05] Waiting for Instagram processing...
+[2026-07-19 11:34:05] Container status: IN_PROGRESS
+[2026-07-19 11:34:11] Container status: FINISHED
+[2026-07-19 11:34:23] Instagram Story posted! ID: 17935305975091219
+[2026-07-19 11:34:23] --- Posting to Facebook ---
+[2026-07-19 11:34:23] Uploading photo to Facebook feed...
+[2026-07-19 11:34:38] Facebook feed post successful! ID: 1889041611321657_1454866220009756
+[2026-07-19 11:34:38] Posting photo to Facebook Stories...
+[2026-07-19 11:34:46] Facebook Story posted! ID: 1128724933043395
+[2026-07-19 11:34:46] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
+[2026-07-19 11:34:46] All done. Final state saved.
+[2026-07-19 12:31:18] Skipping - current Nairobi time is 15:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-07-19 14:08:17] Skipping - current Nairobi time is 17:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-07-19 15:12:16] Peak hours check passed - Nairobi hour: 18.
+[2026-07-19 15:12:16] --- Starting Instagram + Facebook post ---
+[2026-07-19 15:12:16] Instagram token OK - account: @lepique_fashions (ID: 27435596712725786)
+[2026-07-19 15:12:16] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-07-19 15:12:16] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-07-19 15:12:16] Found 147 media files (newest-first by git history)
+[2026-07-19 15:12:16] Latest 5: ['13edd28f-ad5b-496e-b914-707ccdb3a814.jpg', '16256cef-c6b0-4133-870b-e39c114e74c6.jpg', '1748f425-f552-49d2-aaa4-ee6a77d71b2d.jpg', '267f3bfb-fde9-41d4-a022-61b18ae47e6a.jpg', '28928d6c-c9f1-4f3c-9025-ef40355317ca.jpg']
+[2026-07-19 15:12:16] Selected media: 3710d8b4-669e-4501-8ce3-882ee3c4df09.jpg
+[2026-07-19 15:12:16] Padded 3710d8b4-669e-4501-8ce3-882ee3c4df09.jpg: 1086x1448 -> 1158x1448 (ratio 0.80)
+[2026-07-19 15:12:16] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/3710d8b4-669e-4501-8ce3-882ee3c4df09.jpg
+[2026-07-19 15:12:16] Uploading image to Instagram...
+[2026-07-19 15:12:16] Alt text: Ladies ladies fashion - Lepique Fashions Nairobi
+[2026-07-19 15:12:21] Waiting for Instagram processing...
+[2026-07-19 15:12:22] Container status: IN_PROGRESS
+[2026-07-19 15:12:27] Container status: FINISHED
+[2026-07-19 15:12:37] Container ID: 18545278306073384
+[2026-07-19 15:12:39] Instagram feed post successful! ID: 18110003668950856
+[2026-07-19 15:12:39] State saved after Instagram post.
+[2026-07-19 15:12:39] Story image resized to 1080x1920 -> photos/story_temp.jpg
+[2026-07-19 15:12:41] Story URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/story_temp.jpg - waiting for GitHub Pages to deploy...
+[2026-07-19 15:13:37] Story image live after 55s.
+[2026-07-19 15:13:37] Posting to Instagram Stories...
+[2026-07-19 15:13:40] Waiting for Instagram processing...
+[2026-07-19 15:13:40] Container status: FINISHED
+[2026-07-19 15:13:52] Instagram Story posted! ID: 18086606369399024
+[2026-07-19 15:13:52] --- Posting to Facebook ---
+[2026-07-19 15:13:52] Uploading photo to Facebook feed...
+[2026-07-19 15:14:00] Facebook feed post successful! ID: 1889041611321657_1455041419992236
+[2026-07-19 15:14:00] Posting photo to Facebook Stories...
+[2026-07-19 15:14:08] Facebook Story posted! ID: 1521207866153713
+[2026-07-19 15:14:08] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
+[2026-07-19 15:14:08] All done. Final state saved.
+[2026-07-19 16:12:41] Peak hours check passed - Nairobi hour: 19.
+[2026-07-19 16:12:41] --- Starting Instagram + Facebook post ---
+[2026-07-19 16:12:41] Instagram token OK - account: @lepique_fashions (ID: 27435596712725786)
+[2026-07-19 16:12:41] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-07-19 16:12:41] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-07-19 16:12:41] Found 147 media files (newest-first by git history)
+[2026-07-19 16:12:41] Latest 5: ['13edd28f-ad5b-496e-b914-707ccdb3a814.jpg', '16256cef-c6b0-4133-870b-e39c114e74c6.jpg', '1748f425-f552-49d2-aaa4-ee6a77d71b2d.jpg', '267f3bfb-fde9-41d4-a022-61b18ae47e6a.jpg', '28928d6c-c9f1-4f3c-9025-ef40355317ca.jpg']
+[2026-07-19 16:12:41] Selected media: 396c3964-00a0-40f7-b621-114c3134e8cf.jpg
+[2026-07-19 16:12:41] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/396c3964-00a0-40f7-b621-114c3134e8cf.jpg
+[2026-07-19 16:12:41] Uploading image to Instagram...
+[2026-07-19 16:12:41] Alt text: Ladies ladies fashion - Lepique Fashions Nairobi
+[2026-07-19 16:12:44] Waiting for Instagram processing...
+[2026-07-19 16:12:44] Container status: FINISHED
+[2026-07-19 16:12:54] Container ID: 18545293510073384
+[2026-07-19 16:12:57] Instagram feed post successful! ID: 18087099629217178
+[2026-07-19 16:12:57] State saved after Instagram post.
+[2026-07-19 16:12:57] Story image resized to 1080x1920 -> photos/story_temp.jpg
+[2026-07-19 16:12:59] Story URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/story_temp.jpg - waiting for GitHub Pages to deploy...
+[2026-07-19 16:13:54] Story image live after 55s.
+[2026-07-19 16:13:54] Posting to Instagram Stories...
+[2026-07-19 16:13:57] Waiting for Instagram processing...
+[2026-07-19 16:13:57] Container status: IN_PROGRESS
+[2026-07-19 16:14:02] Container status: FINISHED
+[2026-07-19 16:14:14] Instagram Story posted! ID: 18081956441670811
+[2026-07-19 16:14:14] --- Posting to Facebook ---
+[2026-07-19 16:14:14] Uploading photo to Facebook feed...
+[2026-07-19 16:14:20] Facebook feed post successful! ID: 1889041611321657_1455097819986596
+[2026-07-19 16:14:20] Posting photo to Facebook Stories...
+[2026-07-19 16:14:28] Facebook Story posted! ID: 1017190031021434
+[2026-07-19 16:14:28] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
+[2026-07-19 16:14:28] All done. Final state saved.
+[2026-07-19 17:18:20] Peak hours check passed - Nairobi hour: 20.
+[2026-07-19 17:18:20] --- Starting Instagram + Facebook post ---
+[2026-07-19 17:18:21] Instagram token OK - account: @lepique_fashions (ID: 27435596712725786)
+[2026-07-19 17:18:21] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-07-19 17:18:21] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-07-19 17:18:21] Found 147 media files (newest-first by git history)
+[2026-07-19 17:18:21] Latest 5: ['13edd28f-ad5b-496e-b914-707ccdb3a814.jpg', '16256cef-c6b0-4133-870b-e39c114e74c6.jpg', '1748f425-f552-49d2-aaa4-ee6a77d71b2d.jpg', '267f3bfb-fde9-41d4-a022-61b18ae47e6a.jpg', '28928d6c-c9f1-4f3c-9025-ef40355317ca.jpg']
+[2026-07-19 17:18:21] Selected media: 53ce750f-76ea-487d-9b12-725c0f92ce63.jpg
+[2026-07-19 17:18:21] Padded 53ce750f-76ea-487d-9b12-725c0f92ce63.jpg: 1086x1448 -> 1158x1448 (ratio 0.80)
+[2026-07-19 17:18:21] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/53ce750f-76ea-487d-9b12-725c0f92ce63.jpg
+[2026-07-19 17:18:21] Uploading image to Instagram...
+[2026-07-19 17:18:21] Alt text: Ladies ladies fashion - Lepique Fashions Nairobi
+[2026-07-19 17:18:25] Waiting for Instagram processing...
+[2026-07-19 17:18:25] Container status: FINISHED
+[2026-07-19 17:18:35] Container ID: 18545308825073384
+[2026-07-19 17:18:39] Instagram feed post successful! ID: 18104152295152723
+[2026-07-19 17:18:39] State saved after Instagram post.
+[2026-07-19 17:18:39] Story image resized to 1080x1920 -> photos/story_temp.jpg
+[2026-07-19 17:18:41] Story URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/story_temp.jpg - waiting for GitHub Pages to deploy...
+[2026-07-19 17:19:42] Story image live after 60s.
+[2026-07-19 17:19:42] Posting to Instagram Stories...
+[2026-07-19 17:19:45] Waiting for Instagram processing...
+[2026-07-19 17:19:45] Container status: IN_PROGRESS
+[2026-07-19 17:19:51] Container status: FINISHED
+[2026-07-19 17:20:03] Instagram Story posted! ID: 17957625731984801
+[2026-07-19 17:20:03] --- Posting to Facebook ---
+[2026-07-19 17:20:03] Uploading photo to Facebook feed...
+[2026-07-19 17:20:09] Facebook feed post successful! ID: 1889041611321657_1455145323315179
+[2026-07-19 17:20:09] Posting photo to Facebook Stories...
+[2026-07-19 17:20:19] Facebook Story posted! ID: 1656857078733157
+[2026-07-19 17:20:19] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
+[2026-07-19 17:20:19] All done. Final state saved.
+[2026-07-19 18:12:03] Skipping - last post was 53 min ago (next post in ~2 min).
+[2026-07-19 19:34:35] Skipping - current Nairobi time is 22:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-07-19 20:26:16] Skipping - current Nairobi time is 23:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-07-19 21:23:09] Skipping - current Nairobi time is 00:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-07-19 22:23:38] Skipping - current Nairobi time is 01:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-07-19 23:26:38] Skipping - current Nairobi time is 02:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-07-20 01:03:50] Skipping - current Nairobi time is 04:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-07-20 04:47:22] Peak hours check passed - Nairobi hour: 07.
+[2026-07-20 04:47:22] --- Starting Instagram + Facebook post ---
+[2026-07-20 04:47:22] CRITICAL: Instagram access token has EXPIRED or been revoked!
+[2026-07-20 04:47:22]   Generate a new 60-day token at:
+[2026-07-20 04:47:22]   https://developers.facebook.com/tools/explorer/
+[2026-07-20 04:47:22]   Then update the INSTAGRAM_ACCESS_TOKEN GitHub secret.
+[2026-07-20 04:47:22] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-07-20 04:47:22] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-07-20 04:47:22] Found 147 media files (newest-first by git history)
+[2026-07-20 04:47:22] Latest 5: ['13edd28f-ad5b-496e-b914-707ccdb3a814.jpg', '16256cef-c6b0-4133-870b-e39c114e74c6.jpg', '1748f425-f552-49d2-aaa4-ee6a77d71b2d.jpg', '267f3bfb-fde9-41d4-a022-61b18ae47e6a.jpg', '28928d6c-c9f1-4f3c-9025-ef40355317ca.jpg']
+[2026-07-20 04:47:22] Selected media: 8b8553b1-104e-4850-b568-5a04838c7cee.jpg
+[2026-07-20 04:47:22] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/8b8553b1-104e-4850-b568-5a04838c7cee.jpg
+[2026-07-20 04:47:22] Uploading image to Instagram...
+[2026-07-20 04:47:22] Alt text: Ladies ladies fashion - Lepique Fashions Nairobi
+[2026-07-20 04:47:22] Error: 400 Client Error: Bad Request for url: https://graph.instagram.com/v21.0/17841402201496454/media?image_url=https%3A%2F%2Flawrencebiwott.github.io%2Flepique-instagram-posts%2Fmedia%2Fphotos%2F8b8553b1-104e-4850-b568-5a04838c7cee.jpg&caption=%F0%9F%93%8D+Platinum+Plaza%2C+Ground+Floor%2C+Shop+G16+%E2%80%93+Tom+Mboya+Street%2C+Nairobi%0A%F0%9F%93%9E+0+7+2+1+%E2%80%A2+6+7+2+%E2%80%A2+9+0+0%0A%F0%9F%8C%90+https%3A%2F%2Flepique.co.ke%2F%0A%0A%F0%9F%92%95+Date+night+outfit+sorted.%0A%0AHigh-waist+wide-leg+jeans+%2B+bodysuit+%2B+leather+jacket+%3D+a+look+that%27s+effortlessly+put-together%2C+turns+heads+and+photographs+beautifully.%0A%0AAt+Lepique+Fashions%2C+you%27ll+find+everything+you+need+for+a+flawless+date+night+look+%E2%80%94+stunning+jeans+in+every+style%2C+bodysuits+in+multiple+colours%2C+and+sleek+leather+jackets+that+pull+the+whole+outfit+together.%0A%0A%E2%9C%A8+Shop+the+complete+look+at+lepique.co.ke%0A%F0%9F%93%B1+WhatsApp+0721+672+900+to+ask+what%27s+in+stock%0A%0A%F0%9F%92%83+Dress+for+where+you+want+to+go%2C+not+where+you%27ve+been.%0AShop+online+%F0%9F%91%89+https%3A%2F%2Flepique.co.ke%2F%0A%0A%23DateNightOutfitKenya+%23OutfitInspoNairobi+%23KenyanFashionista+%23LadiesOOTDKenya+%23NairobiGirls%0ADate+night+outfit+Kenya%2C+ladies+night+out+outfit+Nairobi%2C+jeans+and+bodysuit+outfit+Kenya%2C+date+outfit+ideas+Nairobi%2C+women+fashion+date+night+Kenya%2C+cute+outfit+Nairobi%2C+ladies+evening+outfit+Kenya%2C+going+out+outfit+Nairobi%2C+leather+jacket+outfit+Kenya%2C+ladies+date+night+look+Nairobi.&access_token=IGAAVmftqcjnpBZAFpmWjdEZAWFXZAEkzanZArU2hGUF9fRFZAHdk1rX3NXQ1lieGpFMlp2VzdVaFdyQnRsd1VlR2lhNmJ4VWdXOHZADb0YzUU1GdGJwWXBXUzZAVNTFiQmlaX1c4MW11WHlyV000R0hkc1prQWlLd2tIS3RGZA1BhdlNBMAZDZD&alt_text=Ladies+ladies+fashion+-+Lepique+Fashions+Nairobi
+[2026-07-20 07:46:56] Skipping - current Nairobi time is 10:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+<<<<<<< Updated upstream
+[2026-07-20 10:33:01] Peak hours check passed - Nairobi hour: 13.
+[2026-07-20 10:33:01] --- Starting Instagram + Facebook post ---
+[2026-07-20 10:33:01] CRITICAL: Instagram access token has EXPIRED or been revoked!
+[2026-07-20 10:33:01]   Generate a new 60-day token at:
+[2026-07-20 10:33:01]   https://developers.facebook.com/tools/explorer/
+[2026-07-20 10:33:01]   Then update the INSTAGRAM_ACCESS_TOKEN GitHub secret.
+[2026-07-20 10:33:01] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-07-20 10:33:01] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-07-20 10:33:01] Found 147 media files (newest-first by git history)
+[2026-07-20 10:33:01] Latest 5: ['13edd28f-ad5b-496e-b914-707ccdb3a814.jpg', '16256cef-c6b0-4133-870b-e39c114e74c6.jpg', '1748f425-f552-49d2-aaa4-ee6a77d71b2d.jpg', '267f3bfb-fde9-41d4-a022-61b18ae47e6a.jpg', '28928d6c-c9f1-4f3c-9025-ef40355317ca.jpg']
+[2026-07-20 10:33:01] Selected media: 8b8553b1-104e-4850-b568-5a04838c7cee.jpg
+[2026-07-20 10:33:01] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/8b8553b1-104e-4850-b568-5a04838c7cee.jpg
+[2026-07-20 10:33:01] Uploading image to Instagram...
+[2026-07-20 10:33:01] Alt text: Ladies ladies fashion - Lepique Fashions Nairobi
+[2026-07-20 10:33:01] Error: 400 Client Error: Bad Request for url: https://graph.instagram.com/v21.0/17841402201496454/media?image_url=https%3A%2F%2Flawrencebiwott.github.io%2Flepique-instagram-posts%2Fmedia%2Fphotos%2F8b8553b1-104e-4850-b568-5a04838c7cee.jpg&caption=%F0%9F%93%8D+Platinum+Plaza%2C+Ground+Floor%2C+Shop+G16+%E2%80%93+Tom+Mboya+Street%2C+Nairobi%0A%F0%9F%93%9E+0+7+2+1+%E2%80%A2+6+7+2+%E2%80%A2+9+0+0%0A%F0%9F%8C%90+https%3A%2F%2Flepique.co.ke%2F%0A%0A%F0%9F%92%95+Date+night+outfit+sorted.%0A%0AHigh-waist+wide-leg+jeans+%2B+bodysuit+%2B+leather+jacket+%3D+a+look+that%27s+effortlessly+put-together%2C+turns+heads+and+photographs+beautifully.%0A%0AAt+Lepique+Fashions%2C+you%27ll+find+everything+you+need+for+a+flawless+date+night+look+%E2%80%94+stunning+jeans+in+every+style%2C+bodysuits+in+multiple+colours%2C+and+sleek+leather+jackets+that+pull+the+whole+outfit+together.%0A%0A%E2%9C%A8+Shop+the+complete+look+at+lepique.co.ke%0A%F0%9F%93%B1+WhatsApp+0721+672+900+to+ask+what%27s+in+stock%0A%0A%F0%9F%92%83+Dress+for+where+you+want+to+go%2C+not+where+you%27ve+been.%0AShop+online+%F0%9F%91%89+https%3A%2F%2Flepique.co.ke%2F%0A%0A%23DateNightOutfitKenya+%23OutfitInspoNairobi+%23KenyanFashionista+%23LadiesOOTDKenya+%23NairobiGirls%0ADate+night+outfit+Kenya%2C+ladies+night+out+outfit+Nairobi%2C+jeans+and+bodysuit+outfit+Kenya%2C+date+outfit+ideas+Nairobi%2C+women+fashion+date+night+Kenya%2C+cute+outfit+Nairobi%2C+ladies+evening+outfit+Kenya%2C+going+out+outfit+Nairobi%2C+leather+jacket+outfit+Kenya%2C+ladies+date+night+look+Nairobi.&access_token=IGAAVmftqcjnpBZAFpmWjdEZAWFXZAEkzanZArU2hGUF9fRFZAHdk1rX3NXQ1lieGpFMlp2VzdVaFdyQnRsd1VlR2lhNmJ4VWdXOHZADb0YzUU1GdGJwWXBXUzZAVNTFiQmlaX1c4MW11WHlyV000R0hkc1prQWlLd2tIS3RGZA1BhdlNBMAZDZD&alt_text=Ladies+ladies+fashion+-+Lepique+Fashions+Nairobi
+[2026-07-20 12:36:19] Skipping - current Nairobi time is 15:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-07-20 14:52:38] Skipping - current Nairobi time is 17:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-07-20 16:21:07] Peak hours check passed - Nairobi hour: 19.
+[2026-07-20 16:21:07] --- Starting Instagram + Facebook post ---
+[2026-07-20 16:21:08] CRITICAL: Instagram access token has EXPIRED or been revoked!
+[2026-07-20 16:21:08]   Generate a new 60-day token at:
+[2026-07-20 16:21:08]   https://developers.facebook.com/tools/explorer/
+[2026-07-20 16:21:08]   Then update the INSTAGRAM_ACCESS_TOKEN GitHub secret.
+[2026-07-20 16:21:08] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-07-20 16:21:08] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-07-20 16:21:08] Found 147 media files (newest-first by git history)
+[2026-07-20 16:21:08] Latest 5: ['13edd28f-ad5b-496e-b914-707ccdb3a814.jpg', '16256cef-c6b0-4133-870b-e39c114e74c6.jpg', '1748f425-f552-49d2-aaa4-ee6a77d71b2d.jpg', '267f3bfb-fde9-41d4-a022-61b18ae47e6a.jpg', '28928d6c-c9f1-4f3c-9025-ef40355317ca.jpg']
+[2026-07-20 16:21:08] Selected media: 8b8553b1-104e-4850-b568-5a04838c7cee.jpg
+[2026-07-20 16:21:08] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/8b8553b1-104e-4850-b568-5a04838c7cee.jpg
+[2026-07-20 16:21:08] Uploading image to Instagram...
+[2026-07-20 16:21:08] Alt text: Ladies ladies fashion - Lepique Fashions Nairobi
+[2026-07-20 16:21:09] Error: 400 Client Error: Bad Request for url: https://graph.instagram.com/v21.0/17841402201496454/media?image_url=https%3A%2F%2Flawrencebiwott.github.io%2Flepique-instagram-posts%2Fmedia%2Fphotos%2F8b8553b1-104e-4850-b568-5a04838c7cee.jpg&caption=%F0%9F%93%8D+Platinum+Plaza%2C+Ground+Floor%2C+Shop+G16+%E2%80%93+Tom+Mboya+Street%2C+Nairobi%0A%F0%9F%93%9E+0+7+2+1+%E2%80%A2+6+7+2+%E2%80%A2+9+0+0%0A%F0%9F%8C%90+https%3A%2F%2Flepique.co.ke%2F%0A%0A%F0%9F%92%95+Date+night+outfit+sorted.%0A%0AHigh-waist+wide-leg+jeans+%2B+bodysuit+%2B+leather+jacket+%3D+a+look+that%27s+effortlessly+put-together%2C+turns+heads+and+photographs+beautifully.%0A%0AAt+Lepique+Fashions%2C+you%27ll+find+everything+you+need+for+a+flawless+date+night+look+%E2%80%94+stunning+jeans+in+every+style%2C+bodysuits+in+multiple+colours%2C+and+sleek+leather+jackets+that+pull+the+whole+outfit+together.%0A%0A%E2%9C%A8+Shop+the+complete+look+at+lepique.co.ke%0A%F0%9F%93%B1+WhatsApp+0721+672+900+to+ask+what%27s+in+stock%0A%0A%F0%9F%92%83+Dress+for+where+you+want+to+go%2C+not+where+you%27ve+been.%0AShop+online+%F0%9F%91%89+https%3A%2F%2Flepique.co.ke%2F%0A%0A%23DateNightOutfitKenya+%23OutfitInspoNairobi+%23KenyanFashionista+%23LadiesOOTDKenya+%23NairobiGirls%0ADate+night+outfit+Kenya%2C+ladies+night+out+outfit+Nairobi%2C+jeans+and+bodysuit+outfit+Kenya%2C+date+outfit+ideas+Nairobi%2C+women+fashion+date+night+Kenya%2C+cute+outfit+Nairobi%2C+ladies+evening+outfit+Kenya%2C+going+out+outfit+Nairobi%2C+leather+jacket+outfit+Kenya%2C+ladies+date+night+look+Nairobi.&access_token=IGAAVmftqcjnpBZAFpmWjdEZAWFXZAEkzanZArU2hGUF9fRFZAHdk1rX3NXQ1lieGpFMlp2VzdVaFdyQnRsd1VlR2lhNmJ4VWdXOHZADb0YzUU1GdGJwWXBXUzZAVNTFiQmlaX1c4MW11WHlyV000R0hkc1prQWlLd2tIS3RGZA1BhdlNBMAZDZD&alt_text=Ladies+ladies+fashion+-+Lepique+Fashions+Nairobi
+[2026-07-20 18:27:19] Peak hours check passed - Nairobi hour: 21.
+[2026-07-20 18:27:19] --- Starting Instagram + Facebook post ---
+[2026-07-20 18:27:19] CRITICAL: Instagram access token has EXPIRED or been revoked!
+[2026-07-20 18:27:19]   Generate a new 60-day token at:
+[2026-07-20 18:27:19]   https://developers.facebook.com/tools/explorer/
+[2026-07-20 18:27:19]   Then update the INSTAGRAM_ACCESS_TOKEN GitHub secret.
+[2026-07-20 18:27:19] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-07-20 18:27:19] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-07-20 18:27:19] Found 147 media files (newest-first by git history)
+[2026-07-20 18:27:19] Latest 5: ['13edd28f-ad5b-496e-b914-707ccdb3a814.jpg', '16256cef-c6b0-4133-870b-e39c114e74c6.jpg', '1748f425-f552-49d2-aaa4-ee6a77d71b2d.jpg', '267f3bfb-fde9-41d4-a022-61b18ae47e6a.jpg', '28928d6c-c9f1-4f3c-9025-ef40355317ca.jpg']
+[2026-07-20 18:27:19] Selected media: 8b8553b1-104e-4850-b568-5a04838c7cee.jpg
+[2026-07-20 18:27:19] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/8b8553b1-104e-4850-b568-5a04838c7cee.jpg
+[2026-07-20 18:27:19] Uploading image to Instagram...
+[2026-07-20 18:27:19] Alt text: Ladies ladies fashion - Lepique Fashions Nairobi
+[2026-07-20 18:27:19] Error: 400 Client Error: Bad Request for url: https://graph.instagram.com/v21.0/17841402201496454/media?image_url=https%3A%2F%2Flawrencebiwott.github.io%2Flepique-instagram-posts%2Fmedia%2Fphotos%2F8b8553b1-104e-4850-b568-5a04838c7cee.jpg&caption=%F0%9F%93%8D+Platinum+Plaza%2C+Ground+Floor%2C+Shop+G16+%E2%80%93+Tom+Mboya+Street%2C+Nairobi%0A%F0%9F%93%9E+0+7+2+1+%E2%80%A2+6+7+2+%E2%80%A2+9+0+0%0A%F0%9F%8C%90+https%3A%2F%2Flepique.co.ke%2F%0A%0A%F0%9F%92%95+Date+night+outfit+sorted.%0A%0AHigh-waist+wide-leg+jeans+%2B+bodysuit+%2B+leather+jacket+%3D+a+look+that%27s+effortlessly+put-together%2C+turns+heads+and+photographs+beautifully.%0A%0AAt+Lepique+Fashions%2C+you%27ll+find+everything+you+need+for+a+flawless+date+night+look+%E2%80%94+stunning+jeans+in+every+style%2C+bodysuits+in+multiple+colours%2C+and+sleek+leather+jackets+that+pull+the+whole+outfit+together.%0A%0A%E2%9C%A8+Shop+the+complete+look+at+lepique.co.ke%0A%F0%9F%93%B1+WhatsApp+0721+672+900+to+ask+what%27s+in+stock%0A%0A%F0%9F%92%83+Dress+for+where+you+want+to+go%2C+not+where+you%27ve+been.%0AShop+online+%F0%9F%91%89+https%3A%2F%2Flepique.co.ke%2F%0A%0A%23DateNightOutfitKenya+%23OutfitInspoNairobi+%23KenyanFashionista+%23LadiesOOTDKenya+%23NairobiGirls%0ADate+night+outfit+Kenya%2C+ladies+night+out+outfit+Nairobi%2C+jeans+and+bodysuit+outfit+Kenya%2C+date+outfit+ideas+Nairobi%2C+women+fashion+date+night+Kenya%2C+cute+outfit+Nairobi%2C+ladies+evening+outfit+Kenya%2C+going+out+outfit+Nairobi%2C+leather+jacket+outfit+Kenya%2C+ladies+date+night+look+Nairobi.&access_token=IGAAVmftqcjnpBZAFpmWjdEZAWFXZAEkzanZArU2hGUF9fRFZAHdk1rX3NXQ1lieGpFMlp2VzdVaFdyQnRsd1VlR2lhNmJ4VWdXOHZADb0YzUU1GdGJwWXBXUzZAVNTFiQmlaX1c4MW11WHlyV000R0hkc1prQWlLd2tIS3RGZA1BhdlNBMAZDZD&alt_text=Ladies+ladies+fashion+-+Lepique+Fashions+Nairobi
+[2026-07-20 20:06:29] Skipping - current Nairobi time is 23:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-07-20 21:20:00] Skipping - current Nairobi time is 00:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-07-20 22:25:57] Skipping - current Nairobi time is 01:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-07-20 23:29:38] Skipping - current Nairobi time is 02:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-07-21 01:00:26] Skipping - current Nairobi time is 04:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-07-21 04:25:51] Peak hours check passed - Nairobi hour: 07.
+[2026-07-21 04:25:51] --- Starting Instagram + Facebook post ---
+[2026-07-21 04:25:51] CRITICAL: Instagram access token has EXPIRED or been revoked!
+[2026-07-21 04:25:51]   Generate a new 60-day token at:
+[2026-07-21 04:25:51]   https://developers.facebook.com/tools/explorer/
+[2026-07-21 04:25:51]   Then update the INSTAGRAM_ACCESS_TOKEN GitHub secret.
+[2026-07-21 04:25:51] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-07-21 04:25:51] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-07-21 04:25:51] Found 147 media files (newest-first by git history)
+[2026-07-21 04:25:51] Latest 5: ['13edd28f-ad5b-496e-b914-707ccdb3a814.jpg', '16256cef-c6b0-4133-870b-e39c114e74c6.jpg', '1748f425-f552-49d2-aaa4-ee6a77d71b2d.jpg', '267f3bfb-fde9-41d4-a022-61b18ae47e6a.jpg', '28928d6c-c9f1-4f3c-9025-ef40355317ca.jpg']
+[2026-07-21 04:25:51] Selected media: 8b8553b1-104e-4850-b568-5a04838c7cee.jpg
+[2026-07-21 04:25:51] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/8b8553b1-104e-4850-b568-5a04838c7cee.jpg
+[2026-07-21 04:25:51] Uploading image to Instagram...
+[2026-07-21 04:25:51] Alt text: Ladies ladies fashion - Lepique Fashions Nairobi
+[2026-07-21 04:25:51] Error: 400 Client Error: Bad Request for url: https://graph.instagram.com/v21.0/17841402201496454/media?image_url=https%3A%2F%2Flawrencebiwott.github.io%2Flepique-instagram-posts%2Fmedia%2Fphotos%2F8b8553b1-104e-4850-b568-5a04838c7cee.jpg&caption=%F0%9F%93%8D+Platinum+Plaza%2C+Ground+Floor%2C+Shop+G16+%E2%80%93+Tom+Mboya+Street%2C+Nairobi%0A%F0%9F%93%9E+0+7+2+1+%E2%80%A2+6+7+2+%E2%80%A2+9+0+0%0A%F0%9F%8C%90+https%3A%2F%2Flepique.co.ke%2F%0A%0A%F0%9F%92%95+Date+night+outfit+sorted.%0A%0AHigh-waist+wide-leg+jeans+%2B+bodysuit+%2B+leather+jacket+%3D+a+look+that%27s+effortlessly+put-together%2C+turns+heads+and+photographs+beautifully.%0A%0AAt+Lepique+Fashions%2C+you%27ll+find+everything+you+need+for+a+flawless+date+night+look+%E2%80%94+stunning+jeans+in+every+style%2C+bodysuits+in+multiple+colours%2C+and+sleek+leather+jackets+that+pull+the+whole+outfit+together.%0A%0A%E2%9C%A8+Shop+the+complete+look+at+lepique.co.ke%0A%F0%9F%93%B1+WhatsApp+0721+672+900+to+ask+what%27s+in+stock%0A%0A%F0%9F%92%83+Dress+for+where+you+want+to+go%2C+not+where+you%27ve+been.%0AShop+online+%F0%9F%91%89+https%3A%2F%2Flepique.co.ke%2F%0A%0A%23DateNightOutfitKenya+%23OutfitInspoNairobi+%23KenyanFashionista+%23LadiesOOTDKenya+%23NairobiGirls%0ADate+night+outfit+Kenya%2C+ladies+night+out+outfit+Nairobi%2C+jeans+and+bodysuit+outfit+Kenya%2C+date+outfit+ideas+Nairobi%2C+women+fashion+date+night+Kenya%2C+cute+outfit+Nairobi%2C+ladies+evening+outfit+Kenya%2C+going+out+outfit+Nairobi%2C+leather+jacket+outfit+Kenya%2C+ladies+date+night+look+Nairobi.&access_token=IGAAVmftqcjnpBZAFpmWjdEZAWFXZAEkzanZArU2hGUF9fRFZAHdk1rX3NXQ1lieGpFMlp2VzdVaFdyQnRsd1VlR2lhNmJ4VWdXOHZADb0YzUU1GdGJwWXBXUzZAVNTFiQmlaX1c4MW11WHlyV000R0hkc1prQWlLd2tIS3RGZA1BhdlNBMAZDZD&alt_text=Ladies+ladies+fashion+-+Lepique+Fashions+Nairobi
+[2026-07-21 07:05:39] Skipping - current Nairobi time is 10:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+=======
+[2026-07-21 08:22:31] Skipping - current Nairobi time is 11:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+>>>>>>> Stashed changes
+[2026-07-21 08:37:18] Skipping - current Nairobi time is 11:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-07-21 08:40:23] FORCE_POST enabled - bypassing interval guard.
+[2026-07-21 08:40:23] --- Starting Instagram + Facebook post ---
+[2026-07-21 08:40:23] CRITICAL: Instagram access token has EXPIRED or been revoked!
+[2026-07-21 08:40:23]   Generate a new 60-day token at:
+[2026-07-21 08:40:23]   https://developers.facebook.com/tools/explorer/
+[2026-07-21 08:40:23]   Then update the INSTAGRAM_ACCESS_TOKEN GitHub secret.
+[2026-07-21 08:40:23] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-07-21 08:40:23] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-07-21 08:40:23] Found 147 media files (newest-first by git history)
+[2026-07-21 08:40:23] Latest 5: ['13edd28f-ad5b-496e-b914-707ccdb3a814.jpg', '16256cef-c6b0-4133-870b-e39c114e74c6.jpg', '1748f425-f552-49d2-aaa4-ee6a77d71b2d.jpg', '267f3bfb-fde9-41d4-a022-61b18ae47e6a.jpg', '28928d6c-c9f1-4f3c-9025-ef40355317ca.jpg']
+[2026-07-21 08:40:23] Selected media: 8b8553b1-104e-4850-b568-5a04838c7cee.jpg
+[2026-07-21 08:40:23] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/8b8553b1-104e-4850-b568-5a04838c7cee.jpg
+[2026-07-21 08:40:23] Uploading image to Instagram...
+[2026-07-21 08:40:23] Alt text: Ladies ladies fashion - Lepique Fashions Nairobi
+[2026-07-21 08:40:24] Error: 400 Client Error: Bad Request for url: https://graph.instagram.com/v21.0/17841402201496454/media?image_url=https%3A%2F%2Flawrencebiwott.github.io%2Flepique-instagram-posts%2Fmedia%2Fphotos%2F8b8553b1-104e-4850-b568-5a04838c7cee.jpg&caption=%F0%9F%93%8D+Platinum+Plaza%2C+Ground+Floor%2C+Shop+G16+%E2%80%93+Tom+Mboya+Street%2C+Nairobi%0A%F0%9F%93%9E+0+7+2+1+%E2%80%A2+6+7+2+%E2%80%A2+9+0+0%0A%F0%9F%8C%90+https%3A%2F%2Flepique.co.ke%2F%0A%0A%F0%9F%92%95+Date+night+outfit+sorted.%0A%0AHigh-waist+wide-leg+jeans+%2B+bodysuit+%2B+leather+jacket+%3D+a+look+that%27s+effortlessly+put-together%2C+turns+heads+and+photographs+beautifully.%0A%0AAt+Lepique+Fashions%2C+you%27ll+find+everything+you+need+for+a+flawless+date+night+look+%E2%80%94+stunning+jeans+in+every+style%2C+bodysuits+in+multiple+colours%2C+and+sleek+leather+jackets+that+pull+the+whole+outfit+together.%0A%0A%E2%9C%A8+Shop+the+complete+look+at+lepique.co.ke%0A%F0%9F%93%B1+WhatsApp+0721+672+900+to+ask+what%27s+in+stock%0A%0A%F0%9F%92%83+Dress+for+where+you+want+to+go%2C+not+where+you%27ve+been.%0AShop+online+%F0%9F%91%89+https%3A%2F%2Flepique.co.ke%2F%0A%0A%23DateNightOutfitKenya+%23OutfitInspoNairobi+%23KenyanFashionista+%23LadiesOOTDKenya+%23NairobiGirls%0ADate+night+outfit+Kenya%2C+ladies+night+out+outfit+Nairobi%2C+jeans+and+bodysuit+outfit+Kenya%2C+date+outfit+ideas+Nairobi%2C+women+fashion+date+night+Kenya%2C+cute+outfit+Nairobi%2C+ladies+evening+outfit+Kenya%2C+going+out+outfit+Nairobi%2C+leather+jacket+outfit+Kenya%2C+ladies+date+night+look+Nairobi.&access_token=EAAoPvY2rIhYBSGL8YgCZCQlDSSKDUgRJMX3OmpYHePwu1S9Ox8hypXeHcPjldn7jhOW1FEZADm1LHTCUWBUkSOtRq0idl4UpJPZAEWGBlBtXHikVrvZCfTE4ifAGbZCCj5k0Qzww2GZCVfYCC4O8MlMB5IGpu8RrTBhEem79JtWrSpeAnzmkDgA7Ma5Uerwig95ZAy0UiKZCrnrtNhUK&alt_text=Ladies+ladies+fashion+-+Lepique+Fashions+Nairobi
+[2026-07-21 08:47:45] FORCE_POST enabled - bypassing interval guard.
+[2026-07-21 08:47:45] --- Starting Instagram + Facebook post ---
+[2026-07-21 08:47:45] CRITICAL: Instagram access token has EXPIRED or been revoked!
+[2026-07-21 08:47:45]   Generate a new 60-day token at:
+[2026-07-21 08:47:45]   https://developers.facebook.com/tools/explorer/
+[2026-07-21 08:47:45]   Then update the INSTAGRAM_ACCESS_TOKEN GitHub secret.
+[2026-07-21 08:47:45] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-07-21 08:47:45] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-07-21 08:47:45] Found 147 media files (newest-first by git history)
+[2026-07-21 08:47:45] Latest 5: ['13edd28f-ad5b-496e-b914-707ccdb3a814.jpg', '16256cef-c6b0-4133-870b-e39c114e74c6.jpg', '1748f425-f552-49d2-aaa4-ee6a77d71b2d.jpg', '267f3bfb-fde9-41d4-a022-61b18ae47e6a.jpg', '28928d6c-c9f1-4f3c-9025-ef40355317ca.jpg']
+[2026-07-21 08:47:45] Selected media: 8b8553b1-104e-4850-b568-5a04838c7cee.jpg
+[2026-07-21 08:47:45] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/8b8553b1-104e-4850-b568-5a04838c7cee.jpg
+[2026-07-21 08:47:45] Uploading image to Instagram...
+[2026-07-21 08:47:45] Alt text: Ladies ladies fashion - Lepique Fashions Nairobi
+[2026-07-21 08:47:45] Error: 400 Client Error: Bad Request for url: https://graph.instagram.com/v21.0/17841402201496454/media?image_url=https%3A%2F%2Flawrencebiwott.github.io%2Flepique-instagram-posts%2Fmedia%2Fphotos%2F8b8553b1-104e-4850-b568-5a04838c7cee.jpg&caption=%F0%9F%93%8D+Platinum+Plaza%2C+Ground+Floor%2C+Shop+G16+%E2%80%93+Tom+Mboya+Street%2C+Nairobi%0A%F0%9F%93%9E+0+7+2+1+%E2%80%A2+6+7+2+%E2%80%A2+9+0+0%0A%F0%9F%8C%90+https%3A%2F%2Flepique.co.ke%2F%0A%0A%F0%9F%92%95+Date+night+outfit+sorted.%0A%0AHigh-waist+wide-leg+jeans+%2B+bodysuit+%2B+leather+jacket+%3D+a+look+that%27s+effortlessly+put-together%2C+turns+heads+and+photographs+beautifully.%0A%0AAt+Lepique+Fashions%2C+you%27ll+find+everything+you+need+for+a+flawless+date+night+look+%E2%80%94+stunning+jeans+in+every+style%2C+bodysuits+in+multiple+colours%2C+and+sleek+leather+jackets+that+pull+the+whole+outfit+together.%0A%0A%E2%9C%A8+Shop+the+complete+look+at+lepique.co.ke%0A%F0%9F%93%B1+WhatsApp+0721+672+900+to+ask+what%27s+in+stock%0A%0A%F0%9F%92%83+Dress+for+where+you+want+to+go%2C+not+where+you%27ve+been.%0AShop+online+%F0%9F%91%89+https%3A%2F%2Flepique.co.ke%2F%0A%0A%23DateNightOutfitKenya+%23OutfitInspoNairobi+%23KenyanFashionista+%23LadiesOOTDKenya+%23NairobiGirls%0ADate+night+outfit+Kenya%2C+ladies+night+out+outfit+Nairobi%2C+jeans+and+bodysuit+outfit+Kenya%2C+date+outfit+ideas+Nairobi%2C+women+fashion+date+night+Kenya%2C+cute+outfit+Nairobi%2C+ladies+evening+outfit+Kenya%2C+going+out+outfit+Nairobi%2C+leather+jacket+outfit+Kenya%2C+ladies+date+night+look+Nairobi.&access_token=EAAoPvY2rIhYBSGL8YgCZCQlDSSKDUgRJMX3OmpYHePwu1S9Ox8hypXeHcPjldn7jhOW1FEZADm1LHTCUWBUkSOtRq0idl4UpJPZAEWGBlBtXHikVrvZCfTE4ifAGbZCCj5k0Qzww2GZCVfYCC4O8MlMB5IGpu8RrTBhEem79JtWrSpeAnzmkDgA7Ma5Uerwig95ZAy0UiKZCrnrtNhUK&alt_text=Ladies+ladies+fashion+-+Lepique+Fashions+Nairobi
+[2026-07-21 08:52:13] FORCE_POST enabled - bypassing interval guard.
+[2026-07-21 08:52:13] --- Starting Instagram + Facebook post ---
+[2026-07-21 08:52:13] CRITICAL: Instagram access token has EXPIRED or been revoked!
+[2026-07-21 08:52:13]   Generate a new 60-day token at:
+[2026-07-21 08:52:13]   https://developers.facebook.com/tools/explorer/
+[2026-07-21 08:52:13]   Then update the INSTAGRAM_ACCESS_TOKEN GitHub secret.
+[2026-07-21 08:52:13] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-07-21 08:52:13] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-07-21 08:52:13] Found 147 media files (newest-first by git history)
+[2026-07-21 08:52:13] Latest 5: ['13edd28f-ad5b-496e-b914-707ccdb3a814.jpg', '16256cef-c6b0-4133-870b-e39c114e74c6.jpg', '1748f425-f552-49d2-aaa4-ee6a77d71b2d.jpg', '267f3bfb-fde9-41d4-a022-61b18ae47e6a.jpg', '28928d6c-c9f1-4f3c-9025-ef40355317ca.jpg']
+[2026-07-21 08:52:13] Selected media: 8b8553b1-104e-4850-b568-5a04838c7cee.jpg
+[2026-07-21 08:52:13] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/8b8553b1-104e-4850-b568-5a04838c7cee.jpg
+[2026-07-21 08:52:13] Uploading image to Instagram...
+[2026-07-21 08:52:13] Alt text: Ladies ladies fashion - Lepique Fashions Nairobi
+[2026-07-21 08:52:13] Error: 400 Client Error: Bad Request for url: https://graph.instagram.com/v21.0/17841402201496454/media?image_url=https%3A%2F%2Flawrencebiwott.github.io%2Flepique-instagram-posts%2Fmedia%2Fphotos%2F8b8553b1-104e-4850-b568-5a04838c7cee.jpg&caption=%F0%9F%93%8D+Platinum+Plaza%2C+Ground+Floor%2C+Shop+G16+%E2%80%93+Tom+Mboya+Street%2C+Nairobi%0A%F0%9F%93%9E+0+7+2+1+%E2%80%A2+6+7+2+%E2%80%A2+9+0+0%0A%F0%9F%8C%90+https%3A%2F%2Flepique.co.ke%2F%0A%0A%F0%9F%92%95+Date+night+outfit+sorted.%0A%0AHigh-waist+wide-leg+jeans+%2B+bodysuit+%2B+leather+jacket+%3D+a+look+that%27s+effortlessly+put-together%2C+turns+heads+and+photographs+beautifully.%0A%0AAt+Lepique+Fashions%2C+you%27ll+find+everything+you+need+for+a+flawless+date+night+look+%E2%80%94+stunning+jeans+in+every+style%2C+bodysuits+in+multiple+colours%2C+and+sleek+leather+jackets+that+pull+the+whole+outfit+together.%0A%0A%E2%9C%A8+Shop+the+complete+look+at+lepique.co.ke%0A%F0%9F%93%B1+WhatsApp+0721+672+900+to+ask+what%27s+in+stock%0A%0A%F0%9F%92%83+Dress+for+where+you+want+to+go%2C+not+where+you%27ve+been.%0AShop+online+%F0%9F%91%89+https%3A%2F%2Flepique.co.ke%2F%0A%0A%23DateNightOutfitKenya+%23OutfitInspoNairobi+%23KenyanFashionista+%23LadiesOOTDKenya+%23NairobiGirls%0ADate+night+outfit+Kenya%2C+ladies+night+out+outfit+Nairobi%2C+jeans+and+bodysuit+outfit+Kenya%2C+date+outfit+ideas+Nairobi%2C+women+fashion+date+night+Kenya%2C+cute+outfit+Nairobi%2C+ladies+evening+outfit+Kenya%2C+going+out+outfit+Nairobi%2C+leather+jacket+outfit+Kenya%2C+ladies+date+night+look+Nairobi.&access_token=EAAoPvY2rIhYBSGL8YgCZCQlDSSKDUgRJMX3OmpYHePwu1S9Ox8hypXeHcPjldn7jhOW1FEZADm1LHTCUWBUkSOtRq0idl4UpJPZAEWGBlBtXHikVrvZCfTE4ifAGbZCCj5k0Qzww2GZCVfYCC4O8MlMB5IGpu8RrTBhEem79JtWrSpeAnzmkDgA7Ma5Uerwig95ZAy0UiKZCrnrtNhUK&alt_text=Ladies+ladies+fashion+-+Lepique+Fashions+Nairobi
+[2026-07-21 08:55:23] FORCE_POST enabled - bypassing interval guard.
+[2026-07-21 08:55:23] --- Starting Instagram + Facebook post ---
+[2026-07-21 08:55:23] CRITICAL: Instagram access token has EXPIRED or been revoked!
+[2026-07-21 08:55:23]   Generate a new 60-day token at:
+[2026-07-21 08:55:23]   https://developers.facebook.com/tools/explorer/
+[2026-07-21 08:55:23]   Then update the INSTAGRAM_ACCESS_TOKEN GitHub secret.
+[2026-07-21 08:55:23] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-07-21 08:55:23] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-07-21 08:55:23] Found 147 media files (newest-first by git history)
+[2026-07-21 08:55:23] Latest 5: ['13edd28f-ad5b-496e-b914-707ccdb3a814.jpg', '16256cef-c6b0-4133-870b-e39c114e74c6.jpg', '1748f425-f552-49d2-aaa4-ee6a77d71b2d.jpg', '267f3bfb-fde9-41d4-a022-61b18ae47e6a.jpg', '28928d6c-c9f1-4f3c-9025-ef40355317ca.jpg']
+[2026-07-21 08:55:23] Selected media: 8b8553b1-104e-4850-b568-5a04838c7cee.jpg
+[2026-07-21 08:55:23] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/8b8553b1-104e-4850-b568-5a04838c7cee.jpg
+[2026-07-21 08:55:23] Uploading image to Instagram...
+[2026-07-21 08:55:23] Alt text: Ladies ladies fashion - Lepique Fashions Nairobi
+[2026-07-21 08:55:23] Error: 400 Client Error: Bad Request for url: https://graph.instagram.com/v21.0/17841402201496454/media?image_url=https%3A%2F%2Flawrencebiwott.github.io%2Flepique-instagram-posts%2Fmedia%2Fphotos%2F8b8553b1-104e-4850-b568-5a04838c7cee.jpg&caption=%F0%9F%93%8D+Platinum+Plaza%2C+Ground+Floor%2C+Shop+G16+%E2%80%93+Tom+Mboya+Street%2C+Nairobi%0A%F0%9F%93%9E+0+7+2+1+%E2%80%A2+6+7+2+%E2%80%A2+9+0+0%0A%F0%9F%8C%90+https%3A%2F%2Flepique.co.ke%2F%0A%0A%F0%9F%92%95+Date+night+outfit+sorted.%0A%0AHigh-waist+wide-leg+jeans+%2B+bodysuit+%2B+leather+jacket+%3D+a+look+that%27s+effortlessly+put-together%2C+turns+heads+and+photographs+beautifully.%0A%0AAt+Lepique+Fashions%2C+you%27ll+find+everything+you+need+for+a+flawless+date+night+look+%E2%80%94+stunning+jeans+in+every+style%2C+bodysuits+in+multiple+colours%2C+and+sleek+leather+jackets+that+pull+the+whole+outfit+together.%0A%0A%E2%9C%A8+Shop+the+complete+look+at+lepique.co.ke%0A%F0%9F%93%B1+WhatsApp+0721+672+900+to+ask+what%27s+in+stock%0A%0A%F0%9F%92%83+Dress+for+where+you+want+to+go%2C+not+where+you%27ve+been.%0AShop+online+%F0%9F%91%89+https%3A%2F%2Flepique.co.ke%2F%0A%0A%23DateNightOutfitKenya+%23OutfitInspoNairobi+%23KenyanFashionista+%23LadiesOOTDKenya+%23NairobiGirls%0ADate+night+outfit+Kenya%2C+ladies+night+out+outfit+Nairobi%2C+jeans+and+bodysuit+outfit+Kenya%2C+date+outfit+ideas+Nairobi%2C+women+fashion+date+night+Kenya%2C+cute+outfit+Nairobi%2C+ladies+evening+outfit+Kenya%2C+going+out+outfit+Nairobi%2C+leather+jacket+outfit+Kenya%2C+ladies+date+night+look+Nairobi.&access_token=EAAoPvY2rIhYBSO7yg1YsBH4r5yRV1JWQmIe9M3JYdTVHDcHTljuivkMc4eUpZCcwN73eqTDhKia1INkUQNu43AxdS7HfHaLoRZAhVZArg36CwcEk2gkiVM8XCuk8NwufRW9iBCJCNIsQGjRBiNvR5niRXZAhKVwXnXaAkTXfb6P053BoSQbT4qvT5DNHe51xp1kwvhptb3bZBQD0JSBeY&alt_text=Ladies+ladies+fashion+-+Lepique+Fashions+Nairobi
+[2026-07-21 08:58:51] FORCE_POST enabled - bypassing interval guard.
+[2026-07-21 08:58:51] --- Starting Instagram + Facebook post ---
+[2026-07-21 08:58:52] CRITICAL: Instagram access token has EXPIRED or been revoked!
+[2026-07-21 08:58:52]   Generate a new 60-day token at:
+[2026-07-21 08:58:52]   https://developers.facebook.com/tools/explorer/
+[2026-07-21 08:58:52]   Then update the INSTAGRAM_ACCESS_TOKEN GitHub secret.
+[2026-07-21 08:58:52] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-07-21 08:58:52] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-07-21 08:58:52] Found 147 media files (newest-first by git history)
+[2026-07-21 08:58:52] Latest 5: ['13edd28f-ad5b-496e-b914-707ccdb3a814.jpg', '16256cef-c6b0-4133-870b-e39c114e74c6.jpg', '1748f425-f552-49d2-aaa4-ee6a77d71b2d.jpg', '267f3bfb-fde9-41d4-a022-61b18ae47e6a.jpg', '28928d6c-c9f1-4f3c-9025-ef40355317ca.jpg']
+[2026-07-21 08:58:52] Selected media: 8b8553b1-104e-4850-b568-5a04838c7cee.jpg
+[2026-07-21 08:58:52] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/8b8553b1-104e-4850-b568-5a04838c7cee.jpg
+[2026-07-21 08:58:52] Uploading image to Instagram...
+[2026-07-21 08:58:52] Alt text: Ladies ladies fashion - Lepique Fashions Nairobi
+[2026-07-21 08:58:52] Error: 400 Client Error: Bad Request for url: https://graph.instagram.com/v21.0/17841402201496454/media?image_url=https%3A%2F%2Flawrencebiwott.github.io%2Flepique-instagram-posts%2Fmedia%2Fphotos%2F8b8553b1-104e-4850-b568-5a04838c7cee.jpg&caption=%F0%9F%93%8D+Platinum+Plaza%2C+Ground+Floor%2C+Shop+G16+%E2%80%93+Tom+Mboya+Street%2C+Nairobi%0A%F0%9F%93%9E+0+7+2+1+%E2%80%A2+6+7+2+%E2%80%A2+9+0+0%0A%F0%9F%8C%90+https%3A%2F%2Flepique.co.ke%2F%0A%0A%F0%9F%92%95+Date+night+outfit+sorted.%0A%0AHigh-waist+wide-leg+jeans+%2B+bodysuit+%2B+leather+jacket+%3D+a+look+that%27s+effortlessly+put-together%2C+turns+heads+and+photographs+beautifully.%0A%0AAt+Lepique+Fashions%2C+you%27ll+find+everything+you+need+for+a+flawless+date+night+look+%E2%80%94+stunning+jeans+in+every+style%2C+bodysuits+in+multiple+colours%2C+and+sleek+leather+jackets+that+pull+the+whole+outfit+together.%0A%0A%E2%9C%A8+Shop+the+complete+look+at+lepique.co.ke%0A%F0%9F%93%B1+WhatsApp+0721+672+900+to+ask+what%27s+in+stock%0A%0A%F0%9F%92%83+Dress+for+where+you+want+to+go%2C+not+where+you%27ve+been.%0AShop+online+%F0%9F%91%89+https%3A%2F%2Flepique.co.ke%2F%0A%0A%23DateNightOutfitKenya+%23OutfitInspoNairobi+%23KenyanFashionista+%23LadiesOOTDKenya+%23NairobiGirls%0ADate+night+outfit+Kenya%2C+ladies+night+out+outfit+Nairobi%2C+jeans+and+bodysuit+outfit+Kenya%2C+date+outfit+ideas+Nairobi%2C+women+fashion+date+night+Kenya%2C+cute+outfit+Nairobi%2C+ladies+evening+outfit+Kenya%2C+going+out+outfit+Nairobi%2C+leather+jacket+outfit+Kenya%2C+ladies+date+night+look+Nairobi.&access_token=EAAoPvY2rIhYBSO7yg1YsBH4r5yRV1JWQmIe9M3JYdTVHDcHTljuivkMc4eUpZCcwN73eqTDhKia1INkUQNu43AxdS7HfHaLoRZAhVZArg36CwcEk2gkiVM8XCuk8NwufRW9iBCJCNIsQGjRBiNvR5niRXZAhKVwXnXaAkTXfb6P053BoSQbT4qvT5DNHe51xp1kwvhptb3bZBQD0JSBeY&alt_text=Ladies+ladies+fashion+-+Lepique+Fashions+Nairobi
+[2026-07-21 09:07:03] FORCE_POST enabled - bypassing interval guard.
+[2026-07-21 09:07:03] --- Starting Instagram + Facebook post ---
+[2026-07-21 09:07:04] Instagram token OK - account: @lepiquefashions (ID: 1889041611321657)
+[2026-07-21 09:07:04] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-07-21 09:07:04] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-07-21 09:07:04] Found 147 media files (newest-first by git history)
+[2026-07-21 09:07:04] Latest 5: ['13edd28f-ad5b-496e-b914-707ccdb3a814.jpg', '16256cef-c6b0-4133-870b-e39c114e74c6.jpg', '1748f425-f552-49d2-aaa4-ee6a77d71b2d.jpg', '267f3bfb-fde9-41d4-a022-61b18ae47e6a.jpg', '28928d6c-c9f1-4f3c-9025-ef40355317ca.jpg']
+[2026-07-21 09:07:04] Selected media: 8b8553b1-104e-4850-b568-5a04838c7cee.jpg
+[2026-07-21 09:07:04] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/8b8553b1-104e-4850-b568-5a04838c7cee.jpg
+[2026-07-21 09:07:04] Uploading image to Instagram...
+[2026-07-21 09:07:04] Alt text: Ladies ladies fashion - Lepique Fashions Nairobi
+[2026-07-21 09:07:08] Waiting for Instagram processing...
+[2026-07-21 09:07:09] Container status: IN_PROGRESS
+[2026-07-21 09:07:14] Container status: FINISHED
+[2026-07-21 09:07:24] Container ID: 18545717059073384
+[2026-07-21 09:07:27] Instagram feed post successful! ID: 17899581519534867
+[2026-07-21 09:07:27] State saved after Instagram post.
+[2026-07-21 09:07:28] Story image resized to 1080x1920 -> photos/story_temp.jpg
+[2026-07-21 09:07:29] Story URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/story_temp.jpg - waiting for GitHub Pages to deploy...
+[2026-07-21 09:08:25] Story image live after 55s.
+[2026-07-21 09:08:25] Posting to Instagram Stories...
+[2026-07-21 09:08:27] Waiting for Instagram processing...
+[2026-07-21 09:08:28] Container status: IN_PROGRESS
+[2026-07-21 09:08:33] Container status: FINISHED
+[2026-07-21 09:08:46] Instagram Story posted! ID: 18102326330269636
+[2026-07-21 09:08:46] --- Posting to Facebook ---
+[2026-07-21 09:08:46] Uploading photo to Facebook feed...
+[2026-07-21 09:08:53] Facebook feed post successful! ID: 1889041611321657_1456514873178224
+[2026-07-21 09:08:53] Posting photo to Facebook Stories...
+[2026-07-21 09:09:00] Facebook Story posted! ID: 897551363408888
+[2026-07-21 09:09:00] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
+[2026-07-21 09:09:00] All done. Final state saved.
+[2026-07-21 09:34:46] Skipping - last post was 27 min ago (next post in ~28 min).
+[2026-07-21 11:26:01] Peak hours check passed - Nairobi hour: 14.
+[2026-07-21 11:26:01] --- Starting Instagram + Facebook post ---
+[2026-07-21 11:26:01] Instagram token OK - account: @lepiquefashions (ID: 1889041611321657)
+[2026-07-21 11:26:01] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-07-21 11:26:01] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-07-21 11:26:01] Found 147 media files (newest-first by git history)
+[2026-07-21 11:26:01] Latest 5: ['13edd28f-ad5b-496e-b914-707ccdb3a814.jpg', '16256cef-c6b0-4133-870b-e39c114e74c6.jpg', '1748f425-f552-49d2-aaa4-ee6a77d71b2d.jpg', '267f3bfb-fde9-41d4-a022-61b18ae47e6a.jpg', '28928d6c-c9f1-4f3c-9025-ef40355317ca.jpg']
+[2026-07-21 11:26:01] Selected media: 8b9a50f6-7167-4310-93bc-0159ff55b89b.jpg
+[2026-07-21 11:26:01] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/8b9a50f6-7167-4310-93bc-0159ff55b89b.jpg
+[2026-07-21 11:26:01] Uploading image to Instagram...
+[2026-07-21 11:26:01] Alt text: Ladies ladies fashion - Lepique Fashions Nairobi
+[2026-07-21 11:26:05] Waiting for Instagram processing...
+[2026-07-21 11:26:06] Container status: FINISHED
+[2026-07-21 11:26:16] Container ID: 18545736916073384
+[2026-07-21 11:26:18] Instagram feed post successful! ID: 18017204678910743
+[2026-07-21 11:26:18] State saved after Instagram post.
+[2026-07-21 11:26:19] Story image resized to 1080x1920 -> photos/story_temp.jpg
+[2026-07-21 11:26:21] Story URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/story_temp.jpg - waiting for GitHub Pages to deploy...
+[2026-07-21 11:27:18] Story image live after 55s.
+[2026-07-21 11:27:18] Posting to Instagram Stories...
+[2026-07-21 11:27:21] Waiting for Instagram processing...
+[2026-07-21 11:27:22] Container status: FINISHED
+[2026-07-21 11:27:35] Instagram Story posted! ID: 18228461671317641
+[2026-07-21 11:27:35] --- Posting to Facebook ---
+[2026-07-21 11:27:35] Uploading photo to Facebook feed...
+[2026-07-21 11:27:40] Facebook feed post successful! ID: 1889041611321657_1456604016502643
+[2026-07-21 11:27:40] Posting photo to Facebook Stories...
+[2026-07-21 11:27:49] Facebook Story posted! ID: 1044370661302113
+[2026-07-21 11:27:49] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
+[2026-07-21 11:27:49] All done. Final state saved.
+[2026-07-21 12:51:27] Skipping - current Nairobi time is 15:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-07-21 15:00:10] Peak hours check passed - Nairobi hour: 18.
+[2026-07-21 15:00:10] --- Starting Instagram + Facebook post ---
+[2026-07-21 15:00:11] Instagram token OK - account: @lepiquefashions (ID: 1889041611321657)
+[2026-07-21 15:00:11] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-07-21 15:00:11] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-07-21 15:00:11] Found 147 media files (newest-first by git history)
+[2026-07-21 15:00:11] Latest 5: ['13edd28f-ad5b-496e-b914-707ccdb3a814.jpg', '16256cef-c6b0-4133-870b-e39c114e74c6.jpg', '1748f425-f552-49d2-aaa4-ee6a77d71b2d.jpg', '267f3bfb-fde9-41d4-a022-61b18ae47e6a.jpg', '28928d6c-c9f1-4f3c-9025-ef40355317ca.jpg']
+[2026-07-21 15:00:11] Selected media: WhatsApp Image 2026-07-15 at 16.08.55.jpeg
+[2026-07-21 15:00:11] Padded WhatsApp Image 2026-07-15 at 16.08.55.jpeg: 1086x1448 -> 1158x1448 (ratio 0.80)
+[2026-07-21 15:00:11] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/WhatsApp%20Image%202026-07-15%20at%2016.08.55.jpeg
+[2026-07-21 15:00:11] Uploading image to Instagram...
+[2026-07-21 15:00:11] Alt text: Ladies ladies fashion - Lepique Fashions Nairobi
+[2026-07-21 15:00:15] Waiting for Instagram processing...
+[2026-07-21 15:00:15] Container status: FINISHED
+[2026-07-21 15:00:25] Container ID: 18545775964073384
+[2026-07-21 15:00:30] Instagram feed post successful! ID: 18173276038402729
+[2026-07-21 15:00:30] State saved after Instagram post.
+[2026-07-21 15:00:31] Story image resized to 1080x1920 -> photos/story_temp.jpg
+[2026-07-21 15:00:33] Story URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/story_temp.jpg - waiting for GitHub Pages to deploy...
+[2026-07-21 15:01:48] Story image live after 75s.
+[2026-07-21 15:01:48] Posting to Instagram Stories...
+[2026-07-21 15:01:52] Waiting for Instagram processing...
+[2026-07-21 15:01:53] Container status: FINISHED
+[2026-07-21 15:02:08] Instagram Story posted! ID: 18149659720505699
+[2026-07-21 15:02:08] --- Posting to Facebook ---
+[2026-07-21 15:02:08] Uploading photo to Facebook feed...
+[2026-07-21 15:02:12] Facebook feed post successful! ID: 1889041611321657_1456747546488290
+[2026-07-21 15:02:12] Posting photo to Facebook Stories...
+[2026-07-21 15:02:20] Facebook Story posted! ID: 1741548840490139
+[2026-07-21 15:02:20] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
+[2026-07-21 15:02:20] All done. Final state saved.
+[2026-07-21 16:36:40] Peak hours check passed - Nairobi hour: 19.
+[2026-07-21 16:36:40] --- Starting Instagram + Facebook post ---
+[2026-07-21 16:36:40] Instagram token OK - account: @lepiquefashions (ID: 1889041611321657)
+[2026-07-21 16:36:40] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-07-21 16:36:40] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-07-21 16:36:40] Found 147 media files (newest-first by git history)
+[2026-07-21 16:36:40] Latest 5: ['13edd28f-ad5b-496e-b914-707ccdb3a814.jpg', '16256cef-c6b0-4133-870b-e39c114e74c6.jpg', '1748f425-f552-49d2-aaa4-ee6a77d71b2d.jpg', '267f3bfb-fde9-41d4-a022-61b18ae47e6a.jpg', '28928d6c-c9f1-4f3c-9025-ef40355317ca.jpg']
+[2026-07-21 16:36:40] Selected media: WhatsApp Image 2026-07-15 at 16.08.56 (1).jpeg
+[2026-07-21 16:36:40] Padded WhatsApp Image 2026-07-15 at 16.08.56 (1).jpeg: 1087x1446 -> 1156x1446 (ratio 0.80)
+[2026-07-21 16:36:40] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/WhatsApp%20Image%202026-07-15%20at%2016.08.56%20%281%29.jpeg
+[2026-07-21 16:36:40] Uploading image to Instagram...
+[2026-07-21 16:36:40] Alt text: Ladies ladies fashion - Lepique Fashions Nairobi
+[2026-07-21 16:36:45] Waiting for Instagram processing...
+[2026-07-21 16:36:46] Container status: FINISHED
+[2026-07-21 16:36:56] Container ID: 18545795464073384
+[2026-07-21 16:36:59] Instagram feed post successful! ID: 18061378004738948
+[2026-07-21 16:36:59] State saved after Instagram post.
+[2026-07-21 16:36:59] Story image resized to 1080x1920 -> photos/story_temp.jpg
+[2026-07-21 16:37:01] Story URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/story_temp.jpg - waiting for GitHub Pages to deploy...
+[2026-07-21 16:38:02] Story image live after 60s.
+[2026-07-21 16:38:02] Posting to Instagram Stories...
+[2026-07-21 16:38:07] Waiting for Instagram processing...
+[2026-07-21 16:38:08] Container status: IN_PROGRESS
+[2026-07-21 16:38:13] Container status: FINISHED
+[2026-07-21 16:38:25] Instagram Story posted! ID: 17912364003244520
+[2026-07-21 16:38:25] --- Posting to Facebook ---
+[2026-07-21 16:38:25] Uploading photo to Facebook feed...
+[2026-07-21 16:38:30] Facebook feed post successful! ID: 1889041611321657_1456812313148480
+[2026-07-21 16:38:30] Posting photo to Facebook Stories...
+[2026-07-21 16:38:40] Facebook Story posted! ID: 1693564552774229
+[2026-07-21 16:38:40] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
+[2026-07-21 16:38:40] All done. Final state saved.
+[2026-07-21 17:56:26] Peak hours check passed - Nairobi hour: 20.
+[2026-07-21 17:56:26] --- Starting Instagram + Facebook post ---
+[2026-07-21 17:56:27] Instagram token OK - account: @lepiquefashions (ID: 1889041611321657)
+[2026-07-21 17:56:27] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-07-21 17:56:27] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-07-21 17:56:27] Found 147 media files (newest-first by git history)
+[2026-07-21 17:56:27] Latest 5: ['13edd28f-ad5b-496e-b914-707ccdb3a814.jpg', '16256cef-c6b0-4133-870b-e39c114e74c6.jpg', '1748f425-f552-49d2-aaa4-ee6a77d71b2d.jpg', '267f3bfb-fde9-41d4-a022-61b18ae47e6a.jpg', '28928d6c-c9f1-4f3c-9025-ef40355317ca.jpg']
+[2026-07-21 17:56:27] Selected media: WhatsApp Image 2026-07-15 at 16.08.56.jpeg
+[2026-07-21 17:56:27] Padded WhatsApp Image 2026-07-15 at 16.08.56.jpeg: 1086x1448 -> 1158x1448 (ratio 0.80)
+[2026-07-21 17:56:27] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/WhatsApp%20Image%202026-07-15%20at%2016.08.56.jpeg
+[2026-07-21 17:56:27] Uploading image to Instagram...
+[2026-07-21 17:56:27] Alt text: Ladies ladies fashion - Lepique Fashions Nairobi
+[2026-07-21 17:56:33] Waiting for Instagram processing...
+[2026-07-21 17:56:33] Container status: IN_PROGRESS
+[2026-07-21 17:56:38] Container status: FINISHED
+[2026-07-21 17:56:48] Container ID: 18545808817073384
+[2026-07-21 17:56:52] Instagram feed post successful! ID: 18109993570953675
+[2026-07-21 17:56:52] State saved after Instagram post.
+[2026-07-21 17:56:53] Story image resized to 1080x1920 -> photos/story_temp.jpg
+[2026-07-21 17:56:54] Story URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/story_temp.jpg - waiting for GitHub Pages to deploy...
+[2026-07-21 17:57:50] Story image live after 55s.
+[2026-07-21 17:57:50] Posting to Instagram Stories...
+[2026-07-21 17:57:55] Waiting for Instagram processing...
+[2026-07-21 17:57:55] Container status: IN_PROGRESS
+[2026-07-21 17:58:00] Container status: FINISHED
+[2026-07-21 17:58:14] Instagram Story posted! ID: 18114367450894184
+[2026-07-21 17:58:14] --- Posting to Facebook ---
+[2026-07-21 17:58:14] Uploading photo to Facebook feed...
+[2026-07-21 17:58:32] Facebook feed post successful! ID: 1889041611321657_1456862196476825
+[2026-07-21 17:58:32] Posting photo to Facebook Stories...
+[2026-07-21 17:58:47] Facebook Story posted! ID: 2273445373498474
+[2026-07-21 17:58:47] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
+[2026-07-21 17:58:47] All done. Final state saved.
+[2026-07-21 19:17:52] Skipping - current Nairobi time is 22:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-07-21 20:38:11] Skipping - current Nairobi time is 23:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-07-21 21:43:31] Skipping - current Nairobi time is 00:xx (outside peak hours 07-09, 12-14, 18-21 EAT).

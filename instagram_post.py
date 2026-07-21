@@ -55,7 +55,7 @@ IMAGE_EXTS = {".jpg", ".jpeg", ".png", ".webp"}
 VIDEO_EXTS = {".mp4", ".mov", ".m4v"}
 
 # API base URLs
-IG_BASE_URL     = "https://graph.instagram.com/v21.0"
+IG_BASE_URL     = "https://graph.facebook.com/v21.0"
 FB_BASE_URL     = "https://graph.facebook.com/v21.0"
 TIKTOK_BASE_URL = "https://open.tiktokapis.com/v2"
 TIKTOK_CHUNK_SIZE = 10 * 1024 * 1024  # 10 MB per chunk
