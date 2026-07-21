@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Studio — Lepique Studio</title>
+<link rel="icon" type="image/png" href="/lepique-instagram-posts/lepique-studio-icon.png">
+<style>
+  :root { --navy: #111827; --gold: #b8860b; --gray: #4b5563; --bg: #fafafa; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: var(--navy); background: var(--bg); line-height: 1.6; }
+  header { background: var(--navy); color:#fff; padding: 28px 20px; text-align: center; }
+  header img.logo { width: 48px; height: 48px; border-radius: 8px; margin-bottom: 8px; }
+  header h1 { margin:0; font-size: 1.6rem; }
+  nav { background:#fff; border-bottom:1px solid #e5e7eb; padding:14px 20px; text-align:center; }
+  nav a { color: var(--navy); text-decoration:none; margin:0 14px; font-weight:600; font-size:0.95rem; }
+  nav a:hover { color: var(--gold); }
+  main { max-width: 560px; margin: 0 auto; padding: 40px 20px 60px; }
+  .card { background:#fff; border:1px solid #e5e7eb; border-radius:12px; padding:28px; text-align:center; }
+  .spinner { width:34px; height:34px; border-radius:50%; border:3px solid #e5e7eb; border-top-color: var(--gold); margin: 6px auto 18px; animation: spin 0.9s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .status-title { font-size:1.15rem; font-weight:700; margin-bottom:6px; }
+  .status-sub { color: var(--gray); font-size:0.92rem; }
+  .profile-row { display:flex; align-items:center; gap:12px; justify-content:center; margin:18px 0; padding:14px; background:#fafafa; border:1px solid #e5e7eb; border-radius:10px; }
+  .avatar { width:44px; height:44px; border-radius:50%; background: var(--navy); color:#fff; display:flex; align-items:center; justify-content:center; font-weight:700; }
+  .success-icon { width:48px; height:48px; border-radius:50%; background:#16a34a; color:#fff; display:flex; align-items:center; justify-content:center; font-size:1.5rem; margin:6px auto 18px; }
+  .error-icon { width:48px; height:48px; border-radius:50%; background:#dc2626; color:#fff; display:flex; align-items:center; justify-content:center; font-size:1.5rem; margin:6px auto 18px; }
+  .meta { font-size:0.85rem; color:#9ca3af; margin-top:14px; }
+  footer { text-align:center; padding:24px 20px; color:#9ca3af; font-size:0.85rem; border-top:1px solid #e5e7eb; background:#fff; margin-top:40px; }
+</style>
+</head>
+<body>
+
+<header>
+  <img class="logo" src="/lepique-instagram-posts/lepique-studio-icon.png" alt="Lepique Studio icon">
+  <h1>Lepique Studio</h1>
+</header>
+
+<nav>
+  <a href="/lepique-instagram-posts/">Home</a>
+  <a href="/lepique-instagram-posts/terms.html">Terms of Service</a>
+  <a href="/lepique-instagram-posts/privacy.html">Privacy Policy</a>
+  <a href="/lepique-instagram-posts/studio.html">Studio</a>
+</nav>
+
+<main>
+  <div class="card" id="card">
+    <div class="spinner" id="spinner"></div>
+    <div class="status-title" id="statusTitle">Authorization received</div>
+    <div class="status-sub" id="statusSub">Publishing your video to TikTok…</div>
+    <div id="extra"></div>
+  </div>
+</main>
+
+<footer>
+  &copy; 2026 Lepique Studio &middot; Operated by Lepique Fashions, Nairobi, Kenya &middot;
+  <a href="/lepique-instagram-posts/terms.html">Terms</a> &middot;
+  <a href="/lepique-instagram-posts/privacy.html">Privacy</a>
+</footer>
+
+<script>
+  var params = new URLSearchParams(window.location.search);
+  var code = params.get("code");
+  var errorParam = params.get("error");
+  var statusTitle = document.getElementById("statusTitle");
+  var statusSub = document.getElementById("statusSub");
+  var spinner = document.getElementById("spinner");
+  var extra = document.getElementById("extra");
+
+  function showError(msg) {
+    spinner.style.display = "none";
+    var icon = document.createElement("div");
+    icon.className = "error-icon";
+    icon.textContent = "✕";
+    spinner.parentNode.insertBefore(icon, statusTitle);
+    statusTitle.textContent = "Authorization failed";
+    statusSub.textContent = msg;
+  }
+
+  if (errorParam) {
+    showError(params.get("error_description") || errorParam);
+  } else if (!code) {
+    showError("No authorization code was returned.");
+  } else {
+    statusSub.textContent = "Authorization received. Publishing your video to TikTok…";
+
+    var attempts = 0;
+    var maxAttempts = 40; // ~2 minutes at 3s interval
+
+    function poll() {
+      attempts++;
+      fetch("/lepique-instagram-posts/demo_result.json?t=" + Date.now(), { cache: "no-store" })
+        .then(function (r) { return r.json(); })
+        .then(function (data) {
+          if (data.code === code && data.status !== "idle") {
+            spinner.style.display = "none";
+            if (data.status === "success") {
+              var icon = document.createElement("div");
+              icon.className = "success-icon";
+              icon.textContent = "✓";
+              spinner.parentNode.insertBefore(icon, statusTitle);
+              statusTitle.textContent = "Published to TikTok";
+              statusSub.textContent = "Your video is live for @" + (data.creator_username || "your account") + ".";
+              extra.innerHTML = "<div class='profile-row'><div class='avatar'>" +
+                (data.creator_nickname ? data.creator_nickname.charAt(0).toUpperCase() : "L") +
+                "</div><div style='text-align:left'><strong>" + (data.creator_nickname || "") +
+                "</strong><div style='font-size:0.85rem;color:#6b7280'>@" + (data.creator_username || "") + "</div></div></div>" +
+                "<div class='meta'>Post ID: " + data.publish_id + "</div>";
+            } else {
+              showError(data.message || "Something went wrong while publishing.");
+            }
+            return;
+          }
+          if (attempts < maxAttempts) {
+            setTimeout(poll, 3000);
+          } else {
+            showError("Timed out waiting for the publish result.");
+          }
+        })
+        .catch(function () {
+          if (attempts < maxAttempts) {
+            setTimeout(poll, 3000);
+          } else {
+            showError("Could not reach the publish result.");
+          }
+        });
+    }
+
+    setTimeout(poll, 3000);
+  }
+</script>
+
+</body>
+</html>

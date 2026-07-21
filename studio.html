@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Studio — Lepique Studio</title>
+<link rel="icon" type="image/png" href="/lepique-instagram-posts/lepique-studio-icon.png">
+<style>
+  :root { --navy: #111827; --gold: #b8860b; --gray: #4b5563; --bg: #fafafa; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: var(--navy); background: var(--bg); line-height: 1.6; }
+  header { background: var(--navy); color:#fff; padding: 28px 20px; text-align: center; }
+  header img.logo { width: 48px; height: 48px; border-radius: 8px; margin-bottom: 8px; }
+  header h1 { margin:0; font-size: 1.6rem; }
+  nav { background:#fff; border-bottom:1px solid #e5e7eb; padding:14px 20px; text-align:center; }
+  nav a { color: var(--navy); text-decoration:none; margin:0 14px; font-weight:600; font-size:0.95rem; }
+  nav a.active, nav a:hover { color: var(--gold); }
+  main { max-width: 560px; margin: 0 auto; padding: 40px 20px 60px; }
+  .card { background:#fff; border:1px solid #e5e7eb; border-radius:12px; padding:28px; }
+  .card h2 { margin-top:0; font-size:1.2rem; }
+  .video-row { display:flex; gap:14px; align-items:center; background:#fafafa; border:1px solid #e5e7eb; border-radius:10px; padding:14px; margin:18px 0; }
+  .video-thumb { width:56px; height:56px; border-radius:8px; background: var(--navy); color:#fff; display:flex; align-items:center; justify-content:center; font-size:1.4rem; flex-shrink:0; }
+  .video-meta p { margin:2px 0; font-size:0.9rem; }
+  .video-meta .fname { color: var(--gray); font-size:0.8rem; }
+  .caption-box { background:#fafafa; border:1px solid #e5e7eb; border-radius:8px; padding:12px 14px; font-size:0.9rem; color: var(--gray); margin-bottom:22px; }
+  .connect-btn { display:flex; align-items:center; justify-content:center; gap:10px; width:100%; background: var(--navy); color:#fff; text-decoration:none; padding:14px 20px; border-radius:8px; font-weight:600; font-size:1rem; }
+  .connect-btn:hover { background:#000; }
+  .note { color:#9ca3af; font-size:0.8rem; margin-top:14px; text-align:center; }
+  footer { text-align:center; padding:24px 20px; color:#9ca3af; font-size:0.85rem; border-top:1px solid #e5e7eb; background:#fff; margin-top:40px; }
+</style>
+</head>
+<body>
+
+<header>
+  <img class="logo" src="/lepique-instagram-posts/lepique-studio-icon.png" alt="Lepique Studio icon">
+  <h1>Lepique Studio</h1>
+</header>
+
+<nav>
+  <a href="/lepique-instagram-posts/">Home</a>
+  <a href="/lepique-instagram-posts/terms.html">Terms of Service</a>
+  <a href="/lepique-instagram-posts/privacy.html">Privacy Policy</a>
+  <a href="/lepique-instagram-posts/studio.html" class="active">Studio</a>
+</nav>
+
+<main>
+  <div class="card">
+    <h2>Review &amp; publish</h2>
+    <p style="color:var(--gray); font-size:0.92rem;">Connect your TikTok account to review the next approved product video and publish it to your profile.</p>
+
+    <div class="video-row">
+      <div class="video-thumb">&#9654;</div>
+      <div class="video-meta">
+        <p><strong>New arrivals at Lepique Fashions</strong></p>
+        <p class="fname">lepique-video-11-transition.mp4</p>
+      </div>
+    </div>
+
+    <div class="caption-box" id="captionBox">
+      "New arrivals at Lepique Fashions 👖 Platinum Plaza, Shop G16, Tom Mboya Street, Nairobi. #LepiqueFashions #NairobiFashion #Jeans"
+    </div>
+
+    <a href="#" id="connectBtn" class="connect-btn">Continue with TikTok</a>
+    <p class="note">You'll be asked to sign in to TikTok and approve access before anything is published.</p>
+  </div>
+</main>
+
+<footer>
+  &copy; 2026 Lepique Studio &middot; Operated by Lepique Fashions, Nairobi, Kenya &middot;
+  <a href="/lepique-instagram-posts/terms.html">Terms</a> &middot;
+  <a href="/lepique-instagram-posts/privacy.html">Privacy</a>
+</footer>
+
+<script>
+  var CLIENT_KEY = "sbawbhp8b6o05k551c";
+  var REDIRECT_URI = "https://lawrencebiwott.github.io/lepique-instagram-posts/studio-callback.html";
+  var SCOPES = "user.info.basic,video.publish,video.upload";
+
+  function randomState(len) {
+    var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    var out = "";
+    for (var i = 0; i < len; i++) out += chars.charAt(Math.floor(Math.random() * chars.length));
+    return out;
+  }
+
+  var state = randomState(24);
+  sessionStorage.setItem("lepique_studio_state", state);
+
+  var authUrl = "https://www.tiktok.com/v2/auth/authorize/" +
+    "?client_key=" + encodeURIComponent(CLIENT_KEY) +
+    "&scope=" + encodeURIComponent(SCOPES) +
+    "&response_type=code" +
+    "&redirect_uri=" + encodeURIComponent(REDIRECT_URI) +
+    "&state=" + encodeURIComponent(state);
+
+  document.getElementById("connectBtn").href = authUrl;
+</script>
+
+</body>
+</html>
