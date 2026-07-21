@@ -2826,3 +2826,36 @@ continue appending new entries below as usual.
 [2026-07-21 08:58:52] Uploading image to Instagram...
 [2026-07-21 08:58:52] Alt text: Ladies ladies fashion - Lepique Fashions Nairobi
 [2026-07-21 08:58:52] Error: 400 Client Error: Bad Request for url: https://graph.instagram.com/v21.0/17841402201496454/media?image_url=https%3A%2F%2Flawrencebiwott.github.io%2Flepique-instagram-posts%2Fmedia%2Fphotos%2F8b8553b1-104e-4850-b568-5a04838c7cee.jpg&caption=%F0%9F%93%8D+Platinum+Plaza%2C+Ground+Floor%2C+Shop+G16+%E2%80%93+Tom+Mboya+Street%2C+Nairobi%0A%F0%9F%93%9E+0+7+2+1+%E2%80%A2+6+7+2+%E2%80%A2+9+0+0%0A%F0%9F%8C%90+https%3A%2F%2Flepique.co.ke%2F%0A%0A%F0%9F%92%95+Date+night+outfit+sorted.%0A%0AHigh-waist+wide-leg+jeans+%2B+bodysuit+%2B+leather+jacket+%3D+a+look+that%27s+effortlessly+put-together%2C+turns+heads+and+photographs+beautifully.%0A%0AAt+Lepique+Fashions%2C+you%27ll+find+everything+you+need+for+a+flawless+date+night+look+%E2%80%94+stunning+jeans+in+every+style%2C+bodysuits+in+multiple+colours%2C+and+sleek+leather+jackets+that+pull+the+whole+outfit+together.%0A%0A%E2%9C%A8+Shop+the+complete+look+at+lepique.co.ke%0A%F0%9F%93%B1+WhatsApp+0721+672+900+to+ask+what%27s+in+stock%0A%0A%F0%9F%92%83+Dress+for+where+you+want+to+go%2C+not+where+you%27ve+been.%0AShop+online+%F0%9F%91%89+https%3A%2F%2Flepique.co.ke%2F%0A%0A%23DateNightOutfitKenya+%23OutfitInspoNairobi+%23KenyanFashionista+%23LadiesOOTDKenya+%23NairobiGirls%0ADate+night+outfit+Kenya%2C+ladies+night+out+outfit+Nairobi%2C+jeans+and+bodysuit+outfit+Kenya%2C+date+outfit+ideas+Nairobi%2C+women+fashion+date+night+Kenya%2C+cute+outfit+Nairobi%2C+ladies+evening+outfit+Kenya%2C+going+out+outfit+Nairobi%2C+leather+jacket+outfit+Kenya%2C+ladies+date+night+look+Nairobi.&access_token=EAAoPvY2rIhYBSO7yg1YsBH4r5yRV1JWQmIe9M3JYdTVHDcHTljuivkMc4eUpZCcwN73eqTDhKia1INkUQNu43AxdS7HfHaLoRZAhVZArg36CwcEk2gkiVM8XCuk8NwufRW9iBCJCNIsQGjRBiNvR5niRXZAhKVwXnXaAkTXfb6P053BoSQbT4qvT5DNHe51xp1kwvhptb3bZBQD0JSBeY&alt_text=Ladies+ladies+fashion+-+Lepique+Fashions+Nairobi
+[2026-07-21 09:07:03] FORCE_POST enabled - bypassing interval guard.
+[2026-07-21 09:07:03] --- Starting Instagram + Facebook post ---
+[2026-07-21 09:07:04] Instagram token OK - account: @lepiquefashions (ID: 1889041611321657)
+[2026-07-21 09:07:04] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-07-21 09:07:04] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-07-21 09:07:04] Found 147 media files (newest-first by git history)
+[2026-07-21 09:07:04] Latest 5: ['13edd28f-ad5b-496e-b914-707ccdb3a814.jpg', '16256cef-c6b0-4133-870b-e39c114e74c6.jpg', '1748f425-f552-49d2-aaa4-ee6a77d71b2d.jpg', '267f3bfb-fde9-41d4-a022-61b18ae47e6a.jpg', '28928d6c-c9f1-4f3c-9025-ef40355317ca.jpg']
+[2026-07-21 09:07:04] Selected media: 8b8553b1-104e-4850-b568-5a04838c7cee.jpg
+[2026-07-21 09:07:04] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/8b8553b1-104e-4850-b568-5a04838c7cee.jpg
+[2026-07-21 09:07:04] Uploading image to Instagram...
+[2026-07-21 09:07:04] Alt text: Ladies ladies fashion - Lepique Fashions Nairobi
+[2026-07-21 09:07:08] Waiting for Instagram processing...
+[2026-07-21 09:07:09] Container status: IN_PROGRESS
+[2026-07-21 09:07:14] Container status: FINISHED
+[2026-07-21 09:07:24] Container ID: 18545717059073384
+[2026-07-21 09:07:27] Instagram feed post successful! ID: 17899581519534867
+[2026-07-21 09:07:27] State saved after Instagram post.
+[2026-07-21 09:07:28] Story image resized to 1080x1920 -> photos/story_temp.jpg
+[2026-07-21 09:07:29] Story URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/story_temp.jpg - waiting for GitHub Pages to deploy...
+[2026-07-21 09:08:25] Story image live after 55s.
+[2026-07-21 09:08:25] Posting to Instagram Stories...
+[2026-07-21 09:08:27] Waiting for Instagram processing...
+[2026-07-21 09:08:28] Container status: IN_PROGRESS
+[2026-07-21 09:08:33] Container status: FINISHED
+[2026-07-21 09:08:46] Instagram Story posted! ID: 18102326330269636
+[2026-07-21 09:08:46] --- Posting to Facebook ---
+[2026-07-21 09:08:46] Uploading photo to Facebook feed...
+[2026-07-21 09:08:53] Facebook feed post successful! ID: 1889041611321657_1456514873178224
+[2026-07-21 09:08:53] Posting photo to Facebook Stories...
+[2026-07-21 09:09:00] Facebook Story posted! ID: 897551363408888
+[2026-07-21 09:09:00] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
+[2026-07-21 09:09:00] All done. Final state saved.
