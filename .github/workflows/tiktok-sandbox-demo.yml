@@ -1,0 +1,54 @@
+name: TikTok Sandbox Demo
+
+on:
+  workflow_dispatch:
+    inputs:
+      code:
+        description: 'OAuth authorization code from the Studio Sandbox redirect'
+        required: true
+        type: string
+
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run sandbox demo publish
+        env:
+          TIKTOK_SANDBOX_CLIENT_KEY: ${{ secrets.TIKTOK_SANDBOX_CLIENT_KEY }}
+          TIKTOK_SANDBOX_CLIENT_SECRET: ${{ secrets.TIKTOK_SANDBOX_CLIENT_SECRET }}
+          AUTH_CODE: ${{ github.event.inputs.code }}
+          REDIRECT_URI: "https://lawrencebiwott.github.io/lepique-instagram-posts/studio-callback.html"
+          PYTHONUNBUFFERED: "1"
+        run: |
+          pip install requests -q
+          python -u sandbox_demo_publish.py
+
+      - name: Commit result
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git pull --rebase --autostash origin main
+          git add demo_result.json
+
+          git diff --cached --quiet || git commit -m "chore: sandbox demo result [skip ci]"
+
+          for i in 1 2 3; do
+            git push && break
+            echo "Push attempt $i failed — retrying in 10s..."
+            sleep 10
+            git pull --rebase --autostash origin main
+          done || { echo "All push attempts failed"; exit 1; }
