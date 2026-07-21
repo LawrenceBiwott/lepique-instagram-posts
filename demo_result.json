@@ -1,6 +1,6 @@
 {
-  "code": "rDT-nd-3jPG-4O5WEKfSVMt6jpih-9t1D8ddw_vBh_1qvDctru5XCn99TdUEQ0dGBpzR2V3GnThrRuBViWQFzrAY8SxHlb0AQsv_qU8yMFDg1FDWkPkssKKNahxMAdyOqEeWkO3WvWq-oH6MajMuYg7DZmCc4WlIiOGv6xr3HHB_2wVX0_NRdTLLjs2m-Wo1do4ESRze5dnpBdNp3-rr02qBR_W-EmN2L5Zvz2lKORCCAo4rVHZUlV5wrN09FveCMwkIPygrgPlvK9OH6343YX1wJCTj2egZUvcLeg*v!5437.s1",
+  "code": "l_skPYTwOZfrMI344oEmeNG5NhIpOMaT0PbMegR403w8WcJYfYEG9jk6yT1t6k0ep0BsJI1-WcFyDcb4PUwdQWOsLdwl-KNsS6yqAU-VJooOLBuH4pYaYUBZ-RMu8Bcbb6BQ_3K11EQV_eD0WyHnItc2hA9S2AQg455IYMJWw7SugGmn3VmR_6zzyvDf-mLJynlgZDY0R2gkPsbhGuazwNGcnxJnoR_2vGOaADNBNWS-SmMEj2JrNkjjFH9HOhK0ecv2gkIZJYzl8mPExocmBQXk8UujCFmku_jlWg*v!5363.s1",
   "status": "error",
-  "message": "Token exchange failed: {'error': 'invalid_client', 'error_description': 'Client key or secret is incorrect.', 'log_id': '20260721195049D3BE93D64119433427C3'}",
-  "timestamp": "2026-07-21 11:50:49"
+  "message": "Token exchange failed: {'error': 'invalid_client', 'error_description': 'Client key or secret is incorrect.', 'log_id': '20260721200029E2BAE4EB4425D00AF0C6'}",
+  "timestamp": "2026-07-21 12:00:29"
 }
