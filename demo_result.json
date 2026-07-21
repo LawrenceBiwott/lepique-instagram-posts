@@ -1,6 +1,8 @@
 {
-  "code": "l_skPYTwOZfrMI344oEmeNG5NhIpOMaT0PbMegR403w8WcJYfYEG9jk6yT1t6k0ep0BsJI1-WcFyDcb4PUwdQWOsLdwl-KNsS6yqAU-VJooOLBuH4pYaYUBZ-RMu8Bcbb6BQ_3K11EQV_eD0WyHnItc2hA9S2AQg455IYMJWw7SugGmn3VmR_6zzyvDf-mLJynlgZDY0R2gkPsbhGuazwNGcnxJnoR_2vGOaADNBNWS-SmMEj2JrNkjjFH9HOhK0ecv2gkIZJYzl8mPExocmBQXk8UujCFmku_jlWg*v!5363.s1",
+  "code": "8QcFYEPvjdIHXT-ej7adzEKFaZUIpJvT0DkN6jzCtOL-4zMo1JXKGU7KaIS-KVXLa-5ovwP7G-cGxlzqoWySPaHTWq85jOxA_o5foBjye1fwb0WIpaYxKI2KndDuZjlymPmwqr_v40dz11DAIB8x6-CLhO1IN5Ea4ihLHxU2c7FtCfhnVTksX8QcmYy8NzyimQRlWVufw4Aw2yZLsLmynlPdZTYdSHIqPyw6xIRgIiZWygkspw_OLYjs8m0ozkJFS4U_KEBOyVVrGi3Pe4Sw8CuQrLHyoc0-ZGg7MQ*v!5438.s1",
   "status": "error",
-  "message": "Token exchange failed: {'error': 'invalid_client', 'error_description': 'Client key or secret is incorrect.', 'log_id': '20260721200029E2BAE4EB4425D00AF0C6'}",
-  "timestamp": "2026-07-21 12:00:29"
+  "message": "Init failed: {'code': 'unaudited_client_can_only_post_to_private_accounts', 'message': 'Please review our integration guidelines at https://developers.tiktok.com/doc/content-sharing-guidelines/', 'log_id': '2026072120214066316FBCC5EF6E021F5B'}",
+  "timestamp": "2026-07-21 12:21:39",
+  "creator_username": "lepique_fashions",
+  "creator_nickname": "Lepique Fashions | Nairobi"
 }
