@@ -3912,3 +3912,39 @@ continue appending new entries below as usual.
 [2026-07-25 17:34:49] Skipping Facebook Story for video (not supported via public URL).
 [2026-07-25 17:34:49] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
 [2026-07-25 17:34:49] All done. Final state saved.
+[2026-07-25 18:33:30] Peak hours check passed - Nairobi hour: 21.
+[2026-07-25 18:33:30] --- Starting Instagram + Facebook post ---
+[2026-07-25 18:33:30] Instagram token OK - account: @lepiquefashions (ID: 1889041611321657)
+[2026-07-25 18:33:30] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-07-25 18:33:30] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-07-25 18:33:30] Media categories (1): ['videos']
+[2026-07-25 18:33:30] Selected from 'videos': WhatsApp Video 2026-07-04 at 10.27.22.mp4
+[2026-07-25 18:33:30] Selected media: WhatsApp Video 2026-07-04 at 10.27.22.mp4
+[2026-07-25 18:33:30] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/videos/WhatsApp%20Video%202026-07-04%20at%2010.27.22.mp4
+[2026-07-25 18:33:30] Uploading video/reel to Instagram...
+[2026-07-25 18:33:32] Waiting for Instagram processing...
+[2026-07-25 18:33:32] Container status: IN_PROGRESS
+[2026-07-25 18:33:38] Container status: IN_PROGRESS
+[2026-07-25 18:33:43] Container status: IN_PROGRESS
+[2026-07-25 18:33:48] Container status: IN_PROGRESS
+[2026-07-25 18:33:53] Container status: IN_PROGRESS
+[2026-07-25 18:33:58] Container status: FINISHED
+[2026-07-25 18:34:08] Container ID: 18546782362073384
+[2026-07-25 18:34:19] Instagram feed post successful! ID: 18165882859456660
+[2026-07-25 18:34:19] State saved after Instagram post.
+[2026-07-25 18:34:19] Posting to Instagram Stories...
+[2026-07-25 18:34:20] Waiting for Instagram processing...
+[2026-07-25 18:34:20] Container status: IN_PROGRESS
+[2026-07-25 18:34:25] Container status: IN_PROGRESS
+[2026-07-25 18:34:31] Container status: IN_PROGRESS
+[2026-07-25 18:34:36] Container status: IN_PROGRESS
+[2026-07-25 18:34:41] Container status: IN_PROGRESS
+[2026-07-25 18:34:47] Container status: FINISHED
+[2026-07-25 18:35:09] Instagram Story posted! ID: 18113817343936243
+[2026-07-25 18:35:09] --- Posting to Facebook ---
+[2026-07-25 18:35:09] Uploading video to Facebook feed...
+[2026-07-25 18:35:15] Facebook feed post successful! ID: 2039726326679879
+[2026-07-25 18:35:15] Skipping Facebook Story for video (not supported via public URL).
+[2026-07-25 18:35:15] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
+[2026-07-25 18:35:15] All done. Final state saved.
