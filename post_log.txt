@@ -2994,3 +2994,1267 @@ continue appending new entries below as usual.
 [2026-07-21 19:17:52] Skipping - current Nairobi time is 22:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
 [2026-07-21 20:38:11] Skipping - current Nairobi time is 23:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
 [2026-07-21 21:43:31] Skipping - current Nairobi time is 00:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-07-21 22:38:50] Skipping - current Nairobi time is 01:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-07-21 23:38:30] Skipping - current Nairobi time is 02:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-07-22 01:04:25] Skipping - current Nairobi time is 04:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-07-22 04:28:41] Peak hours check passed - Nairobi hour: 07.
+[2026-07-22 04:28:41] --- Starting Instagram + Facebook post ---
+[2026-07-22 04:28:42] Instagram token OK - account: @lepiquefashions (ID: 1889041611321657)
+[2026-07-22 04:28:42] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-07-22 04:28:42] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-07-22 04:28:42] Found 151 media files (newest-first by git history)
+[2026-07-22 04:28:42] Latest 5: ['13edd28f-ad5b-496e-b914-707ccdb3a814.jpg', '16256cef-c6b0-4133-870b-e39c114e74c6.jpg', '1748f425-f552-49d2-aaa4-ee6a77d71b2d.jpg', '267f3bfb-fde9-41d4-a022-61b18ae47e6a.jpg', '28928d6c-c9f1-4f3c-9025-ef40355317ca.jpg']
+[2026-07-22 04:28:42] Selected media: 5f839e19-1b26-4f43-99d4-221df4c4720d.jpg
+[2026-07-22 04:28:42] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/5f839e19-1b26-4f43-99d4-221df4c4720d.jpg
+[2026-07-22 04:28:42] Uploading image to Instagram...
+[2026-07-22 04:28:42] Alt text: Ladies ladies fashion - Lepique Fashions Nairobi
+[2026-07-22 04:28:47] Waiting for Instagram processing...
+[2026-07-22 04:28:47] Container status: IN_PROGRESS
+[2026-07-22 04:28:52] Container status: FINISHED
+[2026-07-22 04:29:02] Container ID: 18545903056073384
+[2026-07-22 04:29:06] Instagram feed post successful! ID: 17992088471991083
+[2026-07-22 04:29:06] State saved after Instagram post.
+[2026-07-22 04:29:06] Story image resized to 1080x1920 -> photos/story_temp.jpg
+[2026-07-22 04:29:07] Story URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/story_temp.jpg - waiting for GitHub Pages to deploy...
+[2026-07-22 04:30:13] Story image live after 65s.
+[2026-07-22 04:30:13] Posting to Instagram Stories...
+[2026-07-22 04:30:17] Waiting for Instagram processing...
+[2026-07-22 04:30:17] Container status: IN_PROGRESS
+[2026-07-22 04:30:23] Container status: FINISHED
+[2026-07-22 04:30:36] Instagram Story posted! ID: 18333659587284453
+[2026-07-22 04:30:36] --- Posting to Facebook ---
+[2026-07-22 04:30:36] Uploading photo to Facebook feed...
+[2026-07-22 04:30:50] Facebook feed post successful! ID: 1889041611321657_1457206153109096
+[2026-07-22 04:30:50] Posting photo to Facebook Stories...
+[2026-07-22 04:31:03] Facebook Story posted! ID: 2300765483792912
+[2026-07-22 04:31:03] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
+[2026-07-22 04:31:03] All done. Final state saved.
+[2026-07-22 07:13:05] Skipping - current Nairobi time is 10:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-07-22 09:40:22] Peak hours check passed - Nairobi hour: 12.
+[2026-07-22 09:40:22] --- Starting Instagram + Facebook post ---
+[2026-07-22 09:40:23] Instagram token OK - account: @lepiquefashions (ID: 1889041611321657)
+[2026-07-22 09:40:23] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-07-22 09:40:23] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-07-22 09:40:23] Found 151 media files (newest-first by git history)
+[2026-07-22 09:40:23] Latest 5: ['13edd28f-ad5b-496e-b914-707ccdb3a814.jpg', '16256cef-c6b0-4133-870b-e39c114e74c6.jpg', '1748f425-f552-49d2-aaa4-ee6a77d71b2d.jpg', '267f3bfb-fde9-41d4-a022-61b18ae47e6a.jpg', '28928d6c-c9f1-4f3c-9025-ef40355317ca.jpg']
+[2026-07-22 09:40:23] Selected media: 6114b1e7-20fa-438c-8e0d-d5c50090f093.jpg
+[2026-07-22 09:40:23] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/6114b1e7-20fa-438c-8e0d-d5c50090f093.jpg
+[2026-07-22 09:40:23] Uploading image to Instagram...
+[2026-07-22 09:40:23] Alt text: Ladies ladies fashion - Lepique Fashions Nairobi
+[2026-07-22 09:40:28] Waiting for Instagram processing...
+[2026-07-22 09:40:28] Container status: FINISHED
+[2026-07-22 09:40:38] Container ID: 18545943190073384
+[2026-07-22 09:40:42] Instagram feed post successful! ID: 18606141109001819
+[2026-07-22 09:40:42] State saved after Instagram post.
+[2026-07-22 09:40:42] Story image resized to 1080x1920 -> photos/story_temp.jpg
+[2026-07-22 09:40:45] Story URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/story_temp.jpg - waiting for GitHub Pages to deploy...
+[2026-07-22 09:41:46] Story image live after 60s.
+[2026-07-22 09:41:46] Posting to Instagram Stories...
+[2026-07-22 09:41:49] Waiting for Instagram processing...
+[2026-07-22 09:41:49] Container status: IN_PROGRESS
+[2026-07-22 09:41:54] Container status: FINISHED
+[2026-07-22 09:42:07] Instagram Story posted! ID: 17950441485239626
+[2026-07-22 09:42:07] --- Posting to Facebook ---
+[2026-07-22 09:42:07] Uploading photo to Facebook feed...
+[2026-07-22 09:42:13] Facebook feed post successful! ID: 1889041611321657_1457369313092780
+[2026-07-22 09:42:13] Posting photo to Facebook Stories...
+[2026-07-22 09:42:26] Facebook Story posted! ID: 1054386577141774
+[2026-07-22 09:42:26] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
+[2026-07-22 09:42:26] All done. Final state saved.
+[2026-07-22 11:29:23] Peak hours check passed - Nairobi hour: 14.
+[2026-07-22 11:29:23] --- Starting Instagram + Facebook post ---
+[2026-07-22 11:29:24] Instagram token OK - account: @lepiquefashions (ID: 1889041611321657)
+[2026-07-22 11:29:24] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-07-22 11:29:24] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-07-22 11:29:24] Found 151 media files (newest-first by git history)
+[2026-07-22 11:29:24] Latest 5: ['13edd28f-ad5b-496e-b914-707ccdb3a814.jpg', '16256cef-c6b0-4133-870b-e39c114e74c6.jpg', '1748f425-f552-49d2-aaa4-ee6a77d71b2d.jpg', '267f3bfb-fde9-41d4-a022-61b18ae47e6a.jpg', '28928d6c-c9f1-4f3c-9025-ef40355317ca.jpg']
+[2026-07-22 11:29:24] Selected media: 9205f757-26b5-4b03-9f37-c2753f3a7037.jpg
+[2026-07-22 11:29:24] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/9205f757-26b5-4b03-9f37-c2753f3a7037.jpg
+[2026-07-22 11:29:24] Uploading image to Instagram...
+[2026-07-22 11:29:24] Alt text: Ladies ladies fashion - Lepique Fashions Nairobi
+[2026-07-22 11:29:27] Waiting for Instagram processing...
+[2026-07-22 11:29:28] Container status: FINISHED
+[2026-07-22 11:29:38] Container ID: 18545961652073384
+[2026-07-22 11:29:41] Instagram feed post successful! ID: 17939403612291774
+[2026-07-22 11:29:41] State saved after Instagram post.
+[2026-07-22 11:29:41] Story image resized to 1080x1920 -> photos/story_temp.jpg
+[2026-07-22 11:29:43] Story URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/story_temp.jpg - waiting for GitHub Pages to deploy...
+[2026-07-22 11:30:59] Story image live after 75s.
+[2026-07-22 11:30:59] Posting to Instagram Stories...
+[2026-07-22 11:31:02] Waiting for Instagram processing...
+[2026-07-22 11:31:02] Container status: IN_PROGRESS
+[2026-07-22 11:31:07] Container status: FINISHED
+[2026-07-22 11:31:20] Instagram Story posted! ID: 17924639289389030
+[2026-07-22 11:31:20] --- Posting to Facebook ---
+[2026-07-22 11:31:20] Uploading photo to Facebook feed...
+[2026-07-22 11:31:25] Facebook feed post successful! ID: 1889041611321657_1457434453086266
+[2026-07-22 11:31:25] Posting photo to Facebook Stories...
+[2026-07-22 11:31:32] Facebook Story posted! ID: 1362611702493242
+[2026-07-22 11:31:32] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
+[2026-07-22 11:31:32] All done. Final state saved.
+[2026-07-22 13:03:06] Skipping - current Nairobi time is 16:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-07-22 15:10:55] Peak hours check passed - Nairobi hour: 18.
+[2026-07-22 15:10:55] --- Starting Instagram + Facebook post ---
+[2026-07-22 15:10:55] Instagram token OK - account: @lepiquefashions (ID: 1889041611321657)
+[2026-07-22 15:10:55] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-07-22 15:10:55] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-07-22 15:10:55] Found 151 media files (newest-first by git history)
+[2026-07-22 15:10:55] Latest 5: ['13edd28f-ad5b-496e-b914-707ccdb3a814.jpg', '16256cef-c6b0-4133-870b-e39c114e74c6.jpg', '1748f425-f552-49d2-aaa4-ee6a77d71b2d.jpg', '267f3bfb-fde9-41d4-a022-61b18ae47e6a.jpg', '28928d6c-c9f1-4f3c-9025-ef40355317ca.jpg']
+[2026-07-22 15:10:55] Selected media: WhatsApp Image 2026-07-15 at 16.08.57 (1).jpeg
+[2026-07-22 15:10:55] Padded WhatsApp Image 2026-07-15 at 16.08.57 (1).jpeg: 1086x1448 -> 1158x1448 (ratio 0.80)
+[2026-07-22 15:10:55] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/WhatsApp%20Image%202026-07-15%20at%2016.08.57%20%281%29.jpeg
+[2026-07-22 15:10:55] Uploading image to Instagram...
+[2026-07-22 15:10:55] Alt text: Ladies ladies fashion - Lepique Fashions Nairobi
+[2026-07-22 15:11:00] Waiting for Instagram processing...
+[2026-07-22 15:11:01] Container status: IN_PROGRESS
+[2026-07-22 15:11:06] Container status: FINISHED
+[2026-07-22 15:11:16] Container ID: 18546003898073384
+[2026-07-22 15:11:19] Instagram feed post successful! ID: 18123338326812977
+[2026-07-22 15:11:19] State saved after Instagram post.
+[2026-07-22 15:11:20] Story image resized to 1080x1920 -> photos/story_temp.jpg
+[2026-07-22 15:11:22] Story URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/story_temp.jpg - waiting for GitHub Pages to deploy...
+[2026-07-22 15:12:22] Story image live after 60s.
+[2026-07-22 15:12:22] Posting to Instagram Stories...
+[2026-07-22 15:12:25] Waiting for Instagram processing...
+[2026-07-22 15:12:26] Container status: IN_PROGRESS
+[2026-07-22 15:12:31] Container status: FINISHED
+[2026-07-22 15:12:44] Instagram Story posted! ID: 17872626621548934
+[2026-07-22 15:12:44] --- Posting to Facebook ---
+[2026-07-22 15:12:44] Uploading photo to Facebook feed...
+[2026-07-22 15:12:50] Facebook feed post successful! ID: 1889041611321657_1457576499738728
+[2026-07-22 15:12:50] Posting photo to Facebook Stories...
+[2026-07-22 15:12:58] Facebook Story posted! ID: 1036936655382758
+[2026-07-22 15:12:58] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
+[2026-07-22 15:12:58] All done. Final state saved.
+[2026-07-22 16:49:43] Peak hours check passed - Nairobi hour: 19.
+[2026-07-22 16:49:43] --- Starting Instagram + Facebook post ---
+[2026-07-22 16:49:45] Instagram token OK - account: @lepiquefashions (ID: 1889041611321657)
+[2026-07-22 16:49:45] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-07-22 16:49:45] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-07-22 16:49:45] Found 151 media files (newest-first by git history)
+[2026-07-22 16:49:45] Latest 5: ['13edd28f-ad5b-496e-b914-707ccdb3a814.jpg', '16256cef-c6b0-4133-870b-e39c114e74c6.jpg', '1748f425-f552-49d2-aaa4-ee6a77d71b2d.jpg', '267f3bfb-fde9-41d4-a022-61b18ae47e6a.jpg', '28928d6c-c9f1-4f3c-9025-ef40355317ca.jpg']
+[2026-07-22 16:49:45] Selected media: WhatsApp Image 2026-07-15 at 16.08.57.jpeg
+[2026-07-22 16:49:45] Padded WhatsApp Image 2026-07-15 at 16.08.57.jpeg: 1086x1448 -> 1158x1448 (ratio 0.80)
+[2026-07-22 16:49:45] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/WhatsApp%20Image%202026-07-15%20at%2016.08.57.jpeg
+[2026-07-22 16:49:45] Uploading image to Instagram...
+[2026-07-22 16:49:45] Alt text: Ladies ladies fashion - Lepique Fashions Nairobi
+[2026-07-22 16:49:50] Waiting for Instagram processing...
+[2026-07-22 16:49:51] Container status: IN_PROGRESS
+[2026-07-22 16:49:56] Container status: FINISHED
+[2026-07-22 16:50:06] Container ID: 18546021517073384
+[2026-07-22 16:50:10] Instagram feed post successful! ID: 18609535744000835
+[2026-07-22 16:50:10] State saved after Instagram post.
+[2026-07-22 16:50:10] Story image resized to 1080x1920 -> photos/story_temp.jpg
+[2026-07-22 16:50:12] Story URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/story_temp.jpg - waiting for GitHub Pages to deploy...
+[2026-07-22 16:51:18] Story image live after 65s.
+[2026-07-22 16:51:18] Posting to Instagram Stories...
+[2026-07-22 16:51:22] Waiting for Instagram processing...
+[2026-07-22 16:51:23] Container status: FINISHED
+[2026-07-22 16:51:37] Instagram Story posted! ID: 18019359482879231
+[2026-07-22 16:51:37] --- Posting to Facebook ---
+[2026-07-22 16:51:37] Uploading photo to Facebook feed...
+[2026-07-22 16:51:45] Facebook feed post successful! ID: 1889041611321657_1457641769732201
+[2026-07-22 16:51:45] Posting photo to Facebook Stories...
+[2026-07-22 16:51:55] Facebook Story posted! ID: 1049408407581256
+[2026-07-22 16:51:55] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
+[2026-07-22 16:51:55] All done. Final state saved.
+[2026-07-22 17:57:30] Peak hours check passed - Nairobi hour: 20.
+[2026-07-22 17:57:30] --- Starting Instagram + Facebook post ---
+[2026-07-22 17:57:30] Instagram token OK - account: @lepiquefashions (ID: 1889041611321657)
+[2026-07-22 17:57:30] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-07-22 17:57:30] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-07-22 17:57:30] Found 151 media files (newest-first by git history)
+[2026-07-22 17:57:30] Latest 5: ['13edd28f-ad5b-496e-b914-707ccdb3a814.jpg', '16256cef-c6b0-4133-870b-e39c114e74c6.jpg', '1748f425-f552-49d2-aaa4-ee6a77d71b2d.jpg', '267f3bfb-fde9-41d4-a022-61b18ae47e6a.jpg', '28928d6c-c9f1-4f3c-9025-ef40355317ca.jpg']
+[2026-07-22 17:57:30] Selected media: b4d0e4c2-61c8-44a6-996d-85093333c679.jpg
+[2026-07-22 17:57:30] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/b4d0e4c2-61c8-44a6-996d-85093333c679.jpg
+[2026-07-22 17:57:30] Uploading image to Instagram...
+[2026-07-22 17:57:30] Alt text: Ladies ladies fashion - Lepique Fashions Nairobi
+[2026-07-22 17:57:35] Waiting for Instagram processing...
+[2026-07-22 17:57:35] Container status: IN_PROGRESS
+[2026-07-22 17:57:40] Container status: FINISHED
+[2026-07-22 17:57:50] Container ID: 18546036052073384
+[2026-07-22 17:57:54] Instagram feed post successful! ID: 17930407854361442
+[2026-07-22 17:57:54] State saved after Instagram post.
+[2026-07-22 17:57:55] Story image resized to 1080x1920 -> photos/story_temp.jpg
+[2026-07-22 17:57:56] Story URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/story_temp.jpg - waiting for GitHub Pages to deploy...
+[2026-07-22 17:59:07] Story image live after 70s.
+[2026-07-22 17:59:07] Posting to Instagram Stories...
+[2026-07-22 17:59:13] Waiting for Instagram processing...
+[2026-07-22 17:59:13] Container status: IN_PROGRESS
+[2026-07-22 17:59:18] Container status: FINISHED
+[2026-07-22 17:59:32] Instagram Story posted! ID: 17920600665185464
+[2026-07-22 17:59:32] --- Posting to Facebook ---
+[2026-07-22 17:59:32] Uploading photo to Facebook feed...
+[2026-07-22 17:59:40] Facebook feed post successful! ID: 1889041611321657_1457690143060697
+[2026-07-22 17:59:40] Posting photo to Facebook Stories...
+[2026-07-22 17:59:57] Facebook Story posted! ID: 1028247183537578
+[2026-07-22 17:59:57] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
+[2026-07-22 17:59:57] All done. Final state saved.
+[2026-07-22 19:19:33] Skipping - current Nairobi time is 22:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-07-22 20:34:20] Skipping - current Nairobi time is 23:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-07-22 21:40:44] Skipping - current Nairobi time is 00:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-07-22 22:43:56] Skipping - current Nairobi time is 01:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-07-22 23:43:49] Skipping - current Nairobi time is 02:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-07-23 01:15:41] Skipping - current Nairobi time is 04:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-07-23 04:37:19] Peak hours check passed - Nairobi hour: 07.
+[2026-07-23 04:37:19] --- Starting Instagram + Facebook post ---
+[2026-07-23 04:37:20] Instagram token OK - account: @lepiquefashions (ID: 1889041611321657)
+[2026-07-23 04:37:20] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-07-23 04:37:20] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-07-23 04:37:20] Found 151 media files (newest-first by git history)
+[2026-07-23 04:37:20] Latest 5: ['13edd28f-ad5b-496e-b914-707ccdb3a814.jpg', '16256cef-c6b0-4133-870b-e39c114e74c6.jpg', '1748f425-f552-49d2-aaa4-ee6a77d71b2d.jpg', '267f3bfb-fde9-41d4-a022-61b18ae47e6a.jpg', '28928d6c-c9f1-4f3c-9025-ef40355317ca.jpg']
+[2026-07-23 04:37:20] Selected media: b7ac22d1-ef65-45c6-9796-7a59591d56a5.jpg
+[2026-07-23 04:37:20] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/b7ac22d1-ef65-45c6-9796-7a59591d56a5.jpg
+[2026-07-23 04:37:20] Uploading image to Instagram...
+[2026-07-23 04:37:20] Alt text: Ladies ladies fashion - Lepique Fashions Nairobi
+[2026-07-23 04:37:25] Waiting for Instagram processing...
+[2026-07-23 04:37:25] Container status: IN_PROGRESS
+[2026-07-23 04:37:30] Container status: FINISHED
+[2026-07-23 04:37:40] Container ID: 18546134041073384
+[2026-07-23 04:37:43] Instagram feed post successful! ID: 17959138860176822
+[2026-07-23 04:37:43] State saved after Instagram post.
+[2026-07-23 04:37:44] Story image resized to 1080x1920 -> photos/story_temp.jpg
+[2026-07-23 04:37:46] Story URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/story_temp.jpg - waiting for GitHub Pages to deploy...
+[2026-07-23 04:38:36] Story image live after 50s.
+[2026-07-23 04:38:36] Posting to Instagram Stories...
+[2026-07-23 04:38:40] Waiting for Instagram processing...
+[2026-07-23 04:38:40] Container status: FINISHED
+[2026-07-23 04:38:53] Instagram Story posted! ID: 18057155372599273
+[2026-07-23 04:38:53] --- Posting to Facebook ---
+[2026-07-23 04:38:53] Uploading photo to Facebook feed...
+[2026-07-23 04:38:59] Facebook feed post successful! ID: 1889041611321657_1458015993028112
+[2026-07-23 04:38:59] Posting photo to Facebook Stories...
+[2026-07-23 04:39:10] Facebook Story posted! ID: 1067736212704340
+[2026-07-23 04:39:10] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
+[2026-07-23 04:39:10] All done. Final state saved.
+[2026-07-23 07:14:56] Skipping - current Nairobi time is 10:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-07-23 09:38:40] Peak hours check passed - Nairobi hour: 12.
+[2026-07-23 09:38:40] --- Starting Instagram + Facebook post ---
+[2026-07-23 09:38:40] Instagram token OK - account: @lepiquefashions (ID: 1889041611321657)
+[2026-07-23 09:38:40] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-07-23 09:38:40] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-07-23 09:38:40] Found 151 media files (newest-first by git history)
+[2026-07-23 09:38:40] Latest 5: ['13edd28f-ad5b-496e-b914-707ccdb3a814.jpg', '16256cef-c6b0-4133-870b-e39c114e74c6.jpg', '1748f425-f552-49d2-aaa4-ee6a77d71b2d.jpg', '267f3bfb-fde9-41d4-a022-61b18ae47e6a.jpg', '28928d6c-c9f1-4f3c-9025-ef40355317ca.jpg']
+[2026-07-23 09:38:40] Selected media: c37c3cbd-9c83-4783-8bb0-9092f3b667fe.jpg
+[2026-07-23 09:38:40] Padded c37c3cbd-9c83-4783-8bb0-9092f3b667fe.jpg: 1086x1448 -> 1158x1448 (ratio 0.80)
+[2026-07-23 09:38:40] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/c37c3cbd-9c83-4783-8bb0-9092f3b667fe.jpg
+[2026-07-23 09:38:40] Uploading image to Instagram...
+[2026-07-23 09:38:40] Alt text: Ladies ladies fashion - Lepique Fashions Nairobi
+[2026-07-23 09:38:47] Waiting for Instagram processing...
+[2026-07-23 09:38:48] Container status: IN_PROGRESS
+[2026-07-23 09:38:53] Container status: FINISHED
+[2026-07-23 09:39:03] Container ID: 18546178360073384
+[2026-07-23 09:39:06] Instagram feed post successful! ID: 18178186723416112
+[2026-07-23 09:39:06] State saved after Instagram post.
+[2026-07-23 09:39:07] Story image resized to 1080x1920 -> photos/story_temp.jpg
+[2026-07-23 09:39:09] Story URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/story_temp.jpg - waiting for GitHub Pages to deploy...
+[2026-07-23 09:40:19] Story image live after 70s.
+[2026-07-23 09:40:19] Posting to Instagram Stories...
+[2026-07-23 09:40:22] Waiting for Instagram processing...
+[2026-07-23 09:40:22] Container status: FINISHED
+[2026-07-23 09:40:36] Instagram Story posted! ID: 18136858969589501
+[2026-07-23 09:40:36] --- Posting to Facebook ---
+[2026-07-23 09:40:36] Uploading photo to Facebook feed...
+[2026-07-23 09:40:44] Facebook feed post successful! ID: 1889041611321657_1458172346345810
+[2026-07-23 09:40:44] Posting photo to Facebook Stories...
+[2026-07-23 09:40:52] Facebook Story posted! ID: 1581472613491013
+[2026-07-23 09:40:52] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
+[2026-07-23 09:40:52] All done. Final state saved.
+[2026-07-23 11:30:15] Peak hours check passed - Nairobi hour: 14.
+[2026-07-23 11:30:15] --- Starting Instagram + Facebook post ---
+[2026-07-23 11:30:16] Instagram token OK - account: @lepiquefashions (ID: 1889041611321657)
+[2026-07-23 11:30:16] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-07-23 11:30:16] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-07-23 11:30:16] Found 151 media files (newest-first by git history)
+[2026-07-23 11:30:16] Latest 5: ['13edd28f-ad5b-496e-b914-707ccdb3a814.jpg', '16256cef-c6b0-4133-870b-e39c114e74c6.jpg', '1748f425-f552-49d2-aaa4-ee6a77d71b2d.jpg', '267f3bfb-fde9-41d4-a022-61b18ae47e6a.jpg', '28928d6c-c9f1-4f3c-9025-ef40355317ca.jpg']
+[2026-07-23 11:30:16] Selected media: d3f46663-0ba4-47c6-bc64-69be493bce7e.jpg
+[2026-07-23 11:30:16] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/d3f46663-0ba4-47c6-bc64-69be493bce7e.jpg
+[2026-07-23 11:30:16] Uploading image to Instagram...
+[2026-07-23 11:30:16] Alt text: Ladies ladies fashion - Lepique Fashions Nairobi
+[2026-07-23 11:30:20] Waiting for Instagram processing...
+[2026-07-23 11:30:20] Container status: IN_PROGRESS
+[2026-07-23 11:30:25] Container status: FINISHED
+[2026-07-23 11:30:35] Container ID: 18546196102073384
+[2026-07-23 11:30:40] Instagram feed post successful! ID: 18138843118566838
+[2026-07-23 11:30:40] State saved after Instagram post.
+[2026-07-23 11:30:40] Story image resized to 1080x1920 -> photos/story_temp.jpg
+[2026-07-23 11:30:42] Story URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/story_temp.jpg - waiting for GitHub Pages to deploy...
+[2026-07-23 11:31:47] Story image live after 65s.
+[2026-07-23 11:31:47] Posting to Instagram Stories...
+[2026-07-23 11:31:51] Waiting for Instagram processing...
+[2026-07-23 11:31:52] Container status: IN_PROGRESS
+[2026-07-23 11:31:57] Container status: FINISHED
+[2026-07-23 11:32:10] Instagram Story posted! ID: 18190781683379676
+[2026-07-23 11:32:10] --- Posting to Facebook ---
+[2026-07-23 11:32:10] Uploading photo to Facebook feed...
+[2026-07-23 11:32:23] Facebook feed post successful! ID: 1889041611321657_1458240243005687
+[2026-07-23 11:32:23] Posting photo to Facebook Stories...
+[2026-07-23 11:32:43] Facebook Story posted! ID: 1750140322974498
+[2026-07-23 11:32:43] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
+[2026-07-23 11:32:43] All done. Final state saved.
+[2026-07-23 13:06:34] Skipping - current Nairobi time is 16:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-07-23 15:21:11] Peak hours check passed - Nairobi hour: 18.
+[2026-07-23 15:21:11] --- Starting Instagram + Facebook post ---
+[2026-07-23 15:21:13] Instagram token OK - account: @lepiquefashions (ID: 1889041611321657)
+[2026-07-23 15:21:13] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-07-23 15:21:13] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-07-23 15:21:13] Found 151 media files (newest-first by git history)
+[2026-07-23 15:21:13] Latest 5: ['13edd28f-ad5b-496e-b914-707ccdb3a814.jpg', '16256cef-c6b0-4133-870b-e39c114e74c6.jpg', '1748f425-f552-49d2-aaa4-ee6a77d71b2d.jpg', '267f3bfb-fde9-41d4-a022-61b18ae47e6a.jpg', '28928d6c-c9f1-4f3c-9025-ef40355317ca.jpg']
+[2026-07-23 15:21:13] Selected media: e0363dad-d68a-4b33-b1b3-6b65cff02096.jpg
+[2026-07-23 15:21:13] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/e0363dad-d68a-4b33-b1b3-6b65cff02096.jpg
+[2026-07-23 15:21:13] Uploading image to Instagram...
+[2026-07-23 15:21:13] Alt text: Ladies ladies fashion - Lepique Fashions Nairobi
+[2026-07-23 15:21:19] Waiting for Instagram processing...
+[2026-07-23 15:21:20] Container status: IN_PROGRESS
+[2026-07-23 15:21:25] Container status: FINISHED
+[2026-07-23 15:21:35] Container ID: 18546242326073384
+[2026-07-23 15:21:39] Instagram feed post successful! ID: 18109821796791533
+[2026-07-23 15:21:39] State saved after Instagram post.
+[2026-07-23 15:21:39] Story image resized to 1080x1920 -> photos/story_temp.jpg
+[2026-07-23 15:21:41] Story URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/story_temp.jpg - waiting for GitHub Pages to deploy...
+[2026-07-23 15:22:36] Story image live after 55s.
+[2026-07-23 15:22:36] Posting to Instagram Stories...
+[2026-07-23 15:22:41] Waiting for Instagram processing...
+[2026-07-23 15:22:41] Container status: IN_PROGRESS
+[2026-07-23 15:22:47] Container status: FINISHED
+[2026-07-23 15:23:00] Instagram Story posted! ID: 18007935914752276
+[2026-07-23 15:23:00] --- Posting to Facebook ---
+[2026-07-23 15:23:00] Uploading photo to Facebook feed...
+[2026-07-23 15:23:07] Facebook feed post successful! ID: 1889041611321657_1458395479656830
+[2026-07-23 15:23:07] Posting photo to Facebook Stories...
+[2026-07-23 15:23:15] Facebook Story posted! ID: 2120236151865144
+[2026-07-23 15:23:15] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
+[2026-07-23 15:23:15] All done. Final state saved.
+[2026-07-23 16:54:45] Peak hours check passed - Nairobi hour: 19.
+[2026-07-23 16:54:45] --- Starting Instagram + Facebook post ---
+[2026-07-23 16:54:45] Instagram token OK - account: @lepiquefashions (ID: 1889041611321657)
+[2026-07-23 16:54:45] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-07-23 16:54:45] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-07-23 16:54:45] Found 151 media files (newest-first by git history)
+[2026-07-23 16:54:45] Latest 5: ['13edd28f-ad5b-496e-b914-707ccdb3a814.jpg', '16256cef-c6b0-4133-870b-e39c114e74c6.jpg', '1748f425-f552-49d2-aaa4-ee6a77d71b2d.jpg', '267f3bfb-fde9-41d4-a022-61b18ae47e6a.jpg', '28928d6c-c9f1-4f3c-9025-ef40355317ca.jpg']
+[2026-07-23 16:54:45] Selected media: e40de057-4595-4f93-9ab3-25a00b7e294d.jpg
+[2026-07-23 16:54:45] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/e40de057-4595-4f93-9ab3-25a00b7e294d.jpg
+[2026-07-23 16:54:45] Uploading image to Instagram...
+[2026-07-23 16:54:45] Alt text: Ladies ladies fashion - Lepique Fashions Nairobi
+[2026-07-23 16:54:50] Waiting for Instagram processing...
+[2026-07-23 16:54:50] Container status: IN_PROGRESS
+[2026-07-23 16:54:55] Container status: FINISHED
+[2026-07-23 16:55:05] Container ID: 18546261184073384
+[2026-07-23 16:55:08] Instagram feed post successful! ID: 18108966032071080
+[2026-07-23 16:55:08] State saved after Instagram post.
+[2026-07-23 16:55:08] Story image resized to 1080x1920 -> photos/story_temp.jpg
+[2026-07-23 16:55:10] Story URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/story_temp.jpg - waiting for GitHub Pages to deploy...
+[2026-07-23 16:56:10] Story image live after 60s.
+[2026-07-23 16:56:10] Posting to Instagram Stories...
+[2026-07-23 16:56:13] Waiting for Instagram processing...
+[2026-07-23 16:56:13] Container status: IN_PROGRESS
+[2026-07-23 16:56:19] Container status: FINISHED
+[2026-07-23 16:56:31] Instagram Story posted! ID: 18098848036978007
+[2026-07-23 16:56:31] --- Posting to Facebook ---
+[2026-07-23 16:56:31] Uploading photo to Facebook feed...
+[2026-07-23 16:56:39] Facebook feed post successful! ID: 1889041611321657_1458456322984079
+[2026-07-23 16:56:39] Posting photo to Facebook Stories...
+[2026-07-23 16:56:49] Facebook Story posted! ID: 28078698611753804
+[2026-07-23 16:56:49] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
+[2026-07-23 16:56:49] All done. Final state saved.
+[2026-07-23 18:09:01] Peak hours check passed - Nairobi hour: 21.
+[2026-07-23 18:09:01] --- Starting Instagram + Facebook post ---
+[2026-07-23 18:09:02] Instagram token OK - account: @lepiquefashions (ID: 1889041611321657)
+[2026-07-23 18:09:02] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-07-23 18:09:02] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-07-23 18:09:02] Found 151 media files (newest-first by git history)
+[2026-07-23 18:09:02] Latest 5: ['13edd28f-ad5b-496e-b914-707ccdb3a814.jpg', '16256cef-c6b0-4133-870b-e39c114e74c6.jpg', '1748f425-f552-49d2-aaa4-ee6a77d71b2d.jpg', '267f3bfb-fde9-41d4-a022-61b18ae47e6a.jpg', '28928d6c-c9f1-4f3c-9025-ef40355317ca.jpg']
+[2026-07-23 18:09:02] Selected media: ecd621af-1738-4e41-ae23-a903b9701b8a.jpg
+[2026-07-23 18:09:02] Padded ecd621af-1738-4e41-ae23-a903b9701b8a.jpg: 1086x1448 -> 1158x1448 (ratio 0.80)
+[2026-07-23 18:09:02] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/ecd621af-1738-4e41-ae23-a903b9701b8a.jpg
+[2026-07-23 18:09:02] Uploading image to Instagram...
+[2026-07-23 18:09:02] Alt text: Ladies ladies fashion - Lepique Fashions Nairobi
+[2026-07-23 18:09:06] Waiting for Instagram processing...
+[2026-07-23 18:09:07] Container status: FINISHED
+[2026-07-23 18:09:17] Container ID: 18546276523073384
+[2026-07-23 18:09:21] Instagram feed post successful! ID: 18087029222206768
+[2026-07-23 18:09:21] State saved after Instagram post.
+[2026-07-23 18:09:21] Story image resized to 1080x1920 -> photos/story_temp.jpg
+[2026-07-23 18:09:22] Story URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/story_temp.jpg - waiting for GitHub Pages to deploy...
+[2026-07-23 18:10:23] Story image live after 60s.
+[2026-07-23 18:10:23] Posting to Instagram Stories...
+[2026-07-23 18:10:26] Waiting for Instagram processing...
+[2026-07-23 18:10:27] Container status: FINISHED
+[2026-07-23 18:10:40] Instagram Story posted! ID: 18067235222709689
+[2026-07-23 18:10:40] --- Posting to Facebook ---
+[2026-07-23 18:10:40] Uploading photo to Facebook feed...
+[2026-07-23 18:10:45] Facebook feed post successful! ID: 1889041611321657_1458502879646090
+[2026-07-23 18:10:45] Posting photo to Facebook Stories...
+[2026-07-23 18:10:56] Facebook Story posted! ID: 995777223283308
+[2026-07-23 18:10:56] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
+[2026-07-23 18:10:56] All done. Final state saved.
+[2026-07-23 19:43:05] Skipping - current Nairobi time is 22:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-07-23 20:44:24] Skipping - current Nairobi time is 23:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-07-23 21:45:55] Skipping - current Nairobi time is 00:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-07-23 22:40:01] Skipping - current Nairobi time is 01:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-07-23 23:37:01] Skipping - current Nairobi time is 02:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-07-24 01:04:01] Skipping - current Nairobi time is 04:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-07-24 04:26:45] Peak hours check passed - Nairobi hour: 07.
+[2026-07-24 04:26:45] --- Starting Instagram + Facebook post ---
+[2026-07-24 04:26:46] Instagram token OK - account: @lepiquefashions (ID: 1889041611321657)
+[2026-07-24 04:26:46] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-07-24 04:26:46] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-07-24 04:26:46] Found 151 media files (newest-first by git history)
+[2026-07-24 04:26:46] Latest 5: ['13edd28f-ad5b-496e-b914-707ccdb3a814.jpg', '16256cef-c6b0-4133-870b-e39c114e74c6.jpg', '1748f425-f552-49d2-aaa4-ee6a77d71b2d.jpg', '267f3bfb-fde9-41d4-a022-61b18ae47e6a.jpg', '28928d6c-c9f1-4f3c-9025-ef40355317ca.jpg']
+[2026-07-24 04:26:46] Selected media: fd7fd54e-a60f-4ff2-8413-916c678ec604.jpg
+[2026-07-24 04:26:46] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/fd7fd54e-a60f-4ff2-8413-916c678ec604.jpg
+[2026-07-24 04:26:46] Uploading image to Instagram...
+[2026-07-24 04:26:46] Alt text: Ladies ladies fashion - Lepique Fashions Nairobi
+[2026-07-24 04:26:49] Waiting for Instagram processing...
+[2026-07-24 04:26:50] Container status: IN_PROGRESS
+[2026-07-24 04:26:55] Container status: FINISHED
+[2026-07-24 04:27:05] Container ID: 18546374224073384
+[2026-07-24 04:27:08] Instagram feed post successful! ID: 18332186779267469
+[2026-07-24 04:27:08] State saved after Instagram post.
+[2026-07-24 04:27:08] Story image resized to 1080x1920 -> photos/story_temp.jpg
+[2026-07-24 04:27:10] Story URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/story_temp.jpg - waiting for GitHub Pages to deploy...
+[2026-07-24 04:28:11] Story image live after 60s.
+[2026-07-24 04:28:11] Posting to Instagram Stories...
+[2026-07-24 04:28:15] Waiting for Instagram processing...
+[2026-07-24 04:28:15] Container status: IN_PROGRESS
+[2026-07-24 04:28:20] Container status: FINISHED
+[2026-07-24 04:28:33] Instagram Story posted! ID: 18111303128068925
+[2026-07-24 04:28:33] --- Posting to Facebook ---
+[2026-07-24 04:28:33] Uploading photo to Facebook feed...
+[2026-07-24 04:28:43] Facebook feed post successful! ID: 1889041611321657_1458828656280179
+[2026-07-24 04:28:43] Posting photo to Facebook Stories...
+[2026-07-24 04:28:51] Facebook Story posted! ID: 866975566213505
+[2026-07-24 04:28:51] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
+[2026-07-24 04:28:51] All done. Final state saved.
+[2026-07-24 07:06:06] Skipping - current Nairobi time is 10:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-07-24 09:29:13] Peak hours check passed - Nairobi hour: 12.
+[2026-07-24 09:29:13] --- Starting Instagram + Facebook post ---
+[2026-07-24 09:29:13] Instagram token OK - account: @lepiquefashions (ID: 1889041611321657)
+[2026-07-24 09:29:13] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-07-24 09:29:13] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-07-24 09:29:13] Media categories (1): ['videos']
+[2026-07-24 09:29:13] Selected from 'videos': WhatsApp Video 2026-07-14 at 10.26.31.mp4
+[2026-07-24 09:29:13] Selected media: WhatsApp Video 2026-07-14 at 10.26.31.mp4
+[2026-07-24 09:29:13] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/videos/WhatsApp%20Video%202026-07-14%20at%2010.26.31.mp4
+[2026-07-24 09:29:13] Uploading video/reel to Instagram...
+[2026-07-24 09:29:14] Waiting for Instagram processing...
+[2026-07-24 09:29:14] Container status: IN_PROGRESS
+[2026-07-24 09:29:19] Container status: IN_PROGRESS
+[2026-07-24 09:29:25] Container status: IN_PROGRESS
+[2026-07-24 09:29:30] Container status: IN_PROGRESS
+[2026-07-24 09:29:35] Container status: IN_PROGRESS
+[2026-07-24 09:29:40] Container status: IN_PROGRESS
+[2026-07-24 09:29:45] Container status: FINISHED
+[2026-07-24 09:29:55] Container ID: 18546414343073384
+[2026-07-24 09:30:03] Instagram feed post successful! ID: 17956782165183707
+[2026-07-24 09:30:03] State saved after Instagram post.
+[2026-07-24 09:30:03] Posting to Instagram Stories...
+[2026-07-24 09:30:04] Waiting for Instagram processing...
+[2026-07-24 09:30:04] Container status: IN_PROGRESS
+[2026-07-24 09:30:09] Container status: IN_PROGRESS
+[2026-07-24 09:30:14] Container status: IN_PROGRESS
+[2026-07-24 09:30:20] Container status: IN_PROGRESS
+[2026-07-24 09:30:25] Container status: IN_PROGRESS
+[2026-07-24 09:30:30] Container status: FINISHED
+[2026-07-24 09:30:48] Instagram Story posted! ID: 18010009052936086
+[2026-07-24 09:30:48] --- Posting to Facebook ---
+[2026-07-24 09:30:48] Uploading video to Facebook feed...
+[2026-07-24 09:30:53] Facebook feed post successful! ID: 2939826303015669
+[2026-07-24 09:30:53] Skipping Facebook Story for video (not supported via public URL).
+[2026-07-24 09:30:53] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
+[2026-07-24 09:30:53] All done. Final state saved.
+[2026-07-24 11:18:10] Peak hours check passed - Nairobi hour: 14.
+[2026-07-24 11:18:10] --- Starting Instagram + Facebook post ---
+[2026-07-24 11:18:11] Instagram token OK - account: @lepiquefashions (ID: 1889041611321657)
+[2026-07-24 11:18:11] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-07-24 11:18:11] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-07-24 11:18:11] Media categories (1): ['videos']
+[2026-07-24 11:18:11] Selected from 'videos': WhatsApp Video 2026-07-14 at 10.26.32.mp4
+[2026-07-24 11:18:11] Selected media: WhatsApp Video 2026-07-14 at 10.26.32.mp4
+[2026-07-24 11:18:11] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/videos/WhatsApp%20Video%202026-07-14%20at%2010.26.32.mp4
+[2026-07-24 11:18:11] Uploading video/reel to Instagram...
+[2026-07-24 11:18:11] Waiting for Instagram processing...
+[2026-07-24 11:18:12] Container status: IN_PROGRESS
+[2026-07-24 11:18:17] Container status: IN_PROGRESS
+[2026-07-24 11:18:22] Container status: IN_PROGRESS
+[2026-07-24 11:18:27] Container status: IN_PROGRESS
+[2026-07-24 11:18:32] Container status: IN_PROGRESS
+[2026-07-24 11:18:38] Container status: FINISHED
+[2026-07-24 11:18:48] Container ID: 18546433195073384
+[2026-07-24 11:18:55] Instagram feed post successful! ID: 18057137714519179
+[2026-07-24 11:18:55] State saved after Instagram post.
+[2026-07-24 11:18:55] Posting to Instagram Stories...
+[2026-07-24 11:18:55] Waiting for Instagram processing...
+[2026-07-24 11:18:55] Container status: IN_PROGRESS
+[2026-07-24 11:19:01] Container status: IN_PROGRESS
+[2026-07-24 11:19:06] Container status: IN_PROGRESS
+[2026-07-24 11:19:11] Container status: IN_PROGRESS
+[2026-07-24 11:19:16] Container status: IN_PROGRESS
+[2026-07-24 11:19:21] Container status: IN_PROGRESS
+[2026-07-24 11:19:27] Container status: IN_PROGRESS
+[2026-07-24 11:19:32] Container status: IN_PROGRESS
+[2026-07-24 11:19:37] Container status: IN_PROGRESS
+[2026-07-24 11:19:42] Container status: IN_PROGRESS
+[2026-07-24 11:19:47] Container status: FINISHED
+[2026-07-24 11:20:04] Instagram Story posted! ID: 17893689192387000
+[2026-07-24 11:20:04] --- Posting to Facebook ---
+[2026-07-24 11:20:04] Uploading video to Facebook feed...
+[2026-07-24 11:20:09] Facebook feed post successful! ID: 2043058296355538
+[2026-07-24 11:20:09] Skipping Facebook Story for video (not supported via public URL).
+[2026-07-24 11:20:09] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
+[2026-07-24 11:20:09] All done. Final state saved.
+[2026-07-24 12:49:04] Skipping - current Nairobi time is 15:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-07-24 14:28:07] Skipping - current Nairobi time is 17:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-07-24 15:55:19] Peak hours check passed - Nairobi hour: 18.
+[2026-07-24 15:55:19] --- Starting Instagram + Facebook post ---
+[2026-07-24 15:55:21] Instagram token OK - account: @lepiquefashions (ID: 1889041611321657)
+[2026-07-24 15:55:21] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-07-24 15:55:21] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-07-24 15:55:21] Media categories (1): ['videos']
+[2026-07-24 15:55:21] Selected from 'videos': WhatsApp Video 2026-07-14 at 10.26.35.mp4
+[2026-07-24 15:55:21] Selected media: WhatsApp Video 2026-07-14 at 10.26.35.mp4
+[2026-07-24 15:55:21] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/videos/WhatsApp%20Video%202026-07-14%20at%2010.26.35.mp4
+[2026-07-24 15:55:21] Uploading video/reel to Instagram...
+[2026-07-24 15:55:22] Waiting for Instagram processing...
+[2026-07-24 15:55:22] Container status: IN_PROGRESS
+[2026-07-24 15:55:28] Container status: IN_PROGRESS
+[2026-07-24 15:55:33] Container status: IN_PROGRESS
+[2026-07-24 15:55:38] Container status: IN_PROGRESS
+[2026-07-24 15:55:43] Container status: IN_PROGRESS
+[2026-07-24 15:55:49] Container status: FINISHED
+[2026-07-24 15:55:59] Container ID: 18546487321073384
+[2026-07-24 15:56:09] Instagram feed post successful! ID: 17959142700154087
+[2026-07-24 15:56:09] State saved after Instagram post.
+[2026-07-24 15:56:09] Posting to Instagram Stories...
+[2026-07-24 15:56:09] Waiting for Instagram processing...
+[2026-07-24 15:56:10] Container status: IN_PROGRESS
+[2026-07-24 15:56:15] Container status: IN_PROGRESS
+[2026-07-24 15:56:20] Container status: IN_PROGRESS
+[2026-07-24 15:56:25] Container status: IN_PROGRESS
+[2026-07-24 15:56:30] Container status: IN_PROGRESS
+[2026-07-24 15:56:36] Container status: FINISHED
+[2026-07-24 15:56:58] Instagram Story posted! ID: 18615621439047276
+[2026-07-24 15:56:58] --- Posting to Facebook ---
+[2026-07-24 15:56:58] Uploading video to Facebook feed...
+[2026-07-24 15:57:05] Facebook feed post successful! ID: 1506257090809217
+[2026-07-24 15:57:05] Skipping Facebook Story for video (not supported via public URL).
+[2026-07-24 15:57:05] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
+[2026-07-24 15:57:05] All done. Final state saved.
+[2026-07-24 17:25:01] Peak hours check passed - Nairobi hour: 20.
+[2026-07-24 17:25:01] --- Starting Instagram + Facebook post ---
+[2026-07-24 17:25:01] Instagram token OK - account: @lepiquefashions (ID: 1889041611321657)
+[2026-07-24 17:25:01] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-07-24 17:25:01] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-07-24 17:25:01] Media categories (1): ['videos']
+[2026-07-24 17:25:01] Selected from 'videos': WhatsApp Video 2026-07-14 at 11.42.39 (1).mp4
+[2026-07-24 17:25:01] Selected media: WhatsApp Video 2026-07-14 at 11.42.39 (1).mp4
+[2026-07-24 17:25:01] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/videos/WhatsApp%20Video%202026-07-14%20at%2011.42.39%20%281%29.mp4
+[2026-07-24 17:25:01] Uploading video/reel to Instagram...
+[2026-07-24 17:25:03] Waiting for Instagram processing...
+[2026-07-24 17:25:04] Container status: IN_PROGRESS
+[2026-07-24 17:25:09] Container status: IN_PROGRESS
+[2026-07-24 17:25:14] Container status: IN_PROGRESS
+[2026-07-24 17:25:20] Container status: IN_PROGRESS
+[2026-07-24 17:25:25] Container status: IN_PROGRESS
+[2026-07-24 17:25:30] Container status: FINISHED
+[2026-07-24 17:25:40] Container ID: 18546505360073384
+[2026-07-24 17:25:52] Instagram feed post successful! ID: 18202115521363776
+[2026-07-24 17:25:52] State saved after Instagram post.
+[2026-07-24 17:25:52] Posting to Instagram Stories...
+[2026-07-24 17:25:53] Waiting for Instagram processing...
+[2026-07-24 17:25:54] Container status: IN_PROGRESS
+[2026-07-24 17:25:59] Container status: IN_PROGRESS
+[2026-07-24 17:26:04] Container status: IN_PROGRESS
+[2026-07-24 17:26:09] Container status: IN_PROGRESS
+[2026-07-24 17:26:15] Container status: IN_PROGRESS
+[2026-07-24 17:26:20] Container status: FINISHED
+[2026-07-24 17:26:38] Instagram Story posted! ID: 18096254783366224
+[2026-07-24 17:26:38] --- Posting to Facebook ---
+[2026-07-24 17:26:38] Uploading video to Facebook feed...
+[2026-07-24 17:26:42] Facebook feed post successful! ID: 1597584518753030
+[2026-07-24 17:26:42] Skipping Facebook Story for video (not supported via public URL).
+[2026-07-24 17:26:42] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
+[2026-07-24 17:26:42] All done. Final state saved.
+[2026-07-24 18:55:46] Peak hours check passed - Nairobi hour: 21.
+[2026-07-24 18:55:46] --- Starting Instagram + Facebook post ---
+[2026-07-24 18:55:47] Instagram token OK - account: @lepiquefashions (ID: 1889041611321657)
+[2026-07-24 18:55:47] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-07-24 18:55:47] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-07-24 18:55:47] Media categories (1): ['videos']
+[2026-07-24 18:55:47] Selected from 'videos': WhatsApp Video 2026-07-14 at 11.42.39.mp4
+[2026-07-24 18:55:47] Selected media: WhatsApp Video 2026-07-14 at 11.42.39.mp4
+[2026-07-24 18:55:47] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/videos/WhatsApp%20Video%202026-07-14%20at%2011.42.39.mp4
+[2026-07-24 18:55:47] Uploading video/reel to Instagram...
+[2026-07-24 18:55:48] Waiting for Instagram processing...
+[2026-07-24 18:55:48] Container status: IN_PROGRESS
+[2026-07-24 18:55:53] Container status: IN_PROGRESS
+[2026-07-24 18:55:58] Container status: IN_PROGRESS
+[2026-07-24 18:56:03] Container status: IN_PROGRESS
+[2026-07-24 18:56:09] Container status: IN_PROGRESS
+[2026-07-24 18:56:14] Container status: IN_PROGRESS
+[2026-07-24 18:56:19] Container status: IN_PROGRESS
+[2026-07-24 18:56:24] Container status: IN_PROGRESS
+[2026-07-24 18:56:29] Container status: IN_PROGRESS
+[2026-07-24 18:56:35] Container status: IN_PROGRESS
+[2026-07-24 18:56:40] Container status: FINISHED
+[2026-07-24 18:56:50] Container ID: 18546524047073384
+[2026-07-24 18:57:02] Instagram feed post successful! ID: 18095728424341255
+[2026-07-24 18:57:02] State saved after Instagram post.
+[2026-07-24 18:57:02] Posting to Instagram Stories...
+[2026-07-24 18:57:03] Waiting for Instagram processing...
+[2026-07-24 18:57:03] Container status: IN_PROGRESS
+[2026-07-24 18:57:08] Container status: IN_PROGRESS
+[2026-07-24 18:57:13] Container status: IN_PROGRESS
+[2026-07-24 18:57:18] Container status: IN_PROGRESS
+[2026-07-24 18:57:24] Container status: IN_PROGRESS
+[2026-07-24 18:57:29] Container status: IN_PROGRESS
+[2026-07-24 18:57:34] Container status: FINISHED
+[2026-07-24 18:57:54] Instagram Story posted! ID: 18128433607636219
+[2026-07-24 18:57:54] --- Posting to Facebook ---
+[2026-07-24 18:57:54] Uploading video to Facebook feed...
+[2026-07-24 18:58:01] Facebook feed post successful! ID: 4650056368614305
+[2026-07-24 18:58:01] Skipping Facebook Story for video (not supported via public URL).
+[2026-07-24 18:58:01] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
+[2026-07-24 18:58:01] All done. Final state saved.
+[2026-07-24 20:16:57] Skipping - current Nairobi time is 23:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-07-24 21:31:04] Skipping - current Nairobi time is 00:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-07-24 22:39:17] Skipping - current Nairobi time is 01:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-07-24 23:41:26] Skipping - current Nairobi time is 02:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-07-25 01:12:43] Skipping - current Nairobi time is 04:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-07-25 04:30:16] Peak hours check passed - Nairobi hour: 07.
+[2026-07-25 04:30:16] --- Starting Instagram + Facebook post ---
+[2026-07-25 04:30:16] Instagram token OK - account: @lepiquefashions (ID: 1889041611321657)
+[2026-07-25 04:30:16] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-07-25 04:30:16] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-07-25 04:30:16] Media categories (1): ['videos']
+[2026-07-25 04:30:16] Selected from 'videos': WhatsApp Video 2026-07-17 at 11.51.16.mp4
+[2026-07-25 04:30:16] Selected media: WhatsApp Video 2026-07-17 at 11.51.16.mp4
+[2026-07-25 04:30:16] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/videos/WhatsApp%20Video%202026-07-17%20at%2011.51.16.mp4
+[2026-07-25 04:30:16] Uploading video/reel to Instagram...
+[2026-07-25 04:30:17] Waiting for Instagram processing...
+[2026-07-25 04:30:17] Container status: IN_PROGRESS
+[2026-07-25 04:30:22] Container status: IN_PROGRESS
+[2026-07-25 04:30:27] Container status: IN_PROGRESS
+[2026-07-25 04:30:33] Container status: IN_PROGRESS
+[2026-07-25 04:30:38] Container status: IN_PROGRESS
+[2026-07-25 04:30:43] Container status: IN_PROGRESS
+[2026-07-25 04:30:48] Container status: IN_PROGRESS
+[2026-07-25 04:30:53] Container status: IN_PROGRESS
+[2026-07-25 04:30:59] Container status: IN_PROGRESS
+[2026-07-25 04:31:04] Container status: IN_PROGRESS
+[2026-07-25 04:31:09] Container status: IN_PROGRESS
+[2026-07-25 04:31:15] Container status: IN_PROGRESS
+[2026-07-25 04:31:20] Container status: IN_PROGRESS
+[2026-07-25 04:31:25] Container status: IN_PROGRESS
+[2026-07-25 04:31:31] Container status: IN_PROGRESS
+[2026-07-25 04:31:36] Container status: IN_PROGRESS
+[2026-07-25 04:31:41] Container status: FINISHED
+[2026-07-25 04:31:51] Container ID: 18546619582073384
+[2026-07-25 04:32:00] Instagram feed post successful! ID: 18105140930274049
+[2026-07-25 04:32:00] State saved after Instagram post.
+[2026-07-25 04:32:00] Posting to Instagram Stories...
+[2026-07-25 04:32:01] Waiting for Instagram processing...
+[2026-07-25 04:32:01] Container status: IN_PROGRESS
+[2026-07-25 04:32:06] Container status: IN_PROGRESS
+[2026-07-25 04:32:12] Container status: IN_PROGRESS
+[2026-07-25 04:32:17] Container status: IN_PROGRESS
+[2026-07-25 04:32:23] Container status: IN_PROGRESS
+[2026-07-25 04:32:28] Container status: FINISHED
+[2026-07-25 04:32:46] Instagram Story posted! ID: 18196009789349688
+[2026-07-25 04:32:46] --- Posting to Facebook ---
+[2026-07-25 04:32:46] Uploading video to Facebook feed...
+[2026-07-25 04:32:52] Facebook feed post successful! ID: 1049283857597048
+[2026-07-25 04:32:52] Skipping Facebook Story for video (not supported via public URL).
+[2026-07-25 04:32:52] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
+[2026-07-25 04:32:52] All done. Final state saved.
+[2026-07-25 06:59:21] Peak hours check passed - Nairobi hour: 09.
+[2026-07-25 06:59:21] --- Starting Instagram + Facebook post ---
+[2026-07-25 06:59:22] Instagram token OK - account: @lepiquefashions (ID: 1889041611321657)
+[2026-07-25 06:59:22] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-07-25 06:59:22] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-07-25 06:59:22] Media categories (1): ['videos']
+[2026-07-25 06:59:22] Selected from 'videos': WhatsApp Video 2026-07-17 at 11.51.17.mp4
+[2026-07-25 06:59:22] Selected media: WhatsApp Video 2026-07-17 at 11.51.17.mp4
+[2026-07-25 06:59:22] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/videos/WhatsApp%20Video%202026-07-17%20at%2011.51.17.mp4
+[2026-07-25 06:59:22] Uploading video/reel to Instagram...
+[2026-07-25 06:59:23] Waiting for Instagram processing...
+[2026-07-25 06:59:24] Container status: IN_PROGRESS
+[2026-07-25 06:59:29] Container status: IN_PROGRESS
+[2026-07-25 06:59:34] Container status: IN_PROGRESS
+[2026-07-25 06:59:40] Container status: IN_PROGRESS
+[2026-07-25 06:59:45] Container status: IN_PROGRESS
+[2026-07-25 06:59:50] Container status: IN_PROGRESS
+[2026-07-25 06:59:56] Container status: IN_PROGRESS
+[2026-07-25 07:00:01] Container status: IN_PROGRESS
+[2026-07-25 07:00:06] Container status: IN_PROGRESS
+[2026-07-25 07:00:12] Container status: IN_PROGRESS
+[2026-07-25 07:00:17] Container status: FINISHED
+[2026-07-25 07:00:27] Container ID: 18546638536073384
+[2026-07-25 07:00:39] Instagram feed post successful! ID: 18218071822331885
+[2026-07-25 07:00:39] State saved after Instagram post.
+[2026-07-25 07:00:39] Posting to Instagram Stories...
+[2026-07-25 07:00:39] Waiting for Instagram processing...
+[2026-07-25 07:00:39] Container status: IN_PROGRESS
+[2026-07-25 07:00:45] Container status: IN_PROGRESS
+[2026-07-25 07:00:50] Container status: IN_PROGRESS
+[2026-07-25 07:00:55] Container status: IN_PROGRESS
+[2026-07-25 07:01:00] Container status: IN_PROGRESS
+[2026-07-25 07:01:06] Container status: FINISHED
+[2026-07-25 07:01:23] Instagram Story posted! ID: 17963807742138528
+[2026-07-25 07:01:23] --- Posting to Facebook ---
+[2026-07-25 07:01:23] Uploading video to Facebook feed...
+[2026-07-25 07:01:35] Facebook feed post successful! ID: 2191565434718329
+[2026-07-25 07:01:35] Skipping Facebook Story for video (not supported via public URL).
+[2026-07-25 07:01:35] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
+[2026-07-25 07:01:35] All done. Final state saved.
+[2026-07-25 09:04:10] Peak hours check passed - Nairobi hour: 12.
+[2026-07-25 09:04:10] --- Starting Instagram + Facebook post ---
+[2026-07-25 09:04:11] Instagram token OK - account: @lepiquefashions (ID: 1889041611321657)
+[2026-07-25 09:04:11] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-07-25 09:04:11] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-07-25 09:04:11] Media categories (1): ['videos']
+[2026-07-25 09:04:11] Selected from 'videos': WhatsApp Video 2026-07-17 at 17.55.57.mp4
+[2026-07-25 09:04:11] Selected media: WhatsApp Video 2026-07-17 at 17.55.57.mp4
+[2026-07-25 09:04:11] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/videos/WhatsApp%20Video%202026-07-17%20at%2017.55.57.mp4
+[2026-07-25 09:04:11] Uploading video/reel to Instagram...
+[2026-07-25 09:04:12] Waiting for Instagram processing...
+[2026-07-25 09:04:13] Container status: IN_PROGRESS
+[2026-07-25 09:04:19] Container status: IN_PROGRESS
+[2026-07-25 09:04:25] Container status: IN_PROGRESS
+[2026-07-25 09:04:30] Container status: IN_PROGRESS
+[2026-07-25 09:04:36] Container status: FINISHED
+[2026-07-25 09:04:46] Container ID: 18546659884073384
+[2026-07-25 09:04:56] Instagram feed post successful! ID: 18087305498232657
+[2026-07-25 09:04:56] State saved after Instagram post.
+[2026-07-25 09:04:56] Posting to Instagram Stories...
+[2026-07-25 09:04:57] Waiting for Instagram processing...
+[2026-07-25 09:04:57] Container status: IN_PROGRESS
+[2026-07-25 09:05:03] Container status: IN_PROGRESS
+[2026-07-25 09:05:09] Container status: IN_PROGRESS
+[2026-07-25 09:05:14] Container status: IN_PROGRESS
+[2026-07-25 09:05:20] Container status: IN_PROGRESS
+[2026-07-25 09:05:25] Container status: IN_PROGRESS
+[2026-07-25 09:05:30] Container status: FINISHED
+[2026-07-25 09:05:51] Instagram Story posted! ID: 18108352457021662
+[2026-07-25 09:05:51] --- Posting to Facebook ---
+[2026-07-25 09:05:51] Uploading video to Facebook feed...
+[2026-07-25 09:06:01] Facebook feed post successful! ID: 2088418562031597
+[2026-07-25 09:06:01] Skipping Facebook Story for video (not supported via public URL).
+[2026-07-25 09:06:01] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
+[2026-07-25 09:06:01] All done. Final state saved.
+[2026-07-25 10:40:59] Peak hours check passed - Nairobi hour: 13.
+[2026-07-25 10:40:59] --- Starting Instagram + Facebook post ---
+[2026-07-25 10:41:00] Instagram token OK - account: @lepiquefashions (ID: 1889041611321657)
+[2026-07-25 10:41:00] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-07-25 10:41:00] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-07-25 10:41:00] Media categories (1): ['videos']
+[2026-07-25 10:41:00] Selected from 'videos': WhatsApp Video 2026-07-19 at 00.42.37.mp4
+[2026-07-25 10:41:00] Selected media: WhatsApp Video 2026-07-19 at 00.42.37.mp4
+[2026-07-25 10:41:00] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/videos/WhatsApp%20Video%202026-07-19%20at%2000.42.37.mp4
+[2026-07-25 10:41:00] Uploading video/reel to Instagram...
+[2026-07-25 10:41:02] Waiting for Instagram processing...
+[2026-07-25 10:41:03] Container status: IN_PROGRESS
+[2026-07-25 10:41:08] Container status: IN_PROGRESS
+[2026-07-25 10:41:14] Container status: FINISHED
+[2026-07-25 10:41:24] Container ID: 18546678559073384
+[2026-07-25 10:41:35] Instagram feed post successful! ID: 18129008068725564
+[2026-07-25 10:41:35] State saved after Instagram post.
+[2026-07-25 10:41:35] Posting to Instagram Stories...
+[2026-07-25 10:41:37] Waiting for Instagram processing...
+[2026-07-25 10:41:38] Container status: IN_PROGRESS
+[2026-07-25 10:41:44] Container status: IN_PROGRESS
+[2026-07-25 10:41:50] Container status: IN_PROGRESS
+[2026-07-25 10:41:56] Container status: IN_PROGRESS
+[2026-07-25 10:42:02] Container status: FINISHED
+[2026-07-25 10:42:24] Instagram Story posted! ID: 18115832534475769
+[2026-07-25 10:42:24] --- Posting to Facebook ---
+[2026-07-25 10:42:24] Uploading video to Facebook feed...
+[2026-07-25 10:42:37] Facebook feed post successful! ID: 1746500323331181
+[2026-07-25 10:42:37] Skipping Facebook Story for video (not supported via public URL).
+[2026-07-25 10:42:37] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
+[2026-07-25 10:42:37] All done. Final state saved.
+[2026-07-25 11:50:18] Peak hours check passed - Nairobi hour: 14.
+[2026-07-25 11:50:18] --- Starting Instagram + Facebook post ---
+[2026-07-25 11:50:18] Instagram token OK - account: @lepiquefashions (ID: 1889041611321657)
+[2026-07-25 11:50:18] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-07-25 11:50:18] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-07-25 11:50:18] Media categories (1): ['videos']
+[2026-07-25 11:50:18] Selected from 'videos': WhatsApp Video 2026-07-22 at 00.23.57.mp4
+[2026-07-25 11:50:18] Selected media: WhatsApp Video 2026-07-22 at 00.23.57.mp4
+[2026-07-25 11:50:18] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/videos/WhatsApp%20Video%202026-07-22%20at%2000.23.57.mp4
+[2026-07-25 11:50:18] Uploading video/reel to Instagram...
+[2026-07-25 11:50:20] Waiting for Instagram processing...
+[2026-07-25 11:50:21] Container status: IN_PROGRESS
+[2026-07-25 11:50:27] Container status: IN_PROGRESS
+[2026-07-25 11:50:32] Container status: IN_PROGRESS
+[2026-07-25 11:50:38] Container status: IN_PROGRESS
+[2026-07-25 11:50:43] Container status: IN_PROGRESS
+[2026-07-25 11:50:49] Container status: FINISHED
+[2026-07-25 11:50:59] Container ID: 18546691894073384
+[2026-07-25 11:51:22] Instagram feed post successful! ID: 18113154965292462
+[2026-07-25 11:51:22] State saved after Instagram post.
+[2026-07-25 11:51:22] Posting to Instagram Stories...
+[2026-07-25 11:51:24] Waiting for Instagram processing...
+[2026-07-25 11:51:24] Container status: IN_PROGRESS
+[2026-07-25 11:51:30] Container status: IN_PROGRESS
+[2026-07-25 11:51:36] Container status: IN_PROGRESS
+[2026-07-25 11:51:41] Container status: IN_PROGRESS
+[2026-07-25 11:51:47] Container status: IN_PROGRESS
+[2026-07-25 11:51:52] Container status: IN_PROGRESS
+[2026-07-25 11:51:58] Container status: IN_PROGRESS
+[2026-07-25 11:52:03] Container status: IN_PROGRESS
+[2026-07-25 11:52:09] Container status: IN_PROGRESS
+[2026-07-25 11:52:15] Container status: IN_PROGRESS
+[2026-07-25 11:52:20] Container status: FINISHED
+[2026-07-25 11:52:45] Instagram Story posted! ID: 18211821775353487
+[2026-07-25 11:52:45] --- Posting to Facebook ---
+[2026-07-25 11:52:45] Uploading video to Facebook feed...
+[2026-07-25 11:52:52] Facebook feed post successful! ID: 1797361347928984
+[2026-07-25 11:52:52] Skipping Facebook Story for video (not supported via public URL).
+[2026-07-25 11:52:52] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
+[2026-07-25 11:52:52] All done. Final state saved.
+[2026-07-25 12:49:40] Skipping - current Nairobi time is 15:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-07-25 14:22:05] Skipping - current Nairobi time is 17:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-07-25 15:37:27] Peak hours check passed - Nairobi hour: 18.
+[2026-07-25 15:37:27] --- Starting Instagram + Facebook post ---
+[2026-07-25 15:37:28] Instagram token OK - account: @lepiquefashions (ID: 1889041611321657)
+[2026-07-25 15:37:28] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-07-25 15:37:28] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-07-25 15:37:28] Media categories (1): ['videos']
+[2026-07-25 15:37:28] Selected from 'videos': lepique-video-11-transition.mp4
+[2026-07-25 15:37:28] Selected media: lepique-video-11-transition.mp4
+[2026-07-25 15:37:28] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/videos/lepique-video-11-transition.mp4
+[2026-07-25 15:37:28] Uploading video/reel to Instagram...
+[2026-07-25 15:37:29] Waiting for Instagram processing...
+[2026-07-25 15:37:29] Container status: IN_PROGRESS
+[2026-07-25 15:37:34] Container status: IN_PROGRESS
+[2026-07-25 15:37:40] Container status: IN_PROGRESS
+[2026-07-25 15:37:45] Container status: IN_PROGRESS
+[2026-07-25 15:37:50] Container status: IN_PROGRESS
+[2026-07-25 15:37:55] Container status: FINISHED
+[2026-07-25 15:38:05] Container ID: 18546741703073384
+[2026-07-25 15:38:15] Instagram feed post successful! ID: 18056460368785221
+[2026-07-25 15:38:15] State saved after Instagram post.
+[2026-07-25 15:38:15] Posting to Instagram Stories...
+[2026-07-25 15:38:16] Waiting for Instagram processing...
+[2026-07-25 15:38:16] Container status: IN_PROGRESS
+[2026-07-25 15:38:22] Container status: IN_PROGRESS
+[2026-07-25 15:38:27] Container status: IN_PROGRESS
+[2026-07-25 15:38:32] Container status: IN_PROGRESS
+[2026-07-25 15:38:38] Container status: IN_PROGRESS
+[2026-07-25 15:38:43] Container status: FINISHED
+[2026-07-25 15:39:03] Instagram Story posted! ID: 17979966453026000
+[2026-07-25 15:39:03] --- Posting to Facebook ---
+[2026-07-25 15:39:03] Uploading video to Facebook feed...
+[2026-07-25 15:39:08] Facebook feed post successful! ID: 1715907459694896
+[2026-07-25 15:39:08] Skipping Facebook Story for video (not supported via public URL).
+[2026-07-25 15:39:08] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
+[2026-07-25 15:39:08] All done. Final state saved.
+[2026-07-25 16:30:05] Skipping - last post was 52 min ago (next post in ~3 min).
+[2026-07-25 17:32:59] Peak hours check passed - Nairobi hour: 20.
+[2026-07-25 17:32:59] --- Starting Instagram + Facebook post ---
+[2026-07-25 17:32:59] Instagram token OK - account: @lepiquefashions (ID: 1889041611321657)
+[2026-07-25 17:32:59] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-07-25 17:32:59] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-07-25 17:32:59] Media categories (1): ['videos']
+[2026-07-25 17:32:59] All categorized media posted - resetting cycle.
+[2026-07-25 17:32:59] Selected media: WhatsApp Video 2026-07-04 at 00.24.12.mp4
+[2026-07-25 17:32:59] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/videos/WhatsApp%20Video%202026-07-04%20at%2000.24.12.mp4
+[2026-07-25 17:32:59] Uploading video/reel to Instagram...
+[2026-07-25 17:33:00] Waiting for Instagram processing...
+[2026-07-25 17:33:00] Container status: IN_PROGRESS
+[2026-07-25 17:33:06] Container status: IN_PROGRESS
+[2026-07-25 17:33:12] Container status: IN_PROGRESS
+[2026-07-25 17:33:18] Container status: IN_PROGRESS
+[2026-07-25 17:33:23] Container status: IN_PROGRESS
+[2026-07-25 17:33:28] Container status: IN_PROGRESS
+[2026-07-25 17:33:33] Container status: FINISHED
+[2026-07-25 17:33:43] Container ID: 18546766069073384
+[2026-07-25 17:33:55] Instagram feed post successful! ID: 17903720559309130
+[2026-07-25 17:33:55] State saved after Instagram post.
+[2026-07-25 17:33:55] Posting to Instagram Stories...
+[2026-07-25 17:33:55] Waiting for Instagram processing...
+[2026-07-25 17:33:56] Container status: IN_PROGRESS
+[2026-07-25 17:34:01] Container status: IN_PROGRESS
+[2026-07-25 17:34:06] Container status: IN_PROGRESS
+[2026-07-25 17:34:11] Container status: IN_PROGRESS
+[2026-07-25 17:34:17] Container status: IN_PROGRESS
+[2026-07-25 17:34:22] Container status: FINISHED
+[2026-07-25 17:34:42] Instagram Story posted! ID: 17956226475191510
+[2026-07-25 17:34:42] --- Posting to Facebook ---
+[2026-07-25 17:34:42] Uploading video to Facebook feed...
+[2026-07-25 17:34:49] Facebook feed post successful! ID: 1537554530598194
+[2026-07-25 17:34:49] Skipping Facebook Story for video (not supported via public URL).
+[2026-07-25 17:34:49] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
+[2026-07-25 17:34:49] All done. Final state saved.
+[2026-07-25 18:33:30] Peak hours check passed - Nairobi hour: 21.
+[2026-07-25 18:33:30] --- Starting Instagram + Facebook post ---
+[2026-07-25 18:33:30] Instagram token OK - account: @lepiquefashions (ID: 1889041611321657)
+[2026-07-25 18:33:30] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-07-25 18:33:30] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-07-25 18:33:30] Media categories (1): ['videos']
+[2026-07-25 18:33:30] Selected from 'videos': WhatsApp Video 2026-07-04 at 10.27.22.mp4
+[2026-07-25 18:33:30] Selected media: WhatsApp Video 2026-07-04 at 10.27.22.mp4
+[2026-07-25 18:33:30] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/videos/WhatsApp%20Video%202026-07-04%20at%2010.27.22.mp4
+[2026-07-25 18:33:30] Uploading video/reel to Instagram...
+[2026-07-25 18:33:32] Waiting for Instagram processing...
+[2026-07-25 18:33:32] Container status: IN_PROGRESS
+[2026-07-25 18:33:38] Container status: IN_PROGRESS
+[2026-07-25 18:33:43] Container status: IN_PROGRESS
+[2026-07-25 18:33:48] Container status: IN_PROGRESS
+[2026-07-25 18:33:53] Container status: IN_PROGRESS
+[2026-07-25 18:33:58] Container status: FINISHED
+[2026-07-25 18:34:08] Container ID: 18546782362073384
+[2026-07-25 18:34:19] Instagram feed post successful! ID: 18165882859456660
+[2026-07-25 18:34:19] State saved after Instagram post.
+[2026-07-25 18:34:19] Posting to Instagram Stories...
+[2026-07-25 18:34:20] Waiting for Instagram processing...
+[2026-07-25 18:34:20] Container status: IN_PROGRESS
+[2026-07-25 18:34:25] Container status: IN_PROGRESS
+[2026-07-25 18:34:31] Container status: IN_PROGRESS
+[2026-07-25 18:34:36] Container status: IN_PROGRESS
+[2026-07-25 18:34:41] Container status: IN_PROGRESS
+[2026-07-25 18:34:47] Container status: FINISHED
+[2026-07-25 18:35:09] Instagram Story posted! ID: 18113817343936243
+[2026-07-25 18:35:09] --- Posting to Facebook ---
+[2026-07-25 18:35:09] Uploading video to Facebook feed...
+[2026-07-25 18:35:15] Facebook feed post successful! ID: 2039726326679879
+[2026-07-25 18:35:15] Skipping Facebook Story for video (not supported via public URL).
+[2026-07-25 18:35:15] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
+[2026-07-25 18:35:15] All done. Final state saved.
+[2026-07-25 19:50:02] Skipping - current Nairobi time is 22:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-07-25 20:36:52] Skipping - current Nairobi time is 23:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-07-25 21:31:29] Skipping - current Nairobi time is 00:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-07-25 22:32:05] Skipping - current Nairobi time is 01:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-07-25 23:37:24] Skipping - current Nairobi time is 02:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-07-26 01:11:31] Skipping - current Nairobi time is 04:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-07-26 04:44:23] Peak hours check passed - Nairobi hour: 07.
+[2026-07-26 04:44:23] --- Starting Instagram + Facebook post ---
+[2026-07-26 04:44:23] Instagram token OK - account: @lepiquefashions (ID: 1889041611321657)
+[2026-07-26 04:44:23] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-07-26 04:44:23] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-07-26 04:44:23] Media categories (1): ['videos']
+[2026-07-26 04:44:23] Selected from 'videos': WhatsApp Video 2026-07-07 at 09.55.53.mp4
+[2026-07-26 04:44:23] Selected media: WhatsApp Video 2026-07-07 at 09.55.53.mp4
+[2026-07-26 04:44:23] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/videos/WhatsApp%20Video%202026-07-07%20at%2009.55.53.mp4
+[2026-07-26 04:44:23] Uploading video/reel to Instagram...
+[2026-07-26 04:44:24] Waiting for Instagram processing...
+[2026-07-26 04:44:25] Container status: IN_PROGRESS
+[2026-07-26 04:44:30] Container status: IN_PROGRESS
+[2026-07-26 04:44:35] Container status: IN_PROGRESS
+[2026-07-26 04:44:40] Container status: IN_PROGRESS
+[2026-07-26 04:44:46] Container status: IN_PROGRESS
+[2026-07-26 04:44:51] Container status: IN_PROGRESS
+[2026-07-26 04:44:56] Container status: IN_PROGRESS
+[2026-07-26 04:45:01] Container status: IN_PROGRESS
+[2026-07-26 04:45:07] Container status: IN_PROGRESS
+[2026-07-26 04:45:12] Container status: IN_PROGRESS
+[2026-07-26 04:45:17] Container status: FINISHED
+[2026-07-26 04:45:27] Container ID: 18546883768073384
+[2026-07-26 04:45:36] Instagram feed post successful! ID: 17999070914995013
+[2026-07-26 04:45:36] State saved after Instagram post.
+[2026-07-26 04:45:36] Posting to Instagram Stories...
+[2026-07-26 04:45:37] Waiting for Instagram processing...
+[2026-07-26 04:45:37] Container status: IN_PROGRESS
+[2026-07-26 04:45:42] Container status: IN_PROGRESS
+[2026-07-26 04:45:49] Container status: IN_PROGRESS
+[2026-07-26 04:45:55] Container status: IN_PROGRESS
+[2026-07-26 04:46:00] Container status: FINISHED
+[2026-07-26 04:46:20] Instagram Story posted! ID: 18029442569835444
+[2026-07-26 04:46:20] --- Posting to Facebook ---
+[2026-07-26 04:46:20] Uploading video to Facebook feed...
+[2026-07-26 04:46:25] Facebook feed post successful! ID: 922111003506065
+[2026-07-26 04:46:25] Skipping Facebook Story for video (not supported via public URL).
+[2026-07-26 04:46:25] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
+[2026-07-26 04:46:25] All done. Final state saved.
+[2026-07-26 07:25:09] Skipping - current Nairobi time is 10:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-07-26 09:31:39] Peak hours check passed - Nairobi hour: 12.
+[2026-07-26 09:31:39] --- Starting Instagram + Facebook post ---
+[2026-07-26 09:31:40] Instagram token OK - account: @lepiquefashions (ID: 1889041611321657)
+[2026-07-26 09:31:40] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-07-26 09:31:40] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-07-26 09:31:40] Media categories (1): ['videos']
+[2026-07-26 09:31:40] Selected from 'videos': WhatsApp Video 2026-07-07 at 10.57.15.mp4
+[2026-07-26 09:31:40] Selected media: WhatsApp Video 2026-07-07 at 10.57.15.mp4
+[2026-07-26 09:31:40] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/videos/WhatsApp%20Video%202026-07-07%20at%2010.57.15.mp4
+[2026-07-26 09:31:40] Uploading video/reel to Instagram...
+[2026-07-26 09:31:41] Waiting for Instagram processing...
+[2026-07-26 09:31:41] Container status: IN_PROGRESS
+[2026-07-26 09:31:47] Container status: IN_PROGRESS
+[2026-07-26 09:31:52] Container status: IN_PROGRESS
+[2026-07-26 09:31:57] Container status: IN_PROGRESS
+[2026-07-26 09:32:02] Container status: IN_PROGRESS
+[2026-07-26 09:32:08] Container status: FINISHED
+[2026-07-26 09:32:18] Container ID: 18546930991073384
+[2026-07-26 09:32:27] Instagram feed post successful! ID: 17861722419663337
+[2026-07-26 09:32:27] State saved after Instagram post.
+[2026-07-26 09:32:27] Posting to Instagram Stories...
+[2026-07-26 09:32:28] Waiting for Instagram processing...
+[2026-07-26 09:32:28] Container status: IN_PROGRESS
+[2026-07-26 09:32:34] Container status: IN_PROGRESS
+[2026-07-26 09:32:39] Container status: IN_PROGRESS
+[2026-07-26 09:32:44] Container status: IN_PROGRESS
+[2026-07-26 09:32:49] Container status: IN_PROGRESS
+[2026-07-26 09:32:55] Container status: FINISHED
+[2026-07-26 09:33:14] Instagram Story posted! ID: 18143945140557885
+[2026-07-26 09:33:14] --- Posting to Facebook ---
+[2026-07-26 09:33:14] Uploading video to Facebook feed...
+[2026-07-26 09:33:20] Facebook feed post successful! ID: 1592146002474113
+[2026-07-26 09:33:20] Skipping Facebook Story for video (not supported via public URL).
+[2026-07-26 09:33:20] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
+[2026-07-26 09:33:20] All done. Final state saved.
+[2026-07-26 11:05:59] Peak hours check passed - Nairobi hour: 14.
+[2026-07-26 11:05:59] --- Starting Instagram + Facebook post ---
+[2026-07-26 11:05:59] Instagram token OK - account: @lepiquefashions (ID: 1889041611321657)
+[2026-07-26 11:05:59] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-07-26 11:05:59] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-07-26 11:05:59] Media categories (1): ['videos']
+[2026-07-26 11:05:59] Selected from 'videos': WhatsApp Video 2026-07-09 at 19.13.25.mp4
+[2026-07-26 11:05:59] Selected media: WhatsApp Video 2026-07-09 at 19.13.25.mp4
+[2026-07-26 11:05:59] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/videos/WhatsApp%20Video%202026-07-09%20at%2019.13.25.mp4
+[2026-07-26 11:05:59] Uploading video/reel to Instagram...
+[2026-07-26 11:06:00] Waiting for Instagram processing...
+[2026-07-26 11:06:01] Container status: IN_PROGRESS
+[2026-07-26 11:06:06] Container status: IN_PROGRESS
+[2026-07-26 11:06:12] Container status: IN_PROGRESS
+[2026-07-26 11:06:17] Container status: IN_PROGRESS
+[2026-07-26 11:06:22] Container status: IN_PROGRESS
+[2026-07-26 11:06:28] Container status: IN_PROGRESS
+[2026-07-26 11:06:33] Container status: IN_PROGRESS
+[2026-07-26 11:06:39] Container status: IN_PROGRESS
+[2026-07-26 11:06:44] Container status: IN_PROGRESS
+[2026-07-26 11:06:50] Container status: IN_PROGRESS
+[2026-07-26 11:06:55] Container status: IN_PROGRESS
+[2026-07-26 11:07:00] Container status: IN_PROGRESS
+[2026-07-26 11:07:06] Container status: IN_PROGRESS
+[2026-07-26 11:07:11] Container status: IN_PROGRESS
+[2026-07-26 11:07:17] Container status: FINISHED
+[2026-07-26 11:07:27] Container ID: 18546948850073384
+[2026-07-26 11:07:37] Instagram feed post successful! ID: 18110196353067440
+[2026-07-26 11:07:37] State saved after Instagram post.
+[2026-07-26 11:07:37] Posting to Instagram Stories...
+[2026-07-26 11:07:38] Waiting for Instagram processing...
+[2026-07-26 11:07:38] Container status: IN_PROGRESS
+[2026-07-26 11:07:44] Container status: IN_PROGRESS
+[2026-07-26 11:07:49] Container status: IN_PROGRESS
+[2026-07-26 11:07:54] Container status: IN_PROGRESS
+[2026-07-26 11:08:00] Container status: IN_PROGRESS
+[2026-07-26 11:08:05] Container status: IN_PROGRESS
+[2026-07-26 11:08:10] Container status: FINISHED
+[2026-07-26 11:08:29] Instagram Story posted! ID: 17974435386095601
+[2026-07-26 11:08:29] --- Posting to Facebook ---
+[2026-07-26 11:08:29] Uploading video to Facebook feed...
+[2026-07-26 11:08:34] Facebook feed post successful! ID: 1017123434266014
+[2026-07-26 11:08:34] Skipping Facebook Story for video (not supported via public URL).
+[2026-07-26 11:08:34] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
+[2026-07-26 11:08:34] All done. Final state saved.
+[2026-07-26 12:12:30] Skipping - current Nairobi time is 15:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-07-26 13:59:55] Skipping - current Nairobi time is 16:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-07-26 15:10:58] Peak hours check passed - Nairobi hour: 18.
+[2026-07-26 15:10:58] --- Starting Instagram + Facebook post ---
+[2026-07-26 15:10:59] Instagram token OK - account: @lepiquefashions (ID: 1889041611321657)
+[2026-07-26 15:10:59] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-07-26 15:10:59] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-07-26 15:10:59] Media categories (1): ['videos']
+[2026-07-26 15:10:59] Selected from 'videos': WhatsApp Video 2026-07-10 at 04.51.49.mp4
+[2026-07-26 15:10:59] Selected media: WhatsApp Video 2026-07-10 at 04.51.49.mp4
+[2026-07-26 15:10:59] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/videos/WhatsApp%20Video%202026-07-10%20at%2004.51.49.mp4
+[2026-07-26 15:10:59] Uploading video/reel to Instagram...
+[2026-07-26 15:11:00] Waiting for Instagram processing...
+[2026-07-26 15:11:01] Container status: IN_PROGRESS
+[2026-07-26 15:11:07] Container status: IN_PROGRESS
+[2026-07-26 15:11:12] Container status: IN_PROGRESS
+[2026-07-26 15:11:18] Container status: IN_PROGRESS
+[2026-07-26 15:11:23] Container status: IN_PROGRESS
+[2026-07-26 15:11:29] Container status: IN_PROGRESS
+[2026-07-26 15:11:34] Container status: IN_PROGRESS
+[2026-07-26 15:11:39] Container status: IN_PROGRESS
+[2026-07-26 15:11:44] Container status: IN_PROGRESS
+[2026-07-26 15:11:50] Container status: IN_PROGRESS
+[2026-07-26 15:11:55] Container status: FINISHED
+[2026-07-26 15:12:05] Container ID: 18547004608073384
+[2026-07-26 15:12:14] Instagram feed post successful! ID: 18018972389884231
+[2026-07-26 15:12:14] State saved after Instagram post.
+[2026-07-26 15:12:14] Posting to Instagram Stories...
+[2026-07-26 15:12:15] Waiting for Instagram processing...
+[2026-07-26 15:12:15] Container status: IN_PROGRESS
+[2026-07-26 15:12:21] Container status: IN_PROGRESS
+[2026-07-26 15:12:26] Container status: IN_PROGRESS
+[2026-07-26 15:12:31] Container status: IN_PROGRESS
+[2026-07-26 15:12:37] Container status: IN_PROGRESS
+[2026-07-26 15:12:42] Container status: FINISHED
+[2026-07-26 15:13:02] Instagram Story posted! ID: 18068482115711735
+[2026-07-26 15:13:02] --- Posting to Facebook ---
+[2026-07-26 15:13:02] Uploading video to Facebook feed...
+[2026-07-26 15:13:07] Facebook feed post successful! ID: 1587051293080613
+[2026-07-26 15:13:07] Skipping Facebook Story for video (not supported via public URL).
+[2026-07-26 15:13:07] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
+[2026-07-26 15:13:07] All done. Final state saved.
+[2026-07-26 16:15:32] Peak hours check passed - Nairobi hour: 19.
+[2026-07-26 16:15:32] --- Starting Instagram + Facebook post ---
+[2026-07-26 16:15:33] Instagram token OK - account: @lepiquefashions (ID: 1889041611321657)
+[2026-07-26 16:15:33] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-07-26 16:15:33] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-07-26 16:15:33] Media categories (1): ['videos']
+[2026-07-26 16:15:33] Selected from 'videos': WhatsApp Video 2026-07-10 at 04.51.53.mp4
+[2026-07-26 16:15:33] Selected media: WhatsApp Video 2026-07-10 at 04.51.53.mp4
+[2026-07-26 16:15:33] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/videos/WhatsApp%20Video%202026-07-10%20at%2004.51.53.mp4
+[2026-07-26 16:15:33] Uploading video/reel to Instagram...
+[2026-07-26 16:15:34] Waiting for Instagram processing...
+[2026-07-26 16:15:35] Container status: IN_PROGRESS
+[2026-07-26 16:15:40] Container status: IN_PROGRESS
+[2026-07-26 16:15:45] Container status: IN_PROGRESS
+[2026-07-26 16:15:50] Container status: IN_PROGRESS
+[2026-07-26 16:15:56] Container status: IN_PROGRESS
+[2026-07-26 16:16:01] Container status: IN_PROGRESS
+[2026-07-26 16:16:06] Container status: IN_PROGRESS
+[2026-07-26 16:16:12] Container status: IN_PROGRESS
+[2026-07-26 16:16:17] Container status: IN_PROGRESS
+[2026-07-26 16:16:22] Container status: IN_PROGRESS
+[2026-07-26 16:16:27] Container status: IN_PROGRESS
+[2026-07-26 16:16:33] Container status: IN_PROGRESS
+[2026-07-26 16:16:38] Container status: IN_PROGRESS
+[2026-07-26 16:16:44] Container status: FINISHED
+[2026-07-26 16:16:54] Container ID: 18547019758073384
+[2026-07-26 16:17:06] Instagram feed post successful! ID: 18111346132948730
+[2026-07-26 16:17:06] State saved after Instagram post.
+[2026-07-26 16:17:06] Posting to Instagram Stories...
+[2026-07-26 16:17:07] Waiting for Instagram processing...
+[2026-07-26 16:17:07] Container status: IN_PROGRESS
+[2026-07-26 16:17:13] Container status: IN_PROGRESS
+[2026-07-26 16:17:18] Container status: IN_PROGRESS
+[2026-07-26 16:17:23] Container status: IN_PROGRESS
+[2026-07-26 16:17:28] Container status: IN_PROGRESS
+[2026-07-26 16:17:34] Container status: IN_PROGRESS
+[2026-07-26 16:17:39] Container status: IN_PROGRESS
+[2026-07-26 16:17:44] Container status: IN_PROGRESS
+[2026-07-26 16:17:50] Container status: IN_PROGRESS
+[2026-07-26 16:17:55] Container status: IN_PROGRESS
+[2026-07-26 16:18:00] Container status: IN_PROGRESS
+[2026-07-26 16:18:06] Container status: IN_PROGRESS
+[2026-07-26 16:18:11] Container status: IN_PROGRESS
+[2026-07-26 16:18:16] Container status: IN_PROGRESS
+[2026-07-26 16:18:21] Container status: IN_PROGRESS
+[2026-07-26 16:18:27] Container status: FINISHED
+[2026-07-26 16:18:48] Instagram Story posted! ID: 17938492494318562
+[2026-07-26 16:18:48] --- Posting to Facebook ---
+[2026-07-26 16:18:48] Uploading video to Facebook feed...
+[2026-07-26 16:18:55] Facebook feed post successful! ID: 4624430004460402
+[2026-07-26 16:18:55] Skipping Facebook Story for video (not supported via public URL).
+[2026-07-26 16:18:55] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
+[2026-07-26 16:18:55] All done. Final state saved.
+[2026-07-26 17:18:46] Peak hours check passed - Nairobi hour: 20.
+[2026-07-26 17:18:46] --- Starting Instagram + Facebook post ---
+[2026-07-26 17:18:46] Instagram token OK - account: @lepiquefashions (ID: 1889041611321657)
+[2026-07-26 17:18:46] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-07-26 17:18:46] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-07-26 17:18:46] Media categories (1): ['videos']
+[2026-07-26 17:18:46] Selected from 'videos': WhatsApp Video 2026-07-12 at 02.20.42.mp4
+[2026-07-26 17:18:46] Selected media: WhatsApp Video 2026-07-12 at 02.20.42.mp4
+[2026-07-26 17:18:46] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/videos/WhatsApp%20Video%202026-07-12%20at%2002.20.42.mp4
+[2026-07-26 17:18:46] Uploading video/reel to Instagram...
+[2026-07-26 17:18:47] Waiting for Instagram processing...
+[2026-07-26 17:18:47] Container status: IN_PROGRESS
+[2026-07-26 17:18:52] Container status: IN_PROGRESS
+[2026-07-26 17:18:57] Container status: IN_PROGRESS
+[2026-07-26 17:19:03] Container status: IN_PROGRESS
+[2026-07-26 17:19:08] Container status: FINISHED
+[2026-07-26 17:19:18] Container ID: 18547033129073384
+[2026-07-26 17:19:26] Instagram feed post successful! ID: 18122959228698038
+[2026-07-26 17:19:26] State saved after Instagram post.
+[2026-07-26 17:19:26] Posting to Instagram Stories...
+[2026-07-26 17:19:27] Waiting for Instagram processing...
+[2026-07-26 17:19:27] Container status: IN_PROGRESS
+[2026-07-26 17:19:32] Container status: IN_PROGRESS
+[2026-07-26 17:19:37] Container status: IN_PROGRESS
+[2026-07-26 17:19:42] Container status: IN_PROGRESS
+[2026-07-26 17:19:48] Container status: IN_PROGRESS
+[2026-07-26 17:19:53] Container status: IN_PROGRESS
+[2026-07-26 17:19:58] Container status: IN_PROGRESS
+[2026-07-26 17:20:03] Container status: IN_PROGRESS
+[2026-07-26 17:20:08] Container status: IN_PROGRESS
+[2026-07-26 17:20:14] Container status: IN_PROGRESS
+[2026-07-26 17:20:19] Container status: IN_PROGRESS
+[2026-07-26 17:20:24] Container status: IN_PROGRESS
+[2026-07-26 17:20:31] Container status: IN_PROGRESS
+[2026-07-26 17:20:36] Container status: FINISHED
+[2026-07-26 17:20:56] Instagram Story posted! ID: 18173323567426769
+[2026-07-26 17:20:56] --- Posting to Facebook ---
+[2026-07-26 17:20:56] Uploading video to Facebook feed...
+[2026-07-26 17:21:01] Facebook feed post successful! ID: 1037938148885008
+[2026-07-26 17:21:01] Skipping Facebook Story for video (not supported via public URL).
+[2026-07-26 17:21:01] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
+[2026-07-26 17:21:01] All done. Final state saved.
+[2026-07-26 18:15:14] Peak hours check passed - Nairobi hour: 21.
+[2026-07-26 18:15:14] --- Starting Instagram + Facebook post ---
+[2026-07-26 18:15:15] Instagram token OK - account: @lepiquefashions (ID: 1889041611321657)
+[2026-07-26 18:15:15] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-07-26 18:15:15] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-07-26 18:15:15] Media categories (1): ['videos']
+[2026-07-26 18:15:15] Selected from 'videos': WhatsApp Video 2026-07-13 at 04.23.56.mp4
+[2026-07-26 18:15:15] Selected media: WhatsApp Video 2026-07-13 at 04.23.56.mp4
+[2026-07-26 18:15:15] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/videos/WhatsApp%20Video%202026-07-13%20at%2004.23.56.mp4
+[2026-07-26 18:15:15] Uploading video/reel to Instagram...
+[2026-07-26 18:15:17] Waiting for Instagram processing...
+[2026-07-26 18:15:18] Container status: IN_PROGRESS
+[2026-07-26 18:15:24] Container status: IN_PROGRESS
+[2026-07-26 18:15:30] Container status: IN_PROGRESS
+[2026-07-26 18:15:35] Container status: IN_PROGRESS
+[2026-07-26 18:15:40] Container status: FINISHED
+[2026-07-26 18:15:50] Container ID: 18547045954073384
+[2026-07-26 18:16:00] Instagram feed post successful! ID: 18209603437355817
+[2026-07-26 18:16:00] State saved after Instagram post.
+[2026-07-26 18:16:00] Posting to Instagram Stories...
+[2026-07-26 18:16:00] Waiting for Instagram processing...
+[2026-07-26 18:16:00] Container status: IN_PROGRESS
+[2026-07-26 18:16:06] Container status: IN_PROGRESS
+[2026-07-26 18:16:11] Container status: IN_PROGRESS
+[2026-07-26 18:16:16] Container status: IN_PROGRESS
+[2026-07-26 18:16:22] Container status: IN_PROGRESS
+[2026-07-26 18:16:27] Container status: FINISHED
+[2026-07-26 18:16:45] Instagram Story posted! ID: 18107697394919782
+[2026-07-26 18:16:45] --- Posting to Facebook ---
+[2026-07-26 18:16:45] Uploading video to Facebook feed...
+[2026-07-26 18:16:57] Facebook feed post successful! ID: 1731779144518615
+[2026-07-26 18:16:57] Skipping Facebook Story for video (not supported via public URL).
+[2026-07-26 18:16:57] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
+[2026-07-26 18:16:57] All done. Final state saved.
+[2026-07-26 19:37:01] Skipping - current Nairobi time is 22:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-07-26 20:33:52] Skipping - current Nairobi time is 23:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-07-26 21:32:33] Skipping - current Nairobi time is 00:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-07-26 22:36:53] Skipping - current Nairobi time is 01:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-07-26 23:37:16] Skipping - current Nairobi time is 02:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-07-27 01:15:12] Skipping - current Nairobi time is 04:xx (outside peak hours 07-09, 12-14, 18-21 EAT).

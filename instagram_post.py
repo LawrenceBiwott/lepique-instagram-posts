@@ -148,59 +148,70 @@ def get_next_media(state):
         log("media/ folder not found.")
         return None
 
-    # Build file list - newest additions first (git history), fallback to mtime
-    all_files = []
-    try:
-        result = subprocess.run(
-            ["git", "log", "--diff-filter=A", "--name-only", "--format=", "--", "media/"],
-            capture_output=True, text=True, cwd=BASE_DIR
-        )
-        seen = set()
-        for line in result.stdout.strip().split("\n"):
-            line = line.strip()
-            if line:
-                fname = Path(line).name
-                candidates = [
-                    BASE_DIR / line,
-                    PHOTOS_FOLDER / fname,
-                    VIDEOS_FOLDER / fname,
-                    MEDIA_FOLDER / fname,
-                ]
-                fpath = next((c for c in candidates if c.exists()), None)
-                if fpath and fpath.suffix.lower() in (IMAGE_EXTS | VIDEO_EXTS):
-                    if fname not in seen:
-                        seen.add(fname)
-                        all_files.append(fpath)
-        if all_files:
-            log(f"Found {len(all_files)} media files (newest-first by git history)")
-        else:
-            raise Exception("Git log returned no files")
-    except Exception as e:
-        log(f"Git ordering unavailable ({e}) - falling back to mtime sort")
-        all_files = sorted(
-            [p for p in MEDIA_FOLDER.rglob("*")
-             if p.is_file() and p.suffix.lower() in (IMAGE_EXTS | VIDEO_EXTS)],
-            key=lambda p: p.stat().st_mtime, reverse=True
-        )
-        log(f"Found {len(all_files)} media files by mtime")
+    posted = set(state.get("posted_files", []))
 
+    def files_in(folder, exts):
+        if not folder.exists():
+            return []
+        return sorted(
+            [p for p in folder.iterdir() if p.is_file() and p.suffix.lower() in exts],
+            key=lambda p: p.name
+        )
+
+    # Photos are organized into category subfolders (media/photos/<Category>/...).
+    # Each category, plus videos, is treated as one rotation "bucket" so posts
+    # spread across categories instead of clustering on the largest folder.
+    buckets = []
+    if PHOTOS_FOLDER.exists():
+        for d in sorted(PHOTOS_FOLDER.iterdir()):
+            if d.is_dir():
+                buckets.append((f"photos/{d.name}", d, IMAGE_EXTS))
+    if VIDEOS_FOLDER.exists() and files_in(VIDEOS_FOLDER, VIDEO_EXTS):
+        buckets.append(("videos", VIDEOS_FOLDER, VIDEO_EXTS))
+
+    if buckets:
+        log(f"Media categories ({len(buckets)}): {[b[0] for b in buckets]}")
+        start_index = state.get("media_category_index", 0) % len(buckets)
+
+        for offset in range(len(buckets)):
+            idx = (start_index + offset) % len(buckets)
+            name, folder, exts = buckets[idx]
+            candidates = [f for f in files_in(folder, exts) if f.name not in posted]
+            if candidates:
+                selected = candidates[0]
+                posted.add(selected.name)
+                state["posted_files"] = list(posted)
+                state["media_category_index"] = (idx + 1) % len(buckets)
+                log(f"Selected from '{name}': {selected.name}")
+                return selected
+
+        log("All categorized media posted - resetting cycle.")
+        posted = set()
+        name, folder, exts = buckets[start_index]
+        files = files_in(folder, exts)
+        if files:
+            selected = files[0]
+            posted.add(selected.name)
+            state["posted_files"] = list(posted)
+            state["media_category_index"] = (start_index + 1) % len(buckets)
+            return selected
+        return None
+
+    # Fallback: no category subfolders found (unexpected legacy layout)
+    all_files = sorted(
+        [p for p in MEDIA_FOLDER.rglob("*")
+         if p.is_file() and p.suffix.lower() in (IMAGE_EXTS | VIDEO_EXTS)],
+        key=lambda p: p.stat().st_mtime, reverse=True
+    )
+    log(f"No category folders found - {len(all_files)} media files by mtime")
     if not all_files:
         log("No supported media files found in media/")
         return None
 
-    log(f"Latest 5: {[f.name for f in all_files[:5]]}")
-
-    posted = set(state.get("posted_files", []))
-    selected = None
-    for f in all_files:
-        if f.name not in posted:
-            selected = f
-            break
-
+    selected = next((f for f in all_files if f.name not in posted), None)
     if selected is None:
         log(f"All {len(all_files)} files posted - resetting cycle, starting from newest.")
         posted = set()
-        state["posted_files"] = []
         selected = all_files[0]
 
     posted.add(selected.name)
