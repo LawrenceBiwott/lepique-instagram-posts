@@ -7286,3 +7286,4 @@ continue appending new entries below as usual.
 [2026-08-10 17:42:00] Facebook Story posted! ID: 1562783688566081
 [2026-08-10 17:42:00] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
 [2026-08-10 17:42:00] All done. Final state saved.
+[2026-08-10 18:31:34] Skipping - last post was 51 min ago (next post in ~4 min).
