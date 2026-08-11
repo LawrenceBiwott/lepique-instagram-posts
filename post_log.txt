@@ -7468,3 +7468,4 @@ continue appending new entries below as usual.
 [2026-08-11 11:27:05] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
 [2026-08-11 11:27:05] All done. Final state saved.
 [2026-08-11 12:07:11] Skipping - last post was 42 min ago (next post in ~13 min).
+[2026-08-11 13:36:45] Skipping - current Nairobi time is 16:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
