@@ -7787,3 +7787,36 @@ continue appending new entries below as usual.
 [2026-08-12 16:40:48] Facebook Story posted! ID: 871894262466919
 [2026-08-12 16:40:48] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
 [2026-08-12 16:40:48] All done. Final state saved.
+[2026-08-12 17:38:19] Peak hours check passed - Nairobi hour: 20.
+[2026-08-12 17:38:19] --- Starting Instagram + Facebook post ---
+[2026-08-12 17:38:19] Instagram token OK - account: @lepiquefashions (ID: 1889041611321657)
+[2026-08-12 17:38:19] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-08-12 17:38:19] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-08-12 17:38:19] Media categories (12): ['photos/Bodysuits', 'photos/Cargo Jeans', 'photos/Flare Jeans', 'photos/Leather Jackets', 'photos/Mom jeans', 'photos/Printed Jeans', 'photos/Ripped Jeans', 'photos/Skinny Jeans', 'photos/Straight Jeans', 'photos/T-Shirts and Long-Sleeve Tops', 'photos/Wide Leg Jeans', 'videos']
+[2026-08-12 17:38:19] Selected from 'photos/Wide Leg Jeans': lepique-wide-leg-07-light-blue.jpeg
+[2026-08-12 17:38:19] Selected media: lepique-wide-leg-07-light-blue.jpeg
+[2026-08-12 17:38:19] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/Wide%20Leg%20Jeans/lepique-wide-leg-07-light-blue.jpeg
+[2026-08-12 17:38:19] Uploading image to Instagram...
+[2026-08-12 17:38:19] Alt text: Ladies light blue wide-leg jeans - Lepique Fashions Nairobi
+[2026-08-12 17:38:25] Waiting for Instagram processing...
+[2026-08-12 17:38:26] Container status: IN_PROGRESS
+[2026-08-12 17:38:32] Container status: FINISHED
+[2026-08-12 17:38:42] Container ID: 18551433148073384
+[2026-08-12 17:38:45] Instagram feed post successful! ID: 18100623701209692
+[2026-08-12 17:38:45] State saved after Instagram post.
+[2026-08-12 17:38:46] Story image resized to 1080x1920 -> photos/story_temp.jpg
+[2026-08-12 17:38:47] Story URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/story_temp.jpg - waiting for GitHub Pages to deploy...
+[2026-08-12 17:39:44] Story image live after 55s.
+[2026-08-12 17:39:44] Posting to Instagram Stories...
+[2026-08-12 17:39:47] Waiting for Instagram processing...
+[2026-08-12 17:39:48] Container status: IN_PROGRESS
+[2026-08-12 17:39:54] Container status: FINISHED
+[2026-08-12 17:40:07] Instagram Story posted! ID: 18124086853747325
+[2026-08-12 17:40:07] --- Posting to Facebook ---
+[2026-08-12 17:40:07] Uploading photo to Facebook feed...
+[2026-08-12 17:40:11] Facebook feed post successful! ID: 1889041611321657_1476065834556461
+[2026-08-12 17:40:11] Posting photo to Facebook Stories...
+[2026-08-12 17:40:19] Facebook Story posted! ID: 4299360703649870
+[2026-08-12 17:40:19] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
+[2026-08-12 17:40:19] All done. Final state saved.
