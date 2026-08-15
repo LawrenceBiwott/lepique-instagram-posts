@@ -8472,3 +8472,4 @@ continue appending new entries below as usual.
 [2026-08-15 09:22:44] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
 [2026-08-15 09:22:44] All done. Final state saved.
 [2026-08-15 09:45:06] Skipping - last post was 25 min ago (next post in ~30 min).
+[2026-08-15 10:01:07] Skipping - last post was 41 min ago (next post in ~14 min).
