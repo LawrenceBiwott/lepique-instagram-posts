@@ -9558,3 +9558,35 @@ continue appending new entries below as usual.
 [2026-08-18 13:28:13] Skipping - current Nairobi time is 16:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
 [2026-08-18 14:06:28] Skipping - current Nairobi time is 17:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
 [2026-08-18 14:47:43] Skipping - current Nairobi time is 17:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-08-18 15:15:21] Peak hours check passed - Nairobi hour: 18.
+[2026-08-18 15:15:21] --- Starting Instagram + Facebook post ---
+[2026-08-18 15:15:22] Instagram token OK - account: @lepiquefashions (ID: 1889041611321657)
+[2026-08-18 15:15:22] Caption: 📍 Platinum Plaza, Ground Floor, Shop G16 – Tom Mboya Street, Nairobi
+📞 0 7 2 1 •
+[2026-08-18 15:15:22] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-08-18 15:15:22] Media categories (12): ['photos/Bodysuits', 'photos/Cargo Jeans', 'photos/Flare Jeans', 'photos/Leather Jackets', 'photos/Mom jeans', 'photos/Printed Jeans', 'photos/Ripped Jeans', 'photos/Skinny Jeans', 'photos/Straight Jeans', 'photos/T-Shirts and Long-Sleeve Tops', 'photos/Wide Leg Jeans', 'videos']
+[2026-08-18 15:15:22] Selected from 'photos/T-Shirts and Long-Sleeve Tops': 13edd28f-ad5b-496e-b914-707ccdb3a814.jpg
+[2026-08-18 15:15:22] Selected media: 13edd28f-ad5b-496e-b914-707ccdb3a814.jpg
+[2026-08-18 15:15:22] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/T-Shirts%20and%20Long-Sleeve%20Tops/13edd28f-ad5b-496e-b914-707ccdb3a814.jpg
+[2026-08-18 15:15:22] Uploading image to Instagram...
+[2026-08-18 15:15:22] Alt text: Ladies ladies fashion - Lepique Fashions Nairobi
+[2026-08-18 15:15:26] Waiting for Instagram processing...
+[2026-08-18 15:15:26] Container status: FINISHED
+[2026-08-18 15:15:36] Container ID: 18553247512073384
+[2026-08-18 15:15:39] Instagram feed post successful! ID: 17952176289239164
+[2026-08-18 15:15:39] State saved after Instagram post.
+[2026-08-18 15:15:40] Story image resized to 1080x1920 -> photos/story_temp.jpg
+[2026-08-18 15:15:43] Story URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/story_temp.jpg - waiting for GitHub Pages to deploy...
+[2026-08-18 15:17:44] Story image live after 120s.
+[2026-08-18 15:17:44] Posting to Instagram Stories...
+[2026-08-18 15:17:48] Waiting for Instagram processing...
+[2026-08-18 15:17:48] Container status: IN_PROGRESS
+[2026-08-18 15:17:54] Container status: FINISHED
+[2026-08-18 15:18:06] Instagram Story posted! ID: 17997361859990326
+[2026-08-18 15:18:06] --- Posting to Facebook ---
+[2026-08-18 15:18:06] Uploading photo to Facebook feed...
+[2026-08-18 15:18:11] Facebook feed post successful! ID: 1889041611321657_1481284774034567
+[2026-08-18 15:18:11] Posting photo to Facebook Stories...
+[2026-08-18 15:18:15] Facebook Story posted! ID: 2496204157549110
+[2026-08-18 15:18:15] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
+[2026-08-18 15:18:15] All done. Final state saved.
