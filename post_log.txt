@@ -11092,3 +11092,4 @@ continue appending new entries below as usual.
 [2026-08-22 18:58:17] All done. Final state saved.
 [2026-08-22 19:20:07] Skipping - last post was 23 min ago (next post in ~32 min).
 [2026-08-22 19:41:11] Skipping - last post was 44 min ago (next post in ~11 min).
+[2026-08-22 19:59:04] Skipping - current Nairobi time is 22:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
