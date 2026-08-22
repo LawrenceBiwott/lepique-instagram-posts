@@ -10913,3 +10913,4 @@ continue appending new entries below as usual.
 [2026-08-22 10:38:27] Skipping Facebook Story for video (not supported via public URL).
 [2026-08-22 10:38:27] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
 [2026-08-22 10:38:27] All done. Final state saved.
+[2026-08-22 10:55:49] Skipping - last post was 18 min ago (next post in ~37 min).
