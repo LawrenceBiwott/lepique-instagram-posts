@@ -13665,3 +13665,4 @@ continue appending new entries below as usual.
 [2026-09-10 09:38:56] Skipping Facebook Story for video (not supported via public URL).
 [2026-09-10 09:38:56] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
 [2026-09-10 09:38:56] All done. Final state saved.
+[2026-09-10 13:47:24] Skipping - current Nairobi time is 16:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
