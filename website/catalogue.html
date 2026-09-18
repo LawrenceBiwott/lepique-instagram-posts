@@ -99,8 +99,8 @@
 
 <div class="announce-bar">
   <div class="announce-inner">
-    <span>98 Styles Available</span><span>WhatsApp Orders: 0721 672 900</span><span>Sizes 27–42 Jeans</span><span>Tops · Bodysuits · T-Shirts · Leather Jackets</span><span>Countrywide Delivery</span>
-    <span>98 Styles Available</span><span>WhatsApp Orders: 0721 672 900</span><span>Sizes 27–42 Jeans</span><span>Tops · Bodysuits · T-Shirts · Leather Jackets</span><span>Countrywide Delivery</span>
+    <span>98 Styles Available</span><span>WhatsApp Orders: 0721 672 900 | 0181 347 670</span><span>Sizes 27–42 Jeans</span><span>Tops · Bodysuits · T-Shirts · Leather Jackets</span><span>Countrywide Delivery</span>
+    <span>98 Styles Available</span><span>WhatsApp Orders: 0721 672 900 | 0181 347 670</span><span>Sizes 27–42 Jeans</span><span>Tops · Bodysuits · T-Shirts · Leather Jackets</span><span>Countrywide Delivery</span>
   </div>
 </div>
 
@@ -170,10 +170,14 @@
     <button class="color-btn active" onclick="filterColor('all',this)">All Colours</button>
     <button class="color-btn" onclick="filterColor('black',this)"><span class="color-dot" style="background:#1a1a1a;"></span>Black</button>
     <button class="color-btn" onclick="filterColor('dark-navy',this)"><span class="color-dot" style="background:#1b2a4a;"></span>Dark Navy</button>
+    <button class="color-btn" onclick="filterColor('navy-blue',this)"><span class="color-dot" style="background:#223366;"></span>Navy Blue</button>
     <button class="color-btn" onclick="filterColor('dark-blue',this)"><span class="color-dot" style="background:#2a4a7a;"></span>Dark Blue</button>
     <button class="color-btn" onclick="filterColor('medium-blue',this)"><span class="color-dot" style="background:#5580b0;"></span>Medium Blue</button>
     <button class="color-btn" onclick="filterColor('light-blue',this)"><span class="color-dot" style="background:#9ab8d8;"></span>Light Blue</button>
     <button class="color-btn" onclick="filterColor('grey',this)"><span class="color-dot" style="background:#888;"></span>Grey</button>
+    <button class="color-btn" onclick="filterColor('white',this)"><span class="color-dot" style="background:#f5f5f5;border:1px solid #ccc;"></span>White</button>
+    <button class="color-btn" onclick="filterColor('beige',this)"><span class="color-dot" style="background:#d4b896;"></span>Beige</button>
+    <button class="color-btn" onclick="filterColor('olive',this)"><span class="color-dot" style="background:#6b7c4a;"></span>Olive</button>
   </div>
   <div class="filter-bar" style="margin-top:0.5rem;">
     <span class="filter-group-label">Price:</span>
@@ -307,7 +311,7 @@
 <a href="https://wa.me/254721672900?text=Hi%20Lepique%20Fashions!%20I'd%20like%20to%20place%20an%20order." target="_blank" class="wa-float" aria-label="WhatsApp Order">📱</a>
 
 <footer>
-  <p>© 2026 Lepique Fashions · Platinum Plaza, Shop G16, Tom Mboya Street, Nairobi CBD · <a href="/">Home</a> · <a href="/#size-guide">Size Guide</a> · <a href="privacy.html">Privacy</a></p>
+  <p>© 2026 Lepique Fashions · Platinum Plaza G16 &amp; B35, Tom Mboya Street, Nairobi · <a href="tel:+254721672900">0721 672 900</a> | <a href="tel:+254181347670">0181 347 670</a> · <a href="/">Home</a> · <a href="/#size-guide">Size Guide</a> · <a href="privacy.html">Privacy</a></p>
 </footer>
 
 <script>
@@ -329,7 +333,7 @@ function applyFilters(){
     var priceMatch = activePriceFilter==='all'
       || (activePriceFilter==='budget' && pv < 1500)
       || (activePriceFilter==='mid' && pv >= 1500 && pv <= 2500)
-      || (activePriceFilter==='premium' && pv > 2500);
+      || (activePriceFilter==='premium' && pv >= 2500);
     var jeansCats=['wide-leg','skinny','flare','straight','ripped','cargo','printed'];
     var sizeMatch = activeSize==='all'
       || (activeSize==='freesize' && item.dataset.cat==='bodysuit')
