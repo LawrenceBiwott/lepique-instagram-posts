@@ -15140,3 +15140,54 @@ continue appending new entries below as usual.
 [2026-09-25 04:51:21] Facebook Story posted! ID: 1117926360908712
 [2026-09-25 04:51:21] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
 [2026-09-25 04:51:21] All done. Final state saved.
+[2026-09-25 09:51:12] Peak hours check passed - Nairobi hour: 12.
+[2026-09-25 09:51:12] --- Starting Instagram + Facebook post ---
+[2026-09-25 09:51:13] Instagram token OK - account: @lepiquefashions (ID: 1889041611321657)
+[2026-09-25 09:51:13] Caption: 📍 G16 (Ground Floor) & B35 (Basement) – Platinum Plaza, Tom Mboya St, Nairobi
+📞 
+[2026-09-25 09:51:13] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-09-25 09:51:13] Media categories (12): ['photos/Bodysuits', 'photos/Cargo Jeans', 'photos/Flare Jeans', 'photos/Leather Jackets', 'photos/Mom jeans', 'photos/Printed Jeans', 'photos/Ripped Jeans', 'photos/Skinny Jeans', 'photos/Straight Jeans', 'photos/T-Shirts and Long-Sleeve Tops', 'photos/Wide Leg Jeans', 'videos']
+[2026-09-25 09:51:13] Selected from 'videos': lepique-video-24.mp4
+[2026-09-25 09:51:13] Selected media: lepique-video-24.mp4
+[2026-09-25 09:51:13] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/videos/lepique-video-24.mp4
+[2026-09-25 09:51:13] Uploading video/reel to Instagram...
+[2026-09-25 09:51:14] Waiting for Instagram processing...
+[2026-09-25 09:51:15] Container status: IN_PROGRESS
+[2026-09-25 09:51:22] Container status: IN_PROGRESS
+[2026-09-25 09:51:28] Container status: IN_PROGRESS
+[2026-09-25 09:51:35] Container status: IN_PROGRESS
+[2026-09-25 09:51:42] Container status: IN_PROGRESS
+[2026-09-25 09:51:48] Container status: IN_PROGRESS
+[2026-09-25 09:51:54] Container status: IN_PROGRESS
+[2026-09-25 09:52:01] Container status: IN_PROGRESS
+[2026-09-25 09:52:08] Container status: IN_PROGRESS
+[2026-09-25 09:52:14] Container status: IN_PROGRESS
+[2026-09-25 09:52:21] Container status: IN_PROGRESS
+[2026-09-25 09:52:27] Container status: IN_PROGRESS
+[2026-09-25 09:52:33] Container status: FINISHED
+[2026-09-25 09:52:43] Container ID: 18563134159073384
+[2026-09-25 09:52:58] Instagram feed post successful! ID: 17981963448095206
+[2026-09-25 09:52:58] State saved after Instagram post.
+[2026-09-25 09:52:58] Posting to Instagram Stories...
+[2026-09-25 09:53:00] Waiting for Instagram processing...
+[2026-09-25 09:53:02] Container status: IN_PROGRESS
+[2026-09-25 09:53:08] Container status: IN_PROGRESS
+[2026-09-25 09:53:14] Container status: IN_PROGRESS
+[2026-09-25 09:53:20] Container status: IN_PROGRESS
+[2026-09-25 09:53:27] Container status: IN_PROGRESS
+[2026-09-25 09:53:34] Container status: IN_PROGRESS
+[2026-09-25 09:53:40] Container status: IN_PROGRESS
+[2026-09-25 09:53:46] Container status: IN_PROGRESS
+[2026-09-25 09:53:53] Container status: IN_PROGRESS
+[2026-09-25 09:54:01] Container status: IN_PROGRESS
+[2026-09-25 09:54:07] Container status: IN_PROGRESS
+[2026-09-25 09:54:14] Container status: IN_PROGRESS
+[2026-09-25 09:54:19] Container status: IN_PROGRESS
+[2026-09-25 09:54:26] Container status: FINISHED
+[2026-09-25 09:54:58] Instagram Story posted! ID: 18110181572163460
+[2026-09-25 09:54:58] --- Posting to Facebook ---
+[2026-09-25 09:54:58] Uploading video to Facebook feed...
+[2026-09-25 09:55:10] Facebook feed post successful! ID: 29139075889031341
+[2026-09-25 09:55:10] Skipping Facebook Story for video (not supported via public URL).
+[2026-09-25 09:55:10] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
+[2026-09-25 09:55:10] All done. Final state saved.
