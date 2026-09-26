@@ -15266,3 +15266,34 @@ continue appending new entries below as usual.
 [2026-09-26 10:07:08] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
 [2026-09-26 10:07:08] All done. Final state saved.
 [2026-09-26 14:24:10] Skipping - current Nairobi time is 17:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-09-26 17:52:09] Peak hours check passed - Nairobi hour: 20.
+[2026-09-26 17:52:09] --- Starting Instagram + Facebook post ---
+[2026-09-26 17:52:09] Instagram token OK - account: @lepiquefashions (ID: 1889041611321657)
+[2026-09-26 17:52:09] Caption: 📍 G16 (Ground Floor) & B35 (Basement) – Platinum Plaza, Tom Mboya St, Nairobi
+📞 
+[2026-09-26 17:52:09] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-09-26 17:52:09] Media categories (12): ['photos/Bodysuits', 'photos/Cargo Jeans', 'photos/Flare Jeans', 'photos/Leather Jackets', 'photos/Mom jeans', 'photos/Printed Jeans', 'photos/Ripped Jeans', 'photos/Skinny Jeans', 'photos/Straight Jeans', 'photos/T-Shirts and Long-Sleeve Tops', 'photos/Wide Leg Jeans', 'videos']
+[2026-09-26 17:52:09] Selected from 'photos/Wide Leg Jeans': lepique-wide-leg-33-light-blue.jpeg
+[2026-09-26 17:52:09] Selected media: lepique-wide-leg-33-light-blue.jpeg
+[2026-09-26 17:52:09] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/Wide%20Leg%20Jeans/lepique-wide-leg-33-light-blue.jpeg
+[2026-09-26 17:52:09] Uploading image to Instagram...
+[2026-09-26 17:52:09] Alt text: Ladies light blue wide-leg jeans - Lepique Fashions Nairobi
+[2026-09-26 17:52:14] Waiting for Instagram processing...
+[2026-09-26 17:52:14] Container status: FINISHED
+[2026-09-26 17:52:24] Container ID: 18563519257073384
+[2026-09-26 17:52:27] Instagram feed post successful! ID: 17885171685652985
+[2026-09-26 17:52:27] State saved after Instagram post.
+[2026-09-26 17:52:28] Story image resized to 1080x1920 -> photos/story_temp.jpg
+[2026-09-26 17:52:29] Story URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/story_temp.jpg - waiting for GitHub Pages to deploy...
+[2026-09-26 17:53:30] Story image live after 60s.
+[2026-09-26 17:53:30] Posting to Instagram Stories...
+[2026-09-26 17:53:34] Waiting for Instagram processing...
+[2026-09-26 17:53:34] Container status: FINISHED
+[2026-09-26 17:53:48] Instagram Story posted! ID: 18128960743747253
+[2026-09-26 17:53:48] --- Posting to Facebook ---
+[2026-09-26 17:53:48] Uploading photo to Facebook feed...
+[2026-09-26 17:53:53] Facebook feed post successful! ID: 1889041611321657_1516449520518092
+[2026-09-26 17:53:53] Posting photo to Facebook Stories...
+[2026-09-26 17:53:57] Facebook Story posted! ID: 1620282629498745
+[2026-09-26 17:53:57] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
+[2026-09-26 17:53:57] All done. Final state saved.
