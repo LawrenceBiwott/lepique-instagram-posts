@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Full Catalogue – 98 Styles | Ladies Jeans, Tops & Jackets | Lepique Fashions Nairobi</title>
-  <meta name="description" content="Browse all 98 styles at Lepique Fashions — wide leg, skinny, flare, straight, ripped, cargo and printed jeans (sizes 27–42), crop tops, bodysuits, T-shirts and leather jackets. WhatsApp to order: 0721 672 900." />
+  <meta name="description" content="Browse all 129 styles at Lepique Fashions — wide leg, skinny, flare, straight, ripped, cargo and printed jeans (sizes 27–42), crop tops, bodysuits, T-shirts and leather jackets. WhatsApp to order: 0721 672 900." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://lepique.co.ke/catalogue.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -136,7 +136,7 @@
 <section class="cat-hero">
   <div class="tag">Lepique Fashions · Kenya</div>
   <h1>Full Catalogue</h1>
-  <p>Browse all 80+ styles. Filter by category, colour or size — then order in seconds on WhatsApp.</p>
+  <p>Browse all 129 styles. Filter by category, colour or size — then order in seconds on WhatsApp.</p>
 </section>
 
 <!-- FULL CATALOG -->
@@ -401,8 +401,24 @@ function applyFilters(){
 }
 function filterCat(cat,btn){
   activeCat=cat;
-  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+  activeColor='all';
+  activePriceFilter='all';
+  activeSize='all';
+  // Reset all filter-btn active states
+  document.querySelectorAll('.filter-btn').forEach(function(b){b.classList.remove('active');});
+  document.querySelectorAll('.color-btn').forEach(function(b){b.classList.remove('active');});
+  // Set active on clicked category button
   btn.classList.add('active');
+  // Re-activate All Colours button
+  document.querySelectorAll('.color-btn').forEach(function(b){
+    if((b.getAttribute('onclick')||'').indexOf('all')>=0){b.classList.add('active');}
+  });
+  // Re-activate All Prices and All Sizes buttons
+  document.querySelectorAll('.filter-btn').forEach(function(b){
+    var oc=b.getAttribute('onclick')||'';
+    if(oc.indexOf("filterPrice")>=0 && oc.indexOf("'all'")>=0){b.classList.add('active');}
+    if(oc.indexOf("filterSize")>=0 && oc.indexOf("'all'")>=0){b.classList.add('active');}
+  });
   applyFilters();
 }
 function filterColor(color,btn){
