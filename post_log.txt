@@ -15444,3 +15444,443 @@ continue appending new entries below as usual.
 [2026-09-29 07:00:16] Facebook Story posted! ID: 2012257909476698
 [2026-09-29 07:00:16] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
 [2026-09-29 07:00:16] All done. Final state saved.
+[2026-09-29 13:52:10] Skipping - current Nairobi time is 16:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-09-29 19:04:33] Skipping - current Nairobi time is 22:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-09-29 22:56:01] Skipping - current Nairobi time is 01:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-09-30 01:48:53] Skipping - current Nairobi time is 04:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-09-30 07:31:20] Skipping - current Nairobi time is 10:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-09-30 14:12:44] Skipping - current Nairobi time is 17:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-09-30 19:25:12] Skipping - current Nairobi time is 22:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-09-30 23:07:18] Skipping - current Nairobi time is 02:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-10-01 02:04:18] Skipping - current Nairobi time is 05:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-10-01 08:47:52] Skipping - current Nairobi time is 11:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-10-01 15:42:58] Peak hours check passed - Nairobi hour: 18.
+[2026-10-01 15:42:58] --- Starting Instagram + Facebook post ---
+[2026-10-01 15:42:59] Instagram token OK - account: @lepiquefashions (ID: 1889041611321657)
+[2026-10-01 15:42:59] Caption: 📍 G16 (Ground Floor) & B35 (Basement) – Platinum Plaza, Tom Mboya St, Nairobi
+📞 
+[2026-10-01 15:42:59] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-10-01 15:42:59] Media categories (13): ['photos/Bodysuits', 'photos/Cargo Jeans', 'photos/Flare Jeans', 'photos/Leather Jackets', 'photos/Mom jeans', 'photos/Printed Jeans', 'photos/Ripped Jeans', 'photos/Skinny Jeans', 'photos/Straight Jeans', 'photos/T-Shirts and Long-Sleeve Tops', 'photos/Three-quarter jeans', 'photos/Wide Leg Jeans', 'videos']
+[2026-10-01 15:42:59] Selected from 'photos/Wide Leg Jeans': WhatsApp Image 2026-09-22 at 08.17.027.jpeg
+[2026-10-01 15:42:59] Selected media: WhatsApp Image 2026-09-22 at 08.17.027.jpeg
+[2026-10-01 15:42:59] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/Wide%20Leg%20Jeans/WhatsApp%20Image%202026-09-22%20at%2008.17.027.jpeg
+[2026-10-01 15:42:59] Uploading image to Instagram...
+[2026-10-01 15:42:59] Alt text: Ladies ladies fashion - Lepique Fashions Nairobi
+[2026-10-01 15:43:04] Waiting for Instagram processing...
+[2026-10-01 15:43:04] Container status: FINISHED
+[2026-10-01 15:43:14] Container ID: 18564779812073384
+[2026-10-01 15:43:21] Instagram feed post successful! ID: 17953924599029858
+[2026-10-01 15:43:21] State saved after Instagram post.
+[2026-10-01 15:43:21] Story image resized to 1080x1920 -> photos/story_temp.jpg
+[2026-10-01 15:43:23] Story URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/story_temp.jpg - waiting for GitHub Pages to deploy...
+[2026-10-01 15:44:49] Story image live after 85s.
+[2026-10-01 15:44:49] Posting to Instagram Stories...
+[2026-10-01 15:44:52] Waiting for Instagram processing...
+[2026-10-01 15:44:53] Container status: FINISHED
+[2026-10-01 15:45:06] Instagram Story posted! ID: 18109176209047312
+[2026-10-01 15:45:06] --- Posting to Facebook ---
+[2026-10-01 15:45:06] Uploading photo to Facebook feed...
+[2026-10-01 15:45:11] Facebook feed post successful! ID: 1889041611321657_1521448550018189
+[2026-10-01 15:45:11] Posting photo to Facebook Stories...
+[2026-10-01 15:45:15] Facebook Story posted! ID: 984681743888246
+[2026-10-01 15:45:15] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
+[2026-10-01 15:45:15] All done. Final state saved.
+[2026-10-01 20:33:50] Skipping - current Nairobi time is 23:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-10-02 00:10:12] Skipping - current Nairobi time is 03:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-10-02 05:32:06] Peak hours check passed - Nairobi hour: 08.
+[2026-10-02 05:32:06] --- Starting Instagram + Facebook post ---
+[2026-10-02 05:32:07] Instagram token OK - account: @lepiquefashions (ID: 1889041611321657)
+[2026-10-02 05:32:07] Caption: 📍 G16 (Ground Floor) & B35 (Basement) – Platinum Plaza, Tom Mboya St, Nairobi
+📞 
+[2026-10-02 05:32:07] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-10-02 05:32:07] Media categories (13): ['photos/Bodysuits', 'photos/Cargo Jeans', 'photos/Flare Jeans', 'photos/Leather Jackets', 'photos/Mom jeans', 'photos/Printed Jeans', 'photos/Ripped Jeans', 'photos/Skinny Jeans', 'photos/Straight Jeans', 'photos/T-Shirts and Long-Sleeve Tops', 'photos/Three-quarter jeans', 'photos/Wide Leg Jeans', 'videos']
+[2026-10-02 05:32:07] Selected from 'videos': WhatsApp Video 2026-09-15 at 07.53.39.mp4
+[2026-10-02 05:32:07] Selected media: WhatsApp Video 2026-09-15 at 07.53.39.mp4
+[2026-10-02 05:32:07] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/videos/WhatsApp%20Video%202026-09-15%20at%2007.53.39.mp4
+[2026-10-02 05:32:07] Uploading video/reel to Instagram...
+[2026-10-02 05:32:08] Waiting for Instagram processing...
+[2026-10-02 05:32:09] Container status: IN_PROGRESS
+[2026-10-02 05:32:14] Container status: IN_PROGRESS
+[2026-10-02 05:32:20] Container status: FINISHED
+[2026-10-02 05:32:30] Container ID: 18564927070073384
+[2026-10-02 05:32:36] Instagram feed post successful! ID: 17896571070673134
+[2026-10-02 05:32:36] State saved after Instagram post.
+[2026-10-02 05:32:36] Posting to Instagram Stories...
+[2026-10-02 05:32:37] Waiting for Instagram processing...
+[2026-10-02 05:32:37] Container status: IN_PROGRESS
+[2026-10-02 05:32:42] Container status: IN_PROGRESS
+[2026-10-02 05:32:48] Container status: IN_PROGRESS
+[2026-10-02 05:32:53] Container status: IN_PROGRESS
+[2026-10-02 05:32:59] Container status: IN_PROGRESS
+[2026-10-02 05:33:04] Container status: IN_PROGRESS
+[2026-10-02 05:33:10] Container status: FINISHED
+[2026-10-02 05:33:26] Instagram Story posted! ID: 18130248848496189
+[2026-10-02 05:33:26] --- Posting to Facebook ---
+[2026-10-02 05:33:26] Uploading video to Facebook feed...
+[2026-10-02 05:33:31] Facebook feed post successful! ID: 1666051115131148
+[2026-10-02 05:33:31] Skipping Facebook Story for video (not supported via public URL).
+[2026-10-02 05:33:31] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
+[2026-10-02 05:33:31] All done. Final state saved.
+[2026-10-02 11:18:49] Peak hours check passed - Nairobi hour: 14.
+[2026-10-02 11:18:49] --- Starting Instagram + Facebook post ---
+[2026-10-02 11:18:49] Instagram token OK - account: @lepiquefashions (ID: 1889041611321657)
+[2026-10-02 11:18:49] Caption: 📍 G16 (Ground Floor) & B35 (Basement) – Platinum Plaza, Tom Mboya St, Nairobi
+📞 
+[2026-10-02 11:18:49] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-10-02 11:18:49] Media categories (13): ['photos/Bodysuits', 'photos/Cargo Jeans', 'photos/Flare Jeans', 'photos/Leather Jackets', 'photos/Mom jeans', 'photos/Printed Jeans', 'photos/Ripped Jeans', 'photos/Skinny Jeans', 'photos/Straight Jeans', 'photos/T-Shirts and Long-Sleeve Tops', 'photos/Three-quarter jeans', 'photos/Wide Leg Jeans', 'videos']
+[2026-10-02 11:18:49] Selected from 'photos/Flare Jeans': WhatsApp Image 2026-09-22 at 08.17.06.jpeg
+[2026-10-02 11:18:49] Selected media: WhatsApp Image 2026-09-22 at 08.17.06.jpeg
+[2026-10-02 11:18:49] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/Flare%20Jeans/WhatsApp%20Image%202026-09-22%20at%2008.17.06.jpeg
+[2026-10-02 11:18:49] Uploading image to Instagram...
+[2026-10-02 11:18:49] Alt text: Ladies ladies fashion - Lepique Fashions Nairobi
+[2026-10-02 11:18:54] Waiting for Instagram processing...
+[2026-10-02 11:18:54] Container status: FINISHED
+[2026-10-02 11:19:04] Container ID: 18564980656073384
+[2026-10-02 11:19:13] Instagram feed post successful! ID: 18029692259687554
+[2026-10-02 11:19:13] State saved after Instagram post.
+[2026-10-02 11:19:14] Story image resized to 1080x1920 -> photos/story_temp.jpg
+[2026-10-02 11:19:16] Story URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/story_temp.jpg - waiting for GitHub Pages to deploy...
+[2026-10-02 11:20:32] Story image live after 75s.
+[2026-10-02 11:20:32] Posting to Instagram Stories...
+[2026-10-02 11:20:38] Waiting for Instagram processing...
+[2026-10-02 11:20:39] Container status: FINISHED
+[2026-10-02 11:20:53] Instagram Story posted! ID: 18158953261502277
+[2026-10-02 11:20:53] --- Posting to Facebook ---
+[2026-10-02 11:20:53] Uploading photo to Facebook feed...
+[2026-10-02 11:20:58] Facebook feed post successful! ID: 1889041611321657_1522338946595816
+[2026-10-02 11:20:58] Posting photo to Facebook Stories...
+[2026-10-02 11:21:04] Facebook Story posted! ID: 1036896908915181
+[2026-10-02 11:21:04] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
+[2026-10-02 11:21:04] All done. Final state saved.
+[2026-10-02 16:42:03] Peak hours check passed - Nairobi hour: 19.
+[2026-10-02 16:42:03] --- Starting Instagram + Facebook post ---
+[2026-10-02 16:42:04] Instagram token OK - account: @lepiquefashions (ID: 1889041611321657)
+[2026-10-02 16:42:04] Caption: 📍 G16 (Ground Floor) & B35 (Basement) – Platinum Plaza, Tom Mboya St, Nairobi
+📞 
+[2026-10-02 16:42:04] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-10-02 16:42:04] Media categories (13): ['photos/Bodysuits', 'photos/Cargo Jeans', 'photos/Flare Jeans', 'photos/Leather Jackets', 'photos/Mom jeans', 'photos/Printed Jeans', 'photos/Ripped Jeans', 'photos/Skinny Jeans', 'photos/Straight Jeans', 'photos/T-Shirts and Long-Sleeve Tops', 'photos/Three-quarter jeans', 'photos/Wide Leg Jeans', 'videos']
+[2026-10-02 16:42:04] Selected from 'photos/Mom jeans': WhatsApp Image 2026-09-18 at 04.19.36.jpeg
+[2026-10-02 16:42:04] Selected media: WhatsApp Image 2026-09-18 at 04.19.36.jpeg
+[2026-10-02 16:42:04] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/Mom%20jeans/WhatsApp%20Image%202026-09-18%20at%2004.19.36.jpeg
+[2026-10-02 16:42:04] Uploading image to Instagram...
+[2026-10-02 16:42:04] Alt text: Ladies ladies fashion - Lepique Fashions Nairobi
+[2026-10-02 16:42:10] Waiting for Instagram processing...
+[2026-10-02 16:42:11] Container status: IN_PROGRESS
+[2026-10-02 16:42:16] Container status: FINISHED
+[2026-10-02 16:42:26] Container ID: 18565062238073384
+[2026-10-02 16:42:29] Instagram feed post successful! ID: 18130589113613693
+[2026-10-02 16:42:29] State saved after Instagram post.
+[2026-10-02 16:42:29] Story image resized to 1080x1920 -> photos/story_temp.jpg
+[2026-10-02 16:42:31] Story URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/story_temp.jpg - waiting for GitHub Pages to deploy...
+[2026-10-02 16:43:47] Story image live after 75s.
+[2026-10-02 16:43:47] Posting to Instagram Stories...
+[2026-10-02 16:43:52] Waiting for Instagram processing...
+[2026-10-02 16:43:52] Container status: IN_PROGRESS
+[2026-10-02 16:43:57] Container status: FINISHED
+[2026-10-02 16:44:10] Instagram Story posted! ID: 18620112058063343
+[2026-10-02 16:44:10] --- Posting to Facebook ---
+[2026-10-02 16:44:10] Uploading photo to Facebook feed...
+[2026-10-02 16:44:15] Facebook feed post successful! ID: 1889041611321657_1522634303232947
+[2026-10-02 16:44:15] Posting photo to Facebook Stories...
+[2026-10-02 16:44:20] Facebook Story posted! ID: 1099444602464369
+[2026-10-02 16:44:20] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
+[2026-10-02 16:44:20] All done. Final state saved.
+[2026-10-02 21:02:04] Skipping - current Nairobi time is 00:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-10-03 00:25:14] Skipping - current Nairobi time is 03:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-10-03 05:33:15] Peak hours check passed - Nairobi hour: 08.
+[2026-10-03 05:33:15] --- Starting Instagram + Facebook post ---
+[2026-10-03 05:33:15] Instagram token OK - account: @lepiquefashions (ID: 1889041611321657)
+[2026-10-03 05:33:15] Caption: 📍 G16 (Ground Floor) & B35 (Basement) – Platinum Plaza, Tom Mboya St, Nairobi
+📞 
+[2026-10-03 05:33:15] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-10-03 05:33:15] Media categories (13): ['photos/Bodysuits', 'photos/Cargo Jeans', 'photos/Flare Jeans', 'photos/Leather Jackets', 'photos/Mom jeans', 'photos/Printed Jeans', 'photos/Ripped Jeans', 'photos/Skinny Jeans', 'photos/Straight Jeans', 'photos/T-Shirts and Long-Sleeve Tops', 'photos/Three-quarter jeans', 'photos/Wide Leg Jeans', 'videos']
+[2026-10-03 05:33:15] Selected from 'photos/Ripped Jeans': WhatsApp Image 2026-09-18 at 04.47.05.jpeg
+[2026-10-03 05:33:15] Selected media: WhatsApp Image 2026-09-18 at 04.47.05.jpeg
+[2026-10-03 05:33:15] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/Ripped%20Jeans/WhatsApp%20Image%202026-09-18%20at%2004.47.05.jpeg
+[2026-10-03 05:33:15] Uploading image to Instagram...
+[2026-10-03 05:33:15] Alt text: Ladies ladies fashion - Lepique Fashions Nairobi
+[2026-10-03 05:33:20] Waiting for Instagram processing...
+[2026-10-03 05:33:20] Container status: FINISHED
+[2026-10-03 05:33:30] Container ID: 18565199974073384
+[2026-10-03 05:33:33] Instagram feed post successful! ID: 17887919226476582
+[2026-10-03 05:33:33] State saved after Instagram post.
+[2026-10-03 05:33:33] Story image resized to 1080x1920 -> photos/story_temp.jpg
+[2026-10-03 05:33:35] Story URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/story_temp.jpg - waiting for GitHub Pages to deploy...
+[2026-10-03 05:34:41] Story image live after 65s.
+[2026-10-03 05:34:41] Posting to Instagram Stories...
+[2026-10-03 05:34:45] Waiting for Instagram processing...
+[2026-10-03 05:34:46] Container status: FINISHED
+[2026-10-03 05:35:00] Instagram Story posted! ID: 18488960407128927
+[2026-10-03 05:35:00] --- Posting to Facebook ---
+[2026-10-03 05:35:00] Uploading photo to Facebook feed...
+[2026-10-03 05:35:07] Facebook feed post successful! ID: 1889041611321657_1523147366514974
+[2026-10-03 05:35:07] Posting photo to Facebook Stories...
+[2026-10-03 05:35:13] Facebook Story posted! ID: 1130817822616214
+[2026-10-03 05:35:13] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
+[2026-10-03 05:35:13] All done. Final state saved.
+[2026-10-03 10:34:55] Peak hours check passed - Nairobi hour: 13.
+[2026-10-03 10:34:55] --- Starting Instagram + Facebook post ---
+[2026-10-03 10:34:56] Instagram token OK - account: @lepiquefashions (ID: 1889041611321657)
+[2026-10-03 10:34:56] Caption: 📍 G16 (Ground Floor) & B35 (Basement) – Platinum Plaza, Tom Mboya St, Nairobi
+📞 
+[2026-10-03 10:34:56] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-10-03 10:34:56] Media categories (13): ['photos/Bodysuits', 'photos/Cargo Jeans', 'photos/Flare Jeans', 'photos/Leather Jackets', 'photos/Mom jeans', 'photos/Printed Jeans', 'photos/Ripped Jeans', 'photos/Skinny Jeans', 'photos/Straight Jeans', 'photos/T-Shirts and Long-Sleeve Tops', 'photos/Three-quarter jeans', 'photos/Wide Leg Jeans', 'videos']
+[2026-10-03 10:34:56] Selected from 'photos/Skinny Jeans': WhatsApp Image 2026-09-22 at 08.17.037.jpeg
+[2026-10-03 10:34:56] Selected media: WhatsApp Image 2026-09-22 at 08.17.037.jpeg
+[2026-10-03 10:34:56] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/Skinny%20Jeans/WhatsApp%20Image%202026-09-22%20at%2008.17.037.jpeg
+[2026-10-03 10:34:56] Uploading image to Instagram...
+[2026-10-03 10:34:56] Alt text: Ladies ladies fashion - Lepique Fashions Nairobi
+[2026-10-03 10:35:01] Waiting for Instagram processing...
+[2026-10-03 10:35:01] Container status: FINISHED
+[2026-10-03 10:35:11] Container ID: 18565251607073384
+[2026-10-03 10:35:14] Instagram feed post successful! ID: 18449789701125608
+[2026-10-03 10:35:14] State saved after Instagram post.
+[2026-10-03 10:35:14] Story image resized to 1080x1920 -> photos/story_temp.jpg
+[2026-10-03 10:35:16] Story URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/story_temp.jpg - waiting for GitHub Pages to deploy...
+[2026-10-03 10:36:17] Story image live after 60s.
+[2026-10-03 10:36:17] Posting to Instagram Stories...
+[2026-10-03 10:36:21] Waiting for Instagram processing...
+[2026-10-03 10:36:21] Container status: IN_PROGRESS
+[2026-10-03 10:36:27] Container status: FINISHED
+[2026-10-03 10:36:40] Instagram Story posted! ID: 18343007836281547
+[2026-10-03 10:36:40] --- Posting to Facebook ---
+[2026-10-03 10:36:40] Uploading photo to Facebook feed...
+[2026-10-03 10:36:45] Facebook feed post successful! ID: 1889041611321657_1523338869829157
+[2026-10-03 10:36:45] Posting photo to Facebook Stories...
+[2026-10-03 10:36:50] Facebook Story posted! ID: 1588990342171995
+[2026-10-03 10:36:50] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
+[2026-10-03 10:36:50] All done. Final state saved.
+[2026-10-03 14:51:55] Skipping - current Nairobi time is 17:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-10-03 18:30:11] Peak hours check passed - Nairobi hour: 21.
+[2026-10-03 18:30:11] --- Starting Instagram + Facebook post ---
+[2026-10-03 18:30:12] Instagram token OK - account: @lepiquefashions (ID: 1889041611321657)
+[2026-10-03 18:30:12] Caption: 📍 G16 (Ground Floor) & B35 (Basement) – Platinum Plaza, Tom Mboya St, Nairobi
+📞 
+[2026-10-03 18:30:12] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-10-03 18:30:12] Media categories (13): ['photos/Bodysuits', 'photos/Cargo Jeans', 'photos/Flare Jeans', 'photos/Leather Jackets', 'photos/Mom jeans', 'photos/Printed Jeans', 'photos/Ripped Jeans', 'photos/Skinny Jeans', 'photos/Straight Jeans', 'photos/T-Shirts and Long-Sleeve Tops', 'photos/Three-quarter jeans', 'photos/Wide Leg Jeans', 'videos']
+[2026-10-03 18:30:12] Selected from 'photos/Straight Jeans': WhatsApp Image 2026-09-22 at 15.26.04.jpeg
+[2026-10-03 18:30:12] Selected media: WhatsApp Image 2026-09-22 at 15.26.04.jpeg
+[2026-10-03 18:30:12] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/Straight%20Jeans/WhatsApp%20Image%202026-09-22%20at%2015.26.04.jpeg
+[2026-10-03 18:30:12] Uploading image to Instagram...
+[2026-10-03 18:30:12] Alt text: Ladies ladies fashion - Lepique Fashions Nairobi
+[2026-10-03 18:30:18] Waiting for Instagram processing...
+[2026-10-03 18:30:18] Container status: IN_PROGRESS
+[2026-10-03 18:30:23] Container status: FINISHED
+[2026-10-03 18:30:33] Container ID: 18565360219073384
+[2026-10-03 18:30:37] Instagram feed post successful! ID: 18643694197028710
+[2026-10-03 18:30:37] State saved after Instagram post.
+[2026-10-03 18:30:37] Story image resized to 1080x1920 -> photos/story_temp.jpg
+[2026-10-03 18:30:39] Story URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/story_temp.jpg - waiting for GitHub Pages to deploy...
+[2026-10-03 18:31:55] Story image live after 75s.
+[2026-10-03 18:31:55] Posting to Instagram Stories...
+[2026-10-03 18:31:58] Waiting for Instagram processing...
+[2026-10-03 18:31:58] Container status: FINISHED
+[2026-10-03 18:32:11] Instagram Story posted! ID: 18176764597384827
+[2026-10-03 18:32:11] --- Posting to Facebook ---
+[2026-10-03 18:32:11] Uploading photo to Facebook feed...
+[2026-10-03 18:32:17] Facebook feed post successful! ID: 1889041611321657_1523690816460629
+[2026-10-03 18:32:17] Posting photo to Facebook Stories...
+[2026-10-03 18:32:22] Facebook Story posted! ID: 1118190277325084
+[2026-10-03 18:32:22] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
+[2026-10-03 18:32:22] All done. Final state saved.
+[2026-10-03 21:41:07] Skipping - current Nairobi time is 00:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-10-04 00:06:26] Skipping - current Nairobi time is 03:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-10-04 05:44:28] Peak hours check passed - Nairobi hour: 08.
+[2026-10-04 05:44:28] --- Starting Instagram + Facebook post ---
+[2026-10-04 05:44:29] Instagram token OK - account: @lepiquefashions (ID: 1889041611321657)
+[2026-10-04 05:44:29] Caption: 📍 G16 (Ground Floor) & B35 (Basement) – Platinum Plaza, Tom Mboya St, Nairobi
+📞 
+[2026-10-04 05:44:29] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-10-04 05:44:29] Media categories (13): ['photos/Bodysuits', 'photos/Cargo Jeans', 'photos/Flare Jeans', 'photos/Leather Jackets', 'photos/Mom jeans', 'photos/Printed Jeans', 'photos/Ripped Jeans', 'photos/Skinny Jeans', 'photos/Straight Jeans', 'photos/T-Shirts and Long-Sleeve Tops', 'photos/Three-quarter jeans', 'photos/Wide Leg Jeans', 'videos']
+[2026-10-04 05:44:29] Selected from 'photos/Three-quarter jeans': WhatsApp Image 2026-09-26 at 13.06.23 (1).jpeg
+[2026-10-04 05:44:29] Selected media: WhatsApp Image 2026-09-26 at 13.06.23 (1).jpeg
+[2026-10-04 05:44:29] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/Three-quarter%20jeans/WhatsApp%20Image%202026-09-26%20at%2013.06.23%20%281%29.jpeg
+[2026-10-04 05:44:29] Uploading image to Instagram...
+[2026-10-04 05:44:29] Alt text: Ladies ladies fashion - Lepique Fashions Nairobi
+[2026-10-04 05:44:35] Waiting for Instagram processing...
+[2026-10-04 05:44:35] Container status: FINISHED
+[2026-10-04 05:44:45] Container ID: 18565498219073384
+[2026-10-04 05:44:49] Instagram feed post successful! ID: 18207463894370459
+[2026-10-04 05:44:49] State saved after Instagram post.
+[2026-10-04 05:44:49] Story image resized to 1080x1920 -> photos/story_temp.jpg
+[2026-10-04 05:44:51] Story URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/story_temp.jpg - waiting for GitHub Pages to deploy...
+[2026-10-04 05:45:57] Story image live after 65s.
+[2026-10-04 05:45:57] Posting to Instagram Stories...
+[2026-10-04 05:46:01] Waiting for Instagram processing...
+[2026-10-04 05:46:01] Container status: FINISHED
+[2026-10-04 05:46:14] Instagram Story posted! ID: 18134343316566049
+[2026-10-04 05:46:14] --- Posting to Facebook ---
+[2026-10-04 05:46:14] Uploading photo to Facebook feed...
+[2026-10-04 05:46:18] Facebook feed post successful! ID: 1889041611321657_1524075316422179
+[2026-10-04 05:46:18] Posting photo to Facebook Stories...
+[2026-10-04 05:46:22] Facebook Story posted! ID: 2139769650757951
+[2026-10-04 05:46:22] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
+[2026-10-04 05:46:22] All done. Final state saved.
+[2026-10-04 11:19:37] Peak hours check passed - Nairobi hour: 14.
+[2026-10-04 11:19:37] --- Starting Instagram + Facebook post ---
+[2026-10-04 11:19:37] Instagram token OK - account: @lepiquefashions (ID: 1889041611321657)
+[2026-10-04 11:19:37] Caption: 📍 G16 (Ground Floor) & B35 (Basement) – Platinum Plaza, Tom Mboya St, Nairobi
+📞 
+[2026-10-04 11:19:37] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-10-04 11:19:37] Media categories (13): ['photos/Bodysuits', 'photos/Cargo Jeans', 'photos/Flare Jeans', 'photos/Leather Jackets', 'photos/Mom jeans', 'photos/Printed Jeans', 'photos/Ripped Jeans', 'photos/Skinny Jeans', 'photos/Straight Jeans', 'photos/T-Shirts and Long-Sleeve Tops', 'photos/Three-quarter jeans', 'photos/Wide Leg Jeans', 'videos']
+[2026-10-04 11:19:37] Selected from 'photos/Wide Leg Jeans': WhatsApp Image 2026-09-22 at 08.17.0327.jpeg
+[2026-10-04 11:19:37] Selected media: WhatsApp Image 2026-09-22 at 08.17.0327.jpeg
+[2026-10-04 11:19:37] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/Wide%20Leg%20Jeans/WhatsApp%20Image%202026-09-22%20at%2008.17.0327.jpeg
+[2026-10-04 11:19:37] Uploading image to Instagram...
+[2026-10-04 11:19:37] Alt text: Ladies ladies fashion - Lepique Fashions Nairobi
+[2026-10-04 11:19:41] Waiting for Instagram processing...
+[2026-10-04 11:19:41] Container status: FINISHED
+[2026-10-04 11:19:51] Container ID: 18565560430073384
+[2026-10-04 11:19:59] Instagram feed post successful! ID: 18097232942560405
+[2026-10-04 11:19:59] State saved after Instagram post.
+[2026-10-04 11:19:59] Story image resized to 1080x1920 -> photos/story_temp.jpg
+[2026-10-04 11:20:01] Story URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/story_temp.jpg - waiting for GitHub Pages to deploy...
+[2026-10-04 11:21:07] Story image live after 65s.
+[2026-10-04 11:21:07] Posting to Instagram Stories...
+[2026-10-04 11:21:11] Waiting for Instagram processing...
+[2026-10-04 11:21:13] Container status: FINISHED
+[2026-10-04 11:21:28] Instagram Story posted! ID: 18125662567799889
+[2026-10-04 11:21:28] --- Posting to Facebook ---
+[2026-10-04 11:21:28] Uploading photo to Facebook feed...
+[2026-10-04 11:21:38] Facebook feed post successful! ID: 1889041611321657_1524293369733707
+[2026-10-04 11:21:38] Posting photo to Facebook Stories...
+[2026-10-04 11:21:45] Facebook Story posted! ID: 1423710469734331
+[2026-10-04 11:21:45] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
+[2026-10-04 11:21:45] All done. Final state saved.
+[2026-10-04 15:51:24] Peak hours check passed - Nairobi hour: 18.
+[2026-10-04 15:51:24] --- Starting Instagram + Facebook post ---
+[2026-10-04 15:51:24] Instagram token OK - account: @lepiquefashions (ID: 1889041611321657)
+[2026-10-04 15:51:24] Caption: 📍 G16 (Ground Floor) & B35 (Basement) – Platinum Plaza, Tom Mboya St, Nairobi
+📞 
+[2026-10-04 15:51:24] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-10-04 15:51:24] Media categories (13): ['photos/Bodysuits', 'photos/Cargo Jeans', 'photos/Flare Jeans', 'photos/Leather Jackets', 'photos/Mom jeans', 'photos/Printed Jeans', 'photos/Ripped Jeans', 'photos/Skinny Jeans', 'photos/Straight Jeans', 'photos/T-Shirts and Long-Sleeve Tops', 'photos/Three-quarter jeans', 'photos/Wide Leg Jeans', 'videos']
+[2026-10-04 15:51:24] Selected from 'videos': WhatsApp Video 2026-09-18 at 07.50.07.mp4
+[2026-10-04 15:51:24] Selected media: WhatsApp Video 2026-09-18 at 07.50.07.mp4
+[2026-10-04 15:51:24] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/videos/WhatsApp%20Video%202026-09-18%20at%2007.50.07.mp4
+[2026-10-04 15:51:24] Uploading video/reel to Instagram...
+[2026-10-04 15:51:25] Waiting for Instagram processing...
+[2026-10-04 15:51:25] Container status: IN_PROGRESS
+[2026-10-04 15:51:31] Container status: IN_PROGRESS
+[2026-10-04 15:51:36] Container status: IN_PROGRESS
+[2026-10-04 15:51:41] Container status: IN_PROGRESS
+[2026-10-04 15:51:47] Container status: IN_PROGRESS
+[2026-10-04 15:51:52] Container status: FINISHED
+[2026-10-04 15:52:02] Container ID: 18565621993073384
+[2026-10-04 15:52:12] Instagram feed post successful! ID: 18111650762158319
+[2026-10-04 15:52:12] State saved after Instagram post.
+[2026-10-04 15:52:12] Posting to Instagram Stories...
+[2026-10-04 15:52:13] Waiting for Instagram processing...
+[2026-10-04 15:52:13] Container status: IN_PROGRESS
+[2026-10-04 15:52:19] Container status: IN_PROGRESS
+[2026-10-04 15:52:24] Container status: IN_PROGRESS
+[2026-10-04 15:52:30] Container status: IN_PROGRESS
+[2026-10-04 15:52:35] Container status: IN_PROGRESS
+[2026-10-04 15:52:40] Container status: FINISHED
+[2026-10-04 15:52:58] Instagram Story posted! ID: 18059667827570618
+[2026-10-04 15:52:58] --- Posting to Facebook ---
+[2026-10-04 15:52:58] Uploading video to Facebook feed...
+[2026-10-04 15:53:02] Facebook feed post successful! ID: 872673579173830
+[2026-10-04 15:53:02] Skipping Facebook Story for video (not supported via public URL).
+[2026-10-04 15:53:02] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
+[2026-10-04 15:53:02] All done. Final state saved.
+[2026-10-04 18:57:59] Peak hours check passed - Nairobi hour: 21.
+[2026-10-04 18:57:59] --- Starting Instagram + Facebook post ---
+[2026-10-04 18:57:59] Instagram token OK - account: @lepiquefashions (ID: 1889041611321657)
+[2026-10-04 18:57:59] Caption: 📍 G16 (Ground Floor) & B35 (Basement) – Platinum Plaza, Tom Mboya St, Nairobi
+📞 
+[2026-10-04 18:57:59] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-10-04 18:57:59] Media categories (13): ['photos/Bodysuits', 'photos/Cargo Jeans', 'photos/Flare Jeans', 'photos/Leather Jackets', 'photos/Mom jeans', 'photos/Printed Jeans', 'photos/Ripped Jeans', 'photos/Skinny Jeans', 'photos/Straight Jeans', 'photos/T-Shirts and Long-Sleeve Tops', 'photos/Three-quarter jeans', 'photos/Wide Leg Jeans', 'videos']
+[2026-10-04 18:57:59] Selected from 'photos/Flare Jeans': WhatsApp Image 2026-09-22 at 08.17.07.jpeg
+[2026-10-04 18:57:59] Selected media: WhatsApp Image 2026-09-22 at 08.17.07.jpeg
+[2026-10-04 18:57:59] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/Flare%20Jeans/WhatsApp%20Image%202026-09-22%20at%2008.17.07.jpeg
+[2026-10-04 18:57:59] Uploading image to Instagram...
+[2026-10-04 18:57:59] Alt text: Ladies ladies fashion - Lepique Fashions Nairobi
+[2026-10-04 18:58:03] Waiting for Instagram processing...
+[2026-10-04 18:58:03] Container status: FINISHED
+[2026-10-04 18:58:13] Container ID: 18565665721073384
+[2026-10-04 18:58:16] Instagram feed post successful! ID: 17907120777328678
+[2026-10-04 18:58:16] State saved after Instagram post.
+[2026-10-04 18:58:16] Story image resized to 1080x1920 -> photos/story_temp.jpg
+[2026-10-04 18:58:18] Story URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/story_temp.jpg - waiting for GitHub Pages to deploy...
+[2026-10-04 18:59:19] Story image live after 60s.
+[2026-10-04 18:59:19] Posting to Instagram Stories...
+[2026-10-04 18:59:22] Waiting for Instagram processing...
+[2026-10-04 18:59:23] Container status: IN_PROGRESS
+[2026-10-04 18:59:28] Container status: FINISHED
+[2026-10-04 18:59:41] Instagram Story posted! ID: 18089771699236959
+[2026-10-04 18:59:41] --- Posting to Facebook ---
+[2026-10-04 18:59:41] Uploading photo to Facebook feed...
+[2026-10-04 18:59:46] Facebook feed post successful! ID: 1889041611321657_1524660453030332
+[2026-10-04 18:59:46] Posting photo to Facebook Stories...
+[2026-10-04 18:59:51] Facebook Story posted! ID: 3532662233573807
+[2026-10-04 18:59:51] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
+[2026-10-04 18:59:51] All done. Final state saved.
+[2026-10-04 22:13:45] Skipping - current Nairobi time is 01:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-10-05 00:59:28] Skipping - current Nairobi time is 03:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-10-05 06:45:40] Peak hours check passed - Nairobi hour: 09.
+[2026-10-05 06:45:40] --- Starting Instagram + Facebook post ---
+[2026-10-05 06:45:40] Instagram token OK - account: @lepiquefashions (ID: 1889041611321657)
+[2026-10-05 06:45:40] Caption: 📍 G16 (Ground Floor) & B35 (Basement) – Platinum Plaza, Tom Mboya St, Nairobi
+📞 
+[2026-10-05 06:45:40] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-10-05 06:45:40] Media categories (13): ['photos/Bodysuits', 'photos/Cargo Jeans', 'photos/Flare Jeans', 'photos/Leather Jackets', 'photos/Mom jeans', 'photos/Printed Jeans', 'photos/Ripped Jeans', 'photos/Skinny Jeans', 'photos/Straight Jeans', 'photos/T-Shirts and Long-Sleeve Tops', 'photos/Three-quarter jeans', 'photos/Wide Leg Jeans', 'videos']
+[2026-10-05 06:45:40] Selected from 'photos/Mom jeans': WhatsApp Image 2026-09-18 at 04.19.37 (1).jpeg
+[2026-10-05 06:45:40] Selected media: WhatsApp Image 2026-09-18 at 04.19.37 (1).jpeg
+[2026-10-05 06:45:40] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/Mom%20jeans/WhatsApp%20Image%202026-09-18%20at%2004.19.37%20%281%29.jpeg
+[2026-10-05 06:45:40] Uploading image to Instagram...
+[2026-10-05 06:45:40] Alt text: Ladies ladies fashion - Lepique Fashions Nairobi
+[2026-10-05 06:45:44] Waiting for Instagram processing...
+[2026-10-05 06:45:44] Container status: IN_PROGRESS
+[2026-10-05 06:45:50] Container status: FINISHED
+[2026-10-05 06:46:00] Container ID: 18565787815073384
+[2026-10-05 06:46:02] Instagram feed post successful! ID: 18346270639249316
+[2026-10-05 06:46:02] State saved after Instagram post.
+[2026-10-05 06:46:02] Story image resized to 1080x1920 -> photos/story_temp.jpg
+[2026-10-05 06:46:04] Story URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/story_temp.jpg - waiting for GitHub Pages to deploy...
+[2026-10-05 06:47:10] Story image live after 65s.
+[2026-10-05 06:47:10] Posting to Instagram Stories...
+[2026-10-05 06:47:13] Waiting for Instagram processing...
+[2026-10-05 06:47:13] Container status: IN_PROGRESS
+[2026-10-05 06:47:19] Container status: FINISHED
+[2026-10-05 06:47:32] Instagram Story posted! ID: 18126789797499507
+[2026-10-05 06:47:32] --- Posting to Facebook ---
+[2026-10-05 06:47:32] Uploading photo to Facebook feed...
+[2026-10-05 06:47:37] Facebook feed post successful! ID: 1889041611321657_1525067479656296
+[2026-10-05 06:47:37] Posting photo to Facebook Stories...
+[2026-10-05 06:47:42] Facebook Story posted! ID: 967694469220476
+[2026-10-05 06:47:42] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
+[2026-10-05 06:47:42] All done. Final state saved.
+[2026-10-05 15:18:52] Peak hours check passed - Nairobi hour: 18.
+[2026-10-05 15:18:52] --- Starting Instagram + Facebook post ---
+[2026-10-05 15:18:53] Instagram token OK - account: @lepiquefashions (ID: 1889041611321657)
+[2026-10-05 15:18:53] Caption: 📍 G16 (Ground Floor) & B35 (Basement) – Platinum Plaza, Tom Mboya St, Nairobi
+📞 
+[2026-10-05 15:18:53] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-10-05 15:18:53] Media categories (13): ['photos/Bodysuits', 'photos/Cargo Jeans', 'photos/Flare Jeans', 'photos/Leather Jackets', 'photos/Mom jeans', 'photos/Printed Jeans', 'photos/Ripped Jeans', 'photos/Skinny Jeans', 'photos/Straight Jeans', 'photos/T-Shirts and Long-Sleeve Tops', 'photos/Three-quarter jeans', 'photos/Wide Leg Jeans', 'videos']
+[2026-10-05 15:18:53] Selected from 'photos/Ripped Jeans': WhatsApp Image 2026-09-18 at 07.28.09.jpeg
+[2026-10-05 15:18:53] Selected media: WhatsApp Image 2026-09-18 at 07.28.09.jpeg
+[2026-10-05 15:18:53] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/Ripped%20Jeans/WhatsApp%20Image%202026-09-18%20at%2007.28.09.jpeg
+[2026-10-05 15:18:53] Uploading image to Instagram...
+[2026-10-05 15:18:53] Alt text: Ladies ladies fashion - Lepique Fashions Nairobi
+[2026-10-05 15:18:58] Waiting for Instagram processing...
+[2026-10-05 15:18:59] Container status: IN_PROGRESS
+[2026-10-05 15:19:04] Container status: FINISHED
+[2026-10-05 15:19:14] Container ID: 18565886995073384
+[2026-10-05 15:19:19] Instagram feed post successful! ID: 18142762231590131
+[2026-10-05 15:19:19] State saved after Instagram post.
+[2026-10-05 15:19:19] Story image resized to 1080x1920 -> photos/story_temp.jpg
+[2026-10-05 15:19:23] Story URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/story_temp.jpg - waiting for GitHub Pages to deploy...
+[2026-10-05 15:20:39] Story image live after 75s.
+[2026-10-05 15:20:39] Posting to Instagram Stories...
+[2026-10-05 15:20:43] Waiting for Instagram processing...
+[2026-10-05 15:20:44] Container status: IN_PROGRESS
+[2026-10-05 15:20:50] Container status: FINISHED
+[2026-10-05 15:21:03] Instagram Story posted! ID: 18395614972204219
+[2026-10-05 15:21:03] --- Posting to Facebook ---
+[2026-10-05 15:21:03] Uploading photo to Facebook feed...
+[2026-10-05 15:21:10] Facebook feed post successful! ID: 1889041611321657_1525433709619673
+[2026-10-05 15:21:10] Posting photo to Facebook Stories...
+[2026-10-05 15:21:15] Facebook Story posted! ID: 1662160895491624
+[2026-10-05 15:21:15] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
+[2026-10-05 15:21:15] All done. Final state saved.
+[2026-10-05 22:04:14] Skipping - current Nairobi time is 01:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
