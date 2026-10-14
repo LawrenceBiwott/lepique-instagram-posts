@@ -1,10 +1,10 @@
 name: Instagram Auto-Poster
 
 on:
-  schedule:
-    # Runs every 10 min — script skips if posted within last 55 min
-    - cron: "*/10 * * * *"
-
+        schedule:
+        # Runs every 5 min (GitHub's minimum supported interval) — script skips if posted within last 20 min
+          - cron: "*/5 * * * *"
+    
   workflow_dispatch:
     inputs:
       force_post:
