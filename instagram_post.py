@@ -61,7 +61,7 @@ TIKTOK_BASE_URL = "https://open.tiktokapis.com/v2"
 TIKTOK_CHUNK_SIZE = 10 * 1024 * 1024  # 10 MB per chunk
 
 # Minimum minutes between posts (prevents double-posting when cron runs every 10 min)
-MIN_POST_INTERVAL_MINUTES = 55
+MIN_POST_INTERVAL_MINUTES = 30
 
 # Set to 'true' via workflow_dispatch input to bypass the interval guard
 FORCE_POST = os.environ.get("FORCE_POST", "false").strip().lower() == "true"
