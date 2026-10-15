@@ -5,7 +5,7 @@ and Facebook Page feed & Stories.
 (TikTok posting disabled — re-enable by setting TIKTOK_ENABLED=true after app audit approval)
 """
 import os
-import json
+import json; import random
 import time
 import subprocess
 import requests
@@ -178,7 +178,7 @@ def get_next_media(state):
             name, folder, exts = buckets[idx]
             candidates = [f for f in files_in(folder, exts) if f.name not in posted]
             if candidates:
-                selected = candidates[0]
+                selected = random.choice(candidates)
                 posted.add(selected.name)
                 state["posted_files"] = list(posted)
                 state["media_category_index"] = (idx + 1) % len(buckets)
@@ -190,7 +190,7 @@ def get_next_media(state):
         name, folder, exts = buckets[start_index]
         files = files_in(folder, exts)
         if files:
-            selected = files[0]
+            selected = random.choice(files)
             posted.add(selected.name)
             state["posted_files"] = list(posted)
             state["media_category_index"] = (start_index + 1) % len(buckets)
@@ -208,11 +208,11 @@ def get_next_media(state):
         log("No supported media files found in media/")
         return None
 
-    selected = next((f for f in all_files if f.name not in posted), None)
+    selected = (lambda c: random.choice(c) if c else None)([f for f in all_files if f.name not in posted])
     if selected is None:
         log(f"All {len(all_files)} files posted - resetting cycle, starting from newest.")
         posted = set()
-        selected = all_files[0]
+        selected = random.choice(all_files)
 
     posted.add(selected.name)
     state["posted_files"] = list(posted)
