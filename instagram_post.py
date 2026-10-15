@@ -122,7 +122,7 @@ def get_next_caption(state):
     captions = load_captions()
     if not captions:
         raise ValueError("No captions found in captions.json.")
-    idx = state.get("caption_index", 0) % len(captions)
+    idx = random.randrange(len(captions))
     caption = captions[idx]
     state["caption_index"] = (idx + 1) % len(captions)
     return caption
