@@ -6,6 +6,7 @@ and Facebook Page feed & Stories.
 """
 import os
 import json
+import random
 import time
 import subprocess
 import requests
@@ -122,7 +123,7 @@ def get_next_caption(state):
     captions = load_captions()
     if not captions:
         raise ValueError("No captions found in captions.json.")
-    idx = state.get("caption_index", 0) % len(captions)
+    idx = random.randrange(len(captions))
     caption = captions[idx]
     state["caption_index"] = (idx + 1) % len(captions)
     return caption
@@ -178,7 +179,7 @@ def get_next_media(state):
             name, folder, exts = buckets[idx]
             candidates = [f for f in files_in(folder, exts) if f.name not in posted]
             if candidates:
-                selected = candidates[0]
+                selected = random.choice(candidates)
                 posted.add(selected.name)
                 state["posted_files"] = list(posted)
                 state["media_category_index"] = (idx + 1) % len(buckets)
@@ -190,7 +191,7 @@ def get_next_media(state):
         name, folder, exts = buckets[start_index]
         files = files_in(folder, exts)
         if files:
-            selected = files[0]
+            selected = random.choice(files)
             posted.add(selected.name)
             state["posted_files"] = list(posted)
             state["media_category_index"] = (start_index + 1) % len(buckets)
@@ -208,11 +209,12 @@ def get_next_media(state):
         log("No supported media files found in media/")
         return None
 
-    selected = next((f for f in all_files if f.name not in posted), None)
+    remaining = [f for f in all_files if f.name not in posted]
+    selected = random.choice(remaining) if remaining else None
     if selected is None:
-        log(f"All {len(all_files)} files posted - resetting cycle, starting from newest.")
+        log(f"All {len(all_files)} files posted - resetting cycle.")
         posted = set()
-        selected = all_files[0]
+        selected = random.choice(all_files)
 
     posted.add(selected.name)
     state["posted_files"] = list(posted)
@@ -490,6 +492,67 @@ def prepare_story_image(media_path):
         log(f"Story resize failed ({e}) - using original image for Story.")
         return original_url
 
+def post_video_story_to_facebook(video_path):
+    """
+    Facebook does not support video Stories via public URL, so extract a frame
+    from the video, resize it to 9:16 (same treatment as Instagram Stories),
+    commit it, wait for the CDN, and post it as a Facebook Story image.
+    """
+    try:
+        from PIL import Image, ImageFilter
+
+        STORY_W, STORY_H = 1080, 1920
+        frame_raw = PHOTOS_FOLDER / "fb_story_frame_raw.jpg"
+
+        subprocess.run(
+            ["ffmpeg", "-y", "-ss", "00:00:01", "-i", str(video_path),
+             "-frames:v", "1", "-q:v", "2", str(frame_raw)],
+            check=True, capture_output=True, timeout=30
+        )
+
+        img = Image.open(frame_raw).convert("RGB")
+        orig_w, orig_h = img.size
+        scale = min(STORY_W / orig_w, STORY_H / orig_h)
+        fg_w, fg_h = int(orig_w * scale), int(orig_h * scale)
+        foreground = img.resize((fg_w, fg_h), Image.LANCZOS)
+        bg_scale = max(STORY_W / orig_w, STORY_H / orig_h)
+        bg_w, bg_h = int(orig_w * bg_scale), int(orig_h * bg_scale)
+        background = img.resize((bg_w, bg_h), Image.LANCZOS).filter(ImageFilter.GaussianBlur(radius=30))
+        left, top = (bg_w - STORY_W) // 2, (bg_h - STORY_H) // 2
+        background = background.crop((left, top, left + STORY_W, top + STORY_H))
+        background.paste(foreground, ((STORY_W - fg_w) // 2, (STORY_H - fg_h) // 2))
+
+        frame_path = PHOTOS_FOLDER / "fb_story_frame.jpg"
+        background.save(frame_path, "JPEG", quality=92)
+        log("FB Story video frame extracted and resized to 1080x1920.")
+
+        subprocess.run(["git", "config", "user.name", "github-actions[bot]"], cwd=BASE_DIR, check=True)
+        subprocess.run(["git", "config", "user.email", "github-actions[bot]@users.noreply.github.com"], cwd=BASE_DIR, check=True)
+        subprocess.run(["git", "add", str(frame_path)], cwd=BASE_DIR, check=True)
+        subprocess.run(["git", "commit", "-m", "chore: fb story frame [skip ci]"], cwd=BASE_DIR, check=True)
+        subprocess.run(["git", "push"], cwd=BASE_DIR, check=True)
+
+        frame_url = build_media_url(frame_path)
+        log(f"FB Story frame URL: {frame_url} - waiting for GitHub Pages to deploy...")
+        for attempt in range(24):
+            time.sleep(5)
+            try:
+                r = requests.head(frame_url, timeout=10)
+                if r.status_code == 200:
+                    log(f"FB Story frame live after {(attempt + 1) * 5}s.")
+                    break
+            except Exception:
+                pass
+        else:
+            log("FB Story frame not live after 120s - skipping Facebook Story.")
+            return
+
+        log("Posting video-frame photo to Facebook Stories...")
+        story_id = post_fb_photo_story(frame_url)
+        log(f"Facebook Story posted! ID: {story_id}")
+    except Exception as e:
+        log(f"Facebook Story post failed (video frame): {e}")
+
 def create_ig_story_container(media_url, is_video_file):
     params = {
         "media_type": "STORIES",
@@ -580,8 +643,8 @@ def post_fb_photo_story(image_url):
     story_resp.raise_for_status()
     return story_resp.json().get("post_id") or story_resp.json().get("id")
 
-def post_to_facebook(media_url, caption, is_video_file):
-    """Post to Facebook Page feed AND Stories (photo only)."""
+def post_to_facebook(media_url, caption, is_video_file, media_path=None):
+    """Post to Facebook Page feed AND Stories."""
     if not FB_PAGE_ACCESS_TOKEN or not FB_PAGE_ID:
         log("Facebook credentials not set - skipping Facebook post.")
         return
@@ -599,10 +662,13 @@ def post_to_facebook(media_url, caption, is_video_file):
     except Exception as e:
         log(f"Facebook feed post failed: {e}")
 
-    # Facebook Stories: photo only (video Stories via public URL consistently fail)
+    # Facebook Stories: video Stories aren't supported via public URL, so use a frame instead
     try:
         if is_video_file:
-            log("Skipping Facebook Story for video (not supported via public URL).")
+            if media_path:
+                post_video_story_to_facebook(media_path)
+            else:
+                log("Skipping Facebook Story for video (no local media path available).")
             return
         log("Posting photo to Facebook Stories...")
         story_id = post_fb_photo_story(media_url)
@@ -869,7 +935,7 @@ def post_to_instagram():
     post_ig_story(story_url, video_file)
 
     # -- Facebook feed + Stories --
-    post_to_facebook(media_url, full_caption, video_file)
+    post_to_facebook(media_url, full_caption, video_file, media_path)
 
     # -- TikTok (disabled until app audit approved) --
     if TIKTOK_ENABLED:
