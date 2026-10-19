@@ -41,11 +41,11 @@
     .filter-btn:hover,.filter-btn.active{background:var(--navy);color:var(--white);border-color:var(--navy);}
     /* GRID */
     .arrivals-section{padding:3rem 5%;background:var(--off-white);}
-    .arrivals-grid{display:flex;flex-wrap:wrap;width:100%;}
-    .arrival-item{width:20%;padding:0.5rem;box-sizing:border-box;position:relative;}
+    .arrivals-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:0;width:100%;}
+    .arrival-item{padding:0.5rem;box-sizing:border-box;position:relative;}
     .arrival-inner{background:var(--white);border-radius:4px;overflow:hidden;transition:transform 0.25s,box-shadow 0.25s;cursor:pointer;}
     .arrival-inner:hover{transform:translateY(-4px);box-shadow:0 10px 30px rgba(0,0,0,0.12);}
-    .arrival-inner img{width:100%;aspect-ratio:4/5;object-fit:contain;background:#fdf8f9;display:block;transition:transform 0.4s;}
+    .arrival-inner img{width:100%;aspect-ratio:4/5;object-fit:cover;background:#fdf8f9;display:block;transition:transform 0.4s;}
     .arrival-inner:hover img{transform:scale(1.05);}
     .arrival-info{padding:0.7rem 0.8rem 0.5rem;}
     .arrival-name{font-size:0.78rem;font-weight:600;color:var(--navy);line-height:1.3;margin-bottom:0.3rem;}
@@ -67,8 +67,8 @@
     /* FOOTER */
     footer{background:#111;padding:1.5rem 5%;text-align:center;font-size:0.8rem;color:rgba(255,255,255,0.45);}
     footer a{color:var(--gold);text-decoration:none;}
-    @media(max-width:900px){.arrival-item{width:25%;}}
-    @media(max-width:600px){.arrival-item{width:50%;}.nav-left,.nav-right>*:not(.nav-cta){display:none;}}
+    @media(max-width:1100px){.arrivals-grid{grid-template-columns:repeat(4,1fr);}} @media(max-width:900px){.arrivals-grid{grid-template-columns:repeat(3,1fr);}}
+    @media(max-width:600px){.arrivals-grid{grid-template-columns:repeat(2,1fr);}.nav-left,.nav-right>*:not(.nav-cta){display:none;}}
   </style>
 </head>
 <body>
@@ -86,6 +86,7 @@
     <a href="/" class="nav-link">Shop Jeans</a>
     <a href="new-arrivals-kenya.html" class="nav-link active-link">New In</a>
     <a href="/#tops" class="nav-link">Tops &amp; Jackets</a>
+    <a href="/denim-jackets-nairobi.html" class="nav-link">Jackets</a>
   </div>
   <a href="/" style="text-decoration:none;">
     <svg width="150" height="42" viewBox="0 0 220 58" xmlns="http://www.w3.org/2000/svg" aria-label="Lepique Fashions">
@@ -305,6 +306,114 @@
           <div class="arrival-name">Flare – Light Blue (02)</div>
           <div class="arrival-code">LPQ-FL-018</div>
           <a href="https://wa.me/254721672900?text=Hi!%20I%27d%20like%20to%20order%20LPQ-FL-018%20Flare%20Light%20Blue%20(02).%20Is%20my%20size%20available%3F" target="_blank" class="arrival-wa">📱 Quick Order</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="arrival-item" data-cat="jeans">
+      <div class="badge-new">New</div>
+      <div class="arrival-inner">
+        <img src="photos/lepique-flare-19-royal-blue.jpeg" alt="Flare Jeans Royal Blue (01) Kenya – LPQ-FL-019" loading="lazy" />
+        <div class="arrival-info">
+          <div class="arrival-name">Flare – Royal Blue (01)</div>
+          <div class="arrival-code">LPQ-FL-019</div>
+          <a href="https://wa.me/254721672900?text=Hi!%20I%27d%20like%20to%20order%20LPQ-FL-019%20Royal+Blue+Flare+Jeans.%20Is%20my%20size%20available%3F" target="_blank" class="arrival-wa">📱 Quick Order</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="arrival-item" data-cat="jeans">
+      <div class="badge-new">New</div>
+      <div class="arrival-inner">
+        <img src="photos/lepique-flare-20-royal-blue-v2.jpeg" alt="Flare Jeans Royal Blue (02) Kenya – LPQ-FL-020" loading="lazy" />
+        <div class="arrival-info">
+          <div class="arrival-name">Flare – Royal Blue (02)</div>
+          <div class="arrival-code">LPQ-FL-020</div>
+          <a href="https://wa.me/254721672900?text=Hi!%20I%27d%20like%20to%20order%20LPQ-FL-020%20Royal+Blue+Flare+Jeans.%20Is%20my%20size%20available%3F" target="_blank" class="arrival-wa">📱 Quick Order</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="arrival-item" data-cat="jeans">
+      <div class="badge-new">New</div>
+      <div class="arrival-inner">
+        <img src="photos/lepique-flare-21-black-ripped.jpeg" alt="Flare Jeans Black Ripped Kenya – LPQ-FL-021" loading="lazy" />
+        <div class="arrival-info">
+          <div class="arrival-name">Flare – Black Ripped</div>
+          <div class="arrival-code">LPQ-FL-021</div>
+          <a href="https://wa.me/254721672900?text=Hi!%20I%27d%20like%20to%20order%20LPQ-FL-021%20Black+Ripped+Flare+Jeans.%20Is%20my%20size%20available%3F" target="_blank" class="arrival-wa">📱 Quick Order</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="arrival-item" data-cat="jeans">
+      <div class="badge-new">New</div>
+      <div class="arrival-inner">
+        <img src="photos/lepique-flare-22-blue-ripped.jpeg" alt="Flare Jeans Blue Ripped Kenya – LPQ-FL-022" loading="lazy" />
+        <div class="arrival-info">
+          <div class="arrival-name">Flare – Blue Ripped</div>
+          <div class="arrival-code">LPQ-FL-022</div>
+          <a href="https://wa.me/254721672900?text=Hi!%20I%27d%20like%20to%20order%20LPQ-FL-022%20Blue+Ripped+Flare+Jeans.%20Is%20my%20size%20available%3F" target="_blank" class="arrival-wa">📱 Quick Order</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="arrival-item" data-cat="jeans">
+      <div class="badge-new">New</div>
+      <div class="arrival-inner">
+        <img src="photos/lepique-flare-23-royal-blue-ripped.jpeg" alt="Flare Jeans Royal Blue Ripped Kenya – LPQ-FL-023" loading="lazy" />
+        <div class="arrival-info">
+          <div class="arrival-name">Flare – Royal Blue Ripped</div>
+          <div class="arrival-code">LPQ-FL-023</div>
+          <a href="https://wa.me/254721672900?text=Hi!%20I%27d%20like%20to%20order%20LPQ-FL-023%20Royal+Blue+Ripped+Flare+Jeans.%20Is%20my%20size%20available%3F" target="_blank" class="arrival-wa">📱 Quick Order</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="arrival-item" data-cat="jeans">
+      <div class="badge-new">New</div>
+      <div class="arrival-inner">
+        <img src="photos/lepique-flare-24-medium-blue.jpeg" alt="Flare Jeans Medium Blue Kenya – LPQ-FL-024" loading="lazy" />
+        <div class="arrival-info">
+          <div class="arrival-name">Flare – Medium Blue</div>
+          <div class="arrival-code">LPQ-FL-024</div>
+          <a href="https://wa.me/254721672900?text=Hi!%20I%27d%20like%20to%20order%20LPQ-FL-024%20Medium+Blue+Flare+Jeans.%20Is%20my%20size%20available%3F" target="_blank" class="arrival-wa">📱 Quick Order</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="arrival-item" data-cat="jeans">
+      <div class="badge-new">New</div>
+      <div class="arrival-inner">
+        <img src="photos/lepique-flare-25-cobalt-blue.jpeg" alt="Flare Jeans Cobalt Blue Kenya – LPQ-FL-025" loading="lazy" />
+        <div class="arrival-info">
+          <div class="arrival-name">Flare – Cobalt Blue</div>
+          <div class="arrival-code">LPQ-FL-025</div>
+          <a href="https://wa.me/254721672900?text=Hi!%20I%27d%20like%20to%20order%20LPQ-FL-025%20Cobalt+Blue+Flare+Jeans.%20Is%20my%20size%20available%3F" target="_blank" class="arrival-wa">📱 Quick Order</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="arrival-item" data-cat="jeans">
+      <div class="badge-new">New</div>
+      <div class="arrival-inner">
+        <img src="photos/lepique-flare-26-dark-navy.jpeg" alt="Flare Jeans Dark Navy Kenya – LPQ-FL-026" loading="lazy" />
+        <div class="arrival-info">
+          <div class="arrival-name">Flare – Dark Navy</div>
+          <div class="arrival-code">LPQ-FL-026</div>
+          <a href="https://wa.me/254721672900?text=Hi!%20I%27d%20like%20to%20order%20LPQ-FL-026%20Dark+Navy+Flare+Jeans.%20Is%20my%20size%20available%3F" target="_blank" class="arrival-wa">📱 Quick Order</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="arrival-item" data-cat="jeans">
+      <div class="badge-new">New</div>
+      <div class="arrival-inner">
+        <img src="photos/lepique-flare-27-light-blue.jpeg" alt="Flare Jeans Light Blue Kenya – LPQ-FL-027" loading="lazy" />
+        <div class="arrival-info">
+          <div class="arrival-name">Flare – Light Blue</div>
+          <div class="arrival-code">LPQ-FL-027</div>
+          <a href="https://wa.me/254721672900?text=Hi!%20I%27d%20like%20to%20order%20LPQ-FL-027%20Light+Blue+Flare+Jeans.%20Is%20my%20size%20available%3F" target="_blank" class="arrival-wa">📱 Quick Order</a>
         </div>
       </div>
     </div>
@@ -765,6 +874,138 @@
         </div>
       </div>
     </div>
+    <div class="arrival-item" data-cat="jeans">
+      <div class="badge-new">New</div>
+      <div class="arrival-inner">
+        <img src="photos/lepique-wide-leg-58-black.jpeg" alt="Wide Leg Jeans Black Kenya" loading="lazy" />
+        <div class="arrival-info">
+          <div class="arrival-name">Wide Leg – Black (08)</div>
+          <div class="arrival-code">LPQ-WL-058</div>
+          <a href="https://wa.me/254721672900?text=Hi!%20I%27d%20like%20to%20order%20LPQ-WL-058%20Wide+Leg+Jeans+Black.%20Is%20my%20size%20available%3F" target="_blank" class="arrival-wa">📱 Quick Order</a>
+        </div>
+      </div>
+    </div>
+    <div class="arrival-item" data-cat="jeans">
+      <div class="badge-new">New</div>
+      <div class="arrival-inner">
+        <img src="photos/lepique-wide-leg-59-black.jpeg" alt="Wide Leg Jeans Black Kenya" loading="lazy" />
+        <div class="arrival-info">
+          <div class="arrival-name">Wide Leg – Black (09)</div>
+          <div class="arrival-code">LPQ-WL-059</div>
+          <a href="https://wa.me/254721672900?text=Hi!%20I%27d%20like%20to%20order%20LPQ-WL-059%20Wide+Leg+Jeans+Black.%20Is%20my%20size%20available%3F" target="_blank" class="arrival-wa">📱 Quick Order</a>
+        </div>
+      </div>
+    </div>
+    <div class="arrival-item" data-cat="jeans">
+      <div class="badge-new">New</div>
+      <div class="arrival-inner">
+        <img src="photos/lepique-wide-leg-60-light-blue.jpeg" alt="Wide Leg Jeans Light Blue Kenya" loading="lazy" />
+        <div class="arrival-info">
+          <div class="arrival-name">Wide Leg – Light Blue (06)</div>
+          <div class="arrival-code">LPQ-WL-060</div>
+          <a href="https://wa.me/254721672900?text=Hi!%20I%27d%20like%20to%20order%20LPQ-WL-060%20Wide+Leg+Jeans+Light+Blue.%20Is%20my%20size%20available%3F" target="_blank" class="arrival-wa">📱 Quick Order</a>
+        </div>
+      </div>
+    </div>
+    <div class="arrival-item" data-cat="jeans">
+      <div class="badge-new">New</div>
+      <div class="arrival-inner">
+        <img src="photos/lepique-wide-leg-61-royal-blue.jpeg" alt="Wide Leg Jeans Royal Blue Kenya" loading="lazy" />
+        <div class="arrival-info">
+          <div class="arrival-name">Wide Leg – Royal Blue</div>
+          <div class="arrival-code">LPQ-WL-061</div>
+          <a href="https://wa.me/254721672900?text=Hi!%20I%27d%20like%20to%20order%20LPQ-WL-061%20Wide+Leg+Jeans+Royal+Blue.%20Is%20my%20size%20available%3F" target="_blank" class="arrival-wa">📱 Quick Order</a>
+        </div>
+      </div>
+    </div>
+    <div class="arrival-item" data-cat="jeans">
+      <div class="badge-new">New</div>
+      <div class="arrival-inner">
+        <img src="photos/lepique-wide-leg-62-black.jpeg" alt="Wide Leg Jeans Black Kenya" loading="lazy" />
+        <div class="arrival-info">
+          <div class="arrival-name">Wide Leg – Black (10)</div>
+          <div class="arrival-code">LPQ-WL-062</div>
+          <a href="https://wa.me/254721672900?text=Hi!%20I%27d%20like%20to%20order%20LPQ-WL-062%20Wide+Leg+Jeans+Black.%20Is%20my%20size%20available%3F" target="_blank" class="arrival-wa">📱 Quick Order</a>
+        </div>
+      </div>
+    </div>
+    <div class="arrival-item" data-cat="jeans">
+      <div class="badge-new">New</div>
+      <div class="arrival-inner">
+        <img src="photos/lepique-wide-leg-63-royal-blue.jpeg" alt="Wide Leg Jeans Royal Blue Kenya" loading="lazy" />
+        <div class="arrival-info">
+          <div class="arrival-name">Wide Leg – Royal Blue (02)</div>
+          <div class="arrival-code">LPQ-WL-063</div>
+          <a href="https://wa.me/254721672900?text=Hi!%20I%27d%20like%20to%20order%20LPQ-WL-063%20Wide+Leg+Jeans+Royal+Blue.%20Is%20my%20size%20available%3F" target="_blank" class="arrival-wa">📱 Quick Order</a>
+        </div>
+      </div>
+    </div>
+    <div class="arrival-item" data-cat="jeans">
+      <div class="badge-new">New</div>
+      <div class="arrival-inner">
+        <img src="photos/lepique-wide-leg-64-dark-grey.jpeg" alt="Wide Leg Jeans Dark Grey Kenya" loading="lazy" />
+        <div class="arrival-info">
+          <div class="arrival-name">Wide Leg – Dark Grey</div>
+          <div class="arrival-code">LPQ-WL-064</div>
+          <a href="https://wa.me/254721672900?text=Hi!%20I%27d%20like%20to%20order%20LPQ-WL-064%20Wide+Leg+Jeans+Dark+Grey.%20Is%20my%20size%20available%3F" target="_blank" class="arrival-wa">📱 Quick Order</a>
+        </div>
+      </div>
+    </div>
+    <div class="arrival-item" data-cat="jeans">
+      <div class="badge-new">New</div>
+      <div class="arrival-inner">
+        <img src="photos/lepique-wide-leg-65-dark-navy.jpeg" alt="Wide Leg Jeans Dark Navy Kenya" loading="lazy" />
+        <div class="arrival-info">
+          <div class="arrival-name">Wide Leg – Dark Navy (08)</div>
+          <div class="arrival-code">LPQ-WL-065</div>
+          <a href="https://wa.me/254721672900?text=Hi!%20I%27d%20like%20to%20order%20LPQ-WL-065%20Wide+Leg+Jeans+Dark+Navy.%20Is%20my%20size%20available%3F" target="_blank" class="arrival-wa">📱 Quick Order</a>
+        </div>
+      </div>
+    </div>
+    <div class="arrival-item" data-cat="jeans">
+      <div class="badge-new">New</div>
+      <div class="arrival-inner">
+        <img src="photos/lepique-wide-leg-66-royal-blue.jpeg" alt="Wide Leg Jeans Royal Blue Kenya" loading="lazy" />
+        <div class="arrival-info">
+          <div class="arrival-name">Wide Leg – Royal Blue (03)</div>
+          <div class="arrival-code">LPQ-WL-066</div>
+          <a href="https://wa.me/254721672900?text=Hi!%20I%27d%20like%20to%20order%20LPQ-WL-066%20Wide+Leg+Jeans+Royal+Blue.%20Is%20my%20size%20available%3F" target="_blank" class="arrival-wa">📱 Quick Order</a>
+        </div>
+      </div>
+    </div>
+    <div class="arrival-item" data-cat="jeans">
+      <div class="badge-new">New</div>
+      <div class="arrival-inner">
+        <img src="photos/lepique-wide-leg-67-grey-patchwork.jpeg" alt="Wide Leg Jeans Grey Patchwork Kenya" loading="lazy" />
+        <div class="arrival-info">
+          <div class="arrival-name">Wide Leg – Grey Patchwork</div>
+          <div class="arrival-code">LPQ-WL-067</div>
+          <a href="https://wa.me/254721672900?text=Hi!%20I%27d%20like%20to%20order%20LPQ-WL-067%20Wide+Leg+Jeans+Grey+Patchwork.%20Is%20my%20size%20available%3F" target="_blank" class="arrival-wa">📱 Quick Order</a>
+        </div>
+      </div>
+    </div>
+    <div class="arrival-item" data-cat="jeans">
+      <div class="badge-new">New</div>
+      <div class="arrival-inner">
+        <img src="photos/lepique-wide-leg-68-grey-floral.jpeg" alt="Wide Leg Jeans Grey Floral Kenya" loading="lazy" />
+        <div class="arrival-info">
+          <div class="arrival-name">Wide Leg – Grey Floral</div>
+          <div class="arrival-code">LPQ-WL-068</div>
+          <a href="https://wa.me/254721672900?text=Hi!%20I%27d%20like%20to%20order%20LPQ-WL-068%20Wide+Leg+Jeans+Grey+Floral.%20Is%20my%20size%20available%3F" target="_blank" class="arrival-wa">📱 Quick Order</a>
+        </div>
+      </div>
+    </div>
+    <div class="arrival-item" data-cat="jeans">
+      <div class="badge-new">New</div>
+      <div class="arrival-inner">
+        <img src="photos/lepique-wide-leg-69-light-blue-cargo.jpeg" alt="Wide Leg Jeans Light Blue Cargo Pocket Kenya" loading="lazy" />
+        <div class="arrival-info">
+          <div class="arrival-name">Wide Leg – Light Blue (Cargo Pocket)</div>
+          <div class="arrival-code">LPQ-WL-069</div>
+          <a href="https://wa.me/254721672900?text=Hi!%20I%27d%20like%20to%20order%20LPQ-WL-069%20Wide+Leg+Jeans+Light+Blue.%20Is%20my%20size%20available%3F" target="_blank" class="arrival-wa">📱 Quick Order</a>
+        </div>
+      </div>
+    </div>
     <div class="arrival-item" data-cat="tshirt">
       <div class="badge-new">New</div>
       <div class="arrival-inner">
@@ -927,6 +1168,30 @@
           </div>
         </div>
       </div>
+
+    <div class="arrival-item" data-cat="jeans">
+      <div class="badge-new">New</div>
+      <div class="arrival-inner">
+        <img src="photos/lepique-printed-05-ysl-crystals-light-blue.jpeg" alt="Printed YSL Crystals Light Blue Kenya – LPQ-PR-005" loading="lazy" />
+        <div class="arrival-info">
+          <div class="arrival-name">Printed YSL Crystals – Light Blue</div>
+          <div class="arrival-code">LPQ-PR-005</div>
+          <a href="https://wa.me/254721672900?text=Hi!%20I%27d%20like%20to%20order%20LPQ-PR-005%20Printed+YSL+Crystals+Light+Blue.%20Is%20my%20size%20available%3F" target="_blank" class="arrival-wa">📱 Quick Order</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="arrival-item" data-cat="jeans">
+      <div class="badge-new">New</div>
+      <div class="arrival-inner">
+        <img src="photos/lepique-printed-06-ysl-wide-light-blue.jpeg" alt="Printed YSL Wide Light Blue Kenya – LPQ-PR-006" loading="lazy" />
+        <div class="arrival-info">
+          <div class="arrival-name">Printed YSL Wide – Light Blue</div>
+          <div class="arrival-code">LPQ-PR-006</div>
+          <a href="https://wa.me/254721672900?text=Hi!%20I%27d%20like%20to%20order%20LPQ-PR-006%20Printed+YSL+Wide+Light+Blue.%20Is%20my%20size%20available%3F" target="_blank" class="arrival-wa">📱 Quick Order</a>
+        </div>
+      </div>
+    </div>
       <div class="arrival-item" data-cat="jeans">
         <div class="arrival-inner">
           <img src="photos/lepique-straight-04-dark-navy.jpeg" alt="Straight – Dark Navy Kenya" loading="lazy" />
