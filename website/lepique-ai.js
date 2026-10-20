@@ -566,4 +566,25 @@
   } else {
     init();
   }
+
+  // ─── SERVICE WORKER REGISTRATION ──────────────────────────────
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js', {scope: '/'}).catch(() => {});
+    });
+  }
+
+  // ─── WEB VITALS — INP LONG ANIMATION FRAME OBSERVER ─────────
+  if ('PerformanceObserver' in window) {
+    try {
+      const loafObs = new PerformanceObserver(list => {
+        for (const entry of list.getEntries()) {
+          if (entry.duration > 200) {
+            console.debug('[Lepique perf] Long animation frame:', Math.round(entry.duration) + 'ms');
+          }
+        }
+      });
+      loafObs.observe({type: 'long-animation-frame', buffered: true});
+    } catch(e) {}
+  }
 })();

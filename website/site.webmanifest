@@ -1,0 +1,29 @@
+{
+  "name": "Lepique Fashions",
+  "short_name": "Lepique",
+  "description": "Ladies jeans, tops & jackets in Nairobi — WhatsApp to order, Kenya-wide delivery",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#111111",
+  "theme_color": "#111111",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'%3E%3Crect width='192' height='192' rx='16' fill='%23111111'/%3E%3Ctext x='96' y='132' text-anchor='middle' font-family='Georgia,serif' font-size='110' font-weight='700' fill='%23c9a455'%3EL%3C/text%3E%3C/svg%3E",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='40' fill='%23111111'/%3E%3Ctext x='256' y='352' text-anchor='middle' font-family='Georgia,serif' font-size='300' font-weight='700' fill='%23c9a455'%3EL%3C/text%3E%3C/svg%3E",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ],
+  "categories": ["shopping", "fashion"],
+  "lang": "en-KE",
+  "shortcuts": [
+    {"name": "Full Catalogue", "url": "/catalogue.html", "description": "Browse all 147 styles"},
+    {"name": "Wide Leg Jeans", "url": "/wide-leg-jeans-nairobi.html", "description": "Wide leg jeans in Nairobi"},
+    {"name": "Order on WhatsApp", "url": "https://wa.me/254721672900?text=Hi%20Lepique%20Fashions!%20I%27d%20like%20to%20order.", "description": "WhatsApp us to order"}
+  ]
+}
