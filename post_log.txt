@@ -16959,3 +16959,4 @@ continue appending new entries below as usual.
 [2026-10-23 17:27:39] Facebook Story post failed (video frame): [Errno 2] No such file or directory: 'ffmpeg'
 [2026-10-23 17:27:39] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
 [2026-10-23 17:27:39] All done. Final state saved.
+[2026-10-23 20:34:36] Skipping - current Nairobi time is 23:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
