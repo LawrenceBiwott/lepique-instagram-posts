@@ -10,7 +10,7 @@ import random
 import time
 import subprocess
 import requests
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 from urllib.parse import quote
 
@@ -61,8 +61,20 @@ FB_BASE_URL     = "https://graph.facebook.com/v21.0"
 TIKTOK_BASE_URL = "https://open.tiktokapis.com/v2"
 TIKTOK_CHUNK_SIZE = 10 * 1024 * 1024  # 10 MB per chunk
 
-# Minimum minutes between posts (prevents double-posting when cron runs every 5 min)
-MIN_POST_INTERVAL_MINUTES = 20
+# Minimum minutes between FEED posts (IG feed + FB feed + both Stories).
+# Raised from 20 to 180: posting to the feed every 20 min around the clock reads as
+# spam/API-bot behaviour to Instagram's ranking system and was collapsing organic reach
+# (verified via Insights: 7k followers, single-digit-percent reach, 0 likes/comments).
+MIN_POST_INTERVAL_MINUTES = 180
+
+# Hard cap on feed posts (Instagram feed + Facebook feed) per Nairobi calendar day.
+# Extra posting volume during peak hours goes to Stories only (see STORY_ONLY_INTERVAL_MINUTES)
+# instead of stacking more feed posts.
+MAX_FEED_POSTS_PER_DAY = 2
+
+# Minutes between Stories-only posts (IG Story + FB Story, no feed post, no extra caption
+# spam). Stories are far more tolerant of frequency and promotional text than the feed.
+STORY_ONLY_INTERVAL_MINUTES = 90
 
 # Set to 'true' via workflow_dispatch input to bypass the interval guard
 FORCE_POST = os.environ.get("FORCE_POST", "false").strip().lower() == "true"
@@ -104,7 +116,10 @@ def load_state():
         "caption_index": 0,
         "posted_files": [],
         "tiktok_posted_videos": [],
-        "tiktok_caption_index": 0
+        "tiktok_caption_index": 0,
+        "feed_posts_today": 0,
+        "last_feed_post_date": None,
+        "last_story_time": None
     }
 
 def save_state(state):
@@ -676,6 +691,24 @@ def post_to_facebook(media_url, caption, is_video_file, media_path=None):
     except Exception as e:
         log(f"Facebook Story post failed: {e}")
 
+def post_facebook_story_only(media_url, is_video_file, media_path=None):
+    """Post to Facebook Page Stories only (no feed post) - used for extra posting
+    volume during peak hours so the Facebook feed isn't spammed alongside Instagram."""
+    if not FB_PAGE_ACCESS_TOKEN or not FB_PAGE_ID:
+        return
+    try:
+        if is_video_file:
+            if media_path:
+                post_video_story_to_facebook(media_path)
+            else:
+                log("Skipping Facebook Story for video (no local media path available).")
+            return
+        log("Posting photo to Facebook Stories (story-only post)...")
+        story_id = post_fb_photo_story(media_url)
+        log(f"Facebook Story posted! ID: {story_id}")
+    except Exception as e:
+        log(f"Facebook Story post failed: {e}")
+
 # ─────────────────────────────────────────────
 # TIKTOK API  (disabled - kept for re-enablement after audit approval)
 # To enable: set TIKTOK_ENABLED=true in GitHub secrets
@@ -858,23 +891,41 @@ def build_alt_text(media_name):
     return desc[:255]
 
 # ─────────────────────────────────────────────
+# STORY-ONLY POST (extra peak-hour volume without spamming the feed)
+# ─────────────────────────────────────────────
+def post_story_only(state):
+    """Post to Instagram Stories + Facebook Stories only - no feed post, no extra
+    caption. Lets the account stay active through the day without repeating the
+    feed-spam pattern that was suppressing reach."""
+    log("--- Starting Stories-only post ---")
+
+    media_path = get_next_media(state)
+    if not media_path:
+        log("No media files found in media folder.")
+        save_state(state)
+        return
+
+    log(f"Selected media (story-only): {media_path.name}")
+    video_file = is_video(media_path)
+    if not video_file:
+        pad_image_to_valid_ratio(media_path)
+    media_url = build_media_url(media_path)
+
+    story_url = prepare_story_image(media_path) if not video_file else media_url
+    post_ig_story(story_url, video_file)
+    post_facebook_story_only(media_url, video_file, media_path)
+
+    state["last_story_time"] = datetime.utcnow().isoformat()
+    save_state(state)
+    log("Stories-only post done. State saved.")
+
+# ─────────────────────────────────────────────
 # MAIN POST FUNCTION
 # ─────────────────────────────────────────────
 def post_to_instagram():
     ensure_config()
 
     state = load_state()
-
-    # -- Interval guard: skip if posted too recently --
-    last_post_time = state.get("last_post_time")
-    if last_post_time and not FORCE_POST:
-        elapsed = (datetime.utcnow() - datetime.fromisoformat(last_post_time)).total_seconds() / 60
-        if elapsed < MIN_POST_INTERVAL_MINUTES:
-            log(f"Skipping - last post was {elapsed:.0f} min ago "
-                f"(next post in ~{MIN_POST_INTERVAL_MINUTES - elapsed:.0f} min).")
-            return
-    if FORCE_POST:
-        log("FORCE_POST enabled - bypassing interval guard.")
 
     # -- Peak hours guard: only post during high-engagement windows (EAT) --
     if not FORCE_POST and not FORCE_PEAK_BYPASS:
@@ -884,6 +935,44 @@ def post_to_instagram():
                 f"(outside peak hours 07-09, 12-14, 18-21 EAT).")
             return
         log(f"Peak hours check passed - Nairobi hour: {eat_hour:02d}.")
+
+    # -- Reset the daily feed-post counter on a new Nairobi calendar day --
+    today_eat = (datetime.utcnow() + timedelta(hours=3)).strftime("%Y-%m-%d")
+    if state.get("last_feed_post_date") != today_eat:
+        state["feed_posts_today"] = 0
+        state["last_feed_post_date"] = today_eat
+
+    # -- Decide feed vs. story-only vs. skip --
+    if not FORCE_POST:
+        last_post_time = state.get("last_post_time")
+        feed_elapsed = None
+        if last_post_time:
+            feed_elapsed = (datetime.utcnow() - datetime.fromisoformat(last_post_time)).total_seconds() / 60
+
+        feed_allowed = (
+            state.get("feed_posts_today", 0) < MAX_FEED_POSTS_PER_DAY
+            and (feed_elapsed is None or feed_elapsed >= MIN_POST_INTERVAL_MINUTES)
+        )
+
+        if not feed_allowed:
+            last_story_time = state.get("last_story_time")
+            story_elapsed = None
+            if last_story_time:
+                story_elapsed = (datetime.utcnow() - datetime.fromisoformat(last_story_time)).total_seconds() / 60
+
+            story_allowed = story_elapsed is None or story_elapsed >= STORY_ONLY_INTERVAL_MINUTES
+
+            if story_allowed:
+                post_story_only(state)
+            elif feed_elapsed is not None:
+                log(f"Skipping - feed cap reached today ({state.get('feed_posts_today', 0)}/"
+                    f"{MAX_FEED_POSTS_PER_DAY}) and next Story-only post in "
+                    f"~{STORY_ONLY_INTERVAL_MINUTES - (story_elapsed or 0):.0f} min.")
+            else:
+                log("Skipping - nothing eligible to post yet.")
+            return
+    else:
+        log("FORCE_POST enabled - bypassing interval/daily-cap guards.")
 
     log("--- Starting Instagram + Facebook post ---")
 
@@ -927,8 +1016,9 @@ def post_to_instagram():
     # -- Save state immediately after successful Instagram post --
     # Prevents re-posting the same image if Facebook crashes before final save.
     state["last_post_time"] = datetime.utcnow().isoformat()
+    state["feed_posts_today"] = state.get("feed_posts_today", 0) + 1
     save_state(state)
-    log("State saved after Instagram post.")
+    log(f"State saved after Instagram post. Feed posts today: {state['feed_posts_today']}/{MAX_FEED_POSTS_PER_DAY}.")
 
     # -- Instagram Stories --
     story_url = prepare_story_image(media_path) if not video_file else media_url
