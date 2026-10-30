@@ -17482,3 +17482,19 @@ continue appending new entries below as usual.
 [2026-10-29 19:44:54] Skipping - current Nairobi time is 22:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
 [2026-10-29 23:39:09] Skipping - current Nairobi time is 02:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
 [2026-10-30 02:56:41] Skipping - current Nairobi time is 05:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-10-30 09:39:22] Peak hours check passed - Nairobi hour: 12.
+[2026-10-30 09:39:22] --- Starting Instagram + Facebook post ---
+[2026-10-30 09:39:22] Instagram token OK - account: @lepiquefashions (ID: 1889041611321657)
+[2026-10-30 09:39:22] Caption: 📍 B35 (Basement) & G16 (Ground Floor) – Platinum Plaza, Tom Mboya St, Nairobi
+📞 
+[2026-10-30 09:39:22] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-10-30 09:39:22] Media categories (14): ['photos/Bodysuits', 'photos/Cargo Jeans', 'photos/Denim Jackets', 'photos/Flare Jeans', 'photos/Leather Jackets', 'photos/Mom jeans', 'photos/Printed Jeans', 'photos/Ripped Jeans', 'photos/Skinny Jeans', 'photos/Straight Jeans', 'photos/T-Shirts and Long-Sleeve Tops', 'photos/Three-quarter jeans', 'photos/Wide Leg Jeans', 'videos']
+[2026-10-30 09:39:22] Selected from 'photos/Ripped Jeans': lepique-ripped-17-black-wide.jpeg
+[2026-10-30 09:39:22] Selected media: lepique-ripped-17-black-wide.jpeg
+[2026-10-30 09:39:22] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/Ripped%20Jeans/lepique-ripped-17-black-wide.jpeg
+[2026-10-30 09:39:22] Uploading image to Instagram...
+[2026-10-30 09:39:22] Alt text: Ladies black ripped jeans - Lepique Fashions Nairobi
+[2026-10-30 09:39:29] Waiting for Instagram processing...
+[2026-10-30 09:39:29] Container status: FINISHED
+[2026-10-30 09:39:39] Container ID: 18572917981073384
+[2026-10-30 09:39:40] Error: 400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/17841402201496454/media_publish?creation_id=18572917981073384&access_token=EAAoPvY2rIhYBSO7yg1YsBH4r5yRV1JWQmIe9M3JYdTVHDcHTljuivkMc4eUpZCcwN73eqTDhKia1INkUQNu43AxdS7HfHaLoRZAhVZArg36CwcEk2gkiVM8XCuk8NwufRW9iBCJCNIsQGjRBiNvR5niRXZAhKVwXnXaAkTXfb6P053BoSQbT4qvT5DNHe51xp1kwvhptb3bZBQD0JSBeY
