@@ -61,20 +61,22 @@ FB_BASE_URL     = "https://graph.facebook.com/v21.0"
 TIKTOK_BASE_URL = "https://open.tiktokapis.com/v2"
 TIKTOK_CHUNK_SIZE = 10 * 1024 * 1024  # 10 MB per chunk
 
-# Minimum minutes between FEED posts (IG feed + FB feed + both Stories).
-# Raised from 20 to 180: posting to the feed every 20 min around the clock reads as
-# spam/API-bot behaviour to Instagram's ranking system and was collapsing organic reach
-# (verified via Insights: 7k followers, single-digit-percent reach, 0 likes/comments).
-MIN_POST_INTERVAL_MINUTES = 180
+# Minimum minutes between FEED posts (IG feed + FB feed).
+# Set to 30, around the clock, at explicit user request (2026-10-31) - the peak-hours
+# restriction on feed posts has been removed too, so this now runs 24/7, same as the
+# pre-throttle cadence that previously collapsed reach on this account (verified via
+# Insights: 7k followers, single-digit-percent reach, 0 likes/comments). Flagged, not
+# blocked - if reach drops again, the fix is to restore PEAK_HOURS_EAT gating on feed
+# (still defined below, just no longer applied to feed_allowed) and/or raise this back up.
+MIN_POST_INTERVAL_MINUTES = 30
 
-# Hard cap on feed posts (Instagram feed + Facebook feed) per Nairobi calendar day.
-# Extra posting volume during peak hours goes to Stories only (see STORY_ONLY_INTERVAL_MINUTES)
-# instead of stacking more feed posts.
-MAX_FEED_POSTS_PER_DAY = 2
+# Daily feed-post cap. Raised to fit a 24/7 30-min cadence (48 slots/day) without the
+# cap itself blocking posts.
+MAX_FEED_POSTS_PER_DAY = 48
 
-# Minutes between Stories-only posts (IG Story + FB Story, no feed post, no extra caption
-# spam). Stories are far more tolerant of frequency and promotional text than the feed.
-STORY_ONLY_INTERVAL_MINUTES = 90
+# Minutes between Stories-only posts (IG Story + FB Story). Runs all day. Set to 30 at
+# explicit user request (2026-10-31).
+STORY_ONLY_INTERVAL_MINUTES = 30
 
 # Set to 'true' via workflow_dispatch input to bypass the interval guard
 FORCE_POST = os.environ.get("FORCE_POST", "false").strip().lower() == "true"
@@ -425,18 +427,29 @@ def wait_for_container(container_id):
         time.sleep(5)
     raise TimeoutError("Instagram processing timeout.")
 
-def publish_container(container_id):
-    response = requests.post(
-        f"{IG_BASE_URL}/{IG_USER_ID}/media_publish",
-        params={
-            "creation_id": container_id,
-            "access_token": ACCESS_TOKEN
-        },
-        timeout=30
-    )
-    print(response.text)
-    response.raise_for_status()
-    return response.json()["id"]
+def publish_container(container_id, retries=2, retry_delay=15):
+    """Publish a finished media container. Retries on Instagram's known transient
+    'Media Not Found' (code 24 / subcode 2207006) glitch, where the container reports
+    FINISHED but hasn't replicated yet across Facebook's backend in time for publish -
+    this caused real lost posts on Oct 30. A short wait-and-retry resolves it without
+    needing a brand-new container."""
+    for attempt in range(retries + 1):
+        response = requests.post(
+            f"{IG_BASE_URL}/{IG_USER_ID}/media_publish",
+            params={
+                "creation_id": container_id,
+                "access_token": ACCESS_TOKEN
+            },
+            timeout=30
+        )
+        print(response.text)
+        if response.status_code == 400 and "does not exist" in response.text.lower() and attempt < retries:
+            log(f"Publish attempt {attempt + 1} hit transient 'Media Not Found' - "
+                f"retrying in {retry_delay}s.")
+            time.sleep(retry_delay)
+            continue
+        response.raise_for_status()
+        return response.json()["id"]
 
 def prepare_story_image(media_path):
     """
@@ -927,22 +940,18 @@ def post_to_instagram():
 
     state = load_state()
 
-    # -- Peak hours guard: only post during high-engagement windows (EAT) --
-    if not FORCE_POST and not FORCE_PEAK_BYPASS:
-        eat_hour = current_eat_hour()
-        if not check_peak_hours():
-            log(f"Skipping - current Nairobi time is {eat_hour:02d}:xx "
-                f"(outside peak hours 07-09, 12-14, 18-21 EAT).")
-            return
-        log(f"Peak hours check passed - Nairobi hour: {eat_hour:02d}.")
-
     # -- Reset the daily feed-post counter on a new Nairobi calendar day --
     today_eat = (datetime.utcnow() + timedelta(hours=3)).strftime("%Y-%m-%d")
     if state.get("last_feed_post_date") != today_eat:
         state["feed_posts_today"] = 0
         state["last_feed_post_date"] = today_eat
 
+    eat_hour = current_eat_hour()
+
     # -- Decide feed vs. story-only vs. skip --
+    # Peak-hours gating has been removed from the feed path at explicit user request
+    # (2026-10-31) - feed posts now run 24/7 on the same 30-min interval as Stories,
+    # gated only by MIN_POST_INTERVAL_MINUTES and MAX_FEED_POSTS_PER_DAY below.
     if not FORCE_POST:
         last_post_time = state.get("last_post_time")
         feed_elapsed = None
@@ -971,6 +980,7 @@ def post_to_instagram():
             else:
                 log("Skipping - nothing eligible to post yet.")
             return
+        log(f"Feed interval/cap check passed - Nairobi hour: {eat_hour:02d}.")
     else:
         log("FORCE_POST enabled - bypassing interval/daily-cap guards.")
 
