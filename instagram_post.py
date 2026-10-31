@@ -61,23 +61,21 @@ FB_BASE_URL     = "https://graph.facebook.com/v21.0"
 TIKTOK_BASE_URL = "https://open.tiktokapis.com/v2"
 TIKTOK_CHUNK_SIZE = 10 * 1024 * 1024  # 10 MB per chunk
 
-# Minimum minutes between FEED posts (IG feed + FB feed + both Stories).
-# Raised from 20 to 180: posting to the feed every 20 min around the clock reads as
-# spam/API-bot behaviour to Instagram's ranking system and was collapsing organic reach
-# (verified via Insights: 7k followers, single-digit-percent reach, 0 likes/comments).
-MIN_POST_INTERVAL_MINUTES = 180
+# Minimum minutes between FEED posts (IG feed + FB feed).
+# Set to 30 at explicit user request (2026-10-31), overriding the earlier 180-min
+# throttle that was put in place after reach collapsed to single-digit views on a
+# 7k-follower account. Known risk: this is close to the cadence that caused that
+# collapse. Feed posts are still restricted to peak hours only (see PEAK_HOURS_EAT)
+# so the account isn't posting to the feed 24/7, only every 30 min within peak windows.
+MIN_POST_INTERVAL_MINUTES = 30
 
-# Hard cap on feed posts (Instagram feed + Facebook feed) per Nairobi calendar day.
-# One per peak window (07-09, 12-14, 18-21 EAT) is the "optimal" cadence for an
-# e-commerce account this size - visible every peak window without reading as spam.
-MAX_FEED_POSTS_PER_DAY = 3
+# Daily feed-post cap. Raised to comfortably fit a 30-min cadence across all peak
+# windows (9 peak hours/day -> up to ~18 slots) without the cap itself blocking posts.
+MAX_FEED_POSTS_PER_DAY = 20
 
-# Minutes between Stories-only posts (IG Story + FB Story, no feed post, no extra caption
-# spam). Stories are far more tolerant of frequency/promo text than the feed AND don't
-# hurt feed reach, so they now run all day (not just peak hours) to keep the account
-# visibly active between feed posts - this is the main lever for "posting like before"
-# without resurrecting the every-20-min feed spam that collapsed reach.
-STORY_ONLY_INTERVAL_MINUTES = 90
+# Minutes between Stories-only posts (IG Story + FB Story). Runs all day (not peak-hours
+# restricted). Set to 30 at explicit user request (2026-10-31).
+STORY_ONLY_INTERVAL_MINUTES = 30
 
 # Set to 'true' via workflow_dispatch input to bypass the interval guard
 FORCE_POST = os.environ.get("FORCE_POST", "false").strip().lower() == "true"
