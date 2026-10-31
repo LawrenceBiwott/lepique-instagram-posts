@@ -62,19 +62,20 @@ TIKTOK_BASE_URL = "https://open.tiktokapis.com/v2"
 TIKTOK_CHUNK_SIZE = 10 * 1024 * 1024  # 10 MB per chunk
 
 # Minimum minutes between FEED posts (IG feed + FB feed).
-# Set to 30 at explicit user request (2026-10-31), overriding the earlier 180-min
-# throttle that was put in place after reach collapsed to single-digit views on a
-# 7k-follower account. Known risk: this is close to the cadence that caused that
-# collapse. Feed posts are still restricted to peak hours only (see PEAK_HOURS_EAT)
-# so the account isn't posting to the feed 24/7, only every 30 min within peak windows.
+# Set to 30, around the clock, at explicit user request (2026-10-31) - the peak-hours
+# restriction on feed posts has been removed too, so this now runs 24/7, same as the
+# pre-throttle cadence that previously collapsed reach on this account (verified via
+# Insights: 7k followers, single-digit-percent reach, 0 likes/comments). Flagged, not
+# blocked - if reach drops again, the fix is to restore PEAK_HOURS_EAT gating on feed
+# (still defined below, just no longer applied to feed_allowed) and/or raise this back up.
 MIN_POST_INTERVAL_MINUTES = 30
 
-# Daily feed-post cap. Raised to comfortably fit a 30-min cadence across all peak
-# windows (9 peak hours/day -> up to ~18 slots) without the cap itself blocking posts.
-MAX_FEED_POSTS_PER_DAY = 20
+# Daily feed-post cap. Raised to fit a 24/7 30-min cadence (48 slots/day) without the
+# cap itself blocking posts.
+MAX_FEED_POSTS_PER_DAY = 48
 
-# Minutes between Stories-only posts (IG Story + FB Story). Runs all day (not peak-hours
-# restricted). Set to 30 at explicit user request (2026-10-31).
+# Minutes between Stories-only posts (IG Story + FB Story). Runs all day. Set to 30 at
+# explicit user request (2026-10-31).
 STORY_ONLY_INTERVAL_MINUTES = 30
 
 # Set to 'true' via workflow_dispatch input to bypass the interval guard
@@ -946,13 +947,11 @@ def post_to_instagram():
         state["last_feed_post_date"] = today_eat
 
     eat_hour = current_eat_hour()
-    in_peak = FORCE_POST or FORCE_PEAK_BYPASS or check_peak_hours()
 
     # -- Decide feed vs. story-only vs. skip --
-    # Feed posts are still peak-hours-gated (that's the throttle that fixed the reach
-    # collapse). Stories are NOT peak-hours-gated - they run on their own clock all day,
-    # which is what keeps the account looking active "like before" without touching the
-    # feed-ranking risk.
+    # Peak-hours gating has been removed from the feed path at explicit user request
+    # (2026-10-31) - feed posts now run 24/7 on the same 30-min interval as Stories,
+    # gated only by MIN_POST_INTERVAL_MINUTES and MAX_FEED_POSTS_PER_DAY below.
     if not FORCE_POST:
         last_post_time = state.get("last_post_time")
         feed_elapsed = None
@@ -960,8 +959,7 @@ def post_to_instagram():
             feed_elapsed = (datetime.utcnow() - datetime.fromisoformat(last_post_time)).total_seconds() / 60
 
         feed_allowed = (
-            in_peak
-            and state.get("feed_posts_today", 0) < MAX_FEED_POSTS_PER_DAY
+            state.get("feed_posts_today", 0) < MAX_FEED_POSTS_PER_DAY
             and (feed_elapsed is None or feed_elapsed >= MIN_POST_INTERVAL_MINUTES)
         )
 
@@ -975,9 +973,6 @@ def post_to_instagram():
 
             if story_allowed:
                 post_story_only(state)
-            elif not in_peak:
-                log(f"Skipping feed - outside peak hours ({eat_hour:02d}:xx EAT). Next "
-                    f"Story-only post in ~{STORY_ONLY_INTERVAL_MINUTES - (story_elapsed or 0):.0f} min.")
             elif feed_elapsed is not None:
                 log(f"Skipping - feed cap reached today ({state.get('feed_posts_today', 0)}/"
                     f"{MAX_FEED_POSTS_PER_DAY}) and next Story-only post in "
@@ -985,7 +980,7 @@ def post_to_instagram():
             else:
                 log("Skipping - nothing eligible to post yet.")
             return
-        log(f"Peak hours check passed - Nairobi hour: {eat_hour:02d}.")
+        log(f"Feed interval/cap check passed - Nairobi hour: {eat_hour:02d}.")
     else:
         log("FORCE_POST enabled - bypassing interval/daily-cap guards.")
 
