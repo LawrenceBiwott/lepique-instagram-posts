@@ -17443,3 +17443,76 @@ continue appending new entries below as usual.
 [2026-10-28 11:35:04] Facebook Story posted! ID: 2264562201138626
 [2026-10-28 11:35:04] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
 [2026-10-28 11:35:04] All done. Final state saved.
+[2026-10-28 17:20:04] Peak hours check passed - Nairobi hour: 20.
+[2026-10-28 17:20:04] --- Starting Instagram + Facebook post ---
+[2026-10-28 17:20:05] Instagram token OK - account: @lepiquefashions (ID: 1889041611321657)
+[2026-10-28 17:20:05] Caption: 📍 G16 (Ground Floor) & B35 (Basement) – Platinum Plaza, Tom Mboya St, Nairobi
+📞 
+[2026-10-28 17:20:05] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-10-28 17:20:05] Media categories (14): ['photos/Bodysuits', 'photos/Cargo Jeans', 'photos/Denim Jackets', 'photos/Flare Jeans', 'photos/Leather Jackets', 'photos/Mom jeans', 'photos/Printed Jeans', 'photos/Ripped Jeans', 'photos/Skinny Jeans', 'photos/Straight Jeans', 'photos/T-Shirts and Long-Sleeve Tops', 'photos/Three-quarter jeans', 'photos/Wide Leg Jeans', 'videos']
+[2026-10-28 17:20:05] Selected from 'photos/Mom jeans': lepique-mom-03-dark-navy.jpeg
+[2026-10-28 17:20:05] Selected media: lepique-mom-03-dark-navy.jpeg
+[2026-10-28 17:20:05] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/Mom%20jeans/lepique-mom-03-dark-navy.jpeg
+[2026-10-28 17:20:05] Uploading image to Instagram...
+[2026-10-28 17:20:05] Alt text: Ladies dark navy ladies fashion - Lepique Fashions Nairobi
+[2026-10-28 17:20:09] Waiting for Instagram processing...
+[2026-10-28 17:20:09] Container status: FINISHED
+[2026-10-28 17:20:19] Container ID: 18572418823073384
+[2026-10-28 17:20:21] Instagram feed post successful! ID: 18120518089765304
+[2026-10-28 17:20:21] State saved after Instagram post. Feed posts today: 1/2.
+[2026-10-28 17:20:21] Story image resized to 1080x1920 -> photos/story_temp.jpg
+[2026-10-28 17:20:25] Story URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/story_temp.jpg - waiting for GitHub Pages to deploy...
+[2026-10-28 17:22:06] Story image live after 100s.
+[2026-10-28 17:22:06] Posting to Instagram Stories...
+[2026-10-28 17:22:08] Waiting for Instagram processing...
+[2026-10-28 17:22:09] Container status: IN_PROGRESS
+[2026-10-28 17:22:14] Container status: FINISHED
+[2026-10-28 17:22:26] Instagram Story posted! ID: 17865041787696519
+[2026-10-28 17:22:26] --- Posting to Facebook ---
+[2026-10-28 17:22:26] Uploading photo to Facebook feed...
+[2026-10-28 17:22:30] Facebook feed post successful! ID: 1889041611321657_1548857273943983
+[2026-10-28 17:22:30] Posting photo to Facebook Stories...
+[2026-10-28 17:22:35] Facebook Story posted! ID: 28650830987948982
+[2026-10-28 17:22:35] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
+[2026-10-28 17:22:35] All done. Final state saved.
+[2026-10-28 21:44:54] Skipping - current Nairobi time is 00:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-10-29 01:16:42] Skipping - current Nairobi time is 04:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-10-29 07:13:12] Skipping - current Nairobi time is 10:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-10-29 14:22:11] Skipping - current Nairobi time is 17:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-10-29 19:44:54] Skipping - current Nairobi time is 22:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-10-29 23:39:09] Skipping - current Nairobi time is 02:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-10-30 02:56:41] Skipping - current Nairobi time is 05:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-10-30 09:39:22] Peak hours check passed - Nairobi hour: 12.
+[2026-10-30 09:39:22] --- Starting Instagram + Facebook post ---
+[2026-10-30 09:39:22] Instagram token OK - account: @lepiquefashions (ID: 1889041611321657)
+[2026-10-30 09:39:22] Caption: 📍 B35 (Basement) & G16 (Ground Floor) – Platinum Plaza, Tom Mboya St, Nairobi
+📞 
+[2026-10-30 09:39:22] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-10-30 09:39:22] Media categories (14): ['photos/Bodysuits', 'photos/Cargo Jeans', 'photos/Denim Jackets', 'photos/Flare Jeans', 'photos/Leather Jackets', 'photos/Mom jeans', 'photos/Printed Jeans', 'photos/Ripped Jeans', 'photos/Skinny Jeans', 'photos/Straight Jeans', 'photos/T-Shirts and Long-Sleeve Tops', 'photos/Three-quarter jeans', 'photos/Wide Leg Jeans', 'videos']
+[2026-10-30 09:39:22] Selected from 'photos/Ripped Jeans': lepique-ripped-17-black-wide.jpeg
+[2026-10-30 09:39:22] Selected media: lepique-ripped-17-black-wide.jpeg
+[2026-10-30 09:39:22] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/Ripped%20Jeans/lepique-ripped-17-black-wide.jpeg
+[2026-10-30 09:39:22] Uploading image to Instagram...
+[2026-10-30 09:39:22] Alt text: Ladies black ripped jeans - Lepique Fashions Nairobi
+[2026-10-30 09:39:29] Waiting for Instagram processing...
+[2026-10-30 09:39:29] Container status: FINISHED
+[2026-10-30 09:39:39] Container ID: 18572917981073384
+[2026-10-30 09:39:40] Error: 400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/17841402201496454/media_publish?creation_id=18572917981073384&access_token=EAAoPvY2rIhYBSO7yg1YsBH4r5yRV1JWQmIe9M3JYdTVHDcHTljuivkMc4eUpZCcwN73eqTDhKia1INkUQNu43AxdS7HfHaLoRZAhVZArg36CwcEk2gkiVM8XCuk8NwufRW9iBCJCNIsQGjRBiNvR5niRXZAhKVwXnXaAkTXfb6P053BoSQbT4qvT5DNHe51xp1kwvhptb3bZBQD0JSBeY
+[2026-10-30 16:13:35] Peak hours check passed - Nairobi hour: 19.
+[2026-10-30 16:13:35] --- Starting Instagram + Facebook post ---
+[2026-10-30 16:13:36] Instagram token OK - account: @lepiquefashions (ID: 1889041611321657)
+[2026-10-30 16:13:36] Caption: 📍 B35 (Basement) & G16 (Ground Floor) – Platinum Plaza, Tom Mboya St, Nairobi
+📞 
+[2026-10-30 16:13:36] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-10-30 16:13:36] Media categories (14): ['photos/Bodysuits', 'photos/Cargo Jeans', 'photos/Denim Jackets', 'photos/Flare Jeans', 'photos/Leather Jackets', 'photos/Mom jeans', 'photos/Printed Jeans', 'photos/Ripped Jeans', 'photos/Skinny Jeans', 'photos/Straight Jeans', 'photos/T-Shirts and Long-Sleeve Tops', 'photos/Three-quarter jeans', 'photos/Wide Leg Jeans', 'videos']
+[2026-10-30 16:13:36] Selected from 'photos/Ripped Jeans': lepique-ripped-13-medium-blue.jpeg
+[2026-10-30 16:13:36] Selected media: lepique-ripped-13-medium-blue.jpeg
+[2026-10-30 16:13:36] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/Ripped%20Jeans/lepique-ripped-13-medium-blue.jpeg
+[2026-10-30 16:13:36] Uploading image to Instagram...
+[2026-10-30 16:13:36] Alt text: Ladies medium blue ripped jeans - Lepique Fashions Nairobi
+[2026-10-30 16:13:41] Waiting for Instagram processing...
+[2026-10-30 16:13:42] Container status: FINISHED
+[2026-10-30 16:13:52] Container ID: 18573016558073384
+[2026-10-30 16:13:52] Error: 400 Client Error: Bad Request for url: https://graph.facebook.com/v21.0/17841402201496454/media_publish?creation_id=18573016558073384&access_token=EAAoPvY2rIhYBSO7yg1YsBH4r5yRV1JWQmIe9M3JYdTVHDcHTljuivkMc4eUpZCcwN73eqTDhKia1INkUQNu43AxdS7HfHaLoRZAhVZArg36CwcEk2gkiVM8XCuk8NwufRW9iBCJCNIsQGjRBiNvR5niRXZAhKVwXnXaAkTXfb6P053BoSQbT4qvT5DNHe51xp1kwvhptb3bZBQD0JSBeY
+[2026-10-30 20:49:26] Skipping - current Nairobi time is 23:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
+[2026-10-31 00:11:12] Skipping - current Nairobi time is 03:xx (outside peak hours 07-09, 12-14, 18-21 EAT).
