@@ -18118,3 +18118,35 @@ continue appending new entries below as usual.
 [2026-11-04 02:34:07] Facebook Story posted! ID: 1613616153584158
 [2026-11-04 02:34:07] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
 [2026-11-04 02:34:07] All done. Final state saved.
+[2026-11-04 09:46:29] Feed interval/cap check passed - Nairobi hour: 12.
+[2026-11-04 09:46:29] --- Starting Instagram + Facebook post ---
+[2026-11-04 09:46:30] Instagram token OK - account: @lepiquefashions (ID: 1889041611321657)
+[2026-11-04 09:46:30] Caption: 📍 B35 (Basement) & G16 (Ground Floor) – Platinum Plaza, Tom Mboya St, Nairobi
+📞 
+[2026-11-04 09:46:30] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-11-04 09:46:30] Media categories (14): ['photos/Bodysuits', 'photos/Cargo Jeans', 'photos/Denim Jackets', 'photos/Flare Jeans', 'photos/Leather Jackets', 'photos/Mom jeans', 'photos/Printed Jeans', 'photos/Ripped Jeans', 'photos/Skinny Jeans', 'photos/Straight Jeans', 'photos/T-Shirts and Long-Sleeve Tops', 'photos/Three-quarter jeans', 'photos/Wide Leg Jeans', 'videos']
+[2026-11-04 09:46:30] Selected from 'photos/Ripped Jeans': lepique-ripped-16-light-blue-wide.jpeg
+[2026-11-04 09:46:30] Selected media: lepique-ripped-16-light-blue-wide.jpeg
+[2026-11-04 09:46:30] Padded lepique-ripped-16-light-blue-wide.jpeg: 1086x1448 -> 1158x1448 (ratio 0.80)
+[2026-11-04 09:46:30] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/Ripped%20Jeans/lepique-ripped-16-light-blue-wide.jpeg
+[2026-11-04 09:46:30] Uploading image to Instagram...
+[2026-11-04 09:46:30] Alt text: Ladies light blue ripped jeans - Lepique Fashions Nairobi
+[2026-11-04 09:46:36] Waiting for Instagram processing...
+[2026-11-04 09:46:36] Container status: IN_PROGRESS
+[2026-11-04 09:46:42] Container status: FINISHED
+[2026-11-04 09:46:52] Container ID: 18574347058073384
+[2026-11-04 09:46:55] Instagram feed post successful! ID: 17918777898469048
+[2026-11-04 09:46:55] State saved after Instagram post. Feed posts today: 3/48.
+[2026-11-04 09:46:55] Story image resized to 1080x1920 -> photos/story_temp.jpg
+[2026-11-04 09:47:12] Story resize failed (Command '['git', 'push']' returned non-zero exit status 1.) - using original image for Story.
+[2026-11-04 09:47:12] Posting to Instagram Stories...
+[2026-11-04 09:47:16] Waiting for Instagram processing...
+[2026-11-04 09:47:17] Container status: FINISHED
+[2026-11-04 09:47:30] Instagram Story posted! ID: 17990349183119709
+[2026-11-04 09:47:30] --- Posting to Facebook ---
+[2026-11-04 09:47:30] Uploading photo to Facebook feed...
+[2026-11-04 09:47:35] Facebook feed post successful! ID: 1889041611321657_1556151826547861
+[2026-11-04 09:47:35] Posting photo to Facebook Stories...
+[2026-11-04 09:47:41] Facebook Story posted! ID: 1445150944434654
+[2026-11-04 09:47:41] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
+[2026-11-04 09:47:41] All done. Final state saved.
