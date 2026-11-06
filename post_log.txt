@@ -18341,3 +18341,34 @@ continue appending new entries below as usual.
 [2026-11-05 23:38:25] Facebook Story posted! ID: 1029694620154859
 [2026-11-05 23:38:25] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
 [2026-11-05 23:38:25] All done. Final state saved.
+[2026-11-06 03:38:36] Feed interval/cap check passed - Nairobi hour: 06.
+[2026-11-06 03:38:36] --- Starting Instagram + Facebook post ---
+[2026-11-06 03:38:36] Instagram token OK - account: @lepiquefashions (ID: 1889041611321657)
+[2026-11-06 03:38:36] Caption: 📍 B35 (Basement) & G16 (Ground Floor) – Platinum Plaza, Tom Mboya St, Nairobi
+📞 
+[2026-11-06 03:38:36] Checking media folder: /home/runner/work/lepique-instagram-posts/lepique-instagram-posts/media
+[2026-11-06 03:38:36] Media categories (14): ['photos/Bodysuits', 'photos/Cargo Jeans', 'photos/Denim Jackets', 'photos/Flare Jeans', 'photos/Leather Jackets', 'photos/Mom jeans', 'photos/Printed Jeans', 'photos/Ripped Jeans', 'photos/Skinny Jeans', 'photos/Straight Jeans', 'photos/T-Shirts and Long-Sleeve Tops', 'photos/Three-quarter jeans', 'photos/Wide Leg Jeans', 'videos']
+[2026-11-06 03:38:36] Selected from 'photos/Ripped Jeans': lepique-ripped-15-medium-blue-wide.jpeg
+[2026-11-06 03:38:36] Selected media: lepique-ripped-15-medium-blue-wide.jpeg
+[2026-11-06 03:38:36] Media URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/Ripped%20Jeans/lepique-ripped-15-medium-blue-wide.jpeg
+[2026-11-06 03:38:36] Uploading image to Instagram...
+[2026-11-06 03:38:36] Alt text: Ladies medium blue ripped jeans - Lepique Fashions Nairobi
+[2026-11-06 03:38:40] Waiting for Instagram processing...
+[2026-11-06 03:38:41] Container status: FINISHED
+[2026-11-06 03:38:51] Container ID: 18574830328073384
+[2026-11-06 03:38:54] Instagram feed post successful! ID: 18099292358445692
+[2026-11-06 03:38:54] State saved after Instagram post. Feed posts today: 2/48.
+[2026-11-06 03:38:54] Story image resized to 1080x1920 -> photos/story_temp.jpg
+[2026-11-06 03:38:56] Story URL: https://lawrencebiwott.github.io/lepique-instagram-posts/media/photos/story_temp.jpg - waiting for GitHub Pages to deploy...
+[2026-11-06 03:39:57] Story image live after 60s.
+[2026-11-06 03:39:57] Posting to Instagram Stories...
+[2026-11-06 03:40:01] Waiting for Instagram processing...
+[2026-11-06 03:40:02] Container status: FINISHED
+[2026-11-06 03:40:15] Instagram Story posted! ID: 18133275001825520
+[2026-11-06 03:40:15] --- Posting to Facebook ---
+[2026-11-06 03:40:15] Uploading photo to Facebook feed...
+[2026-11-06 03:40:19] Facebook feed post successful! ID: 1889041611321657_1558079479688429
+[2026-11-06 03:40:19] Posting photo to Facebook Stories...
+[2026-11-06 03:40:24] Facebook Story posted! ID: 1441827987364039
+[2026-11-06 03:40:24] TikTok posting is disabled (TIKTOK_ENABLED=false). Skipping.
+[2026-11-06 03:40:24] All done. Final state saved.
